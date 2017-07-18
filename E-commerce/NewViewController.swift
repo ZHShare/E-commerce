@@ -7,7 +7,13 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class NewViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.hide(animated: true, afterDelay: TimeInterval(5.0))
+    }
 }
