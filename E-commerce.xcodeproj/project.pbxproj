@@ -11,6 +11,8 @@
 		C616AF641F1D97F90054C364 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616AF631F1D97F90054C364 /* NewViewController.swift */; };
 		C66BECF01F1DDBAE00985880 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */; };
 		C66BECF21F1DDBB200985880 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECF11F1DDBB200985880 /* SDWebImage.framework */; };
+		C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECF81F1DDF9800985880 /* HHttp.swift */; };
+		C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFA1F1DDF9C00985880 /* HNet.swift */; };
 		C6AF7EAD1F1D952400D4CF95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */; };
 		C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */; };
 		C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EBE1F1D959B00D4CF95 /* LaunchScreen.storyboard */; };
@@ -26,6 +28,8 @@
 		C616AF631F1D97F90054C364 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
 		C66BECF11F1DDBB200985880 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
+		C66BECF81F1DDF9800985880 /* HHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHttp.swift; sourceTree = "<group>"; };
+		C66BECFA1F1DDF9C00985880 /* HNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNet.swift; sourceTree = "<group>"; };
 		C6AF7EA71F1D952400D4CF95 /* E-commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C66BECF61F1DDF8600985880 /* ThirdLibs */ = {
+			isa = PBXGroup;
+			children = (
+				C66BECF71F1DDF8600985880 /* BaseNet */,
+			);
+			path = ThirdLibs;
+			sourceTree = "<group>";
+		};
+		C66BECF71F1DDF8600985880 /* BaseNet */ = {
+			isa = PBXGroup;
+			children = (
+				C66BECFA1F1DDF9C00985880 /* HNet.swift */,
+				C66BECF81F1DDF9800985880 /* HHttp.swift */,
+			);
+			path = BaseNet;
+			sourceTree = "<group>";
+		};
 		C6AF7E9E1F1D952300D4CF95 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +103,7 @@
 				C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */,
 				C616AF631F1D97F90054C364 /* NewViewController.swift */,
 				C6AF7EC11F1D959B00D4CF95 /* Main.storyboard */,
+				C66BECF61F1DDF8600985880 /* ThirdLibs */,
 				C6AF7EBC1F1D959B00D4CF95 /* Common */,
 				C6AF7EC21F1D959B00D4CF95 /* Resource */,
 			);
@@ -243,6 +265,8 @@
 			files = (
 				C616AF641F1D97F90054C364 /* NewViewController.swift in Sources */,
 				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
+				C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */,
+				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
 				C6AF7EAD1F1D952400D4CF95 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
