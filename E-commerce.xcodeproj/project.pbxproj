@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C6AF7EAB1F1D952400D4CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EAA1F1D952400D4CF95 /* AppDelegate.swift */; };
 		C6AF7EAD1F1D952400D4CF95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */; };
-		C6AF7EB01F1D952500D4CF95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EAE1F1D952500D4CF95 /* Main.storyboard */; };
-		C6AF7EB21F1D952500D4CF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EB11F1D952500D4CF95 /* Assets.xcassets */; };
-		C6AF7EB51F1D952500D4CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EB31F1D952500D4CF95 /* LaunchScreen.storyboard */; };
+		C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */; };
+		C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EBE1F1D959B00D4CF95 /* LaunchScreen.storyboard */; };
+		C6AF7EC61F1D959B00D4CF95 /* e-commerceInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EC01F1D959B00D4CF95 /* e-commerceInfo.plist */; };
+		C6AF7EC71F1D959B00D4CF95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EC11F1D959B00D4CF95 /* Main.storyboard */; };
+		C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EC31F1D959B00D4CF95 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C6AF7EA71F1D952400D4CF95 /* E-commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6AF7EAA1F1D952400D4CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C6AF7EAF1F1D952500D4CF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C6AF7EB11F1D952500D4CF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C6AF7EB41F1D952500D4CF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C6AF7EB61F1D952500D4CF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C6AF7EBF1F1D959B00D4CF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C6AF7EC01F1D959B00D4CF95 /* e-commerceInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "e-commerceInfo.plist"; sourceTree = "<group>"; };
+		C6AF7EC11F1D959B00D4CF95 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C6AF7EC31F1D959B00D4CF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +55,30 @@
 		C6AF7EA91F1D952400D4CF95 /* E-commerce */ = {
 			isa = PBXGroup;
 			children = (
-				C6AF7EAA1F1D952400D4CF95 /* AppDelegate.swift */,
 				C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */,
-				C6AF7EAE1F1D952500D4CF95 /* Main.storyboard */,
-				C6AF7EB11F1D952500D4CF95 /* Assets.xcassets */,
-				C6AF7EB31F1D952500D4CF95 /* LaunchScreen.storyboard */,
-				C6AF7EB61F1D952500D4CF95 /* Info.plist */,
+				C6AF7EC11F1D959B00D4CF95 /* Main.storyboard */,
+				C6AF7EBC1F1D959B00D4CF95 /* Common */,
+				C6AF7EC21F1D959B00D4CF95 /* Resource */,
 			);
 			path = "E-commerce";
+			sourceTree = "<group>";
+		};
+		C6AF7EBC1F1D959B00D4CF95 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */,
+				C6AF7EBE1F1D959B00D4CF95 /* LaunchScreen.storyboard */,
+				C6AF7EC01F1D959B00D4CF95 /* e-commerceInfo.plist */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C6AF7EC21F1D959B00D4CF95 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C6AF7EC31F1D959B00D4CF95 /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +141,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6AF7EB51F1D952500D4CF95 /* LaunchScreen.storyboard in Resources */,
-				C6AF7EB21F1D952500D4CF95 /* Assets.xcassets in Resources */,
-				C6AF7EB01F1D952500D4CF95 /* Main.storyboard in Resources */,
+				C6AF7EC71F1D959B00D4CF95 /* Main.storyboard in Resources */,
+				C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */,
+				C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */,
+				C6AF7EC61F1D959B00D4CF95 /* e-commerceInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,26 +155,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
 				C6AF7EAD1F1D952400D4CF95 /* ViewController.swift in Sources */,
-				C6AF7EAB1F1D952400D4CF95 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C6AF7EAE1F1D952500D4CF95 /* Main.storyboard */ = {
+		C6AF7EBE1F1D959B00D4CF95 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C6AF7EAF1F1D952500D4CF95 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C6AF7EB31F1D952500D4CF95 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C6AF7EB41F1D952500D4CF95 /* Base */,
+				C6AF7EBF1F1D959B00D4CF95 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -262,9 +272,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X34ANAY29B;
-				INFOPLIST_FILE = "E-commerce/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/E-commerce/Common/e-commerceInfo.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "eter.E-commerce";
+				PRODUCT_BUNDLE_IDENTIFIER = "eter.E-commerce.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -275,9 +286,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X34ANAY29B;
-				INFOPLIST_FILE = "E-commerce/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/E-commerce/Common/e-commerceInfo.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "eter.E-commerce";
+				PRODUCT_BUNDLE_IDENTIFIER = "eter.E-commerce.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
