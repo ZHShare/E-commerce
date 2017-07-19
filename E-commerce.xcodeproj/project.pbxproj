@@ -13,6 +13,14 @@
 		C66BECF21F1DDBB200985880 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECF11F1DDBB200985880 /* SDWebImage.framework */; };
 		C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECF81F1DDF9800985880 /* HHttp.swift */; };
 		C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFA1F1DDF9C00985880 /* HNet.swift */; };
+		C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFF1F1DE3C100985880 /* GuideViewController.swift */; };
+		C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */; };
+		C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */; };
+		C66BED0A1F1EE32400985880 /* LogNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED091F1EE32400985880 /* LogNavViewController.swift */; };
+		C66BED0C1F1EE33100985880 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED0B1F1EE33100985880 /* LoginViewController.swift */; };
+		C66BED0E1F1EE33D00985880 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED0D1F1EE33D00985880 /* RegisterViewController.swift */; };
+		C66BED101F1EE34B00985880 /* ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED0F1F1EE34B00985880 /* ForgetViewController.swift */; };
+		C66BED131F1EE3BF00985880 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED121F1EE3BF00985880 /* ProductViewController.swift */; };
 		C6AF7EAD1F1D952400D4CF95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */; };
 		C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */; };
 		C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EBE1F1D959B00D4CF95 /* LaunchScreen.storyboard */; };
@@ -30,6 +38,14 @@
 		C66BECF11F1DDBB200985880 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		C66BECF81F1DDF9800985880 /* HHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHttp.swift; sourceTree = "<group>"; };
 		C66BECFA1F1DDF9C00985880 /* HNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNet.swift; sourceTree = "<group>"; };
+		C66BECFF1F1DE3C100985880 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefineCommon.swift; sourceTree = "<group>"; };
+		C66BED091F1EE32400985880 /* LogNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogNavViewController.swift; sourceTree = "<group>"; };
+		C66BED0B1F1EE33100985880 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C66BED0D1F1EE33D00985880 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C66BED0F1F1EE34B00985880 /* ForgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetViewController.swift; sourceTree = "<group>"; };
+		C66BED121F1EE3BF00985880 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		C6AF7EA71F1D952400D4CF95 /* E-commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +95,41 @@
 			path = BaseNet;
 			sourceTree = "<group>";
 		};
+		C66BECFC1F1DE38C00985880 /* 引导页 */ = {
+			isa = PBXGroup;
+			children = (
+				C66BECFF1F1DE3C100985880 /* GuideViewController.swift */,
+			);
+			path = "引导页";
+			sourceTree = "<group>";
+		};
+		C66BED011F1DE49000985880 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		C66BED081F1EE31000985880 /* 登录&注册 */ = {
+			isa = PBXGroup;
+			children = (
+				C66BED091F1EE32400985880 /* LogNavViewController.swift */,
+				C66BED0B1F1EE33100985880 /* LoginViewController.swift */,
+				C66BED0D1F1EE33D00985880 /* RegisterViewController.swift */,
+				C66BED0F1F1EE34B00985880 /* ForgetViewController.swift */,
+			);
+			path = "登录&注册";
+			sourceTree = "<group>";
+		};
+		C66BED111F1EE38900985880 /* 产品 */ = {
+			isa = PBXGroup;
+			children = (
+				C66BED121F1EE3BF00985880 /* ProductViewController.swift */,
+			);
+			path = "产品";
+			sourceTree = "<group>";
+		};
 		C6AF7E9E1F1D952300D4CF95 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +151,10 @@
 		C6AF7EA91F1D952400D4CF95 /* E-commerce */ = {
 			isa = PBXGroup;
 			children = (
+				C66BED111F1EE38900985880 /* 产品 */,
+				C66BED081F1EE31000985880 /* 登录&注册 */,
+				C66BED011F1DE49000985880 /* TabBarController */,
+				C66BECFC1F1DE38C00985880 /* 引导页 */,
 				C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */,
 				C616AF631F1D97F90054C364 /* NewViewController.swift */,
 				C6AF7EC11F1D959B00D4CF95 /* Main.storyboard */,
@@ -114,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */,
+				C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */,
 				C6AF7EBE1F1D959B00D4CF95 /* LaunchScreen.storyboard */,
 				C6AF7EC01F1D959B00D4CF95 /* e-commerceInfo.plist */,
 			);
@@ -263,11 +319,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66BED131F1EE3BF00985880 /* ProductViewController.swift in Sources */,
+				C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */,
+				C66BED0E1F1EE33D00985880 /* RegisterViewController.swift in Sources */,
 				C616AF641F1D97F90054C364 /* NewViewController.swift in Sources */,
 				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
 				C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */,
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
 				C6AF7EAD1F1D952400D4CF95 /* ViewController.swift in Sources */,
+				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
+				C66BED0A1F1EE32400985880 /* LogNavViewController.swift in Sources */,
+				C66BED0C1F1EE33100985880 /* LoginViewController.swift in Sources */,
+				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
+				C66BED101F1EE34B00985880 /* ForgetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
