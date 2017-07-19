@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0AFBC9DF76A237E8A2B551F5 /* Pods_E_commerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD3BB9767F91DEB222286D9 /* Pods_E_commerce.framework */; };
-		C616AF641F1D97F90054C364 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616AF631F1D97F90054C364 /* NewViewController.swift */; };
 		C66BECF01F1DDBAE00985880 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */; };
 		C66BECF21F1DDBB200985880 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECF11F1DDBB200985880 /* SDWebImage.framework */; };
 		C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECF81F1DDF9800985880 /* HHttp.swift */; };
@@ -16,16 +15,20 @@
 		C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFF1F1DE3C100985880 /* GuideViewController.swift */; };
 		C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */; };
 		C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */; };
-		C66BED0A1F1EE32400985880 /* LogNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED091F1EE32400985880 /* LogNavViewController.swift */; };
 		C66BED0C1F1EE33100985880 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED0B1F1EE33100985880 /* LoginViewController.swift */; };
 		C66BED0E1F1EE33D00985880 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED0D1F1EE33D00985880 /* RegisterViewController.swift */; };
 		C66BED101F1EE34B00985880 /* ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED0F1F1EE34B00985880 /* ForgetViewController.swift */; };
 		C66BED131F1EE3BF00985880 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED121F1EE3BF00985880 /* ProductViewController.swift */; };
-		C6AF7EAD1F1D952400D4CF95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */; };
+		C66BEEF41F1EFFE200985880 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEEF31F1EFFE200985880 /* LoginModel.swift */; };
+		C66BEEFA1F1F0AB700985880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C66BEEF71F1F0AB700985880 /* Main.storyboard */; };
+		C66BEEFB1F1F0AB700985880 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEEF81F1F0AB700985880 /* NewViewController.swift */; };
+		C66BEEFC1F1F0AB700985880 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEEF91F1F0AB700985880 /* ViewController.swift */; };
+		C66BEEFF1F1F0B0700985880 /* ECHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEEFE1F1F0B0700985880 /* ECHud.swift */; };
+		C66BEF011F1F2A6200985880 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEF001F1F2A6200985880 /* BaseNavigationController.swift */; };
+		C66BEF031F1F2C1C00985880 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEF021F1F2C1C00985880 /* BaseViewController.swift */; };
 		C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */; };
 		C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EBE1F1D959B00D4CF95 /* LaunchScreen.storyboard */; };
 		C6AF7EC61F1D959B00D4CF95 /* e-commerceInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EC01F1D959B00D4CF95 /* e-commerceInfo.plist */; };
-		C6AF7EC71F1D959B00D4CF95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EC11F1D959B00D4CF95 /* Main.storyboard */; };
 		C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EC31F1D959B00D4CF95 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +36,6 @@
 		9AD3BB9767F91DEB222286D9 /* Pods_E_commerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_commerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D3D8024958D851051FC670 /* Pods-E-commerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-commerce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-E-commerce/Pods-E-commerce.debug.xcconfig"; sourceTree = "<group>"; };
 		C5B8481E203F22AA59784AC1 /* Pods-E-commerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-commerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-E-commerce/Pods-E-commerce.release.xcconfig"; sourceTree = "<group>"; };
-		C616AF631F1D97F90054C364 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
 		C66BECF11F1DDBB200985880 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		C66BECF81F1DDF9800985880 /* HHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHttp.swift; sourceTree = "<group>"; };
@@ -41,17 +43,21 @@
 		C66BECFF1F1DE3C100985880 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefineCommon.swift; sourceTree = "<group>"; };
-		C66BED091F1EE32400985880 /* LogNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogNavViewController.swift; sourceTree = "<group>"; };
 		C66BED0B1F1EE33100985880 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C66BED0D1F1EE33D00985880 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C66BED0F1F1EE34B00985880 /* ForgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetViewController.swift; sourceTree = "<group>"; };
 		C66BED121F1EE3BF00985880 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		C66BEEF31F1EFFE200985880 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		C66BEEF71F1F0AB700985880 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C66BEEF81F1F0AB700985880 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		C66BEEF91F1F0AB700985880 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C66BEEFE1F1F0B0700985880 /* ECHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECHud.swift; sourceTree = "<group>"; };
+		C66BEF001F1F2A6200985880 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		C66BEF021F1F2C1C00985880 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C6AF7EA71F1D952400D4CF95 /* E-commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6AF7EBF1F1D959B00D4CF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6AF7EC01F1D959B00D4CF95 /* e-commerceInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "e-commerceInfo.plist"; sourceTree = "<group>"; };
-		C6AF7EC11F1D959B00D4CF95 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C6AF7EC31F1D959B00D4CF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,8 +120,8 @@
 		C66BED081F1EE31000985880 /* 登录&注册 */ = {
 			isa = PBXGroup;
 			children = (
-				C66BED091F1EE32400985880 /* LogNavViewController.swift */,
 				C66BED0B1F1EE33100985880 /* LoginViewController.swift */,
+				C66BEEF31F1EFFE200985880 /* LoginModel.swift */,
 				C66BED0D1F1EE33D00985880 /* RegisterViewController.swift */,
 				C66BED0F1F1EE34B00985880 /* ForgetViewController.swift */,
 			);
@@ -128,6 +134,34 @@
 				C66BED121F1EE3BF00985880 /* ProductViewController.swift */,
 			);
 			path = "产品";
+			sourceTree = "<group>";
+		};
+		C66BEEF51F1F0AA200985880 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C66BEF001F1F2A6200985880 /* BaseNavigationController.swift */,
+				C66BEF021F1F2C1C00985880 /* BaseViewController.swift */,
+				C66BEEF71F1F0AB700985880 /* Main.storyboard */,
+				C66BEEF81F1F0AB700985880 /* NewViewController.swift */,
+				C66BEEF91F1F0AB700985880 /* ViewController.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		C66BEEF61F1F0AA200985880 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C66BEEFD1F1F0AFE00985880 /* ECHud */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C66BEEFD1F1F0AFE00985880 /* ECHud */ = {
+			isa = PBXGroup;
+			children = (
+				C66BEEFE1F1F0B0700985880 /* ECHud.swift */,
+			);
+			path = ECHud;
 			sourceTree = "<group>";
 		};
 		C6AF7E9E1F1D952300D4CF95 = {
@@ -151,13 +185,12 @@
 		C6AF7EA91F1D952400D4CF95 /* E-commerce */ = {
 			isa = PBXGroup;
 			children = (
+				C66BEEF51F1F0AA200985880 /* Other */,
+				C66BEEF61F1F0AA200985880 /* Tools */,
 				C66BED111F1EE38900985880 /* 产品 */,
 				C66BED081F1EE31000985880 /* 登录&注册 */,
 				C66BED011F1DE49000985880 /* TabBarController */,
 				C66BECFC1F1DE38C00985880 /* 引导页 */,
-				C6AF7EAC1F1D952400D4CF95 /* ViewController.swift */,
-				C616AF631F1D97F90054C364 /* NewViewController.swift */,
-				C6AF7EC11F1D959B00D4CF95 /* Main.storyboard */,
 				C66BECF61F1DDF8600985880 /* ThirdLibs */,
 				C6AF7EBC1F1D959B00D4CF95 /* Common */,
 				C6AF7EC21F1D959B00D4CF95 /* Resource */,
@@ -257,10 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6AF7EC71F1D959B00D4CF95 /* Main.storyboard in Resources */,
 				C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */,
 				C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */,
 				C6AF7EC61F1D959B00D4CF95 /* e-commerceInfo.plist in Resources */,
+				C66BEEFA1F1F0AB700985880 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,17 +352,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66BEEFF1F1F0B0700985880 /* ECHud.swift in Sources */,
 				C66BED131F1EE3BF00985880 /* ProductViewController.swift in Sources */,
+				C66BEEF41F1EFFE200985880 /* LoginModel.swift in Sources */,
 				C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */,
 				C66BED0E1F1EE33D00985880 /* RegisterViewController.swift in Sources */,
-				C616AF641F1D97F90054C364 /* NewViewController.swift in Sources */,
+				C66BEEFC1F1F0AB700985880 /* ViewController.swift in Sources */,
 				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
 				C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */,
+				C66BEF011F1F2A6200985880 /* BaseNavigationController.swift in Sources */,
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
-				C6AF7EAD1F1D952400D4CF95 /* ViewController.swift in Sources */,
 				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
-				C66BED0A1F1EE32400985880 /* LogNavViewController.swift in Sources */,
+				C66BEEFB1F1F0AB700985880 /* NewViewController.swift in Sources */,
 				C66BED0C1F1EE33100985880 /* LoginViewController.swift in Sources */,
+				C66BEF031F1F2C1C00985880 /* BaseViewController.swift in Sources */,
 				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
 				C66BED101F1EE34B00985880 /* ForgetViewController.swift in Sources */,
 			);

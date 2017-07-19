@@ -8,16 +8,13 @@
 
 import UIKit
 
-class ProductViewController: UIViewController
+class ProductViewController: BaseViewController
 {
 
     
     @IBAction func login(_ sender: UIButton) {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let logNav = storyboard.instantiateViewController(withIdentifier: "LogNavViewController") as? LogNavViewController {
-            present(logNav, animated: true, completion: nil)
-        }
+        enterLogin()
     }
 
 }
