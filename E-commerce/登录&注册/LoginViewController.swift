@@ -8,7 +8,8 @@
 
 import UIKit
 
-class LoginViewController: BaseViewController {
+class LoginViewController: BaseViewController
+{
 
     @IBOutlet weak var userNameField: UITextField! {
         didSet {
@@ -22,6 +23,7 @@ class LoginViewController: BaseViewController {
             passwordField.addTarget(self, action: #selector(textFiledDidChanged(textField:)), for: UIControlEvents.editingChanged)
         }
     }
+    
     @IBOutlet weak var loginButton: UIButton!
    
     

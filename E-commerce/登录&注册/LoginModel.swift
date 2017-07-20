@@ -8,7 +8,8 @@
 
 import Foundation
 
-class LoginModel: NSObject {
+class LoginModel: NSObject
+{
     
     var user_id: String = ""
     var name: String = ""
