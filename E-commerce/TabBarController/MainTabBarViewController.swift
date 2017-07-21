@@ -11,6 +11,13 @@ import UIKit
 class MainTabBarViewController: UITabBarController
 {
     
+    fileprivate var selectedTabBarButton: UIControl? {
+        get {
+            
+            return getSelectedTabBarButton()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -22,11 +29,12 @@ class MainTabBarViewController: UITabBarController
 extension MainTabBarViewController: UITabBarControllerDelegate
 {
     
+   
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        
-        tabBarButtonClick(sender: getSelectedTabBarButton())
+      
+        tabBarButtonClick(sender: selectedTabBarButton)
     }
-    
+   
 }
 
 // MARK: - 私有方法
@@ -39,7 +47,7 @@ fileprivate extension MainTabBarViewController
         static let Main: AnyClass? = NSClassFromString("UITabBarButton")
     }
     
-    enum TransformKeyPath {
+    enum Transform {
         static let Scale = "transform.scale"
     }
     
@@ -89,7 +97,7 @@ fileprivate extension MainTabBarViewController
     func addAnimationForView(view: UIView) {
         
         let animation = CAKeyframeAnimation()
-        animation.keyPath = TransformKeyPath.Scale
+        animation.keyPath = Transform.Scale
         animation.values = [1.0,1.1,0.9,1.0]
         animation.duration = 0.3
         animation.calculationMode = kCAAnimationCubic

@@ -13,17 +13,10 @@ class BaseViewController: UIViewController {
   
     func enterLogin() {
         
-        if isLogin() { return }
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let logNav = storyboard.instantiateViewController(withIdentifier: "BaseNavigationController") as? BaseNavigationController {
             present(logNav, animated: true, completion: nil)
         }
-    }
-
-    fileprivate func isLogin() -> Bool {
-        
-        return LoginModel.status()
     }
     
 }

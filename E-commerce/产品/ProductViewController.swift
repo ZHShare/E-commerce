@@ -14,13 +14,16 @@ class ProductViewController: BaseViewController
     
     @IBAction func login(_ sender: UIButton) {
         
-        enterLogin()
-        
-        if let user = LoginModel.getModel() {
+        if LoginStatus.isLogined {
             
-           print("\(String(describing: user))\n\(String(describing: user.name))\n\(String(describing: user.user_id))")
+            if let user = LoginModel.load() {
+                
+                print("\n\(String(describing: user))\n\(String(describing: user.name))\n\(String(describing: user.user_id))")
+            }
+            return
         }
-        
+
+        enterLogin()
     }
 
     @IBAction func exit() {
