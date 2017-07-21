@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0AFBC9DF76A237E8A2B551F5 /* Pods_E_commerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD3BB9767F91DEB222286D9 /* Pods_E_commerce.framework */; };
+		C6094C191F2186D8004677BE /* MappingAce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6094C181F2186D8004677BE /* MappingAce.framework */; };
+		C6094C1E1F218873004677BE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6094C1D1F218873004677BE /* SwiftyJSON.framework */; };
+		C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C261F21B06D004677BE /* ECHud.swift */; };
+		C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C271F21B06D004677BE /* ECMapping.swift */; };
+		C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C281F21B06D004677BE /* ECModelManager.swift */; };
+		C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C291F21B06D004677BE /* ECSwiftJSON.swift */; };
 		C66BECF01F1DDBAE00985880 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */; };
 		C66BECF21F1DDBB200985880 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECF11F1DDBB200985880 /* SDWebImage.framework */; };
 		C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECF81F1DDF9800985880 /* HHttp.swift */; };
@@ -23,7 +29,6 @@
 		C66BEEFA1F1F0AB700985880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C66BEEF71F1F0AB700985880 /* Main.storyboard */; };
 		C66BEEFB1F1F0AB700985880 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEEF81F1F0AB700985880 /* NewViewController.swift */; };
 		C66BEEFC1F1F0AB700985880 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEEF91F1F0AB700985880 /* ViewController.swift */; };
-		C66BEEFF1F1F0B0700985880 /* ECHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEEFE1F1F0B0700985880 /* ECHud.swift */; };
 		C66BEF011F1F2A6200985880 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEF001F1F2A6200985880 /* BaseNavigationController.swift */; };
 		C66BEF031F1F2C1C00985880 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEF021F1F2C1C00985880 /* BaseViewController.swift */; };
 		C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */; };
@@ -36,6 +41,12 @@
 		9AD3BB9767F91DEB222286D9 /* Pods_E_commerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_commerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D3D8024958D851051FC670 /* Pods-E-commerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-commerce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-E-commerce/Pods-E-commerce.debug.xcconfig"; sourceTree = "<group>"; };
 		C5B8481E203F22AA59784AC1 /* Pods-E-commerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-commerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-E-commerce/Pods-E-commerce.release.xcconfig"; sourceTree = "<group>"; };
+		C6094C181F2186D8004677BE /* MappingAce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MappingAce.framework; path = "../../Library/Developer/Xcode/DerivedData/E-commerce-gviqnltugxugkzfzzzbihuapeljb/Build/Products/Debug-iphonesimulator/MappingAce/MappingAce.framework"; sourceTree = "<group>"; };
+		C6094C1D1F218873004677BE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/E-commerce-gviqnltugxugkzfzzzbihuapeljb/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		C6094C261F21B06D004677BE /* ECHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECHud.swift; sourceTree = "<group>"; };
+		C6094C271F21B06D004677BE /* ECMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECMapping.swift; sourceTree = "<group>"; };
+		C6094C281F21B06D004677BE /* ECModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECModelManager.swift; sourceTree = "<group>"; };
+		C6094C291F21B06D004677BE /* ECSwiftJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECSwiftJSON.swift; sourceTree = "<group>"; };
 		C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
 		C66BECF11F1DDBB200985880 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		C66BECF81F1DDF9800985880 /* HHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHttp.swift; sourceTree = "<group>"; };
@@ -51,7 +62,6 @@
 		C66BEEF71F1F0AB700985880 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C66BEEF81F1F0AB700985880 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		C66BEEF91F1F0AB700985880 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C66BEEFE1F1F0B0700985880 /* ECHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECHud.swift; sourceTree = "<group>"; };
 		C66BEF001F1F2A6200985880 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		C66BEF021F1F2C1C00985880 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C6AF7EA71F1D952400D4CF95 /* E-commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6094C1E1F218873004677BE /* SwiftyJSON.framework in Frameworks */,
+				C6094C191F2186D8004677BE /* MappingAce.framework in Frameworks */,
 				C66BECF21F1DDBB200985880 /* SDWebImage.framework in Frameworks */,
 				C66BECF01F1DDBAE00985880 /* MBProgressHUD.framework in Frameworks */,
 				0AFBC9DF76A237E8A2B551F5 /* Pods_E_commerce.framework in Frameworks */,
@@ -82,6 +94,17 @@
 				C5B8481E203F22AA59784AC1 /* Pods-E-commerce.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C6094C251F21B06D004677BE /* ECTools */ = {
+			isa = PBXGroup;
+			children = (
+				C6094C261F21B06D004677BE /* ECHud.swift */,
+				C6094C271F21B06D004677BE /* ECMapping.swift */,
+				C6094C281F21B06D004677BE /* ECModelManager.swift */,
+				C6094C291F21B06D004677BE /* ECSwiftJSON.swift */,
+			);
+			path = ECTools;
 			sourceTree = "<group>";
 		};
 		C66BECF61F1DDF8600985880 /* ThirdLibs */ = {
@@ -151,17 +174,9 @@
 		C66BEEF61F1F0AA200985880 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				C66BEEFD1F1F0AFE00985880 /* ECHud */,
+				C6094C251F21B06D004677BE /* ECTools */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		C66BEEFD1F1F0AFE00985880 /* ECHud */ = {
-			isa = PBXGroup;
-			children = (
-				C66BEEFE1F1F0B0700985880 /* ECHud.swift */,
-			);
-			path = ECHud;
 			sourceTree = "<group>";
 		};
 		C6AF7E9E1F1D952300D4CF95 = {
@@ -220,6 +235,8 @@
 		F34797E21FA7DECC04350779 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6094C1D1F218873004677BE /* SwiftyJSON.framework */,
+				C6094C181F2186D8004677BE /* MappingAce.framework */,
 				C66BECF11F1DDBB200985880 /* SDWebImage.framework */,
 				C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */,
 				9AD3BB9767F91DEB222286D9 /* Pods_E_commerce.framework */,
@@ -352,7 +369,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C66BEEFF1F1F0B0700985880 /* ECHud.swift in Sources */,
 				C66BED131F1EE3BF00985880 /* ProductViewController.swift in Sources */,
 				C66BEEF41F1EFFE200985880 /* LoginModel.swift in Sources */,
 				C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */,
@@ -361,13 +377,17 @@
 				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
 				C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */,
 				C66BEF011F1F2A6200985880 /* BaseNavigationController.swift in Sources */,
+				C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */,
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
+				C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */,
 				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
 				C66BEEFB1F1F0AB700985880 /* NewViewController.swift in Sources */,
 				C66BED0C1F1EE33100985880 /* LoginViewController.swift in Sources */,
 				C66BEF031F1F2C1C00985880 /* BaseViewController.swift in Sources */,
 				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
 				C66BED101F1EE34B00985880 /* ForgetViewController.swift in Sources */,
+				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
+				C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

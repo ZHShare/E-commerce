@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MappingAce.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-E-commerce.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,20 +24,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1B5194C97F823887D337F42777DB6CE8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1BC66CE31C812E1FCFA00DF2C6AF1F04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3ADF6A4769A7200A385D953E05FF8E9A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9FD5D70C43F824882A7623DA8CEA7137</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D3DABE94310AB1909D7B5BAC5637BD96</key>
+		<key>7F60B2765FD3092D437DBFA277E2D331</key>
 		<dict>
 			<key>primary</key>
 			<true/>

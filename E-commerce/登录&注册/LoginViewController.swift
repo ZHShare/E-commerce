@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: BaseViewController
 {
+   
 
     @IBOutlet weak var userNameField: UITextField! {
         didSet {
@@ -42,9 +43,13 @@ class LoginViewController: BaseViewController
         ECHud.show()
         HNet.request(method: "GET", url: "http://localhost:8080", form: params as Dictionary<String, AnyObject>, success: { (data) in
             
+            if let user = ECModelManager.modelWithType(type: LoginModel.self, data: data) {
+             
+                user.save()
+                
+                print("\(user)\n\(user.name)\n\(user.user_id)")
+            }
             
-            print("\(data)")
-
             DispatchQueue.main.async { [unowned self] in
                 
                 self.dismiss(animated: true, completion: nil)

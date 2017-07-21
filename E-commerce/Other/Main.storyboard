@@ -91,13 +91,23 @@
                     <view key="view" contentMode="scaleToFill" id="tXn-bG-lyv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-l5-gGb">
+                                <rect key="frame" x="16" y="318" width="30" height="30"/>
+                                <state key="normal" title="Exit"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hjf-l5-gGb" firstAttribute="leading" secondItem="tXn-bG-lyv" secondAttribute="leadingMargin" id="3Ui-ha-Epn"/>
+                            <constraint firstItem="hjf-l5-gGb" firstAttribute="centerY" secondItem="tXn-bG-lyv" secondAttribute="centerY" id="Hv6-Jh-ogS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KoJ-jl-bh1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBv-U9-hB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="2685"/>
+            <point key="canvasLocation" x="1285.5999999999999" y="2684.7076461769116"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TBm-5F-LLT">
@@ -137,11 +147,20 @@
                                     <action selector="login:" destination="z3i-xD-cwQ" eventType="touchUpInside" id="0i2-Nj-10C"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kk-Q7-abz">
+                                <rect key="frame" x="16" y="580" width="30" height="30"/>
+                                <state key="normal" title="Exit"/>
+                                <connections>
+                                    <action selector="exit" destination="z3i-xD-cwQ" eventType="touchUpInside" id="W0I-qm-T8C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="w33-6r-PBq" firstAttribute="leading" secondItem="NWe-TA-Wkk" secondAttribute="leadingMargin" id="97G-Ot-b5y"/>
                             <constraint firstItem="w33-6r-PBq" firstAttribute="centerY" secondItem="NWe-TA-Wkk" secondAttribute="centerY" id="REP-TF-eop"/>
+                            <constraint firstItem="gpj-nf-enL" firstAttribute="top" secondItem="6kk-Q7-abz" secondAttribute="bottom" constant="8" symbolic="YES" id="VH2-vd-W4l"/>
+                            <constraint firstItem="6kk-Q7-abz" firstAttribute="leading" secondItem="w33-6r-PBq" secondAttribute="leading" id="vZK-zf-0UQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DHa-d5-dHZ"/>
