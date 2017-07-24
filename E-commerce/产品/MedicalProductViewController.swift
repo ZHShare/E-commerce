@@ -24,6 +24,8 @@ fileprivate extension MedicalProductViewController {
         static let header = "AD Scroll"
         static let buttons = "Buttons"
         static let normalHeader = "System and List"
+        static let system = "System Cell"
+        static let list = "List Cell"
     }
     
     func configCollectionView() {
@@ -35,7 +37,13 @@ fileprivate extension MedicalProductViewController {
         collectionView.register(UINib(nibName: "MedicalProductNormalHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ReuseIdentifier.normalHeader)
         
         // 注册按钮cell
-        collectionView.register(UINib.init(nibName: "MedicalProductFirstCell", bundle: nil), forCellWithReuseIdentifier: ReuseIdentifier.buttons)
+        collectionView.register(UINib(nibName: "MedicalProductFirstCell", bundle: nil), forCellWithReuseIdentifier: ReuseIdentifier.buttons)
+        
+        // 注册系统套餐cell
+        collectionView.register(UINib(nibName: "MedicalProductSystemCell", bundle: nil), forCellWithReuseIdentifier: ReuseIdentifier.system)
+        
+        // 注册产品列表cell
+        collectionView.register(UINib(nibName: "MedicalProductListCell", bundle: nil), forCellWithReuseIdentifier: ReuseIdentifier.list)
     }
     
 }
@@ -48,19 +56,49 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if section == 2 {
+            return 10
+        }
+        
+        else if section == 1 {
+            return 5
+        }
+        
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.buttons, for: indexPath) as? MedicalProductFirstCell {
-            return cell
+        if indexPath.section == 0 {
+            
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.buttons, for: indexPath) as? MedicalProductFirstCell {
+                return cell
+            }
         }
         
-        
+        else if indexPath.section == 1 {
+            
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.system, for: indexPath) as? MedicalProductSystemCell {
+                
+                return cell
+            }
+
+        }
+        else {
+            
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.list, for: indexPath) as? MedicalProductListCell {
+                
+                return cell
+            }
+
+        }
         
         return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -122,8 +160,12 @@ extension MedicalProductViewController: UICollectionViewDelegateFlowLayout {
         if indexPath.section == 0 {
             return CGSize(width: Screen.width, height: 251)
         }
+        else if indexPath.section == 1 {
+            return CGSize(width: Screen.width, height: 236)
+        }
+        
         else {
-            return CGSize.zero
+            return CGSize(width: (Screen.width - 6) / 2.0, height: 140)
         }
     }
     
@@ -134,6 +176,14 @@ extension MedicalProductViewController: UICollectionViewDelegateFlowLayout {
         }
         
         return CGSize(width: Screen.width, height: 30)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.001
     }
     
 }

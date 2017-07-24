@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="List Cell" id="gTV-IL-0wX" customClass="MedicalProductListCell" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="127" height="122"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="127" height="122"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeM-bc-oHD">
+                        <rect key="frame" x="0.0" y="0.0" width="127" height="122"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="product_call" translatesAutoresizingMaskIntoConstraints="NO" id="7mA-8d-e4n">
+                                <rect key="frame" x="34" y="8" width="59" height="59"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alB-5B-swm">
+                                <rect key="frame" x="52" y="75" width="23" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="subTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9O-sg-0fp">
+                                <rect key="frame" x="40.5" y="99" width="45" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="alB-5B-swm" firstAttribute="top" secondItem="7mA-8d-e4n" secondAttribute="bottom" constant="8" symbolic="YES" id="FF3-7t-5dx"/>
+                            <constraint firstItem="7mA-8d-e4n" firstAttribute="top" secondItem="FeM-bc-oHD" secondAttribute="topMargin" id="JmC-Wz-gsF"/>
+                            <constraint firstItem="alB-5B-swm" firstAttribute="centerX" secondItem="7mA-8d-e4n" secondAttribute="centerX" id="MJc-Cc-n3e"/>
+                            <constraint firstItem="7mA-8d-e4n" firstAttribute="centerX" secondItem="FeM-bc-oHD" secondAttribute="centerX" id="Zop-Lk-gmT"/>
+                            <constraint firstItem="U9O-sg-0fp" firstAttribute="centerX" secondItem="alB-5B-swm" secondAttribute="centerX" id="aYA-U0-eoX"/>
+                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="U9O-sg-0fp" secondAttribute="bottom" constant="20" symbolic="YES" id="mEG-Vq-1PR"/>
+                            <constraint firstItem="U9O-sg-0fp" firstAttribute="top" secondItem="alB-5B-swm" secondAttribute="bottom" constant="8" symbolic="YES" id="nFb-w4-4Mb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="FeM-bc-oHD" secondAttribute="trailing" id="lhq-s5-aYF"/>
+                <constraint firstAttribute="bottom" secondItem="FeM-bc-oHD" secondAttribute="bottom" id="mWT-co-xLB"/>
+                <constraint firstItem="FeM-bc-oHD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="syy-XB-FOo"/>
+                <constraint firstItem="FeM-bc-oHD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vgV-a0-ibC"/>
+            </constraints>
+            <size key="customSize" width="127" height="122"/>
+            <connections>
+                <outlet property="contentBgView" destination="FeM-bc-oHD" id="2eK-ao-e8i"/>
+                <outlet property="displayImageView" destination="7mA-8d-e4n" id="8uu-Ev-Mdt"/>
+                <outlet property="displaySubTitle" destination="U9O-sg-0fp" id="iP2-cP-ZN1"/>
+                <outlet property="displayTitle" destination="alB-5B-swm" id="G28-ud-NBi"/>
+            </connections>
+            <point key="canvasLocation" x="88.5" y="95"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="product_call" width="59" height="59"/>
+    </resources>
+</document>
