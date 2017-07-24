@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Buttons" id="gTV-IL-0wX" customClass="MedicalProductFirstCell" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGM-z6-vBw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Hxh-9u-rGU">
+                                <rect key="frame" x="0.0" y="8" width="320" height="188"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="tmO-Ik-fUx" customClass="ProductFlowLayout" customModule="E_commerce" customModuleProvider="target"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gTV-IL-0wX" id="9QC-dv-czQ"/>
+                                    <outlet property="delegate" destination="gTV-IL-0wX" id="DNX-fB-MQE"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9q-Vb-JWd">
+                                <rect key="frame" x="8" y="204" width="304" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ2-Kq-fZW">
+                                        <rect key="frame" x="266" y="6" width="30" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="更多">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="more" destination="gTV-IL-0wX" eventType="touchUpInside" id="IxL-Tz-2IF"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAh-Fl-68j">
+                                        <rect key="frame" x="257" y="5" width="1" height="29"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="FR1-Bg-xXE"/>
+                                        </constraints>
+                                    </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8G-2h-vAn">
+                                        <rect key="frame" x="74" y="0.0" width="175" height="38"/>
+                                    </scrollView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_bargain_offer" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-zL-9A1">
+                                        <rect key="frame" x="6" y="14" width="56" height="11"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="PAh-Fl-68j" firstAttribute="leading" secondItem="t8G-2h-vAn" secondAttribute="trailing" constant="8" symbolic="YES" id="0eV-Ag-3s5"/>
+                                    <constraint firstItem="pJ2-Kq-fZW" firstAttribute="leading" secondItem="PAh-Fl-68j" secondAttribute="trailing" constant="8" symbolic="YES" id="6yU-G4-BFu"/>
+                                    <constraint firstItem="t8G-2h-vAn" firstAttribute="leading" secondItem="XlW-zL-9A1" secondAttribute="trailing" constant="12" id="DVx-oX-YQQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pJ2-Kq-fZW" secondAttribute="trailing" constant="8" id="G9X-fG-cRY"/>
+                                    <constraint firstAttribute="bottom" secondItem="PAh-Fl-68j" secondAttribute="bottom" constant="4" id="GKC-99-REt"/>
+                                    <constraint firstItem="PAh-Fl-68j" firstAttribute="top" secondItem="H9q-Vb-JWd" secondAttribute="top" constant="5" id="Pq2-65-kge"/>
+                                    <constraint firstItem="XlW-zL-9A1" firstAttribute="leading" secondItem="H9q-Vb-JWd" secondAttribute="leading" constant="6" id="g5j-Ll-BhT"/>
+                                    <constraint firstItem="t8G-2h-vAn" firstAttribute="top" secondItem="H9q-Vb-JWd" secondAttribute="top" id="gTQ-6b-hN4"/>
+                                    <constraint firstAttribute="bottom" secondItem="t8G-2h-vAn" secondAttribute="bottom" id="hhc-As-xJT"/>
+                                    <constraint firstItem="XlW-zL-9A1" firstAttribute="centerY" secondItem="H9q-Vb-JWd" secondAttribute="centerY" id="o06-Jo-ZRy"/>
+                                    <constraint firstItem="pJ2-Kq-fZW" firstAttribute="centerY" secondItem="H9q-Vb-JWd" secondAttribute="centerY" id="sYB-uI-cIp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Hxh-9u-rGU" secondAttribute="trailing" id="0rN-vS-zLF"/>
+                            <constraint firstItem="Hxh-9u-rGU" firstAttribute="height" secondItem="fGM-z6-vBw" secondAttribute="height" multiplier="3:4" id="35g-Ju-ygy"/>
+                            <constraint firstAttribute="bottom" secondItem="H9q-Vb-JWd" secondAttribute="bottom" constant="9" id="B1u-IX-YGS"/>
+                            <constraint firstItem="Hxh-9u-rGU" firstAttribute="top" secondItem="fGM-z6-vBw" secondAttribute="topMargin" id="IXA-BT-b9I"/>
+                            <constraint firstItem="H9q-Vb-JWd" firstAttribute="top" secondItem="Hxh-9u-rGU" secondAttribute="bottom" constant="8" symbolic="YES" id="KM9-eS-Efv"/>
+                            <constraint firstItem="Hxh-9u-rGU" firstAttribute="leading" secondItem="fGM-z6-vBw" secondAttribute="leading" id="L3N-YV-yyt"/>
+                            <constraint firstAttribute="trailing" secondItem="H9q-Vb-JWd" secondAttribute="trailing" constant="8" id="O5Y-0i-NBg"/>
+                            <constraint firstItem="H9q-Vb-JWd" firstAttribute="leading" secondItem="fGM-z6-vBw" secondAttribute="leading" constant="8" id="nc8-ta-xRD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fGM-z6-vBw" secondAttribute="trailing" id="WTv-Zn-3Gd"/>
+                <constraint firstItem="fGM-z6-vBw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="do9-hb-i4g"/>
+                <constraint firstItem="fGM-z6-vBw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gaD-DG-B7g"/>
+                <constraint firstAttribute="bottom" secondItem="fGM-z6-vBw" secondAttribute="bottom" id="sbd-wx-la0"/>
+            </constraints>
+            <size key="customSize" width="320" height="177"/>
+            <connections>
+                <outlet property="adScrollView" destination="t8G-2h-vAn" id="nPd-fI-zYn"/>
+                <outlet property="buttonsView" destination="Hxh-9u-rGU" id="VNT-GX-cVT"/>
+                <outlet property="moreBg" destination="H9q-Vb-JWd" id="agX-uO-t76"/>
+            </connections>
+            <point key="canvasLocation" x="-10" y="-53.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="product_bargain_offer" width="56" height="11"/>
+    </resources>
+</document>

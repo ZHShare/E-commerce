@@ -14,6 +14,22 @@
 		C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C271F21B06D004677BE /* ECMapping.swift */; };
 		C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C281F21B06D004677BE /* ECModelManager.swift */; };
 		C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C291F21B06D004677BE /* ECSwiftJSON.swift */; };
+		C6094C301F25CFA1004677BE /* XHScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C2F1F25CFA1004677BE /* XHScrollView.swift */; };
+		C6094C331F25D3BD004677BE /* ProductFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C311F25D3BD004677BE /* ProductFirstTableViewCell.swift */; };
+		C6094C341F25D3BD004677BE /* ProductFirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C321F25D3BD004677BE /* ProductFirstTableViewCell.xib */; };
+		C6094C371F25E9B3004677BE /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C351F25E9B3004677BE /* ProductCollectionViewCell.swift */; };
+		C6094C381F25E9B3004677BE /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C361F25E9B3004677BE /* ProductCollectionViewCell.xib */; };
+		C6094C3A1F25EF68004677BE /* ProductFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C391F25EF68004677BE /* ProductFlowLayout.swift */; };
+		C6094C3C1F25FF89004677BE /* ProductHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C3B1F25FF89004677BE /* ProductHeader.swift */; };
+		C6094C3E1F25FF9E004677BE /* ProductHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C3D1F25FF9E004677BE /* ProductHeader.xib */; };
+		C6094C411F260655004677BE /* ProductSystemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C3F1F260655004677BE /* ProductSystemTableViewCell.swift */; };
+		C6094C421F260655004677BE /* ProductSystemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C401F260655004677BE /* ProductSystemTableViewCell.xib */; };
+		C6094C441F260DA9004677BE /* MedicalProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C431F260DA9004677BE /* MedicalProductViewController.swift */; };
+		C6094C471F261163004677BE /* MedicalProductHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C451F261163004677BE /* MedicalProductHeader.swift */; };
+		C6094C4B1F26133F004677BE /* MedicalProductFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C491F26133F004677BE /* MedicalProductFirstCell.swift */; };
+		C6094C4C1F26133F004677BE /* MedicalProductFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C4A1F26133F004677BE /* MedicalProductFirstCell.xib */; };
+		C6094C4F1F261EFC004677BE /* MedicalProductNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C4D1F261EFC004677BE /* MedicalProductNormalHeader.swift */; };
+		C6094C501F261EFC004677BE /* MedicalProductNormalHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C4E1F261EFC004677BE /* MedicalProductNormalHeader.xib */; };
 		C66BECF01F1DDBAE00985880 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */; };
 		C66BECF21F1DDBB200985880 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECF11F1DDBB200985880 /* SDWebImage.framework */; };
 		C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECF81F1DDF9800985880 /* HHttp.swift */; };
@@ -47,6 +63,22 @@
 		C6094C271F21B06D004677BE /* ECMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECMapping.swift; sourceTree = "<group>"; };
 		C6094C281F21B06D004677BE /* ECModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECModelManager.swift; sourceTree = "<group>"; };
 		C6094C291F21B06D004677BE /* ECSwiftJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECSwiftJSON.swift; sourceTree = "<group>"; };
+		C6094C2F1F25CFA1004677BE /* XHScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHScrollView.swift; sourceTree = "<group>"; };
+		C6094C311F25D3BD004677BE /* ProductFirstTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFirstTableViewCell.swift; sourceTree = "<group>"; };
+		C6094C321F25D3BD004677BE /* ProductFirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductFirstTableViewCell.xib; sourceTree = "<group>"; };
+		C6094C351F25E9B3004677BE /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		C6094C361F25E9B3004677BE /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		C6094C391F25EF68004677BE /* ProductFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFlowLayout.swift; sourceTree = "<group>"; };
+		C6094C3B1F25FF89004677BE /* ProductHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductHeader.swift; sourceTree = "<group>"; };
+		C6094C3D1F25FF9E004677BE /* ProductHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductHeader.xib; sourceTree = "<group>"; };
+		C6094C3F1F260655004677BE /* ProductSystemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSystemTableViewCell.swift; sourceTree = "<group>"; };
+		C6094C401F260655004677BE /* ProductSystemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductSystemTableViewCell.xib; sourceTree = "<group>"; };
+		C6094C431F260DA9004677BE /* MedicalProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductViewController.swift; sourceTree = "<group>"; };
+		C6094C451F261163004677BE /* MedicalProductHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductHeader.swift; sourceTree = "<group>"; };
+		C6094C491F26133F004677BE /* MedicalProductFirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductFirstCell.swift; sourceTree = "<group>"; };
+		C6094C4A1F26133F004677BE /* MedicalProductFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductFirstCell.xib; sourceTree = "<group>"; };
+		C6094C4D1F261EFC004677BE /* MedicalProductNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductNormalHeader.swift; sourceTree = "<group>"; };
+		C6094C4E1F261EFC004677BE /* MedicalProductNormalHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductNormalHeader.xib; sourceTree = "<group>"; };
 		C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
 		C66BECF11F1DDBB200985880 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		C66BECF81F1DDF9800985880 /* HHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHttp.swift; sourceTree = "<group>"; };
@@ -99,12 +131,21 @@
 		C6094C251F21B06D004677BE /* ECTools */ = {
 			isa = PBXGroup;
 			children = (
+				C6094C2E1F25CFA1004677BE /* XHScrollView */,
 				C6094C261F21B06D004677BE /* ECHud.swift */,
 				C6094C271F21B06D004677BE /* ECMapping.swift */,
 				C6094C281F21B06D004677BE /* ECModelManager.swift */,
 				C6094C291F21B06D004677BE /* ECSwiftJSON.swift */,
 			);
 			path = ECTools;
+			sourceTree = "<group>";
+		};
+		C6094C2E1F25CFA1004677BE /* XHScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C6094C2F1F25CFA1004677BE /* XHScrollView.swift */,
+			);
+			path = XHScrollView;
 			sourceTree = "<group>";
 		};
 		C66BECF61F1DDF8600985880 /* ThirdLibs */ = {
@@ -155,6 +196,21 @@
 			isa = PBXGroup;
 			children = (
 				C66BED121F1EE3BF00985880 /* ProductViewController.swift */,
+				C6094C311F25D3BD004677BE /* ProductFirstTableViewCell.swift */,
+				C6094C321F25D3BD004677BE /* ProductFirstTableViewCell.xib */,
+				C6094C351F25E9B3004677BE /* ProductCollectionViewCell.swift */,
+				C6094C361F25E9B3004677BE /* ProductCollectionViewCell.xib */,
+				C6094C391F25EF68004677BE /* ProductFlowLayout.swift */,
+				C6094C3B1F25FF89004677BE /* ProductHeader.swift */,
+				C6094C3D1F25FF9E004677BE /* ProductHeader.xib */,
+				C6094C3F1F260655004677BE /* ProductSystemTableViewCell.swift */,
+				C6094C401F260655004677BE /* ProductSystemTableViewCell.xib */,
+				C6094C431F260DA9004677BE /* MedicalProductViewController.swift */,
+				C6094C491F26133F004677BE /* MedicalProductFirstCell.swift */,
+				C6094C4A1F26133F004677BE /* MedicalProductFirstCell.xib */,
+				C6094C451F261163004677BE /* MedicalProductHeader.swift */,
+				C6094C4D1F261EFC004677BE /* MedicalProductNormalHeader.swift */,
+				C6094C4E1F261EFC004677BE /* MedicalProductNormalHeader.xib */,
 			);
 			path = "产品";
 			sourceTree = "<group>";
@@ -307,8 +363,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6094C421F260655004677BE /* ProductSystemTableViewCell.xib in Resources */,
 				C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */,
+				C6094C341F25D3BD004677BE /* ProductFirstTableViewCell.xib in Resources */,
+				C6094C3E1F25FF9E004677BE /* ProductHeader.xib in Resources */,
+				C6094C381F25E9B3004677BE /* ProductCollectionViewCell.xib in Resources */,
+				C6094C4C1F26133F004677BE /* MedicalProductFirstCell.xib in Resources */,
 				C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */,
+				C6094C501F261EFC004677BE /* MedicalProductNormalHeader.xib in Resources */,
 				C6AF7EC61F1D959B00D4CF95 /* e-commerceInfo.plist in Resources */,
 				C66BEEFA1F1F0AB700985880 /* Main.storyboard in Resources */,
 			);
@@ -369,8 +431,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6094C411F260655004677BE /* ProductSystemTableViewCell.swift in Sources */,
+				C6094C3C1F25FF89004677BE /* ProductHeader.swift in Sources */,
 				C66BED131F1EE3BF00985880 /* ProductViewController.swift in Sources */,
 				C66BEEF41F1EFFE200985880 /* LoginModel.swift in Sources */,
+				C6094C371F25E9B3004677BE /* ProductCollectionViewCell.swift in Sources */,
+				C6094C331F25D3BD004677BE /* ProductFirstTableViewCell.swift in Sources */,
 				C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */,
 				C66BED0E1F1EE33D00985880 /* RegisterViewController.swift in Sources */,
 				C66BEEFC1F1F0AB700985880 /* ViewController.swift in Sources */,
@@ -379,15 +445,21 @@
 				C66BEF011F1F2A6200985880 /* BaseNavigationController.swift in Sources */,
 				C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */,
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
+				C6094C4F1F261EFC004677BE /* MedicalProductNormalHeader.swift in Sources */,
+				C6094C441F260DA9004677BE /* MedicalProductViewController.swift in Sources */,
 				C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */,
 				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
 				C66BEEFB1F1F0AB700985880 /* NewViewController.swift in Sources */,
 				C66BED0C1F1EE33100985880 /* LoginViewController.swift in Sources */,
 				C66BEF031F1F2C1C00985880 /* BaseViewController.swift in Sources */,
+				C6094C4B1F26133F004677BE /* MedicalProductFirstCell.swift in Sources */,
 				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
+				C6094C3A1F25EF68004677BE /* ProductFlowLayout.swift in Sources */,
+				C6094C471F261163004677BE /* MedicalProductHeader.swift in Sources */,
 				C66BED101F1EE34B00985880 /* ForgetViewController.swift in Sources */,
 				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
 				C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */,
+				C6094C301F25CFA1004677BE /* XHScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

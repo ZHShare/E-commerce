@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="System and List" id="U6b-Vx-4bR" customClass="MedicalProductNormalHeader" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQr-IJ-4X5">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="3M9-sd-TPr"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDA-UQ-bIZ">
+                    <rect key="frame" x="0.0" y="29" width="320" height="1"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="cwt-qs-P7v"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRE-ZJ-ETA">
+                    <rect key="frame" x="20" y="6.5" width="24.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAw-qy-D0b">
+                    <rect key="frame" x="274" y="1" width="30" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="更多">
+                        <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="more" destination="U6b-Vx-4bR" eventType="touchUpInside" id="4mz-3m-06G"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VAw-qy-D0b" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="200-Vy-HJQ"/>
+                <constraint firstItem="KDA-UQ-bIZ" firstAttribute="leading" secondItem="WQr-IJ-4X5" secondAttribute="leading" id="2aV-MB-vKt"/>
+                <constraint firstItem="FRE-ZJ-ETA" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="20" symbolic="YES" id="O84-1T-ctt"/>
+                <constraint firstItem="FRE-ZJ-ETA" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="XDW-y9-b2I"/>
+                <constraint firstItem="WQr-IJ-4X5" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="ZPC-RM-N3b"/>
+                <constraint firstAttribute="trailing" secondItem="WQr-IJ-4X5" secondAttribute="trailing" id="b56-2a-kBW"/>
+                <constraint firstAttribute="bottom" secondItem="KDA-UQ-bIZ" secondAttribute="bottom" id="dtu-It-X95"/>
+                <constraint firstItem="KDA-UQ-bIZ" firstAttribute="trailing" secondItem="WQr-IJ-4X5" secondAttribute="trailing" id="gyc-AB-lge"/>
+                <constraint firstAttribute="trailing" secondItem="VAw-qy-D0b" secondAttribute="trailing" constant="16" id="qWf-IJ-38G"/>
+                <constraint firstItem="WQr-IJ-4X5" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="xkG-Qw-ETm"/>
+            </constraints>
+            <connections>
+                <outlet property="displayTitle" destination="FRE-ZJ-ETA" id="OrB-1S-a8P"/>
+            </connections>
+            <point key="canvasLocation" x="67" y="112.5"/>
+        </collectionReusableView>
+    </objects>
+</document>

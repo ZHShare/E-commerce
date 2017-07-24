@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Display Images and Titles" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="82" height="88"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="82" height="88"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_disinfect" translatesAutoresizingMaskIntoConstraints="NO" id="w1G-Kh-hYI">
+                        <rect key="frame" x="11.5" y="4" width="59" height="59"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消毒机" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd0-62-ulZ">
+                        <rect key="frame" x="22.5" y="71" width="37" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.44066989420000002" blue="0.93555670980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Yd0-62-ulZ" secondAttribute="bottom" id="ZuC-uw-zda"/>
+                <constraint firstItem="w1G-Kh-hYI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="bzo-3y-CgI"/>
+                <constraint firstItem="Yd0-62-ulZ" firstAttribute="top" secondItem="w1G-Kh-hYI" secondAttribute="bottom" constant="8" symbolic="YES" id="eJ0-EB-fO7"/>
+                <constraint firstItem="w1G-Kh-hYI" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="nuw-8y-qbR"/>
+                <constraint firstItem="Yd0-62-ulZ" firstAttribute="centerX" secondItem="w1G-Kh-hYI" secondAttribute="centerX" id="o18-bt-zod"/>
+            </constraints>
+            <size key="customSize" width="82" height="88"/>
+            <connections>
+                <outlet property="displayImageView" destination="w1G-Kh-hYI" id="esd-FN-Glz"/>
+                <outlet property="displayTitle" destination="Yd0-62-ulZ" id="9eP-e0-hTw"/>
+            </connections>
+            <point key="canvasLocation" x="50" y="32"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="product_disinfect" width="59" height="59"/>
+    </resources>
+</document>

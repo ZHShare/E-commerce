@@ -21,8 +21,25 @@ class MainTabBarViewController: UITabBarController
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        
+        setupTabbar()
     }
     
+    fileprivate func setupTabbar() {
+        
+        guard let items = tabBar.items else {
+            return
+        }
+        
+        for item in items {
+            
+            item.image = item.image!.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            item.selectedImage = item.selectedImage!.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+
+        }
+        
+        
+    }
     
 }
 // MARK: - UITabBarControllerDelegate
