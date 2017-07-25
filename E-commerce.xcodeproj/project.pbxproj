@@ -30,7 +30,16 @@
 		C6094C611F265E0D004677BE /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */; };
 		C6094C621F265E0D004677BE /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */; };
 		C6094C641F265EE0004677BE /* ProductFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C631F265EE0004677BE /* ProductFlowLayout.swift */; };
-		C6545DBC1F26DCE000F9D479 /* MedicalProductViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DBB1F26DCE000F9D479 /* MedicalProductViewFlowLayout.swift */; };
+		C6545DBE1F26F0CA00F9D479 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6545DBD1F26F0CA00F9D479 /* MJRefresh.framework */; };
+		C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DBF1F26F0E400F9D479 /* ECMJRefresh.swift */; };
+		C6545DC41F2714E200F9D479 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DC31F2714E200F9D479 /* MessageViewController.swift */; };
+		C6545DC61F2717A200F9D479 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DC51F2717A200F9D479 /* MessageTableViewCell.swift */; };
+		C6545DC81F27184D00F9D479 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DC71F27184D00F9D479 /* MessageModel.swift */; };
+		C6545DCC1F2723C600F9D479 /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DCB1F2723C600F9D479 /* WorkViewController.swift */; };
+		C6545DCE1F2724A500F9D479 /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DCD1F2724A500F9D479 /* WorkModel.swift */; };
+		C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DD11F272FED00F9D479 /* WorkReusableView.swift */; };
+		C6545DD41F272FED00F9D479 /* WorkReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6545DD21F272FED00F9D479 /* WorkReusableView.xib */; };
+		C6545DD71F27352600F9D479 /* CRMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DD61F27352600F9D479 /* CRMViewController.swift */; };
 		C66BECF01F1DDBAE00985880 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */; };
 		C66BECF21F1DDBB200985880 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECF11F1DDBB200985880 /* SDWebImage.framework */; };
 		C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECF81F1DDF9800985880 /* HHttp.swift */; };
@@ -79,7 +88,16 @@
 		C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		C6094C631F265EE0004677BE /* ProductFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFlowLayout.swift; sourceTree = "<group>"; };
-		C6545DBB1F26DCE000F9D479 /* MedicalProductViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductViewFlowLayout.swift; sourceTree = "<group>"; };
+		C6545DBD1F26F0CA00F9D479 /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJRefresh.framework; path = "Pods/../build/Debug-iphoneos/MJRefresh/MJRefresh.framework"; sourceTree = "<group>"; };
+		C6545DBF1F26F0E400F9D479 /* ECMJRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECMJRefresh.swift; sourceTree = "<group>"; };
+		C6545DC31F2714E200F9D479 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		C6545DC51F2717A200F9D479 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		C6545DC71F27184D00F9D479 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		C6545DCB1F2723C600F9D479 /* WorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
+		C6545DCD1F2724A500F9D479 /* WorkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkModel.swift; sourceTree = "<group>"; };
+		C6545DD11F272FED00F9D479 /* WorkReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkReusableView.swift; sourceTree = "<group>"; };
+		C6545DD21F272FED00F9D479 /* WorkReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkReusableView.xib; sourceTree = "<group>"; };
+		C6545DD61F27352600F9D479 /* CRMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRMViewController.swift; sourceTree = "<group>"; };
 		C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
 		C66BECF11F1DDBB200985880 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		C66BECF81F1DDF9800985880 /* HHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHttp.swift; sourceTree = "<group>"; };
@@ -108,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6545DBE1F26F0CA00F9D479 /* MJRefresh.framework in Frameworks */,
 				C6094C1E1F218873004677BE /* SwiftyJSON.framework in Frameworks */,
 				C6094C191F2186D8004677BE /* MappingAce.framework in Frameworks */,
 				C66BECF21F1DDBB200985880 /* SDWebImage.framework in Frameworks */,
@@ -137,6 +156,7 @@
 				C6094C281F21B06D004677BE /* ECModelManager.swift */,
 				C6094C291F21B06D004677BE /* ECSwiftJSON.swift */,
 				C6094C5B1F265D92004677BE /* ECCommon.swift */,
+				C6545DBF1F26F0E400F9D479 /* ECMJRefresh.swift */,
 			);
 			path = ECTools;
 			sourceTree = "<group>";
@@ -147,6 +167,35 @@
 				C6094C2F1F25CFA1004677BE /* XHScrollView.swift */,
 			);
 			path = XHScrollView;
+			sourceTree = "<group>";
+		};
+		C6545DC11F2714B600F9D479 /* 工作 */ = {
+			isa = PBXGroup;
+			children = (
+				C6545DCB1F2723C600F9D479 /* WorkViewController.swift */,
+				C6545DD11F272FED00F9D479 /* WorkReusableView.swift */,
+				C6545DD21F272FED00F9D479 /* WorkReusableView.xib */,
+				C6545DCD1F2724A500F9D479 /* WorkModel.swift */,
+			);
+			path = "工作";
+			sourceTree = "<group>";
+		};
+		C6545DC21F2714B600F9D479 /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				C6545DC31F2714E200F9D479 /* MessageViewController.swift */,
+				C6545DC51F2717A200F9D479 /* MessageTableViewCell.swift */,
+				C6545DC71F27184D00F9D479 /* MessageModel.swift */,
+			);
+			path = "消息";
+			sourceTree = "<group>";
+		};
+		C6545DD51F27351500F9D479 /* CRM */ = {
+			isa = PBXGroup;
+			children = (
+				C6545DD61F27352600F9D479 /* CRMViewController.swift */,
+			);
+			path = CRM;
 			sourceTree = "<group>";
 		};
 		C66BECF61F1DDF8600985880 /* ThirdLibs */ = {
@@ -197,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				C6094C431F260DA9004677BE /* MedicalProductViewController.swift */,
-				C6545DBB1F26DCE000F9D479 /* MedicalProductViewFlowLayout.swift */,
 				C6094C631F265EE0004677BE /* ProductFlowLayout.swift */,
 				C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */,
 				C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */,
@@ -256,10 +304,13 @@
 		C6AF7EA91F1D952400D4CF95 /* E-commerce */ = {
 			isa = PBXGroup;
 			children = (
+				C6545DD51F27351500F9D479 /* CRM */,
+				C66BED081F1EE31000985880 /* 登录&注册 */,
+				C66BED111F1EE38900985880 /* 产品 */,
+				C6545DC11F2714B600F9D479 /* 工作 */,
+				C6545DC21F2714B600F9D479 /* 消息 */,
 				C66BEEF51F1F0AA200985880 /* Other */,
 				C66BEEF61F1F0AA200985880 /* Tools */,
-				C66BED111F1EE38900985880 /* 产品 */,
-				C66BED081F1EE31000985880 /* 登录&注册 */,
 				C66BED011F1DE49000985880 /* TabBarController */,
 				C66BECFC1F1DE38C00985880 /* 引导页 */,
 				C66BECF61F1DDF8600985880 /* ThirdLibs */,
@@ -291,6 +342,7 @@
 		F34797E21FA7DECC04350779 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6545DBD1F26F0CA00F9D479 /* MJRefresh.framework */,
 				C6094C1D1F218873004677BE /* SwiftyJSON.framework */,
 				C6094C181F2186D8004677BE /* MappingAce.framework */,
 				C66BECF11F1DDBB200985880 /* SDWebImage.framework */,
@@ -367,6 +419,7 @@
 				C6094C5A1F2656EE004677BE /* MedicalProductListCell.xib in Resources */,
 				C6094C621F265E0D004677BE /* ProductCollectionViewCell.xib in Resources */,
 				C6094C561F26521E004677BE /* MedicalProductSystemCell.xib in Resources */,
+				C6545DD41F272FED00F9D479 /* WorkReusableView.xib in Resources */,
 				C6094C4C1F26133F004677BE /* MedicalProductFirstCell.xib in Resources */,
 				C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */,
 				C6094C501F261EFC004677BE /* MedicalProductNormalHeader.xib in Resources */,
@@ -434,27 +487,34 @@
 				C6094C641F265EE0004677BE /* ProductFlowLayout.swift in Sources */,
 				C66BEEF41F1EFFE200985880 /* LoginModel.swift in Sources */,
 				C6094C611F265E0D004677BE /* ProductCollectionViewCell.swift in Sources */,
-				C6545DBC1F26DCE000F9D479 /* MedicalProductViewFlowLayout.swift in Sources */,
+				C6545DCC1F2723C600F9D479 /* WorkViewController.swift in Sources */,
 				C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */,
 				C66BED0E1F1EE33D00985880 /* RegisterViewController.swift in Sources */,
 				C66BEEFC1F1F0AB700985880 /* ViewController.swift in Sources */,
 				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
 				C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */,
+				C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */,
 				C66BEF011F1F2A6200985880 /* BaseNavigationController.swift in Sources */,
 				C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */,
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
+				C6545DCE1F2724A500F9D479 /* WorkModel.swift in Sources */,
 				C6094C4F1F261EFC004677BE /* MedicalProductNormalHeader.swift in Sources */,
 				C6094C441F260DA9004677BE /* MedicalProductViewController.swift in Sources */,
 				C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */,
 				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
 				C66BEEFB1F1F0AB700985880 /* NewViewController.swift in Sources */,
+				C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */,
 				C66BED0C1F1EE33100985880 /* LoginViewController.swift in Sources */,
 				C6094C5E1F265DDD004677BE /* MedicalProductDemoModel.swift in Sources */,
 				C66BEF031F1F2C1C00985880 /* BaseViewController.swift in Sources */,
 				C6094C4B1F26133F004677BE /* MedicalProductFirstCell.swift in Sources */,
+				C6545DD71F27352600F9D479 /* CRMViewController.swift in Sources */,
 				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
 				C6094C471F261163004677BE /* MedicalProductHeader.swift in Sources */,
 				C6094C5C1F265D92004677BE /* ECCommon.swift in Sources */,
+				C6545DC61F2717A200F9D479 /* MessageTableViewCell.swift in Sources */,
+				C6545DC81F27184D00F9D479 /* MessageModel.swift in Sources */,
+				C6545DC41F2714E200F9D479 /* MessageViewController.swift in Sources */,
 				C66BED101F1EE34B00985880 /* ForgetViewController.swift in Sources */,
 				C6094C551F26521E004677BE /* MedicalProductSystemCell.swift in Sources */,
 				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
@@ -580,6 +640,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SDWebImage",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MJRefresh",
 				);
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "$(SRCROOT)/E-commerce/Common/e-commerceInfo.plist";
@@ -602,6 +663,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SDWebImage",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MJRefresh",
 				);
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "$(SRCROOT)/E-commerce/Common/e-commerceInfo.plist";

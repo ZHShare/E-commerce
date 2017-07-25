@@ -35,7 +35,6 @@ fileprivate extension MedicalProductViewController {
         
         static func listForImage(image: UIImage) -> CGSize {
             
-//            let imageHeight = ECCommon.heightForImage(image: image)
             let imageHeight = image.size.height
             let size = CGSize(width: (Screen.width - 6) / 2.0, height: imageHeight + 86.0)
             
@@ -49,6 +48,8 @@ fileprivate extension MedicalProductViewController {
     }
     
     func configCollectionView() {
+        
+        automaticallyAdjustsScrollViewInsets = false
         
         // 注册轮播头
         collectionView.register(MedicalProductHeader.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ReuseIdentifier.header)
@@ -154,7 +155,7 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
         else if contentOffsetY < 0 {
             navigationBarShowdow.alpha = 0
         }
-            
+        
         else {
             
             let alpha = contentOffsetY / 64
@@ -171,7 +172,7 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
 extension MedicalProductViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print("----\(indexPath)")
+
         switch indexPath.section {
         case 0: return ItemSize.buttons
         case 1: return ItemSize.system

@@ -15,15 +15,24 @@ class ProductCollectionViewCell: UICollectionViewCell
     
     @IBOutlet weak var displayTitle: UILabel!
     
-    var model: ButtonModel? {
-        didSet {
-            
-            guard let model = model else {
-                return
-            }
+    var model: ButtonModel? { didSet { updateUI() } }
+    
+    var workModel: WorkModel? { didSet { updateUI() } }
+    
+    fileprivate func updateUI() {
+        
+        if let model = model {
             
             displayImageView.image = UIImage(named: model.imageString)
             displayTitle.text = model.title
         }
+        
+        else if let model = workModel {
+            
+            displayImageView.image = UIImage(named: model.imageString)
+            displayTitle.text = model.title
+        }
+        
     }
+    
 }
