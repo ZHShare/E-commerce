@@ -30,6 +30,7 @@
 		C6094C611F265E0D004677BE /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */; };
 		C6094C621F265E0D004677BE /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */; };
 		C6094C641F265EE0004677BE /* ProductFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C631F265EE0004677BE /* ProductFlowLayout.swift */; };
+		C6545DBC1F26DCE000F9D479 /* MedicalProductViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DBB1F26DCE000F9D479 /* MedicalProductViewFlowLayout.swift */; };
 		C66BECF01F1DDBAE00985880 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */; };
 		C66BECF21F1DDBB200985880 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECF11F1DDBB200985880 /* SDWebImage.framework */; };
 		C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECF81F1DDF9800985880 /* HHttp.swift */; };
@@ -78,6 +79,7 @@
 		C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		C6094C631F265EE0004677BE /* ProductFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFlowLayout.swift; sourceTree = "<group>"; };
+		C6545DBB1F26DCE000F9D479 /* MedicalProductViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductViewFlowLayout.swift; sourceTree = "<group>"; };
 		C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
 		C66BECF11F1DDBB200985880 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		C66BECF81F1DDF9800985880 /* HHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHttp.swift; sourceTree = "<group>"; };
@@ -194,10 +196,11 @@
 		C66BED111F1EE38900985880 /* 产品 */ = {
 			isa = PBXGroup;
 			children = (
+				C6094C431F260DA9004677BE /* MedicalProductViewController.swift */,
+				C6545DBB1F26DCE000F9D479 /* MedicalProductViewFlowLayout.swift */,
 				C6094C631F265EE0004677BE /* ProductFlowLayout.swift */,
 				C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */,
 				C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */,
-				C6094C431F260DA9004677BE /* MedicalProductViewController.swift */,
 				C6094C571F2656EE004677BE /* MedicalProductListCell.swift */,
 				C6094C581F2656EE004677BE /* MedicalProductListCell.xib */,
 				C6094C531F26521E004677BE /* MedicalProductSystemCell.swift */,
@@ -431,6 +434,7 @@
 				C6094C641F265EE0004677BE /* ProductFlowLayout.swift in Sources */,
 				C66BEEF41F1EFFE200985880 /* LoginModel.swift in Sources */,
 				C6094C611F265E0D004677BE /* ProductCollectionViewCell.swift in Sources */,
+				C6545DBC1F26DCE000F9D479 /* MedicalProductViewFlowLayout.swift in Sources */,
 				C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */,
 				C66BED0E1F1EE33D00985880 /* RegisterViewController.swift in Sources */,
 				C66BEEFC1F1F0AB700985880 /* ViewController.swift in Sources */,

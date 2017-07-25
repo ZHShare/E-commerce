@@ -55,3 +55,44 @@ struct ButtonModel {
         return models
     }
 }
+
+struct ListModel {
+    
+    let title: String
+    let imageString: String
+    let subTitle: String
+    let isDisCount: Bool
+    let isP: Bool
+    
+    static func fetchDatas() -> [ListModel] {
+        
+        var models = [ListModel]()
+        
+        for dic in [["title": "天天向上", "imageString": "product_call1", "subTitle": "输液报警器", "isDisCount": true, "isP": false],
+                    ["title": "好好学习", "imageString": "gouwuche", "subTitle": "输液报警器", "isDisCount": false, "isP": true],
+                    ["title": "看不见", "imageString": "椭圆-2", "subTitle": "系统新上线，全部产品5折", "isDisCount": false, "isP": false],
+                    ["title": "输液", "imageString": "product_call1", "subTitle": "系统新上线，全部产品5折", "isDisCount": false, "isP": false],
+                    ["title": "制氧", "imageString": "Share_QzoneIcon_70x70_", "subTitle": "输液报警器", "isDisCount": false, "isP": false],
+                    ["title": "AA工八号设计", "imageString": "tabbar_work_selcted", "subTitle": "半个月内订单付款,4折起", "isDisCount": false, "isP": false],
+                    ["title": "尝试消毒", "imageString": "product_call1", "subTitle": "半个月内订单付款,4折起", "isDisCount": false, "isP": false],
+                    ["title": "产品传呼", "imageString": "product_bargain_offer", "subTitle": "半个月内订单付款,4折起", "isDisCount": false, "isP": false],
+                    ["title": "热门产品", "imageString": "pruduct_device", "subTitle": "半个月内订单付款,4折起", "isDisCount": false, "isP": false],
+                    ["title": "护理系统", "imageString": "product_make_oxygen", "subTitle": "系统新上线，全部产品5折", "isDisCount": false, "isP": false],
+                    ["title": "天天向上", "imageString": "product_call1", "subTitle": "输液报警器", "isDisCount": true, "isP": false],
+                    ["title": "好好学习", "imageString": "gouwuche", "subTitle": "输液报警器", "isDisCount": false, "isP": true],
+                    ["title": "看不见", "imageString": "椭圆-2", "subTitle": "系统新上线，全部产品5折", "isDisCount": false, "isP": false],
+                    ["title": "输液", "imageString": "product_bargain_offer", "subTitle": "系统新上线，全部产品5折", "isDisCount": false, "isP": false],
+                    ["title": "制氧", "imageString": "Share_QzoneIcon_70x70_", "subTitle": "输液报警器", "isDisCount": false, "isP": false],
+                    ["title": "AA工八号设计", "imageString": "tabbar_work_selcted", "subTitle": "半个月内订单付款,4折起", "isDisCount": false, "isP": false],
+                    ["title": "尝试消毒", "imageString": "product_call1", "subTitle": "半个月内订单付款,4折起", "isDisCount": false, "isP": false],
+                    ["title": "产品传呼", "imageString": "product_bargain_offer", "subTitle": "半个月内订单付款,4折起", "isDisCount": false, "isP": false],
+                    ["title": "热门产品", "imageString": "pruduct_device", "subTitle": "半个月内订单付款,4折起", "isDisCount": false, "isP": false],
+                    ["title": "护理系统", "imageString": "product_make_oxygen", "subTitle": "系统新上线，全部产品5折", "isDisCount": false, "isP": false]] {
+            
+                        let model = ECMapping.ace(type: ListModel.self, fromDic: dic)
+                        models.append(model)
+        }
+        
+        return models
+    }
+}
