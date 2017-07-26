@@ -10,32 +10,51 @@ import UIKit
 
 class MineViewController: UITableViewController {
     
+    fileprivate enum ReuseIdentifier {
+        static let list = "Mine List"
+    }
     
+    var models: [MineModel]?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchData()
+    }
+    
+    fileprivate func fetchData() {
+        
+        models = MineModel.models()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
 // MARK: - Table view data source and delegate
 extension MineViewController {
     
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
+        if let models = models {
+            return models.count
+        }
         return 0
     }
     
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.list, for: indexPath)
+        
+        if let cell = cell as? MineCell {
+            cell.model = models?[indexPath.row]
+        }
+        
+        return cell
+    }
+    
     
     /*
      // Override to support conditional editing of the table view.
@@ -75,6 +94,6 @@ extension MineViewController {
 
 
 
- 
- 
- 
+
+
+
