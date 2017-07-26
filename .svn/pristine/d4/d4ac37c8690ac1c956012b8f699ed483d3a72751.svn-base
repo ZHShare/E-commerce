@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Work Top" id="U6b-Vx-4bR" customClass="WorkReusableView" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfy-aE-fFU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="work_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Uvm-AM-iap">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="work_bg_white" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-vh-5Dz">
+                            <rect key="frame" x="8" y="116" width="359" height="103"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="work_img" translatesAutoresizingMaskIntoConstraints="NO" id="jRM-BP-Bij">
+                            <rect key="frame" x="152" y="78" width="70" height="70"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="工作" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYH-AC-dNp">
+                            <rect key="frame" x="8" y="8" width="35" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svL-UL-b8j">
+                            <rect key="frame" x="164" y="158" width="46" height="30"/>
+                            <state key="normal" title="请登录">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="login" destination="U6b-Vx-4bR" eventType="touchUpInside" id="ySB-m5-Gkj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="svL-UL-b8j" firstAttribute="centerX" secondItem="Sf2-vh-5Dz" secondAttribute="centerX" id="15r-Nt-Pb1"/>
+                        <constraint firstItem="lYH-AC-dNp" firstAttribute="leading" secondItem="zfy-aE-fFU" secondAttribute="leadingMargin" id="6Go-Rn-fUO"/>
+                        <constraint firstItem="svL-UL-b8j" firstAttribute="top" secondItem="Uvm-AM-iap" secondAttribute="bottom" constant="8" symbolic="YES" id="9rQ-Sd-Bz0"/>
+                        <constraint firstItem="Uvm-AM-iap" firstAttribute="centerX" secondItem="jRM-BP-Bij" secondAttribute="centerX" id="FQz-QX-EbB"/>
+                        <constraint firstItem="Uvm-AM-iap" firstAttribute="top" secondItem="zfy-aE-fFU" secondAttribute="top" id="H0x-jI-0cb"/>
+                        <constraint firstItem="Uvm-AM-iap" firstAttribute="leading" secondItem="zfy-aE-fFU" secondAttribute="leading" id="JC8-T6-Oov"/>
+                        <constraint firstItem="jRM-BP-Bij" firstAttribute="centerY" secondItem="zfy-aE-fFU" secondAttribute="centerY" id="XCc-4d-zRk"/>
+                        <constraint firstItem="lYH-AC-dNp" firstAttribute="top" secondItem="zfy-aE-fFU" secondAttribute="topMargin" id="a8T-cR-AFF"/>
+                        <constraint firstAttribute="trailing" secondItem="Sf2-vh-5Dz" secondAttribute="trailing" constant="8" id="dNT-gF-ahF"/>
+                        <constraint firstItem="Sf2-vh-5Dz" firstAttribute="bottom" secondItem="zfy-aE-fFU" secondAttribute="bottomMargin" id="fxl-MI-dGd"/>
+                        <constraint firstAttribute="trailing" secondItem="Uvm-AM-iap" secondAttribute="trailing" id="gaB-Px-3k4"/>
+                        <constraint firstItem="lYH-AC-dNp" firstAttribute="leading" secondItem="Sf2-vh-5Dz" secondAttribute="leading" id="pgY-uD-bNR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zfy-aE-fFU" secondAttribute="trailing" id="SgE-V2-r9w"/>
+                <constraint firstItem="zfy-aE-fFU" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="dId-N1-Irg"/>
+                <constraint firstAttribute="bottom" secondItem="zfy-aE-fFU" secondAttribute="bottom" id="ybS-4D-Ud3"/>
+                <constraint firstItem="zfy-aE-fFU" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="zWp-Ig-Cao"/>
+            </constraints>
+            <connections>
+                <outlet property="displayArea" destination="svL-UL-b8j" id="X6E-Q0-5Qe"/>
+                <outlet property="userImg" destination="jRM-BP-Bij" id="h7a-I1-7r9"/>
+            </connections>
+            <point key="canvasLocation" x="52.5" y="140.5"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="work_bg" width="360" height="150"/>
+        <image name="work_bg_white" width="343" height="103"/>
+        <image name="work_img" width="70" height="70"/>
+    </resources>
+</document>

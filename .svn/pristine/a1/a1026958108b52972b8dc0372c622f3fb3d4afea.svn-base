@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="System Cell" id="gTV-IL-0wX" customClass="MedicalProductSystemCell" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="236"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="236"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8L-Sz-6Dk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="236"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="制氧系统套餐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baA-vp-zhA">
+                                <rect key="frame" x="117" y="177" width="86" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7Q-cl-0Bd">
+                                <rect key="frame" x="0.0" y="13" width="325" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="QaC-1G-9Yy"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_system_default" translatesAutoresizingMaskIntoConstraints="NO" id="fTW-if-2aE">
+                                <rect key="frame" x="0.0" y="22" width="320" height="147"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="l0p-sK-21J"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9t-C2-2hu">
+                                <rect key="frame" x="0.0" y="227" width="320" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="68f-nq-3Iw"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="整套系统的产品这里都有" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-hI-U4K">
+                                <rect key="frame" x="93" y="196" width="135" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="baA-vp-zhA" firstAttribute="top" secondItem="fTW-if-2aE" secondAttribute="bottom" constant="8" symbolic="YES" id="1bW-1f-apb"/>
+                            <constraint firstItem="fTW-if-2aE" firstAttribute="top" secondItem="E7Q-cl-0Bd" secondAttribute="bottom" constant="8" symbolic="YES" id="5df-M9-I7G"/>
+                            <constraint firstAttribute="bottom" secondItem="E9t-C2-2hu" secondAttribute="bottom" constant="8" id="70J-Z9-U3m"/>
+                            <constraint firstItem="E7Q-cl-0Bd" firstAttribute="leading" secondItem="fTW-if-2aE" secondAttribute="leading" id="BHH-3N-jHg"/>
+                            <constraint firstItem="7kg-hI-U4K" firstAttribute="top" secondItem="baA-vp-zhA" secondAttribute="bottom" constant="2" id="Kdh-NL-FPB"/>
+                            <constraint firstItem="7kg-hI-U4K" firstAttribute="centerX" secondItem="E9t-C2-2hu" secondAttribute="centerX" id="Lht-Vp-lAG"/>
+                            <constraint firstItem="baA-vp-zhA" firstAttribute="centerX" secondItem="7kg-hI-U4K" secondAttribute="centerX" id="PfC-Or-A1s"/>
+                            <constraint firstItem="E7Q-cl-0Bd" firstAttribute="top" secondItem="w8L-Sz-6Dk" secondAttribute="top" constant="13" id="Z9h-K6-ruU"/>
+                            <constraint firstItem="E9t-C2-2hu" firstAttribute="leading" secondItem="w8L-Sz-6Dk" secondAttribute="leading" id="bSG-vq-rLb"/>
+                            <constraint firstItem="E9t-C2-2hu" firstAttribute="bottom" secondItem="w8L-Sz-6Dk" secondAttribute="bottomMargin" id="dA3-0R-Uhm"/>
+                            <constraint firstAttribute="trailing" secondItem="fTW-if-2aE" secondAttribute="trailing" id="hFe-9I-rpJ"/>
+                            <constraint firstAttribute="trailing" secondItem="E7Q-cl-0Bd" secondAttribute="trailing" constant="-5" id="hIG-Yy-Eow"/>
+                            <constraint firstItem="E9t-C2-2hu" firstAttribute="top" secondItem="7kg-hI-U4K" secondAttribute="bottom" constant="8" symbolic="YES" id="kbt-Da-dwY"/>
+                            <constraint firstItem="fTW-if-2aE" firstAttribute="leading" secondItem="w8L-Sz-6Dk" secondAttribute="leading" id="lPh-YQ-9NN"/>
+                            <constraint firstAttribute="trailing" secondItem="E9t-C2-2hu" secondAttribute="trailing" id="oZN-n6-fCf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="w8L-Sz-6Dk" secondAttribute="trailing" id="75a-T7-Cf0"/>
+                <constraint firstItem="w8L-Sz-6Dk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JXd-EN-rcQ"/>
+                <constraint firstItem="w8L-Sz-6Dk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tun-hb-3Kr"/>
+                <constraint firstAttribute="bottom" secondItem="w8L-Sz-6Dk" secondAttribute="bottom" id="zKi-WP-I0Y"/>
+            </constraints>
+            <size key="customSize" width="320" height="236"/>
+            <point key="canvasLocation" x="-27" y="41"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="product_system_default" width="360" height="163"/>
+    </resources>
+</document>

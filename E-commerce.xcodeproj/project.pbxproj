@@ -39,7 +39,6 @@
 		C6545DCE1F2724A500F9D479 /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DCD1F2724A500F9D479 /* WorkModel.swift */; };
 		C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DD11F272FED00F9D479 /* WorkReusableView.swift */; };
 		C6545DD41F272FED00F9D479 /* WorkReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6545DD21F272FED00F9D479 /* WorkReusableView.xib */; };
-		C6545DD71F27352600F9D479 /* CRMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DD61F27352600F9D479 /* CRMViewController.swift */; };
 		C66BECF01F1DDBAE00985880 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */; };
 		C66BECF21F1DDBB200985880 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66BECF11F1DDBB200985880 /* SDWebImage.framework */; };
 		C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECF81F1DDF9800985880 /* HHttp.swift */; };
@@ -47,19 +46,22 @@
 		C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFF1F1DE3C100985880 /* GuideViewController.swift */; };
 		C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */; };
 		C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */; };
-		C66BED0C1F1EE33100985880 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED0B1F1EE33100985880 /* LoginViewController.swift */; };
-		C66BED0E1F1EE33D00985880 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED0D1F1EE33D00985880 /* RegisterViewController.swift */; };
-		C66BED101F1EE34B00985880 /* ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED0F1F1EE34B00985880 /* ForgetViewController.swift */; };
-		C66BEEF41F1EFFE200985880 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEEF31F1EFFE200985880 /* LoginModel.swift */; };
-		C66BEEFA1F1F0AB700985880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C66BEEF71F1F0AB700985880 /* Main.storyboard */; };
-		C66BEEFB1F1F0AB700985880 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEEF81F1F0AB700985880 /* NewViewController.swift */; };
-		C66BEEFC1F1F0AB700985880 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEEF91F1F0AB700985880 /* ViewController.swift */; };
-		C66BEF011F1F2A6200985880 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEF001F1F2A6200985880 /* BaseNavigationController.swift */; };
-		C66BEF031F1F2C1C00985880 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BEF021F1F2C1C00985880 /* BaseViewController.swift */; };
 		C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */; };
 		C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EBE1F1D959B00D4CF95 /* LaunchScreen.storyboard */; };
 		C6AF7EC61F1D959B00D4CF95 /* e-commerceInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EC01F1D959B00D4CF95 /* e-commerceInfo.plist */; };
 		C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EC31F1D959B00D4CF95 /* Assets.xcassets */; };
+		C6B3DCEF1F2816FC007B2F14 /* ForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCEB1F2816FC007B2F14 /* ForgetViewController.swift */; };
+		C6B3DCF01F2816FC007B2F14 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCEC1F2816FC007B2F14 /* LoginModel.swift */; };
+		C6B3DCF11F2816FC007B2F14 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCED1F2816FC007B2F14 /* LoginViewController.swift */; };
+		C6B3DCF21F2816FC007B2F14 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCEE1F2816FC007B2F14 /* RegisterViewController.swift */; };
+		C6B3DCF41F28170A007B2F14 /* CRMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCF31F28170A007B2F14 /* CRMViewController.swift */; };
+		C6B3DCFA1F28171C007B2F14 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCF51F28171C007B2F14 /* BaseNavigationController.swift */; };
+		C6B3DCFB1F28171C007B2F14 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCF61F28171C007B2F14 /* BaseViewController.swift */; };
+		C6B3DCFC1F28171C007B2F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B3DCF71F28171C007B2F14 /* Main.storyboard */; };
+		C6B3DCFD1F28171C007B2F14 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCF81F28171C007B2F14 /* NewViewController.swift */; };
+		C6B3DCFE1F28171C007B2F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCF91F28171C007B2F14 /* ViewController.swift */; };
+		C6B3DD011F281E15007B2F14 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DD001F281E15007B2F14 /* MineViewController.swift */; };
+		C6B3DD031F281E25007B2F14 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DD021F281E25007B2F14 /* BaseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +99,6 @@
 		C6545DCD1F2724A500F9D479 /* WorkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkModel.swift; sourceTree = "<group>"; };
 		C6545DD11F272FED00F9D479 /* WorkReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkReusableView.swift; sourceTree = "<group>"; };
 		C6545DD21F272FED00F9D479 /* WorkReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkReusableView.xib; sourceTree = "<group>"; };
-		C6545DD61F27352600F9D479 /* CRMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRMViewController.swift; sourceTree = "<group>"; };
 		C66BECEF1F1DDBAE00985880 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
 		C66BECF11F1DDBB200985880 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		C66BECF81F1DDF9800985880 /* HHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHttp.swift; sourceTree = "<group>"; };
@@ -105,20 +106,23 @@
 		C66BECFF1F1DE3C100985880 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefineCommon.swift; sourceTree = "<group>"; };
-		C66BED0B1F1EE33100985880 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C66BED0D1F1EE33D00985880 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		C66BED0F1F1EE34B00985880 /* ForgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetViewController.swift; sourceTree = "<group>"; };
-		C66BEEF31F1EFFE200985880 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		C66BEEF71F1F0AB700985880 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		C66BEEF81F1F0AB700985880 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
-		C66BEEF91F1F0AB700985880 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C66BEF001F1F2A6200985880 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		C66BEF021F1F2C1C00985880 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C6AF7EA71F1D952400D4CF95 /* E-commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6AF7EBF1F1D959B00D4CF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6AF7EC01F1D959B00D4CF95 /* e-commerceInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "e-commerceInfo.plist"; sourceTree = "<group>"; };
 		C6AF7EC31F1D959B00D4CF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6B3DCEB1F2816FC007B2F14 /* ForgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetViewController.swift; sourceTree = "<group>"; };
+		C6B3DCEC1F2816FC007B2F14 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		C6B3DCED1F2816FC007B2F14 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C6B3DCEE1F2816FC007B2F14 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C6B3DCF31F28170A007B2F14 /* CRMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRMViewController.swift; sourceTree = "<group>"; };
+		C6B3DCF51F28171C007B2F14 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		C6B3DCF61F28171C007B2F14 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C6B3DCF71F28171C007B2F14 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C6B3DCF81F28171C007B2F14 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		C6B3DCF91F28171C007B2F14 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6B3DD001F281E15007B2F14 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		C6B3DD021F281E25007B2F14 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +197,7 @@
 		C6545DD51F27351500F9D479 /* CRM */ = {
 			isa = PBXGroup;
 			children = (
-				C6545DD61F27352600F9D479 /* CRMViewController.swift */,
+				C6B3DCF31F28170A007B2F14 /* CRMViewController.swift */,
 			);
 			path = CRM;
 			sourceTree = "<group>";
@@ -234,10 +238,10 @@
 		C66BED081F1EE31000985880 /* 登录&注册 */ = {
 			isa = PBXGroup;
 			children = (
-				C66BED0B1F1EE33100985880 /* LoginViewController.swift */,
-				C66BEEF31F1EFFE200985880 /* LoginModel.swift */,
-				C66BED0D1F1EE33D00985880 /* RegisterViewController.swift */,
-				C66BED0F1F1EE34B00985880 /* ForgetViewController.swift */,
+				C6B3DCEB1F2816FC007B2F14 /* ForgetViewController.swift */,
+				C6B3DCEC1F2816FC007B2F14 /* LoginModel.swift */,
+				C6B3DCED1F2816FC007B2F14 /* LoginViewController.swift */,
+				C6B3DCEE1F2816FC007B2F14 /* RegisterViewController.swift */,
 			);
 			path = "登录&注册";
 			sourceTree = "<group>";
@@ -266,11 +270,12 @@
 		C66BEEF51F1F0AA200985880 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				C66BEF001F1F2A6200985880 /* BaseNavigationController.swift */,
-				C66BEF021F1F2C1C00985880 /* BaseViewController.swift */,
-				C66BEEF71F1F0AB700985880 /* Main.storyboard */,
-				C66BEEF81F1F0AB700985880 /* NewViewController.swift */,
-				C66BEEF91F1F0AB700985880 /* ViewController.swift */,
+				C6B3DD021F281E25007B2F14 /* BaseTableViewController.swift */,
+				C6B3DCF51F28171C007B2F14 /* BaseNavigationController.swift */,
+				C6B3DCF61F28171C007B2F14 /* BaseViewController.swift */,
+				C6B3DCF71F28171C007B2F14 /* Main.storyboard */,
+				C6B3DCF81F28171C007B2F14 /* NewViewController.swift */,
+				C6B3DCF91F28171C007B2F14 /* ViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 		C6AF7EA91F1D952400D4CF95 /* E-commerce */ = {
 			isa = PBXGroup;
 			children = (
+				C6B3DCFF1F281DFA007B2F14 /* 我的 */,
 				C6545DD51F27351500F9D479 /* CRM */,
 				C66BED081F1EE31000985880 /* 登录&注册 */,
 				C66BED111F1EE38900985880 /* 产品 */,
@@ -337,6 +343,14 @@
 				C6AF7EC31F1D959B00D4CF95 /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		C6B3DCFF1F281DFA007B2F14 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				C6B3DD001F281E15007B2F14 /* MineViewController.swift */,
+			);
+			path = "我的";
 			sourceTree = "<group>";
 		};
 		F34797E21FA7DECC04350779 /* Frameworks */ = {
@@ -420,11 +434,11 @@
 				C6094C621F265E0D004677BE /* ProductCollectionViewCell.xib in Resources */,
 				C6094C561F26521E004677BE /* MedicalProductSystemCell.xib in Resources */,
 				C6545DD41F272FED00F9D479 /* WorkReusableView.xib in Resources */,
+				C6B3DCFC1F28171C007B2F14 /* Main.storyboard in Resources */,
 				C6094C4C1F26133F004677BE /* MedicalProductFirstCell.xib in Resources */,
 				C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */,
 				C6094C501F261EFC004677BE /* MedicalProductNormalHeader.xib in Resources */,
 				C6AF7EC61F1D959B00D4CF95 /* e-commerceInfo.plist in Resources */,
-				C66BEEFA1F1F0AB700985880 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,37 +499,39 @@
 			files = (
 				C6094C591F2656EE004677BE /* MedicalProductListCell.swift in Sources */,
 				C6094C641F265EE0004677BE /* ProductFlowLayout.swift in Sources */,
-				C66BEEF41F1EFFE200985880 /* LoginModel.swift in Sources */,
 				C6094C611F265E0D004677BE /* ProductCollectionViewCell.swift in Sources */,
 				C6545DCC1F2723C600F9D479 /* WorkViewController.swift in Sources */,
+				C6B3DCEF1F2816FC007B2F14 /* ForgetViewController.swift in Sources */,
 				C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */,
-				C66BED0E1F1EE33D00985880 /* RegisterViewController.swift in Sources */,
-				C66BEEFC1F1F0AB700985880 /* ViewController.swift in Sources */,
+				C6B3DCFA1F28171C007B2F14 /* BaseNavigationController.swift in Sources */,
+				C6B3DCFE1F28171C007B2F14 /* ViewController.swift in Sources */,
 				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
 				C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */,
 				C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */,
-				C66BEF011F1F2A6200985880 /* BaseNavigationController.swift in Sources */,
 				C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */,
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
+				C6B3DCF21F2816FC007B2F14 /* RegisterViewController.swift in Sources */,
 				C6545DCE1F2724A500F9D479 /* WorkModel.swift in Sources */,
+				C6B3DD031F281E25007B2F14 /* BaseTableViewController.swift in Sources */,
+				C6B3DD011F281E15007B2F14 /* MineViewController.swift in Sources */,
 				C6094C4F1F261EFC004677BE /* MedicalProductNormalHeader.swift in Sources */,
 				C6094C441F260DA9004677BE /* MedicalProductViewController.swift in Sources */,
 				C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */,
 				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
-				C66BEEFB1F1F0AB700985880 /* NewViewController.swift in Sources */,
 				C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */,
-				C66BED0C1F1EE33100985880 /* LoginViewController.swift in Sources */,
 				C6094C5E1F265DDD004677BE /* MedicalProductDemoModel.swift in Sources */,
-				C66BEF031F1F2C1C00985880 /* BaseViewController.swift in Sources */,
 				C6094C4B1F26133F004677BE /* MedicalProductFirstCell.swift in Sources */,
-				C6545DD71F27352600F9D479 /* CRMViewController.swift in Sources */,
 				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
+				C6B3DCFB1F28171C007B2F14 /* BaseViewController.swift in Sources */,
+				C6B3DCFD1F28171C007B2F14 /* NewViewController.swift in Sources */,
+				C6B3DCF11F2816FC007B2F14 /* LoginViewController.swift in Sources */,
 				C6094C471F261163004677BE /* MedicalProductHeader.swift in Sources */,
 				C6094C5C1F265D92004677BE /* ECCommon.swift in Sources */,
 				C6545DC61F2717A200F9D479 /* MessageTableViewCell.swift in Sources */,
 				C6545DC81F27184D00F9D479 /* MessageModel.swift in Sources */,
 				C6545DC41F2714E200F9D479 /* MessageViewController.swift in Sources */,
-				C66BED101F1EE34B00985880 /* ForgetViewController.swift in Sources */,
+				C6B3DCF01F2816FC007B2F14 /* LoginModel.swift in Sources */,
+				C6B3DCF41F28170A007B2F14 /* CRMViewController.swift in Sources */,
 				C6094C551F26521E004677BE /* MedicalProductSystemCell.swift in Sources */,
 				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
 				C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */,
