@@ -32,8 +32,7 @@ class BaseNavigationController: UINavigationController {
         if viewControllers.count > 0 {
             // push 后隐藏 tabbar
             viewController.hidesBottomBarWhenPushed = true
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.done, target: self, action: #selector(navigationBackClick))
-//            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "hosLeft"), style: .plain, target: self, action: #selector(navigationBackClick))
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "log_reg_left"), style: .plain, target: self, action: #selector(navigationBackClick))
             viewController.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
         }
         super.pushViewController(viewController, animated: true)

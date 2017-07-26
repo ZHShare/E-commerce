@@ -8,8 +8,9 @@
 
 import UIKit
 
-class MineViewController: UITableViewController {
+class MineViewController: BaseTableViewController {
     
+   
     fileprivate enum ReuseIdentifier {
         static let list = "Mine List"
     }
@@ -18,6 +19,8 @@ class MineViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configTableView()
         fetchData()
     }
     
@@ -28,7 +31,61 @@ class MineViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
+    
+    fileprivate func configTableView() {
+        
+        if let tableHeader = tableView.tableHeaderView as? MineHeader {
+            tableHeader.delegate = self
+            tableHeader.demoClear()
+        }
+    }
+    
+    
 }
+// MARK: - MineHeaderDelegate
+extension MineViewController: MineHeaderViewDelegate {
+    
+    func headerClick(imageView: UIImageView) {
+        print(imageView)
+        if LoginStatus.isLogined == false { return enterLogin() }
+    }
+    
+    // 待提交
+    func submit() {
+        if LoginStatus.isLogined == false { return enterLogin() }
+    }
+    
+    // 待审核
+    func check() {
+        if LoginStatus.isLogined == false { return enterLogin() }
+    }
+    // 待发货
+    func sending() {
+        if LoginStatus.isLogined == false { return enterLogin() }
+    }
+    
+    // 待收货
+    func consignee() {
+        if LoginStatus.isLogined == false { return enterLogin() }
+    }
+    
+    // 待评价
+    func evaluation() {
+        if LoginStatus.isLogined == false { return enterLogin() }
+    }
+    
+    // 退款
+    func returnedMoney() {
+        if LoginStatus.isLogined == false { return enterLogin() }
+    }
+    
+    // 更多订单
+    func moreCoding() {
+        if LoginStatus.isLogined == false { return enterLogin() }
+    }
+    
+}
+
 // MARK: - Table view data source and delegate
 extension MineViewController {
     
@@ -55,41 +112,14 @@ extension MineViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if LoginStatus.isLogined == false { return enterLogin() }
+    }
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
+
 }
 
 

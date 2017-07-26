@@ -64,6 +64,8 @@
 		C6B3DD181F2832E0007B2F14 /* Pods_E_commerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B3DD121F2832E0007B2F14 /* Pods_E_commerce.framework */; };
 		C6B3DD191F2832E0007B2F14 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B3DD131F2832E0007B2F14 /* SDWebImage.framework */; };
 		C6B3DD1A1F2832E0007B2F14 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B3DD141F2832E0007B2F14 /* SwiftyJSON.framework */; };
+		C6B3DD221F2848CB007B2F14 /* MineHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DD211F2848CB007B2F14 /* MineHeader.swift */; };
+		C6B3DD261F28A9FD007B2F14 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DD251F28A9FD007B2F14 /* ResetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -139,6 +141,8 @@
 		C6B3DD121F2832E0007B2F14 /* Pods_E_commerce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_E_commerce.framework; path = "../../../Library/Developer/Xcode/DerivedData/E-commerce-cmhuvupfbeciqndyzkqwqljtkdxh/Build/Products/Debug-iphoneos/Pods_E_commerce.framework"; sourceTree = "<group>"; };
 		C6B3DD131F2832E0007B2F14 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../Library/Developer/Xcode/DerivedData/E-commerce-cmhuvupfbeciqndyzkqwqljtkdxh/Build/Products/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		C6B3DD141F2832E0007B2F14 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/E-commerce-cmhuvupfbeciqndyzkqwqljtkdxh/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		C6B3DD211F2848CB007B2F14 /* MineHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineHeader.swift; sourceTree = "<group>"; };
+		C6B3DD251F28A9FD007B2F14 /* ResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +262,7 @@
 				C6B3DCEC1F2816FC007B2F14 /* LoginModel.swift */,
 				C6B3DCED1F2816FC007B2F14 /* LoginViewController.swift */,
 				C6B3DCEE1F2816FC007B2F14 /* RegisterViewController.swift */,
+				C6B3DD251F28A9FD007B2F14 /* ResetViewController.swift */,
 			);
 			path = "登录&注册";
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B3DD001F281E15007B2F14 /* MineViewController.swift */,
+				C6B3DD211F2848CB007B2F14 /* MineHeader.swift */,
 				C6B3DD041F282E5E007B2F14 /* MineCell.swift */,
 				C6B3DD061F282E68007B2F14 /* MineModel.swift */,
 			);
@@ -532,6 +538,7 @@
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
 				C6B3DCF21F2816FC007B2F14 /* RegisterViewController.swift in Sources */,
 				C6545DCE1F2724A500F9D479 /* WorkModel.swift in Sources */,
+				C6B3DD261F28A9FD007B2F14 /* ResetViewController.swift in Sources */,
 				C6B3DD031F281E25007B2F14 /* BaseTableViewController.swift in Sources */,
 				C6B3DD011F281E15007B2F14 /* MineViewController.swift in Sources */,
 				C6094C4F1F261EFC004677BE /* MedicalProductNormalHeader.swift in Sources */,
@@ -539,6 +546,7 @@
 				C6094C441F260DA9004677BE /* MedicalProductViewController.swift in Sources */,
 				C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */,
 				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
+				C6B3DD221F2848CB007B2F14 /* MineHeader.swift in Sources */,
 				C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */,
 				C6094C5E1F265DDD004677BE /* MedicalProductDemoModel.swift in Sources */,
 				C6094C4B1F26133F004677BE /* MedicalProductFirstCell.swift in Sources */,
