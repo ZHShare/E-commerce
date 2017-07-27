@@ -29,7 +29,7 @@ class MedicalProductListCell: UICollectionViewCell {
     
     fileprivate func updateUI() {
         
-        displayImageView.image = UIImage(named: model!.imageString)
+        displayImageView.image = model?.image()
         displayTitle.text = model!.title
         displaySubTitle.text = model!.title
         
@@ -42,5 +42,6 @@ class MedicalProductListCell: UICollectionViewCell {
         else {
             displayStatus.image = nil
         }
+        
     }
 }

@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        AMapServices.shared().apiKey = GMap.key
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if UserDefaults.standard.bool(forKey: UserDefaultsKey.isFirstLoad) == false {
             
@@ -50,3 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+fileprivate enum GMap {
+    static let key = "0eef5c8f25dad0434d2e78be206958c7"
+}

@@ -16,6 +16,17 @@ class MedicalProductViewController: BaseViewController {
     @IBAction func search() {
         
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
 }
 
 // MARK: Fileprivate 
@@ -116,7 +127,11 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+       
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailsController = storyboard.instantiateViewController(withIdentifier: "MedicalProductDetailsViewController") as? MedicalProductDetailsViewController {
+            navigationController?.pushViewController(detailsController, animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -209,6 +224,31 @@ extension MedicalProductViewController: UICollectionViewDelegateFlowLayout {
 extension ListModel {
     
     func image() -> UIImage {
-        return UIImage(named: imageString)!
+        
+        var image = UIImage(named: imageString)!
+        let width = image.size.width
+        
+        let itemWidth = (Screen.width - 6) / 2.0
+        
+        if width > itemWidth {
+
+            let imageWidth = CGFloat(itemWidth-10)
+            let imageHeight = imageWidth * image.size.height / width
+            
+            let sizeChange = CGSize(width: imageWidth, height: imageHeight)
+            
+            UIGraphicsBeginImageContext(sizeChange)
+            
+            //draw resized image on Context
+            image.draw(in: CGRect(origin: CGPoint.zero, size: sizeChange))
+            
+            //create UIImage
+            image = UIGraphicsGetImageFromCurrentImageContext()!
+            
+            UIGraphicsEndImageContext()
+            
+        }
+        
+        return image
     }
 }

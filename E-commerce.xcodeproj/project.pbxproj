@@ -27,6 +27,30 @@
 		C6094C611F265E0D004677BE /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */; };
 		C6094C621F265E0D004677BE /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */; };
 		C6094C641F265EE0004677BE /* ProductFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C631F265EE0004677BE /* ProductFlowLayout.swift */; };
+		C64C4DE41F29728D003756B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4DE31F29728D003756B7 /* MapViewController.swift */; };
+		C64C4DED1F2973BD003756B7 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DEC1F2973BD003756B7 /* GLKit.framework */; };
+		C64C4DEF1F2973C6003756B7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DEE1F2973C6003756B7 /* libc++.tbd */; };
+		C64C4DF11F2973D3003756B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DF01F2973D3003756B7 /* libz.tbd */; };
+		C64C4DF31F2973DB003756B7 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DF21F2973DB003756B7 /* libstdc++.6.0.9.tbd */; };
+		C64C4DF51F2973E1003756B7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DF41F2973E1003756B7 /* Security.framework */; };
+		C64C4DF71F2973E8003756B7 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DF61F2973E8003756B7 /* JavaScriptCore.framework */; };
+		C64C4DF91F2973EF003756B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DF81F2973EF003756B7 /* SystemConfiguration.framework */; };
+		C64C4DFB1F2973F5003756B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DFA1F2973F5003756B7 /* CoreLocation.framework */; };
+		C64C4DFD1F2973FD003756B7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DFC1F2973FD003756B7 /* CoreTelephony.framework */; };
+		C64C4E081F29797A003756B7 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4E051F29797A003756B7 /* AMapFoundationKit.framework */; };
+		C64C4E091F29797A003756B7 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4E061F29797A003756B7 /* AMapSearchKit.framework */; };
+		C64C4E0A1F29797A003756B7 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4E071F29797A003756B7 /* MAMapKit.framework */; };
+		C64C4E0C1F298767003756B7 /* Demo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64C4E0B1F298767003756B7 /* Demo.xcassets */; };
+		C64C4E0E1F299256003756B7 /* MedicalProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E0D1F299256003756B7 /* MedicalProductDetailsViewController.swift */; };
+		C64C4E101F299A4B003756B7 /* MedicalProductDetailsModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E0F1F299A4A003756B7 /* MedicalProductDetailsModeCell.swift */; };
+		C64C4E121F299A6C003756B7 /* MedicalProductDetailsEvaluationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E111F299A6C003756B7 /* MedicalProductDetailsEvaluationCell.swift */; };
+		C64C4E141F299AFD003756B7 /* MedicalProductDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E131F299AFD003756B7 /* MedicalProductDetailsHeader.swift */; };
+		C64C4E161F29C2C0003756B7 /* MedicalProductDetailsFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E151F29C2C0003756B7 /* MedicalProductDetailsFooter.swift */; };
+		C64C4E181F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E171F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift */; };
+		C64C4E1A1F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C64C4E191F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib */; };
+		C64C4E1C1F29D26D003756B7 /* MedicalProductDetailsImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E1B1F29D26D003756B7 /* MedicalProductDetailsImagesCell.swift */; };
+		C64C4E1E1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E1D1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift */; };
+		C64C4E201F29E240003756B7 /* MedicalProductDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E1F1F29E240003756B7 /* MedicalProductDetailsModel.swift */; };
 		C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DBF1F26F0E400F9D479 /* ECMJRefresh.swift */; };
 		C6545DC41F2714E200F9D479 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DC31F2714E200F9D479 /* MessageViewController.swift */; };
 		C6545DC61F2717A200F9D479 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DC51F2717A200F9D479 /* MessageTableViewCell.swift */; };
@@ -103,6 +127,31 @@
 		C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		C6094C631F265EE0004677BE /* ProductFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFlowLayout.swift; sourceTree = "<group>"; };
+		C64C4DE31F29728D003756B7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C64C4DEC1F2973BD003756B7 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		C64C4DEE1F2973C6003756B7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		C64C4DF01F2973D3003756B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C64C4DF21F2973DB003756B7 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		C64C4DF41F2973E1003756B7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C64C4DF61F2973E8003756B7 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C64C4DF81F2973EF003756B7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C64C4DFA1F2973F5003756B7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C64C4DFC1F2973FD003756B7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C64C4DFE1F29744A003756B7 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		C64C4E051F29797A003756B7 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapFoundationKit.framework; path = "E-commerce/ThirdLibs/GMAP/AMapFoundationKit.framework"; sourceTree = "<group>"; };
+		C64C4E061F29797A003756B7 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = "E-commerce/ThirdLibs/GMAP/AMapSearchKit.framework"; sourceTree = "<group>"; };
+		C64C4E071F29797A003756B7 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = "E-commerce/ThirdLibs/GMAP/MAMapKit.framework"; sourceTree = "<group>"; };
+		C64C4E0B1F298767003756B7 /* Demo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Demo.xcassets; sourceTree = "<group>"; };
+		C64C4E0D1F299256003756B7 /* MedicalProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsViewController.swift; sourceTree = "<group>"; };
+		C64C4E0F1F299A4A003756B7 /* MedicalProductDetailsModeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsModeCell.swift; sourceTree = "<group>"; };
+		C64C4E111F299A6C003756B7 /* MedicalProductDetailsEvaluationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsEvaluationCell.swift; sourceTree = "<group>"; };
+		C64C4E131F299AFD003756B7 /* MedicalProductDetailsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsHeader.swift; sourceTree = "<group>"; };
+		C64C4E151F29C2C0003756B7 /* MedicalProductDetailsFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsFooter.swift; sourceTree = "<group>"; };
+		C64C4E171F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsBottomSectionHeader.swift; sourceTree = "<group>"; };
+		C64C4E191F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsBottomSectionHeader.xib; sourceTree = "<group>"; };
+		C64C4E1B1F29D26D003756B7 /* MedicalProductDetailsImagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsImagesCell.swift; sourceTree = "<group>"; };
+		C64C4E1D1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsMapCell.swift; sourceTree = "<group>"; };
+		C64C4E1F1F29E240003756B7 /* MedicalProductDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsModel.swift; sourceTree = "<group>"; };
 		C6545DBF1F26F0E400F9D479 /* ECMJRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECMJRefresh.swift; sourceTree = "<group>"; };
 		C6545DC31F2714E200F9D479 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		C6545DC51F2717A200F9D479 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
@@ -150,10 +199,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64C4DFD1F2973FD003756B7 /* CoreTelephony.framework in Frameworks */,
+				C64C4DFB1F2973F5003756B7 /* CoreLocation.framework in Frameworks */,
+				C64C4DF91F2973EF003756B7 /* SystemConfiguration.framework in Frameworks */,
+				C64C4E081F29797A003756B7 /* AMapFoundationKit.framework in Frameworks */,
+				C64C4DF71F2973E8003756B7 /* JavaScriptCore.framework in Frameworks */,
+				C64C4DF51F2973E1003756B7 /* Security.framework in Frameworks */,
+				C64C4DF31F2973DB003756B7 /* libstdc++.6.0.9.tbd in Frameworks */,
+				C64C4DF11F2973D3003756B7 /* libz.tbd in Frameworks */,
+				C64C4E0A1F29797A003756B7 /* MAMapKit.framework in Frameworks */,
+				C64C4DEF1F2973C6003756B7 /* libc++.tbd in Frameworks */,
+				C64C4DED1F2973BD003756B7 /* GLKit.framework in Frameworks */,
 				C6B3DD151F2832E0007B2F14 /* MappingAce.framework in Frameworks */,
 				C6B3DD161F2832E0007B2F14 /* MBProgressHUD.framework in Frameworks */,
 				C6B3DD171F2832E0007B2F14 /* MJRefresh.framework in Frameworks */,
 				C6B3DD181F2832E0007B2F14 /* Pods_E_commerce.framework in Frameworks */,
+				C64C4E091F29797A003756B7 /* AMapSearchKit.framework in Frameworks */,
 				C6B3DD191F2832E0007B2F14 /* SDWebImage.framework in Frameworks */,
 				C6B3DD1A1F2832E0007B2F14 /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -218,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B3DCF31F28170A007B2F14 /* CRMViewController.swift */,
+				C64C4DE31F29728D003756B7 /* MapViewController.swift */,
 			);
 			path = CRM;
 			sourceTree = "<group>";
@@ -284,6 +346,16 @@
 				C6094C4D1F261EFC004677BE /* MedicalProductNormalHeader.swift */,
 				C6094C4E1F261EFC004677BE /* MedicalProductNormalHeader.xib */,
 				C6094C5D1F265DDD004677BE /* MedicalProductDemoModel.swift */,
+				C64C4E0D1F299256003756B7 /* MedicalProductDetailsViewController.swift */,
+				C64C4E0F1F299A4A003756B7 /* MedicalProductDetailsModeCell.swift */,
+				C64C4E111F299A6C003756B7 /* MedicalProductDetailsEvaluationCell.swift */,
+				C64C4E1B1F29D26D003756B7 /* MedicalProductDetailsImagesCell.swift */,
+				C64C4E131F299AFD003756B7 /* MedicalProductDetailsHeader.swift */,
+				C64C4E151F29C2C0003756B7 /* MedicalProductDetailsFooter.swift */,
+				C64C4E171F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift */,
+				C64C4E191F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib */,
+				C64C4E1D1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift */,
+				C64C4E1F1F29E240003756B7 /* MedicalProductDetailsModel.swift */,
 			);
 			path = "产品";
 			sourceTree = "<group>";
@@ -354,6 +426,7 @@
 				C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */,
 				C6AF7EBE1F1D959B00D4CF95 /* LaunchScreen.storyboard */,
 				C6AF7EC01F1D959B00D4CF95 /* e-commerceInfo.plist */,
+				C64C4DFE1F29744A003756B7 /* BridgingHeader.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -362,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				C6AF7EC31F1D959B00D4CF95 /* Assets.xcassets */,
+				C64C4E0B1F298767003756B7 /* Demo.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -380,6 +454,18 @@
 		F34797E21FA7DECC04350779 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C64C4E051F29797A003756B7 /* AMapFoundationKit.framework */,
+				C64C4E061F29797A003756B7 /* AMapSearchKit.framework */,
+				C64C4E071F29797A003756B7 /* MAMapKit.framework */,
+				C64C4DFC1F2973FD003756B7 /* CoreTelephony.framework */,
+				C64C4DFA1F2973F5003756B7 /* CoreLocation.framework */,
+				C64C4DF81F2973EF003756B7 /* SystemConfiguration.framework */,
+				C64C4DF61F2973E8003756B7 /* JavaScriptCore.framework */,
+				C64C4DF41F2973E1003756B7 /* Security.framework */,
+				C64C4DF21F2973DB003756B7 /* libstdc++.6.0.9.tbd */,
+				C64C4DF01F2973D3003756B7 /* libz.tbd */,
+				C64C4DEE1F2973C6003756B7 /* libc++.tbd */,
+				C64C4DEC1F2973BD003756B7 /* GLKit.framework */,
 				C6B3DD0F1F2832E0007B2F14 /* MappingAce.framework */,
 				C6B3DD101F2832E0007B2F14 /* MBProgressHUD.framework */,
 				C6B3DD111F2832E0007B2F14 /* MJRefresh.framework */,
@@ -460,8 +546,10 @@
 				C6094C561F26521E004677BE /* MedicalProductSystemCell.xib in Resources */,
 				C6545DD41F272FED00F9D479 /* WorkReusableView.xib in Resources */,
 				C6B3DCFC1F28171C007B2F14 /* Main.storyboard in Resources */,
+				C64C4E1A1F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib in Resources */,
 				C6094C4C1F26133F004677BE /* MedicalProductFirstCell.xib in Resources */,
 				C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */,
+				C64C4E0C1F298767003756B7 /* Demo.xcassets in Resources */,
 				C6094C501F261EFC004677BE /* MedicalProductNormalHeader.xib in Resources */,
 				C6AF7EC61F1D959B00D4CF95 /* e-commerceInfo.plist in Resources */,
 			);
@@ -523,16 +611,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6094C591F2656EE004677BE /* MedicalProductListCell.swift in Sources */,
+				C64C4E141F299AFD003756B7 /* MedicalProductDetailsHeader.swift in Sources */,
 				C6094C641F265EE0004677BE /* ProductFlowLayout.swift in Sources */,
 				C6094C611F265E0D004677BE /* ProductCollectionViewCell.swift in Sources */,
 				C6545DCC1F2723C600F9D479 /* WorkViewController.swift in Sources */,
 				C6B3DD071F282E68007B2F14 /* MineModel.swift in Sources */,
+				C64C4E101F299A4B003756B7 /* MedicalProductDetailsModeCell.swift in Sources */,
 				C6B3DCEF1F2816FC007B2F14 /* ForgetViewController.swift in Sources */,
 				C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */,
 				C6B3DCFA1F28171C007B2F14 /* BaseNavigationController.swift in Sources */,
 				C6B3DCFE1F28171C007B2F14 /* ViewController.swift in Sources */,
 				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
+				C64C4E1C1F29D26D003756B7 /* MedicalProductDetailsImagesCell.swift in Sources */,
+				C64C4E181F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift in Sources */,
 				C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */,
+				C64C4DE41F29728D003756B7 /* MapViewController.swift in Sources */,
 				C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */,
 				C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */,
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
@@ -542,13 +635,16 @@
 				C6B3DD031F281E25007B2F14 /* BaseTableViewController.swift in Sources */,
 				C6B3DD011F281E15007B2F14 /* MineViewController.swift in Sources */,
 				C6094C4F1F261EFC004677BE /* MedicalProductNormalHeader.swift in Sources */,
+				C64C4E121F299A6C003756B7 /* MedicalProductDetailsEvaluationCell.swift in Sources */,
 				C6B3DD051F282E5E007B2F14 /* MineCell.swift in Sources */,
 				C6094C441F260DA9004677BE /* MedicalProductViewController.swift in Sources */,
 				C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */,
 				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
+				C64C4E201F29E240003756B7 /* MedicalProductDetailsModel.swift in Sources */,
 				C6B3DD221F2848CB007B2F14 /* MineHeader.swift in Sources */,
 				C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */,
 				C6094C5E1F265DDD004677BE /* MedicalProductDemoModel.swift in Sources */,
+				C64C4E1E1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift in Sources */,
 				C6094C4B1F26133F004677BE /* MedicalProductFirstCell.swift in Sources */,
 				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
 				C6B3DCFB1F28171C007B2F14 /* BaseViewController.swift in Sources */,
@@ -558,8 +654,10 @@
 				C6094C5C1F265D92004677BE /* ECCommon.swift in Sources */,
 				C6545DC61F2717A200F9D479 /* MessageTableViewCell.swift in Sources */,
 				C6545DC81F27184D00F9D479 /* MessageModel.swift in Sources */,
+				C64C4E161F29C2C0003756B7 /* MedicalProductDetailsFooter.swift in Sources */,
 				C6545DC41F2714E200F9D479 /* MessageViewController.swift in Sources */,
 				C6B3DCF01F2816FC007B2F14 /* LoginModel.swift in Sources */,
+				C64C4E0E1F299256003756B7 /* MedicalProductDetailsViewController.swift in Sources */,
 				C6B3DCF41F28170A007B2F14 /* CRMViewController.swift in Sources */,
 				C6094C551F26521E004677BE /* MedicalProductSystemCell.swift in Sources */,
 				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
@@ -686,6 +784,8 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SDWebImage",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MJRefresh",
+					"$(PROJECT_DIR)/E-commerce/ThirdLibs/GMap",
+					"$(PROJECT_DIR)/E-commerce/ThirdLibs/GMAP",
 				);
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "$(SRCROOT)/E-commerce/Common/e-commerceInfo.plist";
@@ -694,6 +794,7 @@
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = "eter.E-commerce.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "E-commerce/Common/BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -710,6 +811,8 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SDWebImage",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MJRefresh",
+					"$(PROJECT_DIR)/E-commerce/ThirdLibs/GMap",
+					"$(PROJECT_DIR)/E-commerce/ThirdLibs/GMAP",
 				);
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "$(SRCROOT)/E-commerce/Common/e-commerceInfo.plist";
@@ -718,6 +821,7 @@
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = "eter.E-commerce.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "E-commerce/Common/BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

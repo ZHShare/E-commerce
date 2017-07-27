@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MedicalProductDetailsBottomSectionHeader" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O76-xL-34a">
+                    <rect key="frame" x="0.0" y="0.0" width="94" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="图文详情" backgroundImage="product_details_images_default">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="product_details_images">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="setCurrentWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="i5v-GF-0EF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yie-Gf-H8g">
+                    <rect key="frame" x="94" y="0.0" width="93.5" height="40"/>
+                    <state key="normal" title="产品参数" backgroundImage="product_details_images_default">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="product_details_images">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="setCurrentWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="Jm4-OH-smp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59I-Mr-ToL">
+                    <rect key="frame" x="281.5" y="0.0" width="93.5" height="40"/>
+                    <state key="normal" title="附近客户" backgroundImage="product_details_images_default">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="product_details_images">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="setCurrentWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="zaT-cF-MgJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbP-Ht-fCh">
+                    <rect key="frame" x="187.5" y="0.0" width="94" height="40"/>
+                    <state key="normal" title="安装介绍" backgroundImage="product_details_images_default">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="product_details_images">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="setCurrentWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="llX-8s-TQK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="59I-Mr-ToL" secondAttribute="bottom" id="02e-XY-Aam"/>
+                <constraint firstItem="IbP-Ht-fCh" firstAttribute="leading" secondItem="Yie-Gf-H8g" secondAttribute="trailing" id="0e3-Rz-4Vx"/>
+                <constraint firstAttribute="bottom" secondItem="Yie-Gf-H8g" secondAttribute="bottom" id="1CD-kd-Xjw"/>
+                <constraint firstItem="Yie-Gf-H8g" firstAttribute="width" secondItem="O76-xL-34a" secondAttribute="width" id="7Rz-gx-gDe"/>
+                <constraint firstItem="O76-xL-34a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ANW-uR-Lb5"/>
+                <constraint firstItem="Yie-Gf-H8g" firstAttribute="leading" secondItem="O76-xL-34a" secondAttribute="trailing" id="EBa-Tl-gBO"/>
+                <constraint firstItem="IbP-Ht-fCh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PMD-gC-N7g"/>
+                <constraint firstAttribute="bottom" secondItem="IbP-Ht-fCh" secondAttribute="bottom" id="R8G-av-s7u"/>
+                <constraint firstItem="59I-Mr-ToL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RM8-ba-DLg"/>
+                <constraint firstItem="59I-Mr-ToL" firstAttribute="leading" secondItem="IbP-Ht-fCh" secondAttribute="trailing" id="X4f-d5-pU8"/>
+                <constraint firstAttribute="bottom" secondItem="O76-xL-34a" secondAttribute="bottom" id="ZE4-Iz-LVX"/>
+                <constraint firstItem="59I-Mr-ToL" firstAttribute="width" secondItem="O76-xL-34a" secondAttribute="width" id="cGf-Up-ct1"/>
+                <constraint firstItem="Yie-Gf-H8g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ciV-ew-AUf"/>
+                <constraint firstItem="O76-xL-34a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="isd-X5-iex"/>
+                <constraint firstItem="IbP-Ht-fCh" firstAttribute="width" secondItem="O76-xL-34a" secondAttribute="width" id="rxv-RX-NJ8"/>
+                <constraint firstAttribute="trailing" secondItem="59I-Mr-ToL" secondAttribute="trailing" id="zTK-6I-rHq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="detailsButton" destination="O76-xL-34a" id="nTp-PX-D5G"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="-268"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="product_details_images" width="121" height="49"/>
+        <image name="product_details_images_default" width="150" height="48"/>
+    </resources>
+</document>
