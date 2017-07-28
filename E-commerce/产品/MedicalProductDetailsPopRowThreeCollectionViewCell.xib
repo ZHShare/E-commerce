@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Content" id="gTV-IL-0wX" customClass="MedicalProductDetailsPopRowThreeCollectionViewCell" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPU-on-v0R">
+                        <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="contentButton" backgroundImage="product_details_images_default">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" backgroundImage="product_details_pop_selected">
+                            <color key="titleColor" red="0.04047162831" green="0.56022351979999996" blue="0.81004852059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="didClick" destination="gTV-IL-0wX" eventType="touchUpInside" id="LEt-md-ich"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tPU-on-v0R" secondAttribute="bottom" id="BsY-nf-ovW"/>
+                <constraint firstItem="tPU-on-v0R" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DYK-GC-tmI"/>
+                <constraint firstItem="tPU-on-v0R" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dah-pV-rVw"/>
+                <constraint firstAttribute="trailing" secondItem="tPU-on-v0R" secondAttribute="trailing" id="Vnn-Hj-gep"/>
+            </constraints>
+            <size key="customSize" width="122" height="50"/>
+            <connections>
+                <outlet property="displayUIContent" destination="tPU-on-v0R" id="mDk-I5-mUz"/>
+            </connections>
+            <point key="canvasLocation" x="-132" y="-9"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="product_details_images_default" width="150" height="48"/>
+        <image name="product_details_pop_selected" width="150" height="48"/>
+    </resources>
+</document>

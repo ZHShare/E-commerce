@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8888D73A427159ADF6B9624E /* Pods_E_commerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5604882E5ACD6B568126C28A /* Pods_E_commerce.framework */; };
 		C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C261F21B06D004677BE /* ECHud.swift */; };
 		C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C271F21B06D004677BE /* ECMapping.swift */; };
 		C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C281F21B06D004677BE /* ECModelManager.swift */; };
@@ -59,6 +60,15 @@
 		C6545DCE1F2724A500F9D479 /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DCD1F2724A500F9D479 /* WorkModel.swift */; };
 		C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DD11F272FED00F9D479 /* WorkReusableView.swift */; };
 		C6545DD41F272FED00F9D479 /* WorkReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6545DD21F272FED00F9D479 /* WorkReusableView.xib */; };
+		C66ADB011F2AD45D003E3B79 /* MedicalProductDetailsPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADB001F2AD45D003E3B79 /* MedicalProductDetailsPopModel.swift */; };
+		C66ADB071F2AD654003E3B79 /* DeckTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66ADB061F2AD654003E3B79 /* DeckTransition.framework */; };
+		C66ADB101F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADB0E1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.swift */; };
+		C66ADB111F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66ADB0F1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.xib */; };
+		C66ADB131F2B1C5D003E3B79 /* MedicalProductDetailsPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADB121F2B1C5D003E3B79 /* MedicalProductDetailsPopViewController.swift */; };
+		C66ADB161F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADB141F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift */; };
+		C66ADB171F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66ADB151F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib */; };
+		C66ADB261F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADB241F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.swift */; };
+		C66ADB271F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66ADB251F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.xib */; };
 		C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECF81F1DDF9800985880 /* HHttp.swift */; };
 		C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFA1F1DDF9C00985880 /* HNet.swift */; };
 		C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFF1F1DE3C100985880 /* GuideViewController.swift */; };
@@ -105,6 +115,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5604882E5ACD6B568126C28A /* Pods_E_commerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_commerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D3D8024958D851051FC670 /* Pods-E-commerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-commerce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-E-commerce/Pods-E-commerce.debug.xcconfig"; sourceTree = "<group>"; };
 		C5B8481E203F22AA59784AC1 /* Pods-E-commerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-commerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-E-commerce/Pods-E-commerce.release.xcconfig"; sourceTree = "<group>"; };
 		C6094C261F21B06D004677BE /* ECHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECHud.swift; sourceTree = "<group>"; };
@@ -160,6 +171,15 @@
 		C6545DCD1F2724A500F9D479 /* WorkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkModel.swift; sourceTree = "<group>"; };
 		C6545DD11F272FED00F9D479 /* WorkReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkReusableView.swift; sourceTree = "<group>"; };
 		C6545DD21F272FED00F9D479 /* WorkReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkReusableView.xib; sourceTree = "<group>"; };
+		C66ADB001F2AD45D003E3B79 /* MedicalProductDetailsPopModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopModel.swift; sourceTree = "<group>"; };
+		C66ADB061F2AD654003E3B79 /* DeckTransition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeckTransition.framework; path = "../../../Library/Developer/Xcode/DerivedData/E-commerce-cmhuvupfbeciqndyzkqwqljtkdxh/Build/Products/Debug-iphoneos/DeckTransition/DeckTransition.framework"; sourceTree = "<group>"; };
+		C66ADB0E1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopAddressCollectionViewCell.swift; sourceTree = "<group>"; };
+		C66ADB0F1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopAddressCollectionViewCell.xib; sourceTree = "<group>"; };
+		C66ADB121F2B1C5D003E3B79 /* MedicalProductDetailsPopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopViewController.swift; sourceTree = "<group>"; };
+		C66ADB141F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopRowThreeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C66ADB151F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopRowThreeCollectionViewCell.xib; sourceTree = "<group>"; };
+		C66ADB241F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopNormalHeader.swift; sourceTree = "<group>"; };
+		C66ADB251F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopNormalHeader.xib; sourceTree = "<group>"; };
 		C66BECF81F1DDF9800985880 /* HHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHttp.swift; sourceTree = "<group>"; };
 		C66BECFA1F1DDF9C00985880 /* HNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNet.swift; sourceTree = "<group>"; };
 		C66BECFF1F1DE3C100985880 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66ADB071F2AD654003E3B79 /* DeckTransition.framework in Frameworks */,
 				C64C4DFD1F2973FD003756B7 /* CoreTelephony.framework in Frameworks */,
 				C64C4DFB1F2973F5003756B7 /* CoreLocation.framework in Frameworks */,
 				C64C4DF91F2973EF003756B7 /* SystemConfiguration.framework in Frameworks */,
@@ -217,6 +238,7 @@
 				C64C4E091F29797A003756B7 /* AMapSearchKit.framework in Frameworks */,
 				C6B3DD191F2832E0007B2F14 /* SDWebImage.framework in Frameworks */,
 				C6B3DD1A1F2832E0007B2F14 /* SwiftyJSON.framework in Frameworks */,
+				8888D73A427159ADF6B9624E /* Pods_E_commerce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +378,14 @@
 				C64C4E191F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib */,
 				C64C4E1D1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift */,
 				C64C4E1F1F29E240003756B7 /* MedicalProductDetailsModel.swift */,
+				C66ADB121F2B1C5D003E3B79 /* MedicalProductDetailsPopViewController.swift */,
+				C66ADB001F2AD45D003E3B79 /* MedicalProductDetailsPopModel.swift */,
+				C66ADB241F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.swift */,
+				C66ADB251F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.xib */,
+				C66ADB0E1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.swift */,
+				C66ADB0F1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.xib */,
+				C66ADB141F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift */,
+				C66ADB151F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib */,
 			);
 			path = "产品";
 			sourceTree = "<group>";
@@ -454,6 +484,7 @@
 		F34797E21FA7DECC04350779 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C66ADB061F2AD654003E3B79 /* DeckTransition.framework */,
 				C64C4E051F29797A003756B7 /* AMapFoundationKit.framework */,
 				C64C4E061F29797A003756B7 /* AMapSearchKit.framework */,
 				C64C4E071F29797A003756B7 /* MAMapKit.framework */,
@@ -472,6 +503,7 @@
 				C6B3DD121F2832E0007B2F14 /* Pods_E_commerce.framework */,
 				C6B3DD131F2832E0007B2F14 /* SDWebImage.framework */,
 				C6B3DD141F2832E0007B2F14 /* SwiftyJSON.framework */,
+				5604882E5ACD6B568126C28A /* Pods_E_commerce.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -541,6 +573,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */,
+				C66ADB271F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.xib in Resources */,
+				C66ADB171F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib in Resources */,
 				C6094C5A1F2656EE004677BE /* MedicalProductListCell.xib in Resources */,
 				C6094C621F265E0D004677BE /* ProductCollectionViewCell.xib in Resources */,
 				C6094C561F26521E004677BE /* MedicalProductSystemCell.xib in Resources */,
@@ -548,6 +582,7 @@
 				C6B3DCFC1F28171C007B2F14 /* Main.storyboard in Resources */,
 				C64C4E1A1F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib in Resources */,
 				C6094C4C1F26133F004677BE /* MedicalProductFirstCell.xib in Resources */,
+				C66ADB111F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.xib in Resources */,
 				C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */,
 				C64C4E0C1F298767003756B7 /* Demo.xcassets in Resources */,
 				C6094C501F261EFC004677BE /* MedicalProductNormalHeader.xib in Resources */,
@@ -611,6 +646,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6094C591F2656EE004677BE /* MedicalProductListCell.swift in Sources */,
+				C66ADB131F2B1C5D003E3B79 /* MedicalProductDetailsPopViewController.swift in Sources */,
 				C64C4E141F299AFD003756B7 /* MedicalProductDetailsHeader.swift in Sources */,
 				C6094C641F265EE0004677BE /* ProductFlowLayout.swift in Sources */,
 				C6094C611F265E0D004677BE /* ProductCollectionViewCell.swift in Sources */,
@@ -626,6 +662,7 @@
 				C64C4E181F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift in Sources */,
 				C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */,
 				C64C4DE41F29728D003756B7 /* MapViewController.swift in Sources */,
+				C66ADB011F2AD45D003E3B79 /* MedicalProductDetailsPopModel.swift in Sources */,
 				C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */,
 				C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */,
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
@@ -642,6 +679,8 @@
 				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
 				C64C4E201F29E240003756B7 /* MedicalProductDetailsModel.swift in Sources */,
 				C6B3DD221F2848CB007B2F14 /* MineHeader.swift in Sources */,
+				C66ADB101F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.swift in Sources */,
+				C66ADB261F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.swift in Sources */,
 				C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */,
 				C6094C5E1F265DDD004677BE /* MedicalProductDemoModel.swift in Sources */,
 				C64C4E1E1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift in Sources */,
@@ -660,6 +699,7 @@
 				C64C4E0E1F299256003756B7 /* MedicalProductDetailsViewController.swift in Sources */,
 				C6B3DCF41F28170A007B2F14 /* CRMViewController.swift in Sources */,
 				C6094C551F26521E004677BE /* MedicalProductSystemCell.swift in Sources */,
+				C66ADB161F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift in Sources */,
 				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
 				C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */,
 				C6094C301F25CFA1004677BE /* XHScrollView.swift in Sources */,
@@ -789,7 +829,7 @@
 				);
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "$(SRCROOT)/E-commerce/Common/e-commerceInfo.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = "eter.E-commerce.com";
@@ -816,7 +856,7 @@
 				);
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "$(SRCROOT)/E-commerce/Common/e-commerceInfo.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_BUNDLE_IDENTIFIER = "eter.E-commerce.com";

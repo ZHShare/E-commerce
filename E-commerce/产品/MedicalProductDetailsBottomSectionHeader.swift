@@ -22,9 +22,7 @@ class MedicalProductDetailsBottomSectionHeader: UIView
         centerButton = detailsButton
     }
     
-    
     var delegate: MedicalProductDetailsBottomSectionHeaderDelegate?
-    
     
     @IBAction fileprivate func setCurrent(sender: UIButton) {
         centerButton?.isSelected = false

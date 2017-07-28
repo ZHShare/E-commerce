@@ -24,13 +24,6 @@ class MedicalProductDetailsMapCell: UITableViewCell
         mapView.autoresizingMask = [UIViewAutoresizing.flexibleHeight, UIViewAutoresizing.flexibleWidth]
     }
     
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        
-//        frame.size = CGSize(width: Screen.width, height: Screen.height * ( 2 / 3))
-//        mapView.frame.size = frame.size
-//    }
-    
 }
 // MARK: - MAMapViewDelegate
 extension MedicalProductDetailsMapCell: MAMapViewDelegate {

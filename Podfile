@@ -11,6 +11,7 @@ pod 'MappingAce', '~> 1.0.2'
 pod 'SwiftyJSON', '~> 3.1.4'
 pod 'SDWebImage', '~> 4.0.0'
 pod 'MJRefresh', '~> 3.1.12'
+pod 'DeckTransition', '~> 0.2.0'
 
   # Pods for E-commerce
 

@@ -17,5 +17,6 @@ class BaseTableViewController: UITableViewController {
             present(logNav, animated: true, completion: nil)
         }
     }
+    
 
 }

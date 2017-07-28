@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Normal" id="U6b-Vx-4bR" customClass="MedicalProductDetailsPopNormalHeader" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfs-tI-tMs">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4g0-co-Ufa">
+                            <rect key="frame" x="8" y="15" width="34" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upg-Zk-o4z">
+                            <rect key="frame" x="50" y="16.5" width="51" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="4g0-co-Ufa" firstAttribute="leading" secondItem="dfs-tI-tMs" secondAttribute="leadingMargin" id="9Rh-Yy-LPx"/>
+                        <constraint firstItem="4g0-co-Ufa" firstAttribute="centerY" secondItem="dfs-tI-tMs" secondAttribute="centerY" id="Fsl-6H-vJK"/>
+                        <constraint firstItem="upg-Zk-o4z" firstAttribute="leading" secondItem="4g0-co-Ufa" secondAttribute="trailing" constant="8" symbolic="YES" id="Qax-Jj-eeC"/>
+                        <constraint firstItem="upg-Zk-o4z" firstAttribute="centerY" secondItem="dfs-tI-tMs" secondAttribute="centerY" id="Ssv-VB-7XN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="dfs-tI-tMs" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="6ey-5K-sMf"/>
+                <constraint firstItem="dfs-tI-tMs" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="B1I-lC-azb"/>
+                <constraint firstAttribute="trailing" secondItem="dfs-tI-tMs" secondAttribute="trailing" id="OWv-Xv-rxf"/>
+                <constraint firstAttribute="bottom" secondItem="dfs-tI-tMs" secondAttribute="bottom" id="Oah-pc-plA"/>
+            </constraints>
+        </collectionReusableView>
+    </objects>
+</document>

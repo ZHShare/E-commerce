@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DeckTransition.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0B351D69F87C790489CE2733B1605E5B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1B5194C97F823887D337F42777DB6CE8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B62C33946C06DF0FE8318AFBDD0664E</key>
+		<key>3CBF841E9779C97E787674C7A5E1EF1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,12 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D1CB823F40ED78D05A8B417F123E864</key>
+		<key>682DB2F6673F9F97D30424E0E6D889A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7564782C5A985D24D2C615258E3A20DE</key>
+		<key>D2B00E4C5505832A649AC8215D8DCFCA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

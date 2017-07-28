@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DeckTransition
 
 class MedicalProductDetailsViewController: BaseTableViewController
 {
@@ -48,8 +49,10 @@ class MedicalProductDetailsViewController: BaseTableViewController
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let windows = UIApplication.shared.keyWindow!
-        if windows.subviews.contains(footer) {
-            return
+        for sub in windows.subviews {
+            if sub.isKind(of: MedicalProductDetailsFooter.classForCoder()) {
+                return
+            }
         }
         
         windows.addSubview(footer)
@@ -197,6 +200,21 @@ class MedicalProductDetailsViewController: BaseTableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.section == 0 {
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let popViewController = storyboard.instantiateViewController(withIdentifier: "MedicalProductDetailsPopViewController") as? MedicalProductDetailsPopViewController {
+                
+                let transitionDelegate = DeckTransitioningDelegate()
+                transitionDelegate.isDismissEnabled = false
+                popViewController.transitioningDelegate = transitionDelegate
+                popViewController.modalPresentationStyle = .custom
+                
+                present(popViewController, animated: true, completion: nil)
+            }
+            
+        }
     }
     
 }

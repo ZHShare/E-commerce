@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Pop Address" id="gTV-IL-0wX" customClass="MedicalProductDetailsPopAddressCollectionViewCell" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sv7-lq-4JT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_details_pop_address" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-pY-O0p">
+                                <rect key="frame" x="8" y="15" width="20" height="20"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="湖南省 长沙市  岳麓区" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-En-ePi">
+                                <rect key="frame" x="36" y="15" width="316" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_details_right" translatesAutoresizingMaskIntoConstraints="NO" id="emD-uS-rN3">
+                                <rect key="frame" x="360" y="19" width="7" height="12"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="emD-uS-rN3" firstAttribute="leading" secondItem="hZf-En-ePi" secondAttribute="trailing" constant="8" symbolic="YES" id="BZf-9m-ElS"/>
+                            <constraint firstItem="hZf-En-ePi" firstAttribute="centerY" secondItem="Sv7-lq-4JT" secondAttribute="centerY" id="Neo-Er-q4y"/>
+                            <constraint firstItem="CqQ-pY-O0p" firstAttribute="centerY" secondItem="Sv7-lq-4JT" secondAttribute="centerY" id="Rlt-na-gcO"/>
+                            <constraint firstItem="emD-uS-rN3" firstAttribute="trailing" secondItem="Sv7-lq-4JT" secondAttribute="trailingMargin" id="cei-BR-Jrt"/>
+                            <constraint firstItem="emD-uS-rN3" firstAttribute="centerY" secondItem="Sv7-lq-4JT" secondAttribute="centerY" id="ggB-bW-GD9"/>
+                            <constraint firstItem="hZf-En-ePi" firstAttribute="leading" secondItem="CqQ-pY-O0p" secondAttribute="trailing" constant="8" symbolic="YES" id="s1a-lR-H1b"/>
+                            <constraint firstItem="CqQ-pY-O0p" firstAttribute="leading" secondItem="Sv7-lq-4JT" secondAttribute="leadingMargin" id="xAb-uW-D0k"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Sv7-lq-4JT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Fes-hC-mD1"/>
+                <constraint firstAttribute="trailing" secondItem="Sv7-lq-4JT" secondAttribute="trailing" id="KX5-6p-K0l"/>
+                <constraint firstItem="Sv7-lq-4JT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NcW-R0-l3c"/>
+                <constraint firstAttribute="bottom" secondItem="Sv7-lq-4JT" secondAttribute="bottom" id="Pqa-gW-5CF"/>
+            </constraints>
+            <size key="customSize" width="375" height="50"/>
+            <point key="canvasLocation" x="-2.5" y="39"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="product_details_pop_address" width="20" height="20"/>
+        <image name="product_details_right" width="7" height="12"/>
+    </resources>
+</document>
