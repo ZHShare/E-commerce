@@ -19,14 +19,14 @@ enum ECHud {
         DispatchQueue.main.async {
             
             hud = MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
-            hud?.hide(animated: true, afterDelay: TimeInterval(10))
+            hud?.hide(true, afterDelay: TimeInterval(10))
         }
        
     }
     
     static func hidden() {
         
-        hud?.hide(animated: true)
+        hud?.hide(true)
     }
 }
 

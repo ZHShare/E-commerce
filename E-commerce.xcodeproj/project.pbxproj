@@ -13,21 +13,7 @@
 		C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C281F21B06D004677BE /* ECModelManager.swift */; };
 		C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C291F21B06D004677BE /* ECSwiftJSON.swift */; };
 		C6094C301F25CFA1004677BE /* XHScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C2F1F25CFA1004677BE /* XHScrollView.swift */; };
-		C6094C441F260DA9004677BE /* MedicalProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C431F260DA9004677BE /* MedicalProductViewController.swift */; };
-		C6094C471F261163004677BE /* MedicalProductHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C451F261163004677BE /* MedicalProductHeader.swift */; };
-		C6094C4B1F26133F004677BE /* MedicalProductFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C491F26133F004677BE /* MedicalProductFirstCell.swift */; };
-		C6094C4C1F26133F004677BE /* MedicalProductFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C4A1F26133F004677BE /* MedicalProductFirstCell.xib */; };
-		C6094C4F1F261EFC004677BE /* MedicalProductNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C4D1F261EFC004677BE /* MedicalProductNormalHeader.swift */; };
-		C6094C501F261EFC004677BE /* MedicalProductNormalHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C4E1F261EFC004677BE /* MedicalProductNormalHeader.xib */; };
-		C6094C551F26521E004677BE /* MedicalProductSystemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C531F26521E004677BE /* MedicalProductSystemCell.swift */; };
-		C6094C561F26521E004677BE /* MedicalProductSystemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C541F26521E004677BE /* MedicalProductSystemCell.xib */; };
-		C6094C591F2656EE004677BE /* MedicalProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C571F2656EE004677BE /* MedicalProductListCell.swift */; };
-		C6094C5A1F2656EE004677BE /* MedicalProductListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C581F2656EE004677BE /* MedicalProductListCell.xib */; };
 		C6094C5C1F265D92004677BE /* ECCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C5B1F265D92004677BE /* ECCommon.swift */; };
-		C6094C5E1F265DDD004677BE /* MedicalProductDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C5D1F265DDD004677BE /* MedicalProductDemoModel.swift */; };
-		C6094C611F265E0D004677BE /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */; };
-		C6094C621F265E0D004677BE /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */; };
-		C6094C641F265EE0004677BE /* ProductFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C631F265EE0004677BE /* ProductFlowLayout.swift */; };
 		C64C4DE41F29728D003756B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4DE31F29728D003756B7 /* MapViewController.swift */; };
 		C64C4DED1F2973BD003756B7 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DEC1F2973BD003756B7 /* GLKit.framework */; };
 		C64C4DEF1F2973C6003756B7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DEE1F2973C6003756B7 /* libc++.tbd */; };
@@ -42,16 +28,6 @@
 		C64C4E091F29797A003756B7 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4E061F29797A003756B7 /* AMapSearchKit.framework */; };
 		C64C4E0A1F29797A003756B7 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4E071F29797A003756B7 /* MAMapKit.framework */; };
 		C64C4E0C1F298767003756B7 /* Demo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64C4E0B1F298767003756B7 /* Demo.xcassets */; };
-		C64C4E0E1F299256003756B7 /* MedicalProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E0D1F299256003756B7 /* MedicalProductDetailsViewController.swift */; };
-		C64C4E101F299A4B003756B7 /* MedicalProductDetailsModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E0F1F299A4A003756B7 /* MedicalProductDetailsModeCell.swift */; };
-		C64C4E121F299A6C003756B7 /* MedicalProductDetailsEvaluationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E111F299A6C003756B7 /* MedicalProductDetailsEvaluationCell.swift */; };
-		C64C4E141F299AFD003756B7 /* MedicalProductDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E131F299AFD003756B7 /* MedicalProductDetailsHeader.swift */; };
-		C64C4E161F29C2C0003756B7 /* MedicalProductDetailsFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E151F29C2C0003756B7 /* MedicalProductDetailsFooter.swift */; };
-		C64C4E181F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E171F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift */; };
-		C64C4E1A1F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C64C4E191F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib */; };
-		C64C4E1C1F29D26D003756B7 /* MedicalProductDetailsImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E1B1F29D26D003756B7 /* MedicalProductDetailsImagesCell.swift */; };
-		C64C4E1E1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E1D1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift */; };
-		C64C4E201F29E240003756B7 /* MedicalProductDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4E1F1F29E240003756B7 /* MedicalProductDetailsModel.swift */; };
 		C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DBF1F26F0E400F9D479 /* ECMJRefresh.swift */; };
 		C6545DC41F2714E200F9D479 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DC31F2714E200F9D479 /* MessageViewController.swift */; };
 		C6545DC61F2717A200F9D479 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DC51F2717A200F9D479 /* MessageTableViewCell.swift */; };
@@ -60,20 +36,51 @@
 		C6545DCE1F2724A500F9D479 /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DCD1F2724A500F9D479 /* WorkModel.swift */; };
 		C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DD11F272FED00F9D479 /* WorkReusableView.swift */; };
 		C6545DD41F272FED00F9D479 /* WorkReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6545DD21F272FED00F9D479 /* WorkReusableView.xib */; };
-		C66ADB011F2AD45D003E3B79 /* MedicalProductDetailsPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADB001F2AD45D003E3B79 /* MedicalProductDetailsPopModel.swift */; };
 		C66ADB071F2AD654003E3B79 /* DeckTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66ADB061F2AD654003E3B79 /* DeckTransition.framework */; };
-		C66ADB101F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADB0E1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.swift */; };
-		C66ADB111F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66ADB0F1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.xib */; };
-		C66ADB131F2B1C5D003E3B79 /* MedicalProductDetailsPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADB121F2B1C5D003E3B79 /* MedicalProductDetailsPopViewController.swift */; };
-		C66ADB161F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADB141F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift */; };
-		C66ADB171F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66ADB151F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib */; };
-		C66ADB261F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66ADB241F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.swift */; };
-		C66ADB271F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66ADB251F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.xib */; };
 		C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECF81F1DDF9800985880 /* HHttp.swift */; };
 		C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFA1F1DDF9C00985880 /* HNet.swift */; };
 		C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFF1F1DE3C100985880 /* GuideViewController.swift */; };
 		C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */; };
 		C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */; };
+		C6A1C8251F2ED27600FBD3B9 /* MedicalProductDetailsPopAddressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8021F2ED27600FBD3B9 /* MedicalProductDetailsPopAddressCollectionViewCell.swift */; };
+		C6A1C8261F2ED27600FBD3B9 /* MedicalProductDetailsPopAddressCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C8031F2ED27600FBD3B9 /* MedicalProductDetailsPopAddressCollectionViewCell.xib */; };
+		C6A1C8271F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8041F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift */; };
+		C6A1C8281F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8051F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift */; };
+		C6A1C8291F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C8061F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib */; };
+		C6A1C82A1F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8071F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift */; };
+		C6A1C82B1F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C8081F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib */; };
+		C6A1C82C1F2ED27600FBD3B9 /* MedicalProductDetailsPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8091F2ED27600FBD3B9 /* MedicalProductDetailsPopViewController.swift */; };
+		C6A1C82D1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C80C1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.swift */; };
+		C6A1C82E1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C80D1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.xib */; };
+		C6A1C82F1F2ED27600FBD3B9 /* MedicalProductDetailsEvaluationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C80E1F2ED27600FBD3B9 /* MedicalProductDetailsEvaluationCell.swift */; };
+		C6A1C8301F2ED27600FBD3B9 /* MedicalProductDetailsFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C80F1F2ED27600FBD3B9 /* MedicalProductDetailsFooter.swift */; };
+		C6A1C8311F2ED27600FBD3B9 /* MedicalProductDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8101F2ED27600FBD3B9 /* MedicalProductDetailsHeader.swift */; };
+		C6A1C8321F2ED27600FBD3B9 /* MedicalProductDetailsImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8111F2ED27600FBD3B9 /* MedicalProductDetailsImagesCell.swift */; };
+		C6A1C8331F2ED27600FBD3B9 /* MedicalProductDetailsMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8121F2ED27600FBD3B9 /* MedicalProductDetailsMapCell.swift */; };
+		C6A1C8341F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8131F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift */; };
+		C6A1C8351F2ED27600FBD3B9 /* MedicalProductDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8141F2ED27600FBD3B9 /* MedicalProductDetailsModel.swift */; };
+		C6A1C8361F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8151F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift */; };
+		C6A1C8371F2ED27600FBD3B9 /* MedicalProductDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8171F2ED27600FBD3B9 /* MedicalProductDemoModel.swift */; };
+		C6A1C8381F2ED27600FBD3B9 /* MedicalProductFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8181F2ED27600FBD3B9 /* MedicalProductFirstCell.swift */; };
+		C6A1C8391F2ED27600FBD3B9 /* MedicalProductFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C8191F2ED27600FBD3B9 /* MedicalProductFirstCell.xib */; };
+		C6A1C83A1F2ED27600FBD3B9 /* MedicalProductHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C81A1F2ED27600FBD3B9 /* MedicalProductHeader.swift */; };
+		C6A1C83B1F2ED27600FBD3B9 /* MedicalProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C81B1F2ED27600FBD3B9 /* MedicalProductListCell.swift */; };
+		C6A1C83C1F2ED27600FBD3B9 /* MedicalProductListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C81C1F2ED27600FBD3B9 /* MedicalProductListCell.xib */; };
+		C6A1C83D1F2ED27600FBD3B9 /* MedicalProductNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C81D1F2ED27600FBD3B9 /* MedicalProductNormalHeader.swift */; };
+		C6A1C83E1F2ED27600FBD3B9 /* MedicalProductNormalHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C81E1F2ED27600FBD3B9 /* MedicalProductNormalHeader.xib */; };
+		C6A1C83F1F2ED27600FBD3B9 /* MedicalProductSystemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C81F1F2ED27600FBD3B9 /* MedicalProductSystemCell.swift */; };
+		C6A1C8401F2ED27600FBD3B9 /* MedicalProductSystemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C8201F2ED27600FBD3B9 /* MedicalProductSystemCell.xib */; };
+		C6A1C8411F2ED27600FBD3B9 /* MedicalProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8211F2ED27600FBD3B9 /* MedicalProductViewController.swift */; };
+		C6A1C8421F2ED27600FBD3B9 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8221F2ED27600FBD3B9 /* ProductCollectionViewCell.swift */; };
+		C6A1C8431F2ED27600FBD3B9 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C8231F2ED27600FBD3B9 /* ProductCollectionViewCell.xib */; };
+		C6A1C8441F2ED27600FBD3B9 /* ProductFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8241F2ED27600FBD3B9 /* ProductFlowLayout.swift */; };
+		C6A1C8461F2ED2C100FBD3B9 /* ProductEvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8451F2ED2C100FBD3B9 /* ProductEvaluationViewController.swift */; };
+		C6A1C8481F2ED48E00FBD3B9 /* ProductEvaluationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8471F2ED48E00FBD3B9 /* ProductEvaluationTableViewCell.swift */; };
+		C6A1C84A1F2F01AB00FBD3B9 /* ProductEvaluationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8491F2F01AB00FBD3B9 /* ProductEvaluationHeader.swift */; };
+		C6A1C84E1F2F15D400FBD3B9 /* MWPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A1C84D1F2F15D400FBD3B9 /* MWPhotoBrowser.framework */; };
+		C6A1C8501F2F15D800FBD3B9 /* DACircularProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A1C84F1F2F15D800FBD3B9 /* DACircularProgress.framework */; };
+		C6A1C8541F2F17EB00FBD3B9 /* ProductEvalutaionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8531F2F17EB00FBD3B9 /* ProductEvalutaionModel.swift */; };
+		C6A1C8571F2F21AD00FBD3B9 /* ShoppingCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8561F2F21AD00FBD3B9 /* ShoppingCarViewController.swift */; };
 		C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */; };
 		C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EBE1F1D959B00D4CF95 /* LaunchScreen.storyboard */; };
 		C6AF7EC61F1D959B00D4CF95 /* e-commerceInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AF7EC01F1D959B00D4CF95 /* e-commerceInfo.plist */; };
@@ -123,21 +130,7 @@
 		C6094C281F21B06D004677BE /* ECModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECModelManager.swift; sourceTree = "<group>"; };
 		C6094C291F21B06D004677BE /* ECSwiftJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECSwiftJSON.swift; sourceTree = "<group>"; };
 		C6094C2F1F25CFA1004677BE /* XHScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHScrollView.swift; sourceTree = "<group>"; };
-		C6094C431F260DA9004677BE /* MedicalProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductViewController.swift; sourceTree = "<group>"; };
-		C6094C451F261163004677BE /* MedicalProductHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductHeader.swift; sourceTree = "<group>"; };
-		C6094C491F26133F004677BE /* MedicalProductFirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductFirstCell.swift; sourceTree = "<group>"; };
-		C6094C4A1F26133F004677BE /* MedicalProductFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductFirstCell.xib; sourceTree = "<group>"; };
-		C6094C4D1F261EFC004677BE /* MedicalProductNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductNormalHeader.swift; sourceTree = "<group>"; };
-		C6094C4E1F261EFC004677BE /* MedicalProductNormalHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductNormalHeader.xib; sourceTree = "<group>"; };
-		C6094C531F26521E004677BE /* MedicalProductSystemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductSystemCell.swift; sourceTree = "<group>"; };
-		C6094C541F26521E004677BE /* MedicalProductSystemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductSystemCell.xib; sourceTree = "<group>"; };
-		C6094C571F2656EE004677BE /* MedicalProductListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductListCell.swift; sourceTree = "<group>"; };
-		C6094C581F2656EE004677BE /* MedicalProductListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductListCell.xib; sourceTree = "<group>"; };
 		C6094C5B1F265D92004677BE /* ECCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECCommon.swift; sourceTree = "<group>"; };
-		C6094C5D1F265DDD004677BE /* MedicalProductDemoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDemoModel.swift; sourceTree = "<group>"; };
-		C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
-		C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
-		C6094C631F265EE0004677BE /* ProductFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFlowLayout.swift; sourceTree = "<group>"; };
 		C64C4DE31F29728D003756B7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C64C4DEC1F2973BD003756B7 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C64C4DEE1F2973C6003756B7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -153,16 +146,6 @@
 		C64C4E061F29797A003756B7 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = "E-commerce/ThirdLibs/GMAP/AMapSearchKit.framework"; sourceTree = "<group>"; };
 		C64C4E071F29797A003756B7 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = "E-commerce/ThirdLibs/GMAP/MAMapKit.framework"; sourceTree = "<group>"; };
 		C64C4E0B1F298767003756B7 /* Demo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Demo.xcassets; sourceTree = "<group>"; };
-		C64C4E0D1F299256003756B7 /* MedicalProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsViewController.swift; sourceTree = "<group>"; };
-		C64C4E0F1F299A4A003756B7 /* MedicalProductDetailsModeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsModeCell.swift; sourceTree = "<group>"; };
-		C64C4E111F299A6C003756B7 /* MedicalProductDetailsEvaluationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsEvaluationCell.swift; sourceTree = "<group>"; };
-		C64C4E131F299AFD003756B7 /* MedicalProductDetailsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsHeader.swift; sourceTree = "<group>"; };
-		C64C4E151F29C2C0003756B7 /* MedicalProductDetailsFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsFooter.swift; sourceTree = "<group>"; };
-		C64C4E171F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsBottomSectionHeader.swift; sourceTree = "<group>"; };
-		C64C4E191F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsBottomSectionHeader.xib; sourceTree = "<group>"; };
-		C64C4E1B1F29D26D003756B7 /* MedicalProductDetailsImagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsImagesCell.swift; sourceTree = "<group>"; };
-		C64C4E1D1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsMapCell.swift; sourceTree = "<group>"; };
-		C64C4E1F1F29E240003756B7 /* MedicalProductDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsModel.swift; sourceTree = "<group>"; };
 		C6545DBF1F26F0E400F9D479 /* ECMJRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECMJRefresh.swift; sourceTree = "<group>"; };
 		C6545DC31F2714E200F9D479 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		C6545DC51F2717A200F9D479 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
@@ -171,20 +154,51 @@
 		C6545DCD1F2724A500F9D479 /* WorkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkModel.swift; sourceTree = "<group>"; };
 		C6545DD11F272FED00F9D479 /* WorkReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkReusableView.swift; sourceTree = "<group>"; };
 		C6545DD21F272FED00F9D479 /* WorkReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkReusableView.xib; sourceTree = "<group>"; };
-		C66ADB001F2AD45D003E3B79 /* MedicalProductDetailsPopModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopModel.swift; sourceTree = "<group>"; };
 		C66ADB061F2AD654003E3B79 /* DeckTransition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeckTransition.framework; path = "../../../Library/Developer/Xcode/DerivedData/E-commerce-cmhuvupfbeciqndyzkqwqljtkdxh/Build/Products/Debug-iphoneos/DeckTransition/DeckTransition.framework"; sourceTree = "<group>"; };
-		C66ADB0E1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopAddressCollectionViewCell.swift; sourceTree = "<group>"; };
-		C66ADB0F1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopAddressCollectionViewCell.xib; sourceTree = "<group>"; };
-		C66ADB121F2B1C5D003E3B79 /* MedicalProductDetailsPopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopViewController.swift; sourceTree = "<group>"; };
-		C66ADB141F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopRowThreeCollectionViewCell.swift; sourceTree = "<group>"; };
-		C66ADB151F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopRowThreeCollectionViewCell.xib; sourceTree = "<group>"; };
-		C66ADB241F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopNormalHeader.swift; sourceTree = "<group>"; };
-		C66ADB251F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopNormalHeader.xib; sourceTree = "<group>"; };
 		C66BECF81F1DDF9800985880 /* HHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHttp.swift; sourceTree = "<group>"; };
 		C66BECFA1F1DDF9C00985880 /* HNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNet.swift; sourceTree = "<group>"; };
 		C66BECFF1F1DE3C100985880 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefineCommon.swift; sourceTree = "<group>"; };
+		C6A1C8021F2ED27600FBD3B9 /* MedicalProductDetailsPopAddressCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopAddressCollectionViewCell.swift; sourceTree = "<group>"; };
+		C6A1C8031F2ED27600FBD3B9 /* MedicalProductDetailsPopAddressCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopAddressCollectionViewCell.xib; sourceTree = "<group>"; };
+		C6A1C8041F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopModel.swift; sourceTree = "<group>"; };
+		C6A1C8051F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopNormalHeader.swift; sourceTree = "<group>"; };
+		C6A1C8061F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopNormalHeader.xib; sourceTree = "<group>"; };
+		C6A1C8071F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopRowThreeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C6A1C8081F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopRowThreeCollectionViewCell.xib; sourceTree = "<group>"; };
+		C6A1C8091F2ED27600FBD3B9 /* MedicalProductDetailsPopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopViewController.swift; sourceTree = "<group>"; };
+		C6A1C80C1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsBottomSectionHeader.swift; sourceTree = "<group>"; };
+		C6A1C80D1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsBottomSectionHeader.xib; sourceTree = "<group>"; };
+		C6A1C80E1F2ED27600FBD3B9 /* MedicalProductDetailsEvaluationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsEvaluationCell.swift; sourceTree = "<group>"; };
+		C6A1C80F1F2ED27600FBD3B9 /* MedicalProductDetailsFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsFooter.swift; sourceTree = "<group>"; };
+		C6A1C8101F2ED27600FBD3B9 /* MedicalProductDetailsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsHeader.swift; sourceTree = "<group>"; };
+		C6A1C8111F2ED27600FBD3B9 /* MedicalProductDetailsImagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsImagesCell.swift; sourceTree = "<group>"; };
+		C6A1C8121F2ED27600FBD3B9 /* MedicalProductDetailsMapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsMapCell.swift; sourceTree = "<group>"; };
+		C6A1C8131F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsModeCell.swift; sourceTree = "<group>"; };
+		C6A1C8141F2ED27600FBD3B9 /* MedicalProductDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsModel.swift; sourceTree = "<group>"; };
+		C6A1C8151F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsViewController.swift; sourceTree = "<group>"; };
+		C6A1C8171F2ED27600FBD3B9 /* MedicalProductDemoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDemoModel.swift; sourceTree = "<group>"; };
+		C6A1C8181F2ED27600FBD3B9 /* MedicalProductFirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductFirstCell.swift; sourceTree = "<group>"; };
+		C6A1C8191F2ED27600FBD3B9 /* MedicalProductFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductFirstCell.xib; sourceTree = "<group>"; };
+		C6A1C81A1F2ED27600FBD3B9 /* MedicalProductHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductHeader.swift; sourceTree = "<group>"; };
+		C6A1C81B1F2ED27600FBD3B9 /* MedicalProductListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductListCell.swift; sourceTree = "<group>"; };
+		C6A1C81C1F2ED27600FBD3B9 /* MedicalProductListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductListCell.xib; sourceTree = "<group>"; };
+		C6A1C81D1F2ED27600FBD3B9 /* MedicalProductNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductNormalHeader.swift; sourceTree = "<group>"; };
+		C6A1C81E1F2ED27600FBD3B9 /* MedicalProductNormalHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductNormalHeader.xib; sourceTree = "<group>"; };
+		C6A1C81F1F2ED27600FBD3B9 /* MedicalProductSystemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductSystemCell.swift; sourceTree = "<group>"; };
+		C6A1C8201F2ED27600FBD3B9 /* MedicalProductSystemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductSystemCell.xib; sourceTree = "<group>"; };
+		C6A1C8211F2ED27600FBD3B9 /* MedicalProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductViewController.swift; sourceTree = "<group>"; };
+		C6A1C8221F2ED27600FBD3B9 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		C6A1C8231F2ED27600FBD3B9 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		C6A1C8241F2ED27600FBD3B9 /* ProductFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFlowLayout.swift; sourceTree = "<group>"; };
+		C6A1C8451F2ED2C100FBD3B9 /* ProductEvaluationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductEvaluationViewController.swift; sourceTree = "<group>"; };
+		C6A1C8471F2ED48E00FBD3B9 /* ProductEvaluationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductEvaluationTableViewCell.swift; sourceTree = "<group>"; };
+		C6A1C8491F2F01AB00FBD3B9 /* ProductEvaluationHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductEvaluationHeader.swift; sourceTree = "<group>"; };
+		C6A1C84D1F2F15D400FBD3B9 /* MWPhotoBrowser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MWPhotoBrowser.framework; path = "Pods/../build/Debug-iphoneos/MWPhotoBrowser/MWPhotoBrowser.framework"; sourceTree = "<group>"; };
+		C6A1C84F1F2F15D800FBD3B9 /* DACircularProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DACircularProgress.framework; path = "Pods/../build/Debug-iphoneos/DACircularProgress/DACircularProgress.framework"; sourceTree = "<group>"; };
+		C6A1C8531F2F17EB00FBD3B9 /* ProductEvalutaionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductEvalutaionModel.swift; sourceTree = "<group>"; };
+		C6A1C8561F2F21AD00FBD3B9 /* ShoppingCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCarViewController.swift; sourceTree = "<group>"; };
 		C6AF7EA71F1D952400D4CF95 /* E-commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6AF7EBD1F1D959B00D4CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6AF7EBF1F1D959B00D4CF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -219,6 +233,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6A1C8501F2F15D800FBD3B9 /* DACircularProgress.framework in Frameworks */,
+				C6A1C84E1F2F15D400FBD3B9 /* MWPhotoBrowser.framework in Frameworks */,
 				C66ADB071F2AD654003E3B79 /* DeckTransition.framework in Frameworks */,
 				C64C4DFD1F2973FD003756B7 /* CoreTelephony.framework in Frameworks */,
 				C64C4DFB1F2973F5003756B7 /* CoreLocation.framework in Frameworks */,
@@ -354,38 +370,11 @@
 		C66BED111F1EE38900985880 /* 产品 */ = {
 			isa = PBXGroup;
 			children = (
-				C6094C431F260DA9004677BE /* MedicalProductViewController.swift */,
-				C6094C631F265EE0004677BE /* ProductFlowLayout.swift */,
-				C6094C5F1F265E0D004677BE /* ProductCollectionViewCell.swift */,
-				C6094C601F265E0D004677BE /* ProductCollectionViewCell.xib */,
-				C6094C571F2656EE004677BE /* MedicalProductListCell.swift */,
-				C6094C581F2656EE004677BE /* MedicalProductListCell.xib */,
-				C6094C531F26521E004677BE /* MedicalProductSystemCell.swift */,
-				C6094C541F26521E004677BE /* MedicalProductSystemCell.xib */,
-				C6094C491F26133F004677BE /* MedicalProductFirstCell.swift */,
-				C6094C4A1F26133F004677BE /* MedicalProductFirstCell.xib */,
-				C6094C451F261163004677BE /* MedicalProductHeader.swift */,
-				C6094C4D1F261EFC004677BE /* MedicalProductNormalHeader.swift */,
-				C6094C4E1F261EFC004677BE /* MedicalProductNormalHeader.xib */,
-				C6094C5D1F265DDD004677BE /* MedicalProductDemoModel.swift */,
-				C64C4E0D1F299256003756B7 /* MedicalProductDetailsViewController.swift */,
-				C64C4E0F1F299A4A003756B7 /* MedicalProductDetailsModeCell.swift */,
-				C64C4E111F299A6C003756B7 /* MedicalProductDetailsEvaluationCell.swift */,
-				C64C4E1B1F29D26D003756B7 /* MedicalProductDetailsImagesCell.swift */,
-				C64C4E131F299AFD003756B7 /* MedicalProductDetailsHeader.swift */,
-				C64C4E151F29C2C0003756B7 /* MedicalProductDetailsFooter.swift */,
-				C64C4E171F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift */,
-				C64C4E191F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib */,
-				C64C4E1D1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift */,
-				C64C4E1F1F29E240003756B7 /* MedicalProductDetailsModel.swift */,
-				C66ADB121F2B1C5D003E3B79 /* MedicalProductDetailsPopViewController.swift */,
-				C66ADB001F2AD45D003E3B79 /* MedicalProductDetailsPopModel.swift */,
-				C66ADB241F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.swift */,
-				C66ADB251F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.xib */,
-				C66ADB0E1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.swift */,
-				C66ADB0F1F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.xib */,
-				C66ADB141F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift */,
-				C66ADB151F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib */,
+				C6A1C8551F2F1F0400FBD3B9 /* 购物车 */,
+				C6A1C8011F2ED27600FBD3B9 /* 产品参数 */,
+				C6A1C80A1F2ED27600FBD3B9 /* 产品评价 */,
+				C6A1C80B1F2ED27600FBD3B9 /* 产品详情 */,
+				C6A1C8161F2ED27600FBD3B9 /* 产品主页 */,
 			);
 			path = "产品";
 			sourceTree = "<group>";
@@ -409,6 +398,78 @@
 				C6094C251F21B06D004677BE /* ECTools */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		C6A1C8011F2ED27600FBD3B9 /* 产品参数 */ = {
+			isa = PBXGroup;
+			children = (
+				C6A1C8091F2ED27600FBD3B9 /* MedicalProductDetailsPopViewController.swift */,
+				C6A1C8021F2ED27600FBD3B9 /* MedicalProductDetailsPopAddressCollectionViewCell.swift */,
+				C6A1C8031F2ED27600FBD3B9 /* MedicalProductDetailsPopAddressCollectionViewCell.xib */,
+				C6A1C8041F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift */,
+				C6A1C8051F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift */,
+				C6A1C8061F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib */,
+				C6A1C8071F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift */,
+				C6A1C8081F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib */,
+			);
+			path = "产品参数";
+			sourceTree = "<group>";
+		};
+		C6A1C80A1F2ED27600FBD3B9 /* 产品评价 */ = {
+			isa = PBXGroup;
+			children = (
+				C6A1C8451F2ED2C100FBD3B9 /* ProductEvaluationViewController.swift */,
+				C6A1C8471F2ED48E00FBD3B9 /* ProductEvaluationTableViewCell.swift */,
+				C6A1C8491F2F01AB00FBD3B9 /* ProductEvaluationHeader.swift */,
+				C6A1C8531F2F17EB00FBD3B9 /* ProductEvalutaionModel.swift */,
+			);
+			path = "产品评价";
+			sourceTree = "<group>";
+		};
+		C6A1C80B1F2ED27600FBD3B9 /* 产品详情 */ = {
+			isa = PBXGroup;
+			children = (
+				C6A1C8151F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift */,
+				C6A1C80C1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.swift */,
+				C6A1C80D1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.xib */,
+				C6A1C80E1F2ED27600FBD3B9 /* MedicalProductDetailsEvaluationCell.swift */,
+				C6A1C80F1F2ED27600FBD3B9 /* MedicalProductDetailsFooter.swift */,
+				C6A1C8101F2ED27600FBD3B9 /* MedicalProductDetailsHeader.swift */,
+				C6A1C8111F2ED27600FBD3B9 /* MedicalProductDetailsImagesCell.swift */,
+				C6A1C8121F2ED27600FBD3B9 /* MedicalProductDetailsMapCell.swift */,
+				C6A1C8131F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift */,
+				C6A1C8141F2ED27600FBD3B9 /* MedicalProductDetailsModel.swift */,
+			);
+			path = "产品详情";
+			sourceTree = "<group>";
+		};
+		C6A1C8161F2ED27600FBD3B9 /* 产品主页 */ = {
+			isa = PBXGroup;
+			children = (
+				C6A1C8211F2ED27600FBD3B9 /* MedicalProductViewController.swift */,
+				C6A1C8171F2ED27600FBD3B9 /* MedicalProductDemoModel.swift */,
+				C6A1C8181F2ED27600FBD3B9 /* MedicalProductFirstCell.swift */,
+				C6A1C8191F2ED27600FBD3B9 /* MedicalProductFirstCell.xib */,
+				C6A1C81A1F2ED27600FBD3B9 /* MedicalProductHeader.swift */,
+				C6A1C81B1F2ED27600FBD3B9 /* MedicalProductListCell.swift */,
+				C6A1C81C1F2ED27600FBD3B9 /* MedicalProductListCell.xib */,
+				C6A1C81D1F2ED27600FBD3B9 /* MedicalProductNormalHeader.swift */,
+				C6A1C81E1F2ED27600FBD3B9 /* MedicalProductNormalHeader.xib */,
+				C6A1C81F1F2ED27600FBD3B9 /* MedicalProductSystemCell.swift */,
+				C6A1C8201F2ED27600FBD3B9 /* MedicalProductSystemCell.xib */,
+				C6A1C8221F2ED27600FBD3B9 /* ProductCollectionViewCell.swift */,
+				C6A1C8231F2ED27600FBD3B9 /* ProductCollectionViewCell.xib */,
+				C6A1C8241F2ED27600FBD3B9 /* ProductFlowLayout.swift */,
+			);
+			path = "产品主页";
+			sourceTree = "<group>";
+		};
+		C6A1C8551F2F1F0400FBD3B9 /* 购物车 */ = {
+			isa = PBXGroup;
+			children = (
+				C6A1C8561F2F21AD00FBD3B9 /* ShoppingCarViewController.swift */,
+			);
+			path = "购物车";
 			sourceTree = "<group>";
 		};
 		C6AF7E9E1F1D952300D4CF95 = {
@@ -484,6 +545,8 @@
 		F34797E21FA7DECC04350779 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6A1C84F1F2F15D800FBD3B9 /* DACircularProgress.framework */,
+				C6A1C84D1F2F15D400FBD3B9 /* MWPhotoBrowser.framework */,
 				C66ADB061F2AD654003E3B79 /* DeckTransition.framework */,
 				C64C4E051F29797A003756B7 /* AMapFoundationKit.framework */,
 				C64C4E061F29797A003756B7 /* AMapSearchKit.framework */,
@@ -572,21 +635,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6A1C82E1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.xib in Resources */,
+				C6A1C8291F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib in Resources */,
+				C6A1C8431F2ED27600FBD3B9 /* ProductCollectionViewCell.xib in Resources */,
 				C6AF7EC51F1D959B00D4CF95 /* LaunchScreen.storyboard in Resources */,
-				C66ADB271F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.xib in Resources */,
-				C66ADB171F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib in Resources */,
-				C6094C5A1F2656EE004677BE /* MedicalProductListCell.xib in Resources */,
-				C6094C621F265E0D004677BE /* ProductCollectionViewCell.xib in Resources */,
-				C6094C561F26521E004677BE /* MedicalProductSystemCell.xib in Resources */,
+				C6A1C83E1F2ED27600FBD3B9 /* MedicalProductNormalHeader.xib in Resources */,
+				C6A1C83C1F2ED27600FBD3B9 /* MedicalProductListCell.xib in Resources */,
 				C6545DD41F272FED00F9D479 /* WorkReusableView.xib in Resources */,
+				C6A1C8401F2ED27600FBD3B9 /* MedicalProductSystemCell.xib in Resources */,
+				C6A1C82B1F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.xib in Resources */,
 				C6B3DCFC1F28171C007B2F14 /* Main.storyboard in Resources */,
-				C64C4E1A1F29CAB1003756B7 /* MedicalProductDetailsBottomSectionHeader.xib in Resources */,
-				C6094C4C1F26133F004677BE /* MedicalProductFirstCell.xib in Resources */,
-				C66ADB111F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.xib in Resources */,
+				C6A1C8391F2ED27600FBD3B9 /* MedicalProductFirstCell.xib in Resources */,
 				C6AF7EC81F1D959B00D4CF95 /* Assets.xcassets in Resources */,
 				C64C4E0C1F298767003756B7 /* Demo.xcassets in Resources */,
-				C6094C501F261EFC004677BE /* MedicalProductNormalHeader.xib in Resources */,
 				C6AF7EC61F1D959B00D4CF95 /* e-commerceInfo.plist in Resources */,
+				C6A1C8261F2ED27600FBD3B9 /* MedicalProductDetailsPopAddressCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,63 +708,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6094C591F2656EE004677BE /* MedicalProductListCell.swift in Sources */,
-				C66ADB131F2B1C5D003E3B79 /* MedicalProductDetailsPopViewController.swift in Sources */,
-				C64C4E141F299AFD003756B7 /* MedicalProductDetailsHeader.swift in Sources */,
-				C6094C641F265EE0004677BE /* ProductFlowLayout.swift in Sources */,
-				C6094C611F265E0D004677BE /* ProductCollectionViewCell.swift in Sources */,
+				C6A1C8371F2ED27600FBD3B9 /* MedicalProductDemoModel.swift in Sources */,
+				C6A1C8441F2ED27600FBD3B9 /* ProductFlowLayout.swift in Sources */,
 				C6545DCC1F2723C600F9D479 /* WorkViewController.swift in Sources */,
+				C6A1C8541F2F17EB00FBD3B9 /* ProductEvalutaionModel.swift in Sources */,
+				C6A1C83B1F2ED27600FBD3B9 /* MedicalProductListCell.swift in Sources */,
 				C6B3DD071F282E68007B2F14 /* MineModel.swift in Sources */,
-				C64C4E101F299A4B003756B7 /* MedicalProductDetailsModeCell.swift in Sources */,
 				C6B3DCEF1F2816FC007B2F14 /* ForgetViewController.swift in Sources */,
 				C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */,
+				C6A1C8351F2ED27600FBD3B9 /* MedicalProductDetailsModel.swift in Sources */,
 				C6B3DCFA1F28171C007B2F14 /* BaseNavigationController.swift in Sources */,
 				C6B3DCFE1F28171C007B2F14 /* ViewController.swift in Sources */,
+				C6A1C8271F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift in Sources */,
 				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
-				C64C4E1C1F29D26D003756B7 /* MedicalProductDetailsImagesCell.swift in Sources */,
-				C64C4E181F29CA9C003756B7 /* MedicalProductDetailsBottomSectionHeader.swift in Sources */,
 				C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */,
 				C64C4DE41F29728D003756B7 /* MapViewController.swift in Sources */,
-				C66ADB011F2AD45D003E3B79 /* MedicalProductDetailsPopModel.swift in Sources */,
 				C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */,
+				C6A1C82A1F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift in Sources */,
+				C6A1C83A1F2ED27600FBD3B9 /* MedicalProductHeader.swift in Sources */,
 				C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */,
+				C6A1C8381F2ED27600FBD3B9 /* MedicalProductFirstCell.swift in Sources */,
+				C6A1C8311F2ED27600FBD3B9 /* MedicalProductDetailsHeader.swift in Sources */,
+				C6A1C8341F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift in Sources */,
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
 				C6B3DCF21F2816FC007B2F14 /* RegisterViewController.swift in Sources */,
 				C6545DCE1F2724A500F9D479 /* WorkModel.swift in Sources */,
 				C6B3DD261F28A9FD007B2F14 /* ResetViewController.swift in Sources */,
+				C6A1C8461F2ED2C100FBD3B9 /* ProductEvaluationViewController.swift in Sources */,
 				C6B3DD031F281E25007B2F14 /* BaseTableViewController.swift in Sources */,
+				C6A1C8571F2F21AD00FBD3B9 /* ShoppingCarViewController.swift in Sources */,
+				C6A1C8361F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift in Sources */,
 				C6B3DD011F281E15007B2F14 /* MineViewController.swift in Sources */,
-				C6094C4F1F261EFC004677BE /* MedicalProductNormalHeader.swift in Sources */,
-				C64C4E121F299A6C003756B7 /* MedicalProductDetailsEvaluationCell.swift in Sources */,
 				C6B3DD051F282E5E007B2F14 /* MineCell.swift in Sources */,
-				C6094C441F260DA9004677BE /* MedicalProductViewController.swift in Sources */,
+				C6A1C83F1F2ED27600FBD3B9 /* MedicalProductSystemCell.swift in Sources */,
 				C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */,
 				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
-				C64C4E201F29E240003756B7 /* MedicalProductDetailsModel.swift in Sources */,
 				C6B3DD221F2848CB007B2F14 /* MineHeader.swift in Sources */,
-				C66ADB101F2B1A37003E3B79 /* MedicalProductDetailsPopAddressCollectionViewCell.swift in Sources */,
-				C66ADB261F2B2DF8003E3B79 /* MedicalProductDetailsPopNormalHeader.swift in Sources */,
+				C6A1C8301F2ED27600FBD3B9 /* MedicalProductDetailsFooter.swift in Sources */,
 				C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */,
-				C6094C5E1F265DDD004677BE /* MedicalProductDemoModel.swift in Sources */,
-				C64C4E1E1F29DBA0003756B7 /* MedicalProductDetailsMapCell.swift in Sources */,
-				C6094C4B1F26133F004677BE /* MedicalProductFirstCell.swift in Sources */,
+				C6A1C82D1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.swift in Sources */,
 				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
 				C6B3DCFB1F28171C007B2F14 /* BaseViewController.swift in Sources */,
+				C6A1C8421F2ED27600FBD3B9 /* ProductCollectionViewCell.swift in Sources */,
 				C6B3DCFD1F28171C007B2F14 /* NewViewController.swift in Sources */,
 				C6B3DCF11F2816FC007B2F14 /* LoginViewController.swift in Sources */,
-				C6094C471F261163004677BE /* MedicalProductHeader.swift in Sources */,
 				C6094C5C1F265D92004677BE /* ECCommon.swift in Sources */,
+				C6A1C84A1F2F01AB00FBD3B9 /* ProductEvaluationHeader.swift in Sources */,
+				C6A1C8281F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift in Sources */,
+				C6A1C8321F2ED27600FBD3B9 /* MedicalProductDetailsImagesCell.swift in Sources */,
 				C6545DC61F2717A200F9D479 /* MessageTableViewCell.swift in Sources */,
+				C6A1C8251F2ED27600FBD3B9 /* MedicalProductDetailsPopAddressCollectionViewCell.swift in Sources */,
 				C6545DC81F27184D00F9D479 /* MessageModel.swift in Sources */,
-				C64C4E161F29C2C0003756B7 /* MedicalProductDetailsFooter.swift in Sources */,
 				C6545DC41F2714E200F9D479 /* MessageViewController.swift in Sources */,
 				C6B3DCF01F2816FC007B2F14 /* LoginModel.swift in Sources */,
-				C64C4E0E1F299256003756B7 /* MedicalProductDetailsViewController.swift in Sources */,
+				C6A1C82C1F2ED27600FBD3B9 /* MedicalProductDetailsPopViewController.swift in Sources */,
 				C6B3DCF41F28170A007B2F14 /* CRMViewController.swift in Sources */,
-				C6094C551F26521E004677BE /* MedicalProductSystemCell.swift in Sources */,
-				C66ADB161F2B1D09003E3B79 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift in Sources */,
 				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
 				C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */,
+				C6A1C83D1F2ED27600FBD3B9 /* MedicalProductNormalHeader.swift in Sources */,
+				C6A1C8481F2ED48E00FBD3B9 /* ProductEvaluationTableViewCell.swift in Sources */,
+				C6A1C8411F2ED27600FBD3B9 /* MedicalProductViewController.swift in Sources */,
+				C6A1C8331F2ED27600FBD3B9 /* MedicalProductDetailsMapCell.swift in Sources */,
+				C6A1C82F1F2ED27600FBD3B9 /* MedicalProductDetailsEvaluationCell.swift in Sources */,
 				C6094C301F25CFA1004677BE /* XHScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -826,6 +894,8 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MJRefresh",
 					"$(PROJECT_DIR)/E-commerce/ThirdLibs/GMap",
 					"$(PROJECT_DIR)/E-commerce/ThirdLibs/GMAP",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MWPhotoBrowser",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/DACircularProgress",
 				);
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "$(SRCROOT)/E-commerce/Common/e-commerceInfo.plist";
@@ -853,6 +923,8 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MJRefresh",
 					"$(PROJECT_DIR)/E-commerce/ThirdLibs/GMap",
 					"$(PROJECT_DIR)/E-commerce/ThirdLibs/GMAP",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MWPhotoBrowser",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/DACircularProgress",
 				);
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "$(SRCROOT)/E-commerce/Common/e-commerceInfo.plist";

@@ -10,6 +10,8 @@ import UIKit
 
 class BaseNavigationController: UINavigationController {
 
+    var isHidesBottomBarWhenPushed: Bool = true
+    
     internal override class func initialize() {
         super.initialize()
         
@@ -31,7 +33,7 @@ class BaseNavigationController: UINavigationController {
         /// 这时push进来的控制器viewController，不是第一个子控制器（不是根控制器）
         if viewControllers.count > 0 {
             // push 后隐藏 tabbar
-            viewController.hidesBottomBarWhenPushed = true
+            viewController.hidesBottomBarWhenPushed = isHidesBottomBarWhenPushed
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "log_reg_left"), style: .plain, target: self, action: #selector(navigationBackClick))
             viewController.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
         }

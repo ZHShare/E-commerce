@@ -14,6 +14,6 @@ class NewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
-        hud.hide(animated: true, afterDelay: TimeInterval(5.0))
+        hud?.hide(true, afterDelay: TimeInterval(5.0))
     }
 }
