@@ -1,6 +1,7 @@
 PODS:
   - DACircularProgress (2.3.1)
   - DeckTransition (0.2.0)
+  - EZSwiftExtensions (1.10)
   - MappingAce (1.0.2)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.12)
@@ -15,6 +16,7 @@ PODS:
 
 DEPENDENCIES:
   - DeckTransition (~> 0.2.0)
+  - EZSwiftExtensions (~> 1.10)
   - MappingAce (~> 1.0.2)
   - MJRefresh (~> 3.1.12)
   - MWPhotoBrowser (~> 2.1.2)
@@ -23,6 +25,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DeckTransition: 9028a222282d317bdd1199b681ecac15c3834bbc
+  EZSwiftExtensions: 172160bfb3635161c8b833d9111961ff3e6f517d
   MappingAce: 0e07b1cb3661fb534a111b4db7dd5dc2a19c6934
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -30,6 +33,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 7ea9c2be6479653fa9adba5b31a068f0b70765ce
+PODFILE CHECKSUM: 18016193e0eec3f89ff9b778636c36780ff4e54e
 
 COCOAPODS: 1.2.1

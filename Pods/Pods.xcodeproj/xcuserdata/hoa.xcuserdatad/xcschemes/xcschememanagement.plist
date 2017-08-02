@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EZSwiftExtensions.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>30769FE3AAC751CBE2FBADBE60DAB4DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>35F8E4B917A295B10E73E9F013FC2ABE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3CBF841E9779C97E787674C7A5E1EF1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>57B275BF6168E38703261D48966BA1BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -88,16 +108,6 @@
 			<true/>
 		</dict>
 		<key>A3B3CA69641375F94D39F255650BF877</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CACF10578F37F9FE55E99C931534405F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DCAFD52633FDB6D3C2F821E8C19F9FE0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
