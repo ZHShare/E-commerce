@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CryptoSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DACircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,16 +87,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30769FE3AAC751CBE2FBADBE60DAB4DC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>35F8E4B917A295B10E73E9F013FC2ABE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3CBF841E9779C97E787674C7A5E1EF1B</key>
 		<dict>
 			<key>primary</key>
@@ -97,7 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>61601E75B2C9CCC1CDEFFF3094876218</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6B1714E816AE794962516E2ECBB40A5A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BB1C1403B2419F911818DA8413FDA07</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -113,6 +123,16 @@
 			<true/>
 		</dict>
 		<key>E14A62900910444707A5504D25EC98DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1CF77F748E0D423AEAA21F112639CC8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F307B842FF76B2DE6C55DB67C0885325</key>
 		<dict>
 			<key>primary</key>
 			<true/>

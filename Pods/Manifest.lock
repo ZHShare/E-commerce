@@ -1,4 +1,8 @@
 PODS:
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - CryptoSwift (0.6.9)
   - DACircularProgress (2.3.1)
   - DeckTransition (0.2.0)
   - EZSwiftExtensions (1.10)
@@ -15,6 +19,8 @@ PODS:
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - Charts (~> 3.0.2)
+  - CryptoSwift (~> 0.6.9)
   - DeckTransition (~> 0.2.0)
   - EZSwiftExtensions (~> 1.10)
   - MappingAce (~> 1.0.2)
@@ -23,6 +29,8 @@ DEPENDENCIES:
   - SwiftyJSON (~> 3.1.4)
 
 SPEC CHECKSUMS:
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  CryptoSwift: a22f6ba238e9ce4d26ee7bf45b9ed82e7122d4a0
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DeckTransition: 9028a222282d317bdd1199b681ecac15c3834bbc
   EZSwiftExtensions: 172160bfb3635161c8b833d9111961ff3e6f517d
@@ -33,6 +41,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 18016193e0eec3f89ff9b778636c36780ff4e54e
+PODFILE CHECKSUM: 0407e6275a754b2c1a310ce04539186dde241c38
 
 COCOAPODS: 1.2.1
