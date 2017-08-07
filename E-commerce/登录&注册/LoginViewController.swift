@@ -154,6 +154,17 @@ class LoginViewController: BaseViewController
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateUI()
+    }
+    
+    fileprivate func updateUI() {
+        
+        userNameField.text = LoginStatus.phone
+    }
 }
 extension LoginViewController: UITextFieldDelegate {
     

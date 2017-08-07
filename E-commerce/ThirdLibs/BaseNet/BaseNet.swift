@@ -16,7 +16,8 @@ let objectAddress = "syk-crm-api"
 let api = "api"
 
 struct ApiType {
-    static let userInfo = "userinfo"
+    static let UserInfo = "userinfo"
+    static let Pub = "pub"
 }
 
 enum BaseNet {

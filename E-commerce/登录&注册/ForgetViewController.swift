@@ -12,8 +12,9 @@ class ForgetViewController: BaseViewController
 {
     
     fileprivate var timer: Timer?
-    fileprivate var count = 5
-
+    fileprivate var count = 60
+    fileprivate let max = 60
+    
     @IBAction func tapView(_ sender: Any) {
         view.endEditing(true)
         phoneNumberField.isEnabled = false
@@ -54,8 +55,41 @@ class ForgetViewController: BaseViewController
         codeField.isEnabled = true
         codeField.becomeFirstResponder()
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        timerAction()
+        let params = ["user_mobile": phoneNumberField.text!,
+                      "busi_type": "02",
+                      "templateId": "6833"]
+        
+        PubNet.fetchDataWith(transCode: TransCode.Pub.sendCode, params: params) { (response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
+            }
+            
+            super.hudWithMssage(msg: "验证码已发送")
+            self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
+            self.timerAction()
+        }
+        
+    }
+    
+    @IBAction func next() {
+        
+        PubNet.fetchDataWith(transCode: TransCode.Pub.codeVerify, params: params) { (response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
+            }
+            
+            let resetViewController = ECStroryBoard.controller(type: ResetViewController.self)
+            resetViewController.phoneNumber =  self.phoneNumberField.text!
+            self.navigationController?.ecPushViewController(resetViewController)
+        }
+    }
+    
+    fileprivate var params: [String: Any] {
+        return ["user_mobile": phoneNumberField!.text!,
+                "busi_type": "02",
+                "sms_code": codeField.text!]
     }
     
     @objc fileprivate func timerAction() {
@@ -66,7 +100,7 @@ class ForgetViewController: BaseViewController
         if count == 0 {
             
             fetchCodeButton.setTitle("获取验证码", for: UIControlState.normal)
-            count = 5
+            count = max
             timer?.invalidate()
             timer = nil
             return

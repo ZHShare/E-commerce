@@ -85,10 +85,10 @@ class FeedBackViewController: BaseTableViewController {
             let alert = UIAlertController(title: nil, message: "已收到您的反馈", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.cancel, handler: { (cancel) in
                 
-                self.navigationController?.popToRootViewController(animated: true)
+                self.navigationController?.ecPopViewController()
             }))
             
-            self.presentVC(alert)
+            self.navigationController?.ecPresent(viewController: alert)
         }
         
     }

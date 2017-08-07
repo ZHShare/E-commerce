@@ -67,6 +67,6 @@ class MiniDetailsDatePicker: UIView
     
     
     @IBAction func pickerDidChanged() {
-        date = picker.date.toString(format: "yyyy-MM-dd")
+        date = picker.date.toString(format: "yyyyMMdd")
     }
 }

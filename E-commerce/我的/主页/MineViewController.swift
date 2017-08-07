@@ -154,6 +154,7 @@ extension MineViewController {
         case 0: didClickAccount()
         case 1: didClickShopping()
         case 2: didCLickMyFavorite()
+        case 4: didClickAddressBook()
         case 6: didClickSetting()
         default:
             break
@@ -198,6 +199,13 @@ fileprivate extension MineViewController {
         
         let settingViewController = ECStroryBoard.controller(type: SettingViewController.self)
         navigationController?.ecPushViewController(settingViewController)
+    }
+    
+    // MARK: - click address book 
+    func didClickAddressBook() {
+        
+        let addressBookViewController = ECStroryBoard.controller(type: AddressBookViewController.self)
+        navigationController?.ecPushViewController(addressBookViewController)
     }
 }
 

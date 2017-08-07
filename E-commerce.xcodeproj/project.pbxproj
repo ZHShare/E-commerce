@@ -17,6 +17,8 @@
 		C60D17F01F307D60002A6E59 /* SureShoppingAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D17EF1F307D60002A6E59 /* SureShoppingAddressTableViewCell.swift */; };
 		C60D17F21F308D5B002A6E59 /* SureShoppingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D17F11F308D5B002A6E59 /* SureShoppingBar.swift */; };
 		C60D17F41F308D73002A6E59 /* SureShoppingBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = C60D17F31F308D73002A6E59 /* SureShoppingBar.xib */; };
+		C61A90E21F386A9B00DBC821 /* AddressBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61A90E11F386A9B00DBC821 /* AddressBookModel.swift */; };
+		C63FFDB31F387ED20014BCC5 /* BMChineseSort.m in Sources */ = {isa = PBXBuildFile; fileRef = C63FFDB21F387ED20014BCC5 /* BMChineseSort.m */; };
 		C64C4DE41F29728D003756B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4DE31F29728D003756B7 /* MapViewController.swift */; };
 		C64C4DED1F2973BD003756B7 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DEC1F2973BD003756B7 /* GLKit.framework */; };
 		C64C4DEF1F2973C6003756B7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DEE1F2973C6003756B7 /* libc++.tbd */; };
@@ -157,6 +159,7 @@
 		C6B3DD1A1F2832E0007B2F14 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B3DD141F2832E0007B2F14 /* SwiftyJSON.framework */; };
 		C6B3DD261F28A9FD007B2F14 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DD251F28A9FD007B2F14 /* ResetViewController.swift */; };
 		C6B421791F31AF8D0022C692 /* MineDetailsChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B421781F31AF8D0022C692 /* MineDetailsChangeViewController.swift */; };
+		C6B456121F37F1BB0066E14E /* PubNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B456111F37F1BB0066E14E /* PubNet.swift */; };
 		C6BF2A4E1F34412300008218 /* BaseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF2A4D1F34412300008218 /* BaseNet.swift */; };
 		C6BF2A501F34422B00008218 /* TransCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF2A4F1F34422B00008218 /* TransCode.swift */; };
 		C6BF2A521F344A2200008218 /* UserInfoNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF2A511F344A2200008218 /* UserInfoNet.swift */; };
@@ -165,6 +168,11 @@
 		C6BF2A581F345A9700008218 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6BF2A571F345A9700008218 /* CryptoSwift.framework */; };
 		C6D92F291F340DA8005122C5 /* MyFavoriteTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D92F281F340DA8005122C5 /* MyFavoriteTypeTableViewCell.swift */; };
 		C6D92F2B1F342367005122C5 /* MyFavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D92F2A1F342366005122C5 /* MyFavoriteModel.swift */; };
+		C6FEB53B1F3832E400577F41 /* AddressBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FEB53A1F3832E400577F41 /* AddressBookViewController.swift */; };
+		C6FEB53D1F3833BC00577F41 /* AddressBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FEB53C1F3833BC00577F41 /* AddressBookTableViewCell.swift */; };
+		C6FEB53F1F38340800577F41 /* AddressBookAddPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FEB53E1F38340800577F41 /* AddressBookAddPopViewController.swift */; };
+		C6FEB5411F38346F00577F41 /* AddressBookAddPopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FEB5401F38346F00577F41 /* AddressBookAddPopTableViewCell.swift */; };
+		C6FEB5431F385BE700577F41 /* AddressBookSearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FEB5421F385BE700577F41 /* AddressBookSearchHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -192,6 +200,9 @@
 		C60D17EF1F307D60002A6E59 /* SureShoppingAddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingAddressTableViewCell.swift; sourceTree = "<group>"; };
 		C60D17F11F308D5B002A6E59 /* SureShoppingBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingBar.swift; sourceTree = "<group>"; };
 		C60D17F31F308D73002A6E59 /* SureShoppingBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SureShoppingBar.xib; sourceTree = "<group>"; };
+		C61A90E11F386A9B00DBC821 /* AddressBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookModel.swift; sourceTree = "<group>"; };
+		C63FFDB11F387ED20014BCC5 /* BMChineseSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMChineseSort.h; sourceTree = "<group>"; };
+		C63FFDB21F387ED20014BCC5 /* BMChineseSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMChineseSort.m; sourceTree = "<group>"; };
 		C64C4DE31F29728D003756B7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C64C4DEC1F2973BD003756B7 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C64C4DEE1F2973C6003756B7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -335,6 +346,7 @@
 		C6B3DD251F28A9FD007B2F14 /* ResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		C6B421771F31A7210022C692 /* EZSwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZSwiftExtensions.framework; path = "Pods/../build/Debug-iphoneos/EZSwiftExtensions/EZSwiftExtensions.framework"; sourceTree = "<group>"; };
 		C6B421781F31AF8D0022C692 /* MineDetailsChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineDetailsChangeViewController.swift; sourceTree = "<group>"; };
+		C6B456111F37F1BB0066E14E /* PubNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubNet.swift; sourceTree = "<group>"; };
 		C6BF2A4D1F34412300008218 /* BaseNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNet.swift; sourceTree = "<group>"; };
 		C6BF2A4F1F34422B00008218 /* TransCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransCode.swift; sourceTree = "<group>"; };
 		C6BF2A511F344A2200008218 /* UserInfoNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoNet.swift; sourceTree = "<group>"; };
@@ -343,6 +355,11 @@
 		C6BF2A571F345A9700008218 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "Pods/../build/Debug-iphoneos/CryptoSwift/CryptoSwift.framework"; sourceTree = "<group>"; };
 		C6D92F281F340DA8005122C5 /* MyFavoriteTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavoriteTypeTableViewCell.swift; sourceTree = "<group>"; };
 		C6D92F2A1F342366005122C5 /* MyFavoriteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavoriteModel.swift; sourceTree = "<group>"; };
+		C6FEB53A1F3832E400577F41 /* AddressBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookViewController.swift; sourceTree = "<group>"; };
+		C6FEB53C1F3833BC00577F41 /* AddressBookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookTableViewCell.swift; sourceTree = "<group>"; };
+		C6FEB53E1F38340800577F41 /* AddressBookAddPopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookAddPopViewController.swift; sourceTree = "<group>"; };
+		C6FEB5401F38346F00577F41 /* AddressBookAddPopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookAddPopTableViewCell.swift; sourceTree = "<group>"; };
+		C6FEB5421F385BE700577F41 /* AddressBookSearchHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookSearchHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +432,15 @@
 			path = XHScrollView;
 			sourceTree = "<group>";
 		};
+		C63FFDB01F387ED20014BCC5 /* BMChineseStringSort */ = {
+			isa = PBXGroup;
+			children = (
+				C63FFDB11F387ED20014BCC5 /* BMChineseSort.h */,
+				C63FFDB21F387ED20014BCC5 /* BMChineseSort.m */,
+			);
+			path = BMChineseStringSort;
+			sourceTree = "<group>";
+		};
 		C6545DC11F2714B600F9D479 /* 工作 */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +474,7 @@
 		C66BECF61F1DDF8600985880 /* ThirdLibs */ = {
 			isa = PBXGroup;
 			children = (
+				C63FFDB01F387ED20014BCC5 /* BMChineseStringSort */,
 				C66BECF71F1DDF8600985880 /* BaseNet */,
 			);
 			path = ThirdLibs;
@@ -460,6 +487,7 @@
 				C66BECF81F1DDF9800985880 /* HHttp.swift */,
 				C6BF2A4D1F34412300008218 /* BaseNet.swift */,
 				C6BF2A511F344A2200008218 /* UserInfoNet.swift */,
+				C6B456111F37F1BB0066E14E /* PubNet.swift */,
 				C6BF2A4F1F34422B00008218 /* TransCode.swift */,
 			);
 			path = BaseNet;
@@ -808,6 +836,7 @@
 		C6B3DCFF1F281DFA007B2F14 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				C6FEB5391F3832B900577F41 /* 企业通讯录 */,
 				C68AF91D1F34091300D4A1E3 /* 我的收藏 */,
 				C6A6B6341F331E3700E014C6 /* 确定发票 */,
 				C69258F21F32FB59007CC754 /* 设置 */,
@@ -819,6 +848,19 @@
 				C685277D1F3162A2001A2441 /* 主页 */,
 			);
 			path = "我的";
+			sourceTree = "<group>";
+		};
+		C6FEB5391F3832B900577F41 /* 企业通讯录 */ = {
+			isa = PBXGroup;
+			children = (
+				C6FEB53A1F3832E400577F41 /* AddressBookViewController.swift */,
+				C61A90E11F386A9B00DBC821 /* AddressBookModel.swift */,
+				C6FEB5421F385BE700577F41 /* AddressBookSearchHeader.swift */,
+				C6FEB53C1F3833BC00577F41 /* AddressBookTableViewCell.swift */,
+				C6FEB53E1F38340800577F41 /* AddressBookAddPopViewController.swift */,
+				C6FEB5401F38346F00577F41 /* AddressBookAddPopTableViewCell.swift */,
+			);
+			path = "企业通讯录";
 			sourceTree = "<group>";
 		};
 		F34797E21FA7DECC04350779 /* Frameworks */ = {
@@ -1013,8 +1055,11 @@
 				C6B3DCFA1F28171C007B2F14 /* BaseNavigationController.swift in Sources */,
 				C668811F1F31C3B800125CA6 /* OrderListTableViewCell.swift in Sources */,
 				C6BF2A541F344EEF00008218 /* EnterpriseModel.swift in Sources */,
+				C6FEB5411F38346F00577F41 /* AddressBookAddPopTableViewCell.swift in Sources */,
 				C68527951F3173ED001A2441 /* MineDetailsTitleModel.swift in Sources */,
 				C69258DB1F32A935007CC754 /* OrderDetailsHeader.swift in Sources */,
+				C6B456121F37F1BB0066E14E /* PubNet.swift in Sources */,
+				C61A90E21F386A9B00DBC821 /* AddressBookModel.swift in Sources */,
 				C6B3DCFE1F28171C007B2F14 /* ViewController.swift in Sources */,
 				C69258DD1F32A94A007CC754 /* OrderDetailsFooter.swift in Sources */,
 				C68527821F3162A2001A2441 /* MineCell.swift in Sources */,
@@ -1032,8 +1077,10 @@
 				C66881191F31B72300125CA6 /* MineDetailsDepartmentViewController.swift in Sources */,
 				C6A1C8381F2ED27600FBD3B9 /* MedicalProductFirstCell.swift in Sources */,
 				C6A1C8311F2ED27600FBD3B9 /* MedicalProductDetailsHeader.swift in Sources */,
+				C6FEB53B1F3832E400577F41 /* AddressBookViewController.swift in Sources */,
 				C69258EF1F32F05F007CC754 /* AccountDetailsTableViewCell.swift in Sources */,
 				C6A1C8341F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift in Sources */,
+				C6FEB5431F385BE700577F41 /* AddressBookSearchHeader.swift in Sources */,
 				C66BECF91F1DDF9800985880 /* HHttp.swift in Sources */,
 				C69258F71F32FBA1007CC754 /* SettingViewController.swift in Sources */,
 				C69258D51F32A8DD007CC754 /* OrderDetailsProductTableViewCell.swift in Sources */,
@@ -1069,6 +1116,7 @@
 				C68527841F3162A2001A2441 /* MineModel.swift in Sources */,
 				C6A1C8301F2ED27600FBD3B9 /* MedicalProductDetailsFooter.swift in Sources */,
 				C68527911F316EEC001A2441 /* MineDetailsHeaderTableViewCell.swift in Sources */,
+				C63FFDB31F387ED20014BCC5 /* BMChineseSort.m in Sources */,
 				C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */,
 				C6A1C82D1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.swift in Sources */,
 				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
@@ -1079,6 +1127,7 @@
 				C6A1C8421F2ED27600FBD3B9 /* ProductCollectionViewCell.swift in Sources */,
 				C6B3DCFD1F28171C007B2F14 /* NewViewController.swift in Sources */,
 				C6B3DCF11F2816FC007B2F14 /* LoginViewController.swift in Sources */,
+				C6FEB53F1F38340800577F41 /* AddressBookAddPopViewController.swift in Sources */,
 				C6094C5C1F265D92004677BE /* ECCommon.swift in Sources */,
 				C6A1C84A1F2F01AB00FBD3B9 /* ProductEvaluationHeader.swift in Sources */,
 				C6A1C8281F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift in Sources */,
@@ -1101,6 +1150,7 @@
 				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
 				C68527971F317FEF001A2441 /* MiniDetailsDatePicker.swift in Sources */,
 				C6D92F2B1F342367005122C5 /* MyFavoriteModel.swift in Sources */,
+				C6FEB53D1F3833BC00577F41 /* AddressBookTableViewCell.swift in Sources */,
 				C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */,
 				C6A1C83D1F2ED27600FBD3B9 /* MedicalProductNormalHeader.swift in Sources */,
 				C6A1C8481F2ED48E00FBD3B9 /* ProductEvaluationTableViewCell.swift in Sources */,

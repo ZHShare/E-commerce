@@ -11,6 +11,8 @@ import UIKit
 class ResetViewController: BaseViewController
 {
     
+    var phoneNumber: String!
+    
     @IBOutlet weak var resetButton: UIButton!
     
     @IBOutlet weak var surePwdField: UITextField! { didSet { textFieldAddEdidtingChanged(textField: surePwdField) } }
@@ -34,7 +36,19 @@ class ResetViewController: BaseViewController
     
     @IBAction func reset() {
         
-        self.navigationController?.popToRootViewController(animated: true)
+        let pars = ["user_mobile": phoneNumber,
+                      "user_password": newPwdField.text!.encode()]
+        
+        UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.resetPassword, params: pars) { (response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
+            }
+            
+            LoginStatus.updatePhone(phone: self.phoneNumber)
+            self.navigationController?.ecPopToRootViewController()
+        }
+        
     }
     
     fileprivate func textFieldAddEdidtingChanged(textField: UITextField) {

@@ -22,10 +22,21 @@ class BaseViewController: UIViewController {
     
     func hudWithMssage(msg: String) {
         
+        
+        if Thread.isMainThread {
+            
+            let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+            hud?.mode = .text
+            hud?.labelText = msg
+            hud?.hide(true, afterDelay: 1.0)
+            return
+        }
+        
         DispatchQueue.main.async {
             
             let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
             hud?.mode = .text
+            hud?.labelText = msg
             hud?.hide(true, afterDelay: 1.0)
         }
     }

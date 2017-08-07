@@ -14,6 +14,7 @@ fileprivate let userDefaults = UserDefaults.standard
 fileprivate enum Key {
     static let saveAndLoad = "Save and Get"
     static let loginFlag = "Login"
+    static let phoneNumber = "phoneNumber"
 }
 
 enum LoginStatus {
@@ -26,6 +27,15 @@ enum LoginStatus {
         set {
             userDefaults.set(newValue, forKey: Key.loginFlag)
         }
+    }
+    
+    static func updatePhone(phone: String) {
+    
+        userDefaults.set(phone, forKey: Key.phoneNumber)
+    }
+    
+    static var phone: String? {
+        return userDefaults.string(forKey: Key.phoneNumber)
     }
 }
 
@@ -49,6 +59,7 @@ struct LoginModel: Mapping
     let collect_num: String
     let confirm_num: String
     let department_name: String
+    let enterprise_id: String
     let enterprise_name: String
     let face_image_url: String
     let receipt_num: String
