@@ -41,6 +41,7 @@
 		C6545DCE1F2724A500F9D479 /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DCD1F2724A500F9D479 /* WorkModel.swift */; };
 		C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6545DD11F272FED00F9D479 /* WorkReusableView.swift */; };
 		C6545DD41F272FED00F9D479 /* WorkReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6545DD21F272FED00F9D479 /* WorkReusableView.xib */; };
+		C65641E31F38DA78003D22B5 /* AddressBookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65641E21F38DA78003D22B5 /* AddressBookDetailsViewController.swift */; };
 		C66881191F31B72300125CA6 /* MineDetailsDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66881181F31B72300125CA6 /* MineDetailsDepartmentViewController.swift */; };
 		C668811B1F31B7CF00125CA6 /* MineDetailsDepartmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C668811A1F31B7CF00125CA6 /* MineDetailsDepartmentTableViewCell.swift */; };
 		C668811D1F31B7F900125CA6 /* MineDetailsDepartmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C668811C1F31B7F900125CA6 /* MineDetailsDepartmentModel.swift */; };
@@ -226,6 +227,7 @@
 		C6545DCD1F2724A500F9D479 /* WorkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkModel.swift; sourceTree = "<group>"; };
 		C6545DD11F272FED00F9D479 /* WorkReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkReusableView.swift; sourceTree = "<group>"; };
 		C6545DD21F272FED00F9D479 /* WorkReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkReusableView.xib; sourceTree = "<group>"; };
+		C65641E21F38DA78003D22B5 /* AddressBookDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookDetailsViewController.swift; sourceTree = "<group>"; };
 		C66881181F31B72300125CA6 /* MineDetailsDepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineDetailsDepartmentViewController.swift; sourceTree = "<group>"; };
 		C668811A1F31B7CF00125CA6 /* MineDetailsDepartmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineDetailsDepartmentTableViewCell.swift; sourceTree = "<group>"; };
 		C668811C1F31B7F900125CA6 /* MineDetailsDepartmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineDetailsDepartmentModel.swift; sourceTree = "<group>"; };
@@ -859,6 +861,7 @@
 				C6FEB53C1F3833BC00577F41 /* AddressBookTableViewCell.swift */,
 				C6FEB53E1F38340800577F41 /* AddressBookAddPopViewController.swift */,
 				C6FEB5401F38346F00577F41 /* AddressBookAddPopTableViewCell.swift */,
+				C65641E21F38DA78003D22B5 /* AddressBookDetailsViewController.swift */,
 			);
 			path = "企业通讯录";
 			sourceTree = "<group>";
@@ -1091,6 +1094,7 @@
 				C69258F91F32FEF5007CC754 /* FeedBackViewController.swift in Sources */,
 				C6B3DD261F28A9FD007B2F14 /* ResetViewController.swift in Sources */,
 				C68527831F3162A2001A2441 /* MineHeader.swift in Sources */,
+				C65641E31F38DA78003D22B5 /* AddressBookDetailsViewController.swift in Sources */,
 				C69914C61F30063C00F879EA /* ShoppingCarTableViewCell.swift in Sources */,
 				C6BF2A4E1F34412300008218 /* BaseNet.swift in Sources */,
 				C6A1C8461F2ED2C100FBD3B9 /* ProductEvaluationViewController.swift in Sources */,

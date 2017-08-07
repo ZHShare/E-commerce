@@ -8,19 +8,13 @@
 
 import Foundation
 
-class AddressBookModel: NSObject {
-    
-    var name: String = ""
-    var nickname: String = ""
-    var mobile: String = ""
-    var enterprise_name: String = ""
-    var department_name: String = ""
-    var head_portrait: String = ""
-    var sex: String = ""
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        print("\(key) ==== NONE ===== ")
-    }
+struct AddressBookModel {
+    let sex: String
+    let head_portrait: String
+    let department_name: String
+    let enterprise_name: String
+    let mobile: String
+    let name: String
     
     static func models(dic: [String: Any]?) -> [AddressBookModel]? {
         
@@ -42,13 +36,23 @@ class AddressBookModel: NSObject {
         
         for dic in list {
             
-            let model = AddressBookModel()
-            model.setValuesForKeys(dic as! [String : Any])
+            let model = ECMapping.ace(type: AddressBookModel.self, fromDic: dic as! [String : Any])
             models.add(model)
         }
         
         
         return models as? [AddressBookModel]
+    }
+    
+    static var response: [String: Any]? {
+        return ["data":
+            ["list": [
+                ["sex": "1","head_portrait": "", "department_name": "电子产品研发一部", "enterprise_name": "一特","mobile": "13755002245", "name": "王雄皓"],
+                ["sex": "0","head_portrait": "", "department_name": "电子产品研发二部", "enterprise_name": "湖南一尚","mobile": "13755002244", "name": "大锤子"],
+                ["sex": "1","head_portrait": "", "department_name": "电子产品研发二部", "enterprise_name": "湖南一尚","mobile": "13755002244", "name": "王大爷"]
+                ]
+            ]
+        ]
     }
     
 }

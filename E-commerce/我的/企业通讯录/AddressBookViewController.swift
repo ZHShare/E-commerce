@@ -13,7 +13,9 @@ class AddressBookViewController: BaseTableViewController
 
     fileprivate var indexArray: [NSArray]?
     fileprivate var letterArray: [String]?
-    
+    fileprivate var keysValues = [String: NSMutableArray]()
+    fileprivate var searchResults = [AddressBookModel]()
+
     fileprivate enum ReuseIdentifier {
         static let AddressBook = "Address Book"
         static let Pop = "Add"
@@ -25,7 +27,8 @@ class AddressBookViewController: BaseTableViewController
         super.viewDidLoad()
         configTableView()
         configSearchController()
-        fetchData()
+//        fetchData()
+        demoData()
     }
 
     fileprivate func configTableView() {
@@ -45,6 +48,8 @@ class AddressBookViewController: BaseTableViewController
         searchController.searchBar.barTintColor = UIColor.groupTableViewBackground
         searchController.searchBar.placeholder = "搜索联系人"
         searchController.disablesAutomaticKeyboardDismissal = false
+        searchController.dimsBackgroundDuringPresentation = false
+        
         
         searchController.searchBar.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: Screen.width, height: tableView.tableHeaderView!.frame.size.height))
         
@@ -78,7 +83,34 @@ class AddressBookViewController: BaseTableViewController
         }
     }
     
-
+    fileprivate func demoData() {
+        
+        let models = AddressBookModel.models(dic: AddressBookModel.response)
+        
+        for model in models! {
+            
+            if let value = keysValues[model.firstLetter] {
+                value.add(model)
+            }
+            else {
+                keysValues[model.firstLetter] = [model]
+            }
+        }
+        
+        var letters = [String]()
+        for key in keysValues {
+            
+            letters.append(key.key)
+        }
+        letterArray = letters
+    
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+  
+    
     fileprivate func fetchData() {
         
         UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.contact, params: params) { (response, isLoadFaild, errorMsg) in
@@ -88,8 +120,6 @@ class AddressBookViewController: BaseTableViewController
             }
             
             let models = AddressBookModel.models(dic: response)
-            self.indexArray = BMChineseSort.index(with: models, key: "name") as? [NSArray]
-            self.letterArray = BMChineseSort.letterSortArray(models) as? [String]
             
         }
         
@@ -103,13 +133,50 @@ class AddressBookViewController: BaseTableViewController
     
     
 }
+extension AddressBookModel {
+    
+    var firstLetter: String {
+        
+        let pinyin = name.transformToPinYin()
+        let capitalizedString = pinyin.capitalizedFirst()
+        let index = capitalizedString.index(capitalizedString.startIndex, offsetBy: 1)
+        return capitalizedString.substring(to: index)
+    }
+}
+extension String{
+    func transformToPinYin()->String{
+        let mutableString = NSMutableString(string: self)
+        CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
+        CFStringTransform(mutableString, nil, kCFStringTransformStripDiacritics, false)
+        let string = String(mutableString)
+        return string.replacingOccurrences(of: " ", with: "")
+    }
+}
+
 // MARK: - UISearchControllerDelegate, UISearchResultsUpdating
 extension AddressBookViewController: UISearchControllerDelegate, UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         
+        searchResults.removeAll()
+        
+        let searchText = searchController.searchBar.text!
+        for values in keysValues.values {
+            
+            for value in values {
+                
+                if let value = value as? AddressBookModel {
+                    
+                    if value.name.contains(searchText) {
+                        searchResults.append(value)
+                    }
+                }
+            }
+        }
+        
         tableView.reloadData()
     }
+    
     
 }
 
@@ -129,13 +196,18 @@ extension AddressBookViewController {
     
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return searchController.isActive ? 1 : indexArray == nil ? 0 : indexArray!.count
+        return searchController.isActive ? 1 : letterArray == nil ? 0 : letterArray!.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let indexArray = indexArray {
-            return indexArray[section].count
+        if searchController.isActive {
+            return searchResults.count
+        }
+        
+        
+        if let lettersArray = letterArray {
+            return keysValues[lettersArray[section]]!.count
         }
         
         return 0
@@ -146,7 +218,13 @@ extension AddressBookViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.AddressBook, for: indexPath)
         
         if let cell = cell as? AddressBookTableViewCell {
-            cell.model = indexArray![indexPath.section][indexPath.row] as? AddressBookModel
+            
+            if searchController.isActive {
+                cell.model = searchResults[indexPath.row]
+                return cell
+            }
+            
+            cell.model = keysValues[letterArray![indexPath.section]]?[indexPath.row] as? AddressBookModel
         }
         
         return cell
@@ -161,5 +239,11 @@ extension AddressBookViewController {
         
         return searchController.isActive ? nil : letterArray?[section]
     }
-    
+ 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let detailsViewController = ECStroryBoard.controller(type: AddressBookDetailsViewController.self)
+        navigationController?.ecPushViewController(detailsViewController)
+    }
 }
