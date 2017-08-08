@@ -32,7 +32,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="61" id="z5K-vC-At1"/>
                             </constraints>
-                            <state key="normal" title="取消"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
                             <connections>
                                 <action selector="cancel" destination="iN0-l3-epB" eventType="touchUpInside" id="Veh-mc-5I4"/>
                             </connections>
@@ -48,7 +50,7 @@
                             <date key="maximumDate" timeIntervalSinceReferenceDate="631105200">
                                 <!--2020-12-31 11:00:00 +0000-->
                             </date>
-                            <locale key="locale" localeIdentifier="zh-Hans"/>
+                            <locale key="locale" localeIdentifier="zh_CN"/>
                             <connections>
                                 <action selector="pickerDidChanged" destination="iN0-l3-epB" eventType="valueChanged" id="R7T-M6-UBd"/>
                             </connections>

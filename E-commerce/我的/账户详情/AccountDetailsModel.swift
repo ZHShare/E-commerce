@@ -10,27 +10,51 @@ import Foundation
 
 struct AccountDetailsModel {
     
-    let date: String
-    let imageNamed: String
-    let productName: String
-    let remake: String
-    let money: String
-    let count: String
-    let commission: String
+    let product_id: String
+    let product_name: String
+    let product_image_url: String
+    let product_num: String
+    let product_price: String
+    let order_total_amount: String
+    let product_attr: String
+    let commission_amount: String
+    let trans_time: String
+    let in_out_type: String
+
     
     
-    
-    static func models() -> [AccountDetailsModel] {
+    static func models(withDic: [String: Any]?) -> (String,[AccountDetailsModel])? {
         
-        return [AccountDetailsModel(date:  "2017-08-09", imageNamed: "product_details_1", productName: "产品包名称：医用传呼系统豪华版湖南一特", remake: "白色 55寸", money: "999", count: "2", commission:  "+2009"),
-                AccountDetailsModel(date:  "2017-08-09", imageNamed: "product_details_2", productName: "产品包名称：医用传呼系统乐享版湖南一特", remake: "白色 45寸", money: "2999", count: "1",  commission:  "+2009"),
-                AccountDetailsModel(date:  "2017-08-09", imageNamed: "product_details_1", productName: "产品包名称：医用传呼系统东郭版湖南一特", remake: "白色 25寸", money: "4999", count: "3",  commission:  "+2009"),
-                AccountDetailsModel(date:  "2017-08-09", imageNamed: "product_details_3", productName: "产品包名称：医用传呼系统湖南一特", remake: "白色 55寸", money: "3999", count: "4",  commission:  "+2009"),
-                AccountDetailsModel(date:  "2017-08-09", imageNamed: "product_details_4", productName: "产品包名称：医用传呼系统豪华版湖南一特", remake: "白色 15寸", money: "9999", count: "1",  commission:  "+2009"),
-                AccountDetailsModel(date:  "2017-08-09", imageNamed: "product_details_1", productName: "产品包名称：医用传呼系统舒适版湖南一特", remake: "白色 95寸", money: "3999", count: "2",  commission:  "+2009"),
-                AccountDetailsModel(date:  "2017-08-09", imageNamed: "product_details_4", productName: "产品包名称：医用传呼系统自动版湖南一特", remake: "白色 55寸", money: "4999", count: "12",  commission:  "+2009"),
-                AccountDetailsModel(date:  "2017-08-09", imageNamed: "product_details_2", productName: "产品包名称：医用传呼系统精英版湖南一特", remake: "白色 15寸", money: "2999", count: "2",  commission:  "+2009"),
-                AccountDetailsModel(date:  "2017-08-09", imageNamed: "product_details_3", productName: "产品包名称：医用传呼系统精英版湖南一特", remake: "白色 55寸", money: "1999", count: "2",  commission:  "+2009")]
+        guard let response = withDic else {
+            return nil
+        }
+        
+        guard let data = response["data"] as? [String: Any] else {
+            return nil
+        }
+        
+        var total = ""
+        if let t = data["total_monthly_income"] as? String {
+            total = t
+        }
+        else if let t = data["total_monthly_income"] as? NSNumber {
+            total = t.stringValue
+        }
+        
+        guard let list = data["list"] as? [Any] else {
+            return nil
+        }
+        
+        if list.count == 0 { return nil }
+        
+        var models = [AccountDetailsModel]()
+        for dic in list {
+            
+            let model = ECMapping.ace(type: AccountDetailsModel.self, fromDic: dic as! [String : Any])
+            models.append(model)
+        }
+        
+        return (total,models)
         
     }
 

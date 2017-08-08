@@ -22,8 +22,12 @@ class MineViewController: BaseTableViewController {
         updateUI()
         configTableView()
         fetchData()
+        addNotice()
     }
     
+    deinit {
+        removeNotice()
+    }
     fileprivate func fetchData() {
         
         models = MineModel.models()
@@ -32,11 +36,25 @@ class MineViewController: BaseTableViewController {
         }
     }
     
+    fileprivate func addNotice() {
+        
+        UserInfo.addObserver(observer: self, selector: #selector(notice(notice:)), notification: UserInfo.Notification.Update)
+    }
+    
+    fileprivate func removeNotice() {
+        
+        UserInfo.removeObserver(observer: self, notification: UserInfo.Notification.Update)
+    }
+    
+    @objc fileprivate func notice(notice: Notification) {
+        
+        updateUI()
+    }
+    
     fileprivate func configTableView() {
         
         if let tableHeader = tableView.tableHeaderView as? MineHeader {
             tableHeader.delegate = self
-            tableHeader.demoClear()
         }
     }
     
@@ -171,27 +189,54 @@ fileprivate extension MineViewController {
     // MARK: update UI
     fileprivate func updateUI() {
         
+        if LoginStatus.isLogined {
+            
+            if let header = tableView.tableHeaderView as? MineHeader {
+                header.updateUI()
+            }
+        }
+        else {
+            if let header = tableView.tableHeaderView as? MineHeader {
+                header.demoClear()
+            }
+        }
     }
     
     // MARK: - click shopping
     func didClickShopping() {
         
-        let shoppingCarViewController = ECStroryBoard.controller(type: ShoppingCarViewController.self)
-        navigationController?.ecPushViewController(shoppingCarViewController)
+        if LoginStatus.isLogined {
+            let shoppingCarViewController = ECStroryBoard.controller(type: ShoppingCarViewController.self)
+            navigationController?.ecPushViewController(shoppingCarViewController)
+        }
+        else {
+            enterLogin()
+        }
+        
     }
     
     // MARK: - click my favorite
     func didCLickMyFavorite()  {
     
-        let myFavoriteViewController = ECStroryBoard.controller(type: MyFavoriteViewController.self)
-        navigationController?.ecPushViewController(myFavoriteViewController)
+        if LoginStatus.isLogined {
+            let myFavoriteViewController = ECStroryBoard.controller(type: MyFavoriteViewController.self)
+            navigationController?.ecPushViewController(myFavoriteViewController)
+        }
+        else {
+            enterLogin()
+        }
     }
     
     // MARK: - click account 
     func didClickAccount() {
         
-        let myAccountController = ECStroryBoard.controller(type: MyAccountViewController.self)
-        navigationController?.ecPushViewController(myAccountController)
+        if LoginStatus.isLogined {
+            let myAccountController = ECStroryBoard.controller(type: MyAccountViewController.self)
+            navigationController?.ecPushViewController(myAccountController)
+        }
+        else {
+            enterLogin()
+        }
     }
     
     // MARK: - click setting 
@@ -203,9 +248,14 @@ fileprivate extension MineViewController {
     
     // MARK: - click address book 
     func didClickAddressBook() {
-        
-        let addressBookViewController = ECStroryBoard.controller(type: AddressBookViewController.self)
-        navigationController?.ecPushViewController(addressBookViewController)
+    
+        if LoginStatus.isLogined {
+            let addressBookViewController = ECStroryBoard.controller(type: AddressBookViewController.self)
+            navigationController?.ecPushViewController(addressBookViewController)
+        }
+        else {
+            enterLogin()
+        }
     }
 }
 

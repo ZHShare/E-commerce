@@ -10,10 +10,7 @@ import UIKit
 
 class AddressBookAddPopViewController: BaseTableViewController
 {
-    fileprivate enum ReuseIdentifier {
-        static let Pop = "Pop"
-    }
-    
+   
     fileprivate func configTableView() {
         
         tableView.estimatedRowHeight = tableView.rowHeight
@@ -44,21 +41,14 @@ class AddressBookAddPopViewController: BaseTableViewController
 // MARK: - UITableView Delegate Datasource
 extension AddressBookAddPopViewController {
     
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.Pop, for: indexPath)
-        if let cell = cell as? AddressBookAddPopTableViewCell {
-            cell.displayTitle.text = "添加"
-        }
-        return cell
-    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.row {
+        case 0: print("添加")
+        default: print("管理 ")
+        }
+        
+        dismissVC(completion: nil)
     }
 }

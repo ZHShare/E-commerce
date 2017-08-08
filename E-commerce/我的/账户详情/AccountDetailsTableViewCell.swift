@@ -19,22 +19,52 @@ class AccountDetailsTableViewCell: UITableViewCell
     @IBOutlet var displayDate: UILabel!
     @IBOutlet var displayCommission: UILabel!
 
-    var model: AccountDetailsModel? { didSet { updateUI() } }
+    var model: AccountDetailsModel? {
+        didSet {
+        
+            if Thread.isMainThread {
+                 updateUI()
+            }
+            else {
+                DispatchQueue.main.async {
+                    self.updateUI()
+                }
+            }
+        }
+    }
     
     fileprivate func updateUI() {
         
-        icon.image = model?.image
-        displayProductName.text = model?.productName
-        displayRemake.text = model?.remake
-        displayPrice.text = model?.money
-        displayCount.text = model?.count
-        displayDate.text = model?.date
-        displayCommission.text = model?.commission
+        if model == nil { return }
+        icon.sd_setImage(with: URL(string: model!.trueImageUrl), placeholderImage: Placeholder.DefaultImage)
+        displayProductName.text = model?.product_name
+        displayRemake.text = model?.product_attr
+        displayPrice.text = model?.showPrice
+        displayCount.text = model?.showNumber
+        displayDate.text = model?.trueDate
+        displayCommission.text = model?.commissionPrice
     }
 }
 extension AccountDetailsModel {
     
-    var image: UIImage? {
-        return UIImage(named: imageNamed)
+    var trueImageUrl: String {
+        return "\(host):\(8080)/\(objectAddress)\(product_image_url)"
+    }
+    
+    var showPrice: String? {
+        return "¥\(product_price)"
+    }
+    
+    var showNumber: String {
+        return "x\(product_num)"
+    }
+    
+    var trueDate: String? {
+        
+        return Date(fromString: trans_time, format: "yyyyMMddHHmmss")?.toString(format: "yyyy-MM-dd")
+    }
+    
+    var commissionPrice: String? {
+        return "+\(commission_amount)"
     }
 }

@@ -37,18 +37,28 @@ class ShoppingCarTableViewCell: UITableViewCell
     
     fileprivate func updateUI() {
         
+        displayCount.text = model?.trueCount
+        icon.sd_setImage(with: URL(string: model!.trueProductImageURL), placeholderImage: Placeholder.DefaultImage)
         selectedButton.isSelected = model!.isSelected
-        icon.image = model!.image
-        displayProductName.text = model!.productName
-        displayRemake.text = model?.remake
-        displayMoney.text = model?.money
-        displayCount.text = model?.count
+        displayProductName.text = model?.product_name
+        displayMoney.text = model?.showPrice
+        displayRemake.text = model?.product_id
     }
 
 }
 extension ShoppingModel {
     
-    var image: UIImage {
-        return UIImage(named: imageNamed)!
+    var trueCount: String? {
+        return goods_number.length == 0 ? nil : "x\(goods_number)"
     }
+    
+    var trueProductImageURL: String {
+        return "\(host):\(8080)/\(objectAddress)\(product_image_url)"
+    }
+    
+    var showPrice: String? {
+        return "¥\(sell_price)"
+    }
+    
 }
+

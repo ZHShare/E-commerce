@@ -10,33 +10,51 @@ import Foundation
 
 struct ShoppingModel: Equatable {
     
-    var isSelected: Bool
-    let imageNamed: String
-    let productName: String
-    let remake: String
-    let money: String
-    let count: String
+    var isSelected: Bool = false
+    let product_name: String
+    let product_id: String
+    let goods_number: String
+    let sell_price: String
+    let market_price: String
+    let product_image_url: String
+
     
     public static func ==(lhs: ShoppingModel, rhs: ShoppingModel) -> Bool {
         return
-            lhs.count == rhs.count &&
-                lhs.imageNamed == rhs.imageNamed &&
-                lhs.productName == rhs.productName &&
-                lhs.remake == rhs.remake &&
-                lhs.money == rhs.money
+            lhs.product_name == rhs.product_name &&
+                lhs.product_id == rhs.product_id &&
+                lhs.product_name == rhs.product_name &&
+                lhs.goods_number == rhs.goods_number &&
+                lhs.sell_price == rhs.sell_price &&
+                lhs.market_price == rhs.market_price &&
+                lhs.product_image_url == rhs.product_image_url
     }
-
-    static func models() -> [ShoppingModel] {
+    
+    static func models(withDic: [String: Any]?) -> [ShoppingModel]? {
         
-        return [ShoppingModel(isSelected: false, imageNamed: "product_details_1", productName: "产品包名称：医用传呼系统豪华版湖南一特", remake: "白色 55寸", money: "999", count: "2"),
-         ShoppingModel(isSelected: false, imageNamed: "product_details_2", productName: "产品包名称：医用传呼系统乐享版湖南一特", remake: "白色 45寸", money: "2999", count: "1"),
-         ShoppingModel(isSelected: false, imageNamed: "product_details_1", productName: "产品包名称：医用传呼系统东郭版湖南一特", remake: "白色 25寸", money: "4999", count: "3"),
-         ShoppingModel(isSelected: false, imageNamed: "product_details_3", productName: "产品包名称：医用传呼系统湖南一特", remake: "白色 55寸", money: "3999", count: "4"),
-         ShoppingModel(isSelected: false, imageNamed: "product_details_4", productName: "产品包名称：医用传呼系统豪华版湖南一特", remake: "白色 15寸", money: "9999", count: "1"),
-         ShoppingModel(isSelected: false, imageNamed: "product_details_1", productName: "产品包名称：医用传呼系统舒适版湖南一特", remake: "白色 95寸", money: "3999", count: "2"),
-         ShoppingModel(isSelected: false, imageNamed: "product_details_4", productName: "产品包名称：医用传呼系统自动版湖南一特", remake: "白色 55寸", money: "4999", count: "12"),
-         ShoppingModel(isSelected: false, imageNamed: "product_details_2", productName: "产品包名称：医用传呼系统精英版湖南一特", remake: "白色 15寸", money: "2999", count: "2"),
-         ShoppingModel(isSelected: false, imageNamed: "product_details_3", productName: "产品包名称：医用传呼系统精英版湖南一特", remake: "白色 55寸", money: "1999", count: "2")]
+        guard let response = withDic else {
+            return nil
+        }
         
+        guard let data = response["data"] as? [String: Any] else {
+            return nil
+        }
+        
+        guard let list = data["list"] as? [Any] else {
+            return nil
+        }
+        
+        if list.count == 0 { return nil }
+        
+        var models = [ShoppingModel]()
+        for dic in list {
+            
+            var dic = dic as! [String : Any]
+            dic["isSelected"] = false
+            let model = ECMapping.ace(type: ShoppingModel.self, fromDic: dic)
+            models.append(model)
+        }
+        
+        return models
     }
 }

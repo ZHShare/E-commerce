@@ -9,6 +9,7 @@
 import Foundation
 
 struct AddressBookModel {
+    
     let sex: String
     let head_portrait: String
     let department_name: String

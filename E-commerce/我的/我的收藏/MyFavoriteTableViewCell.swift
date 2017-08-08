@@ -19,15 +19,20 @@ class MyFavoriteTableViewCell: UITableViewCell
     
     fileprivate func updateUI() {
         
-        icon.image = model?.image
-        displayProductName.text = model?.productName
-        displayPrice.text = model?.price
+        if model == nil { return }
+        
+        icon.sd_setImage(with: URL(string: model!.product_image_url), placeholderImage: Placeholder.DefaultImage)
+        displayProductName.text = model?.product_name
+        displayPrice.text = model?.showPrice
     }
 }
-
 extension MyFavoriteModel {
     
-    var image: UIImage? {
-        return UIImage(named: imageNamed)
+    var trueImageUrl: String {
+        return "\(host):\(8080)/\(objectAddress)\(product_image_url)"
+    }
+    
+    var showPrice: String? {
+        return "¥\(sell_price)"
     }
 }

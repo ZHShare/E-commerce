@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 class MyFavoriteViewController: BaseViewController
 {
@@ -24,23 +25,49 @@ class MyFavoriteViewController: BaseViewController
         hiddenTypeTableView()
     }
     
+    fileprivate let mjHeader = MJRefreshNormalHeader()
+    fileprivate let mjFooter = MJRefreshAutoNormalFooter()
     fileprivate var products: [MyFavoriteModel]?
     fileprivate var types: [MyFavoriteTypeModel]?
+    fileprivate var pageNumber = 1 {
+        didSet { fetchData() }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
-
         hiddenTypeTableView()
-        fetchData()
+        configTableView()
+        mjHeader.beginRefreshing()
     }
     
+    fileprivate var params: [String: Any] = ["user_id": LoginModel.load()!.user_id]
     fileprivate func fetchData() {
         
-        products = MyFavoriteModel.models()
-        DispatchQueue.main.async {
-            self.mainTableView.reloadData()
+        params["page_num"] = "\(pageNumber)"
+        UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.myFavorite, params: params) { (response, isLoadFaild, errorMsg) in
+            
+            self.endRefreshing()
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
+            }
+            
+            let newProducts = MyFavoriteModel.models(withDic: response)
+            if self.pageNumber == 1 {
+                self.products = newProducts
+            }
+            else {
+                
+                if newProducts != nil && newProducts?.count != 0 {
+                    self.products!.append(contentsOf: newProducts!)
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.mainTableView.reloadData()
+            }
         }
+        
         
         types = MyFavoriteTypeModel.models()
         DispatchQueue.main.async {
@@ -49,6 +76,47 @@ class MyFavoriteViewController: BaseViewController
         }
     }
     
+    fileprivate func configTableView() {
+        
+        mainTableView.mj_footer = mjFooter
+        mainTableView.mj_header = mjHeader
+        
+        mjHeader.refreshingBlock = {
+            self.pageNumber = 1
+        }
+        
+        mjFooter.refreshingBlock = {
+            self.pageNumber += 1
+        }
+    }
+    
+    fileprivate func endRefreshing() {
+        
+        if Thread.isMainThread {
+            
+            if mjFooter.isRefreshing() {
+                mjFooter.endRefreshing()
+            }
+            
+            if mjHeader.isRefreshing() {
+                mjHeader.endRefreshing()
+            }
+        }
+        
+        else {
+            
+            DispatchQueue.main.async {
+                
+                if self.mjFooter.isRefreshing() {
+                    self.mjFooter.endRefreshing()
+                }
+                
+                if self.mjHeader.isRefreshing() {
+                    self.mjHeader.endRefreshing()
+                }
+            }
+        }
+    }
     
     fileprivate enum ReuseIdentifier {
         static let ListType = "ListType"

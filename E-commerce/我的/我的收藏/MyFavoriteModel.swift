@@ -10,18 +10,37 @@ import Foundation
 
 struct MyFavoriteModel {
     
-    let imageNamed: String
-    let productName: String
-    let price: String
+    let product_id: String
+    let product_name: String
+    let cat_id: String
+    let product_image_url: String
+    let sell_price: String
+    let market_price: String
     
-    static func models() -> [MyFavoriteModel] {
-        return [MyFavoriteModel(imageNamed: "product_details_1", productName: "产品包名称：医用传呼系统乐享版湖南一特", price: "1888"),
-         MyFavoriteModel(imageNamed: "product_details_2", productName: "产品包名称：医用传呼系统乐享版湖南一特", price: "1889"),
-         MyFavoriteModel(imageNamed: "product_details_3", productName: "产品包名称：医用传呼系统乐享版湖南一特", price: "1886"),
-         MyFavoriteModel(imageNamed: "product_details_4", productName: "产品包名称：医用传呼系统乐享版湖南一特", price: "188"),
-         MyFavoriteModel(imageNamed: "product_details_1", productName: "产品包名称：医用传呼系统乐享版湖南一特", price: "1848"),
-         MyFavoriteModel(imageNamed: "product_details_2", productName: "产品包名称：医用传呼系统乐享版湖南一特", price: "1858"),
-         MyFavoriteModel(imageNamed: "product_details_3", productName: "产品包名称：医用传呼系统乐享版湖南一特", price: "18388")]
+    static func models(withDic: [String: Any]?) -> [MyFavoriteModel]? {
+       
+        guard let response = withDic else {
+            return nil
+        }
+        
+        guard let data = response["data"] as? [String: Any] else {
+            return nil
+        }
+        
+        guard let list = data["list"] as? [Any] else {
+            return nil
+        }
+        
+        if list.count == 0 { return nil }
+        
+        var models = [MyFavoriteModel]()
+        for dic in list {
+            
+            let model = ECMapping.ace(type: MyFavoriteModel.self, fromDic: dic as! [String : Any])
+            models.append(model)
+        }
+        
+        return models
     }
 }
 

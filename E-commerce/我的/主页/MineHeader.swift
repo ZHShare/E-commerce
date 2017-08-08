@@ -42,6 +42,77 @@ class MineHeader: UIView
     @IBOutlet weak var consigneeButton: UIButton!
     @IBOutlet weak var evaluationButton: UIButton!
     @IBOutlet weak var returnedMoneyButton: UIButton!
+    
+    fileprivate var submitCount: String? {
+        get { return submitButton.currentTitle }
+        set {
+            
+            if newValue == "0" || newValue == nil {
+                submitButton.alpha = 0
+            }
+            else {
+                submitButton.alpha = 1
+                submitButton.setTitle(newValue, for: .normal)
+            }
+        }
+    }
+    
+    fileprivate var checkCount: String? {
+        get { return checkButton.currentTitle }
+        set {
+            
+            if newValue == "0" || newValue == nil {
+                checkButton.alpha = 0
+            }
+            else {
+                checkButton.alpha = 1
+                checkButton.setTitle(newValue, for: .normal)
+            }
+        }
+    }
+    
+    fileprivate var sendCount: String? {
+        get { return sendingButton.currentTitle }
+        set {
+            
+            if newValue == "0" || newValue == nil {
+                sendingButton.alpha = 0
+            }
+            else {
+                sendingButton.alpha = 1
+                sendingButton.setTitle(newValue, for: .normal)
+            }
+        }
+    }
+    
+    fileprivate var consigneeCount: String? {
+        get { return consigneeButton.currentTitle }
+        set {
+            
+            if newValue == "0" || newValue == nil {
+                consigneeButton.alpha = 0
+            }
+            else {
+                consigneeButton.alpha = 1
+                consigneeButton.setTitle(newValue, for: .normal)
+            }
+        }
+    }
+    
+    fileprivate var evaluationCount: String? {
+        get { return evaluationButton.currentTitle }
+        set {
+            
+            if newValue == "0" || newValue == nil {
+                evaluationButton.alpha = 0
+            }
+            else {
+                evaluationButton.alpha = 1
+                evaluationButton.setTitle(newValue, for: .normal)
+            }
+        }
+    }
+    
     fileprivate var userName: String? {
         
         get {
@@ -55,11 +126,36 @@ class MineHeader: UIView
     
     func updateUI() {
         
-        if let loginModel = LoginModel.load() {
+        let loginModel = LoginModel.load()!
+        
+        if Thread.isMainThread == false {
             
-//            headerImageView.sd_setImage(with: URL(string: loginModel.face_image_url), placeholderImage: UIImage(named: "log_reg_icon"))
-            userName = loginModel.user_name
+            DispatchQueue.main.async {
+                self.headerImageView.sd_setImage(with: URL(string: loginModel.faceUrl), placeholderImage: UIImage(named: "log_reg_icon"))
+                self.userName = loginModel.user_name
+                if self.returnedMoneyButton.alpha != 0 {
+                    self.returnedMoneyButton.alpha = 0
+                }
+                self.submitCount = loginModel.review_num
+                self.checkCount = loginModel.confirm_num
+                self.sendCount = loginModel.ship_num
+                self.consigneeCount = loginModel.receipt_num
+                self.evaluationCount = loginModel.assess_num
+            }
+            return
         }
+        
+        headerImageView.sd_setImage(with: URL(string: loginModel.faceUrl), placeholderImage: UIImage(named: "log_reg_icon"))
+        userName = loginModel.user_name
+        if returnedMoneyButton.alpha != 0 {
+            returnedMoneyButton.alpha = 0
+        }
+        submitCount = loginModel.review_num
+        checkCount = loginModel.confirm_num
+        sendCount = loginModel.ship_num
+        consigneeCount = loginModel.receipt_num
+        evaluationCount = loginModel.assess_num
+        
     }
     
     var delegate: MineHeaderViewDelegate?
@@ -69,16 +165,15 @@ class MineHeader: UIView
     
     func demoClear() {
         
-        if LoginStatus.isLogined == false {
-            
-            submitButton.alpha = 0
-            checkButton.alpha = 0
-            sendingButton.alpha = 0
-            consigneeButton.alpha = 0
-            evaluationButton.alpha = 0
-            returnedMoneyButton.alpha = 0
-        }
+        submitButton.alpha = 0
+        checkButton.alpha = 0
+        sendingButton.alpha = 0
+        consigneeButton.alpha = 0
+        evaluationButton.alpha = 0
+        returnedMoneyButton.alpha = 0
       
+        headerImageView.image = UIImage(named: "log_reg_icon")
+        userName = "请登录"
     }
     
     // 头像点击
@@ -129,4 +224,10 @@ class MineHeader: UIView
     }
 
 }
+extension LoginModel {
+    
+    var faceUrl: String {
 
+        return "\(host):\(8080)/\(objectAddress)\(face_image_url)"
+    }
+}

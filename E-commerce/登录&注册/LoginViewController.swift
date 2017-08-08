@@ -11,6 +11,9 @@ import UIKit
 class LoginViewController: BaseViewController
 {
     
+    @IBOutlet weak var displayName: UILabel!
+    @IBOutlet weak var headerIcon: UIImageView!
+    
     @IBAction func viewTap(_ sender: UITapGestureRecognizer?) {
         
         if userNameField.isFirstResponder {
@@ -29,6 +32,11 @@ class LoginViewController: BaseViewController
             passwordField.isEnabled = false
         }
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
     }
     
     @IBOutlet weak var userNameField: UITextField! {
@@ -125,32 +133,37 @@ class LoginViewController: BaseViewController
             let range = textField.markedTextRange
             
             if range == nil {
-                
-                if textField == userNameField {
-                    if (textField.text?.characters.count)! >= MaxLength.phoneNumber {
-                        textField.text = temp.substring(to: MaxLength.phoneNumber)
-                    }
-                }
-                else {
-                    if (textField.text?.characters.count)! >= MaxLength.password {
-                        textField.text = temp.substring(to: MaxLength.password)
-                    }
-                }
+               updateChineseUIWithTextField(textField: textField, temp: temp)
             }
-            
         }
             
         else {
-            
-            if textField == userNameField {
-                if (textField.text?.characters.count)! >= MaxLength.phoneNumber {
-                    textField.text = temp.substring(to: MaxLength.phoneNumber)
-                }
+            updateChineseUIWithTextField(textField: textField, temp: temp)
+        }
+    }
+    
+    fileprivate func updateChineseUIWithTextField(textField: UITextField, temp: NSString) {
+        
+        if textField == userNameField {
+            if (textField.text?.characters.count)! >= MaxLength.phoneNumber {
+                textField.text = temp.substring(to: MaxLength.phoneNumber)
             }
+            
+            
+            if textField.text == LoginStatus.phone {
+                
+                headerIcon.sd_setImage(with: URL(string: LoginStatus.faceImageUrl!), placeholderImage: UIImage(named: "log_reg_icon"))
+                displayName.text = LoginStatus.name
+            }
+                
             else {
-                if (textField.text?.characters.count)! >= MaxLength.password {
-                    textField.text = temp.substring(to: MaxLength.password)
-                }
+                headerIcon.image = UIImage(named: "log_reg_icon")
+                displayName.text = "请登录"
+            }
+        }
+        else {
+            if (textField.text?.characters.count)! >= MaxLength.password {
+                textField.text = temp.substring(to: MaxLength.password)
             }
         }
     }
@@ -164,6 +177,11 @@ class LoginViewController: BaseViewController
     fileprivate func updateUI() {
         
         userNameField.text = LoginStatus.phone
+        if userNameField.text == LoginStatus.phone {
+            
+            headerIcon.sd_setImage(with: URL(string: LoginStatus.faceImageUrl!), placeholderImage: UIImage(named: "log_reg_icon"))
+            displayName.text = LoginStatus.name
+        }
     }
 }
 extension LoginViewController: UITextFieldDelegate {

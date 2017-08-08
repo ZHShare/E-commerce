@@ -13,7 +13,4 @@
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <MAMapKit/MAMapKit.h>
 
-// 排序
-#import "BMChineseSort.h"
-
 #endif /* BridgingHeader_h */

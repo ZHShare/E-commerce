@@ -11,7 +11,6 @@ import UIKit
 class AddressBookViewController: BaseTableViewController
 {
 
-    fileprivate var indexArray: [NSArray]?
     fileprivate var letterArray: [String]?
     fileprivate var keysValues = [String: NSMutableArray]()
     fileprivate var searchResults = [AddressBookModel]()
@@ -27,8 +26,7 @@ class AddressBookViewController: BaseTableViewController
         super.viewDidLoad()
         configTableView()
         configSearchController()
-//        fetchData()
-        demoData()
+        fetchData()
     }
 
     fileprivate func configTableView() {
@@ -83,9 +81,9 @@ class AddressBookViewController: BaseTableViewController
         }
     }
     
-    fileprivate func demoData() {
+    fileprivate func dealData(models: [AddressBookModel]?) {
         
-        let models = AddressBookModel.models(dic: AddressBookModel.response)
+        if models == nil { return }
         
         for model in models! {
             
@@ -120,7 +118,7 @@ class AddressBookViewController: BaseTableViewController
             }
             
             let models = AddressBookModel.models(dic: response)
-            
+            self.dealData(models: models)
         }
         
     }
@@ -244,6 +242,14 @@ extension AddressBookViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let detailsViewController = ECStroryBoard.controller(type: AddressBookDetailsViewController.self)
+        var model: AddressBookModel?
+        if searchController.isActive {
+            model = searchResults[indexPath.row]
+        }
+        else {
+            model = keysValues[letterArray![indexPath.section]]?[indexPath.row] as? AddressBookModel
+        }
+        detailsViewController.model = model
         navigationController?.ecPushViewController(detailsViewController)
     }
 }

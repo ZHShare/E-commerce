@@ -11,10 +11,23 @@ import MappingAce
 
 fileprivate let userDefaults = UserDefaults.standard
 
+struct Placeholder {
+    static let DefaultImage = UIImage(named: "log_reg_icon")
+}
+
+class UserInfo: Nofifier {
+    enum Notification: String {
+        case Update
+    }
+}
+
+
 fileprivate enum Key {
     static let saveAndLoad = "Save and Get"
     static let loginFlag = "Login"
     static let phoneNumber = "phoneNumber"
+    static let Name = "Name"
+    static let PhotoUrl = "PhotoUrl"
 }
 
 enum LoginStatus {
@@ -36,6 +49,14 @@ enum LoginStatus {
     
     static var phone: String? {
         return userDefaults.string(forKey: Key.phoneNumber)
+    }
+    
+    static var faceImageUrl: String? {
+        return "\(host):\(8080)/\(objectAddress)\(userDefaults.string(forKey: Key.PhotoUrl)!)"
+    }
+    
+    static var name: String? {
+        return userDefaults.string(forKey: Key.Name)
     }
 }
 
@@ -84,13 +105,22 @@ struct LoginModel: Mapping
         return nil
     }
     
-    static func update(key: String, value: String) {
+    static func update(value: String, key: String) {
         
         if let dic = userDefaults.dictionary(forKey: Key.saveAndLoad) {
         
             var newDic = dic
             newDic[key] = value
             userDefaults.set(newDic, forKey: Key.saveAndLoad)
+            LoginModel.notice()
+            
+            switch key {
+            case Key.PhotoUrl: userDefaults.set(value, forKey: Key.PhotoUrl)
+            case Key.Name: userDefaults.set(value, forKey: Key.Name)
+            default:
+                break
+            }
+            
         }
     }
 }
@@ -98,9 +128,14 @@ struct LoginModel: Mapping
 extension LoginModel {
     
     func save() {
-
+        
+        userDefaults.set(face_image_url, forKey: Key.PhotoUrl)
+        userDefaults.set(user_name, forKey: Key.Name)
+        LoginStatus.updatePhone(phone: user_mobile)
+        
         LoginStatus.isLogined = true
         userDefaults.set(toDictionary(), forKey: Key.saveAndLoad)
+        LoginModel.notice()
     }
     
     static func load() -> LoginModel? {
@@ -116,8 +151,15 @@ extension LoginModel {
         
         LoginStatus.isLogined = false
         userDefaults.removeObject(forKey: Key.saveAndLoad)
+        notice()
     }
     
+    // MARK: 通知登录状态发生改变
+    static func notice() {
+        
+        UserInfo.postNotification(notification: UserInfo.Notification.Update, object: nil, userInfo: nil)
+        
+    }
 }
 
 

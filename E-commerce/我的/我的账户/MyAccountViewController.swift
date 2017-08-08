@@ -18,11 +18,39 @@ class MyAccountViewController: BaseTableViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
+        fetchData()
     }
    
+    fileprivate var account: MyAccountModel? {
+        didSet {updateUI()}
+    }
+    
+    fileprivate func fetchData() {
+        
+        UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.myAccount, params: params) { (response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
+            }
+            
+            self.account = MyAccountModel.model(withDic: response)
+            
+        }
+        
+    }
+    
+    fileprivate var params: [String: Any] {
+        return ["user_id": LoginModel.load()!.user_id]
+    }
     
     fileprivate func configNavigationBar() {
         navigationItem.title = "我的账户"
+    }
+    
+    fileprivate func updateUI() {
+        
+        let tableHeader = tableView.tableHeaderView as! MyAccountHeader
+        tableHeader.account = account
     }
 
 }
@@ -58,6 +86,7 @@ extension MyAccountViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let accountDetailsController = ECStroryBoard.controller(type: AccountDetailsViewController.self)
+        accountDetailsController.account_id = account?.account_id
         navigationController?.ecPushViewController(accountDetailsController)
     }
     

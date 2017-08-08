@@ -21,11 +21,7 @@ class AddressBookTableViewCell: UITableViewCell
     fileprivate func updateUI() {
         
         displayName.text = model?.name
-        icon.image = model?.image
+        icon.sd_setImage(with: URL(string: model!.head_portrait), placeholderImage: UIImage(named: "log_reg_icon"))
     }
 }
-extension AddressBookModel {
-    var image: UIImage? {
-        return UIImage(named: head_portrait)
-    }
-}
+

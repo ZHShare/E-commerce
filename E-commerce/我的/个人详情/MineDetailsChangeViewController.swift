@@ -78,7 +78,7 @@ class MineDetailsChangeViewController: BaseViewController
             if let done = self.done {
                 
                 self.navigationController?.ecPopViewController()
-                LoginModel.update(key: "user_name", value: self.nameField.text!)
+                LoginModel.update(value: self.nameField.text!,key: "user_name")
                 done(self.nameField.text!)
             }
         }

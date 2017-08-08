@@ -11,7 +11,9 @@ import UIKit
 class ShoppingCarViewController: BaseViewController
 {
 
-    var models: [ShoppingModel]?
+    var models: [ShoppingModel]? {
+        didSet { updateUI() }
+    }
     
     fileprivate var allMoney = 0
 
@@ -20,14 +22,39 @@ class ShoppingCarViewController: BaseViewController
     @IBOutlet weak var selectedAllButton: UIButton!
     
     fileprivate func fetchData() {
-        models = ShoppingModel.models()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        
+        UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.myShoppingCar, params: params) { (response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
+            }
+            
+            self.models = ShoppingModel.models(withDic: response)
+        }
+        
+    }
+    
+    fileprivate var params: [String: Any] {
+        return ["user_id": LoginModel.load()!.user_id]
+    }
+    
+    fileprivate func updateUI() {
+        
+        if Thread.isMainThread {
+            tableView.reloadData()
+        }
+        
+        else {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
     @IBAction func selectedAll(sender: UIButton) {
      
+        if models == nil { return }
+        
         sender.isSelected = !sender.isSelected
         
         let newModels = NSMutableArray()
@@ -119,13 +146,20 @@ extension ShoppingCarViewController: ShoppingCarTableViewCellDelegate {
         _ = models!.map({ (model) -> Void in
             
             if model.isSelected {
-                allMoney += Int(model.count)! * Int(model.money)!
+                allMoney += Int(model.sell_price)! * Int(model.goods_number)!
             }
         })
         
-        displayMoney.text = "\(allMoney)"
+        if Thread.isMainThread {
+            displayMoney.text = "\(allMoney)"
+            
+        }
+        else {
+            DispatchQueue.main.async {
+                self.displayMoney.text = "\(self.allMoney)"
+            }
+        }
     }
-    
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -163,10 +197,19 @@ extension ShoppingCarViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
-        var newModels = models!
-        newModels.remove(at: indexPath.row)
-        models = newModels
-        tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.none)
-        updateMoney()
+        let selectedModel = models![indexPath.row]
+        let parms: [String: Any] = ["list": [["user_id": LoginModel.load()!.user_id, "product_id": selectedModel.product_id]]]
+        UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.delShoppingCar, params: parms) { (response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
+            }
+            
+            var newModels = self.models!
+            newModels.remove(at: indexPath.row)
+            self.models = newModels
+            self.updateMoney()
+        }
+        
     }
 }

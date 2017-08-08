@@ -63,8 +63,8 @@ class MineDetailsDepartmentViewController: BaseTableViewController
         default:
             
             let loginModel = LoginModel.load()!
-            let params = ["user_no": loginModel.user_id,
-                          "enterprise_id": loginModel.user_identifyid]
+            let params = ["user_id": loginModel.user_id,
+                          "enterprise_id": loginModel.enterprise_id]
             
             UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.department, params: params, handle: { (response, isLoadFaild, errorMsg) in
                 

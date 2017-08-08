@@ -8,6 +8,7 @@
 
 import UIKit
 import MWPhotoBrowser
+import SDWebImage
 
 class MineDetailsViewController: BaseTableViewController
 {
@@ -30,6 +31,8 @@ class MineDetailsViewController: BaseTableViewController
                     self.updateDepartment()
                 }
             }
+            
+            LoginModel.update(value: department!.department_name, key: "department_name")
         }
     }
     
@@ -99,6 +102,8 @@ class MineDetailsViewController: BaseTableViewController
                     self.updateSex()
                 }
             }
+            
+            LoginModel.update(value: sex == "男" ? "1" : "2" , key: "user_sex")
         }
     }
     fileprivate var birthday: String = "" {
@@ -112,6 +117,8 @@ class MineDetailsViewController: BaseTableViewController
                     self.updateBirthDay()
                 }
             }
+            
+            LoginModel.update(value: birthday, key: "user_birthday")
         }
     }
     
@@ -132,6 +139,16 @@ class MineDetailsViewController: BaseTableViewController
             sex = loginModel.stringSex
             birthday = loginModel.user_birthday
             enterprise = loginModel.enterprise_name
+            department = MineDetailsDepartmentModel(department_name: loginModel.department_name, department_id: "", superior_department_id: "")
+            
+            SDWebImageManager.shared().downloadImage(with: URL(string: loginModel.faceUrl), options: SDWebImageOptions(rawValue: 0), progress: { (_, _) in
+                
+            }, completed: { (img, error, type, flag, url) in
+                
+                if let img = img {
+                    self.image = img
+                }
+            })
         }
     }
     
@@ -197,7 +214,7 @@ extension MineDetailsViewController {
 
                     (cell as? MineDetailsNormalTableViewCell)?.displaySubTitle.text = enterprise
                 case 3:
-                    //(cell as? MineDetailsNormalTableViewCell)?.displaySubTitle.text = department?.department_name
+                    (cell as? MineDetailsNormalTableViewCell)?.displaySubTitle.text = department?.department_name
                     break
                 default: break
                 }
@@ -365,7 +382,7 @@ fileprivate extension MineDetailsViewController {
         imagePickerController.delegate = self
         imagePickerController.allowsEditing = true
         imagePickerController.sourceType = type
-        
+        imagePickerController.navigationBar.tintColor = UIColor.darkGray
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             present(imagePickerController, animated: true, completion:nil)
         }
@@ -417,6 +434,12 @@ fileprivate extension MineDetailsViewController {
 // MARK: - UIImagePickerControllerDelegate
 extension MineDetailsViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
+    
+    @objc func dismissPicker(picker: UIViewController) {
+        
+        imagePickerControllerDidCancel(picker as! UIImagePickerController)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let type:String = (info[UIImagePickerControllerMediaType]as!String)
@@ -434,8 +457,7 @@ extension MineDetailsViewController: UIImagePickerControllerDelegate,UINavigatio
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func
-        updateImage(img: UIImage?) {
+    func updateImage(img: UIImage?) {
         
         let imgData = UIImageJPEGRepresentation(img!,0.5)
         if let imgData = imgData {
@@ -451,11 +473,29 @@ extension MineDetailsViewController: UIImagePickerControllerDelegate,UINavigatio
                     return super.hudWithMssage(msg: errorMsg)
                 }
                 
+                self.updateLocalImageWithResponse(response: response)
                 super.hudWithMssage(msg: "更新成功")
                 self.image = img!
             })
             
         }
+    }
+
+    func updateLocalImageWithResponse(response: [String: Any]?) {
+        
+        guard let response = response else {
+            return
+        }
+        
+        guard let data = response["data"] as? [String: Any] else {
+            return
+        }
+        
+        if let imageUrl = data["face_image_url"] as? String {
+            
+            LoginModel.update(value: imageUrl, key: "face_image_url")
+        }
+        
     }
 }
 extension LoginModel {
