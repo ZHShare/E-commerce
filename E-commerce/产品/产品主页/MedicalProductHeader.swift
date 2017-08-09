@@ -10,6 +10,7 @@ import UIKit
 
 class MedicalProductHeader: UICollectionReusableView {
     
+    var models: [ADModel]? { didSet { updateUI() }  }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,4 +34,21 @@ class MedicalProductHeader: UICollectionReusableView {
         addSubview(tableHeader)
     }
 
+    fileprivate func updateUI() {
+        
+        if let models = models {
+            
+            let ads = models.map({ (model) -> String in
+                return model.imageString
+            })
+            
+            tableHeader.dataArray = ads
+        }
+    }
+}
+fileprivate extension ADModel {
+    
+    var imageString: String {
+        return "\(host):\(8080)/\(objectAddress)\(image_url)"
+    }
 }

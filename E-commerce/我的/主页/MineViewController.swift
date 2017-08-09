@@ -15,25 +15,15 @@ class MineViewController: BaseTableViewController {
         static let list = "Mine List"
     }
     
-    var models: [MineModel]?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
         configTableView()
-        fetchData()
         addNotice()
     }
     
     deinit {
         removeNotice()
-    }
-    fileprivate func fetchData() {
-        
-        models = MineModel.models()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
     }
     
     fileprivate func addNotice() {
@@ -143,37 +133,17 @@ extension MineViewController: MineHeaderViewDelegate {
 extension MineViewController {
     
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if let models = models {
-            return models.count
-        }
-        return 0
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.list, for: indexPath)
-        
-        if let cell = cell as? MineCell {
-            cell.model = models?[indexPath.row]
-        }
-        
-        return cell
-    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        switch indexPath.row {
-        case 0: didClickAccount()
-        case 1: didClickShopping()
-        case 2: didCLickMyFavorite()
-        case 4: didClickAddressBook()
-        case 6: didClickSetting()
+        let cell = tableView.cellForRow(at: indexPath)!
+        switch cell.tag {
+        case 1000: didClickAccount()
+        case 1001: didClickShopping()
+        case 1002: didCLickMyFavorite()
+        case 1003: didClickInvoice()
+        case 1005: didClickAddressBook()
+        case 1007: didClickSetting()
         default:
             break
         }
@@ -185,6 +155,13 @@ extension MineViewController {
 }
 // MARK: - FilePrivate 
 fileprivate extension MineViewController {
+    
+    // MARK: did click invoice manager
+    fileprivate func didClickInvoice() {
+        
+        let invoiceManagerViewController = ECStroryBoard.controller(type: InvoiceManagerViewController.self)
+        navigationController?.ecPushViewController(invoiceManagerViewController)
+    }
     
     // MARK: update UI
     fileprivate func updateUI() {

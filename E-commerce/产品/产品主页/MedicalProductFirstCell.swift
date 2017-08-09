@@ -12,10 +12,16 @@ fileprivate enum ReuseIdentifier  {
     static let buttons = "Display Images and Titles"
 }
 
+protocol MedicalProductFirstCellDelegate {
+    
+    func didSelectedIndex(index: IndexPath)
+}
+
 class MedicalProductFirstCell: UICollectionViewCell {
 
-    var models: [ButtonModel]?
-    
+    var models: [ButtonModel]? { didSet { refreshButtons() } }
+    var notices: [PreferentialModel]? { didSet { refreshNotices() }}
+    var delegate: MedicalProductFirstCellDelegate?
     @IBOutlet weak var moreBg: UIView! { didSet { updateBoxUI() } }
     
     fileprivate func updateBoxUI() {
@@ -26,18 +32,15 @@ class MedicalProductFirstCell: UICollectionViewCell {
     }
     
     @IBOutlet weak var buttonsView: UICollectionView! {
-        didSet {
-            updateButtonsView()
-            loadDatas()
-        }
+        didSet { updateButtonsView() }
     }
     
     @IBAction func more() {
         print("更多")
     }
     
-    
-    @IBOutlet weak var adScrollView: UIScrollView! { didSet { updateADScrollView() } }
+    // 上下滚动广告
+    @IBOutlet weak var adScrollView: UIScrollView!
     
     
     fileprivate func updateButtonsView() {
@@ -47,38 +50,42 @@ class MedicalProductFirstCell: UICollectionViewCell {
         
     }
     
-    fileprivate func loadDatas() {
+    fileprivate func refreshButtons() {
         
-        models = ButtonModel.fetchDatas()
         DispatchQueue.main.async { [unowned self] in
             self.buttonsView.reloadData()
         }
     }
     
-    fileprivate func updateADScrollView() {
+    fileprivate func refreshNotices() {
         
-        let models = ADModel.fecthDatas()
-        let contentSize = CGSize(width: 0, height: adScrollView.bounds.height*CGFloat(models.count))
+        adScrollView.removeSubviews()
+        guard let notices = notices else {
+            return
+        }
+        let contentSize = CGSize(width: 0, height: adScrollView.bounds.height*CGFloat(notices.count))
         adScrollView.contentSize = contentSize
         
         var frame = adScrollView.frame
         frame.origin.x = 0
         
         var index = 0
-        for model in models {
+        for model in notices {
             
             frame.origin.y = CGFloat(index) * adScrollView.frame.height
             
             let titleLabel = UILabel(frame: frame)
             titleLabel.font = UIFont.systemFont(ofSize: 12)
             titleLabel.textColor = UIColor.gray
-            titleLabel.text = model.title
+            titleLabel.text = model.notice_title
             adScrollView.addSubview(titleLabel)
             
             index += 1
         }
-    }
 
+        
+    }
+    
 
 }
 
@@ -108,6 +115,10 @@ extension MedicalProductFirstCell: UICollectionViewDelegate, UICollectionViewDat
         return UICollectionViewCell()
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        delegate?.didSelectedIndex(index: indexPath)
+    }
     
 }
 // MARK: UICollectionViewDelegateFlowLayout

@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
+import SDWebImage
 class MedicalProductListCell: UICollectionViewCell {
     
-    var model: ListModel? { didSet { updateUI() } }
+    var model: ProductModel? { didSet { updateUI() } }
     
     
     @IBOutlet weak var contentBgView: UIView! { didSet { updateBg() } }
@@ -29,14 +29,17 @@ class MedicalProductListCell: UICollectionViewCell {
     
     fileprivate func updateUI() {
         
-        displayImageView.image = model?.image()
-        displayTitle.text = model!.title
-        displaySubTitle.text = model!.title
+        if model == nil { return }
+        
+        displayImageView.image = Placeholder.DefaultImage
+        displayImageView.image = model?.image
+        displayTitle.text = model!.product_name
+        displaySubTitle.text = model!.product_desc
         
         if model!.isDisCount {
             displayStatus.image = UIImage(named: "product_discount")
         }
-        else if model!.isP {
+        else if model!.isPromotion {
             displayStatus.image = UIImage(named: "product_promotion")
         }
         else {
@@ -44,4 +47,15 @@ class MedicalProductListCell: UICollectionViewCell {
         }
         
     }
+}
+extension ProductModel {
+    
+    var isDisCount: Bool {
+        return is_promote == "1" ? true : false
+    }
+    
+    var isPromotion: Bool {
+        return is_hot == "1" ? true : false
+    }
+    
 }

@@ -14,7 +14,7 @@ class SureInvoiceViewController: BaseViewController
     @IBOutlet var tableView: UITableView!
     
     fileprivate var header: SureInvoiceHeader?
-    fileprivate var isPersonal = true
+    fileprivate var isPersonal = false
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()

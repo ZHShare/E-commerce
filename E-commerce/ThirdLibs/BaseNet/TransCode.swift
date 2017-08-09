@@ -33,4 +33,8 @@ enum TransCode {
         static let codeVerify = "800012"
     }
     
+    struct Home {
+        static let mainPage = "200010"
+    }
+    
 }

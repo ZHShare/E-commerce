@@ -10,6 +10,12 @@ import UIKit
 
 class MedicalProductViewController: BaseViewController {
 
+    fileprivate var adModels: [ADModel]?
+    fileprivate var buttonModels: [ButtonModel]?
+    fileprivate var notices: [PreferentialModel]?
+    fileprivate var packs: [PackModel]?
+    fileprivate var products: [ProductModel]?
+    
     @IBOutlet weak var collectionView: UICollectionView! { didSet { configCollectionView() } }
     @IBOutlet weak var navigationBarShowdow: UIView!
     
@@ -17,6 +23,10 @@ class MedicalProductViewController: BaseViewController {
         
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchData()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -27,20 +37,50 @@ class MedicalProductViewController: BaseViewController {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
     }
-    @IBAction func shopping() {
+    
+    fileprivate func fetchData() {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let shoppingCar = storyboard.instantiateViewController(withIdentifier: "ShoppingCarViewController") as? ShoppingCarViewController {
+        HomeNet.fetchDataWith(transCode: TransCode.Home.mainPage, params: [String: Any]()) { (response, isLoadFaild, errorMsg) in
             
-            if let nav = navigationController as? BaseNavigationController {
-                nav.isHidesBottomBarWhenPushed = false
-                nav.pushViewController(shoppingCar, animated: true)
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
             }
             
-
+            let model = MedicalProductModel.modelWithResponse(response: response)
+            if let adms = model.0 {
+                self.adModels = adms
+            }
+            if let buts = model.1 {
+                self.buttonModels = buts
+            }
+            if let nots = model.2 {
+                self.notices = nots
+            }
+            if let pac = model.3 {
+                self.packs = pac
+            }
+            
+            if let products = model.4 {
+                self.products = products
+            }
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
         
+    }
+    
+    @IBAction func shopping() {
         
+        if LoginStatus.isLogined {
+            
+            let shoppingCarViewController = ECStroryBoard.controller(type: ShoppingCarViewController.self)
+            navigationController?.ecPushViewController(shoppingCarViewController, animated: true, isHidesBottomBarWhenPushed: false)
+            return
+        }
+        
+        enterLogin()
     }
 }
 
@@ -95,6 +135,16 @@ fileprivate extension MedicalProductViewController {
     
 }
 
+// MARK: MedicalProductFirstCellDelegate
+extension MedicalProductViewController: MedicalProductFirstCellDelegate {
+    
+    func didSelectedIndex(index: IndexPath) {
+        
+        let classifyViewController = ECStroryBoard.controller(type: ProductClassifyViewController.self)
+        navigationController?.ecPushViewController(classifyViewController)  
+    }
+}
+
 // MARK: UICollectionViewDelegate UICollectionViewDatasource
 extension MedicalProductViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -105,11 +155,11 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if section == 2 {
-            return ListModel.fetchDatas().count
+            return products == nil ? 0 : products!.count
         }
         
         else if section == 1 {
-            return 5
+            return packs == nil ? 0 : packs!.count
         }
         
         return 1
@@ -121,17 +171,20 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
         switch indexPath.section {
         case 0:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.buttons, for: indexPath) as? MedicalProductFirstCell {
+                cell.models = buttonModels
+                cell.notices = notices
+                cell.delegate = self
                 return cell
             }
         case 1:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.system, for: indexPath) as? MedicalProductSystemCell {
-                
+                cell.model = packs?[indexPath.row]
                 return cell
             }
         case 2:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.list, for: indexPath) as? MedicalProductListCell {
                 
-                cell.model = ListModel.fetchDatas()[indexPath.row]
+                cell.model = products?[indexPath.row]
                 return cell
             }
         default:
@@ -143,14 +196,8 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let detailsController = storyboard.instantiateViewController(withIdentifier: "MedicalProductDetailsViewController") as? MedicalProductDetailsViewController {
-            
-            if let nav = navigationController as? BaseNavigationController {
-                nav.isHidesBottomBarWhenPushed = true
-                nav.pushViewController(detailsController, animated: true)
-            }
-        }
+        let productDetailsController = ECStroryBoard.controller(type: MedicalProductDetailsViewController.self)
+        navigationController?.ecPushViewController(productDetailsController)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -159,6 +206,7 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
             
             if let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ReuseIdentifier.header, for: indexPath) as? MedicalProductHeader {
                 
+                header.models = adModels
                 return header
             }
         }
@@ -210,7 +258,7 @@ extension MedicalProductViewController: UICollectionViewDelegateFlowLayout {
         switch indexPath.section {
         case 0: return ItemSize.buttons
         case 1: return ItemSize.system
-        case 2: return ItemSize.listForImage(image: ListModel.fetchDatas()[indexPath.row].image())
+        case 2: return ItemSize.listForImage(image: products![indexPath.row].image)
 
         default:
             return CGSize.zero
@@ -240,34 +288,4 @@ extension MedicalProductViewController: UICollectionViewDelegateFlowLayout {
     }
     
 }
-extension ListModel {
-    
-    func image() -> UIImage {
-        
-        var image = UIImage(named: imageString)!
-        let width = image.size.width
-        
-        let itemWidth = (Screen.width - 6) / 2.0
-        
-        if width > itemWidth {
 
-            let imageWidth = CGFloat(itemWidth-10)
-            let imageHeight = imageWidth * image.size.height / width
-            
-            let sizeChange = CGSize(width: imageWidth, height: imageHeight)
-            
-            UIGraphicsBeginImageContext(sizeChange)
-            
-            //draw resized image on Context
-            image.draw(in: CGRect(origin: CGPoint.zero, size: sizeChange))
-            
-            //create UIImage
-            image = UIGraphicsGetImageFromCurrentImageContext()!
-            
-            UIGraphicsEndImageContext()
-            
-        }
-        
-        return image
-    }
-}

@@ -18,6 +18,7 @@ let api = "api"
 struct ApiType {
     static let UserInfo = "userinfo"
     static let Pub = "pub"
+    static let Home = "home"
 }
 
 enum BaseNet {
@@ -39,8 +40,6 @@ enum BaseNet {
         
         let url = "\(host):\(8080)/\(objectAddress)/\(api)/\(apiType)/\(transCode).json"
         
-        print(url)
-        
         let newParams = ["head": headerParams, "body": params]
         
         hNet.shareInstance.fetch(url: url).parameters(p: newParams as [String: AnyObject]).go(success: { (response) in
@@ -50,7 +49,6 @@ enum BaseNet {
                 
                 let obj = JSON(data: response)
                 if let dicValue =  obj.dictionaryObject {
-                    print("\(dicValue)\n")
                     
                     var isLoadFaild = true
                     if (dicValue["ret_code"] as! String) == "0000" {

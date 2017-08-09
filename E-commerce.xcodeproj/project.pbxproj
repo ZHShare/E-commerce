@@ -52,10 +52,13 @@
 		C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFF1F1DE3C100985880 /* GuideViewController.swift */; };
 		C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */; };
 		C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */; };
+		C68159EE1F3AB85C0092A40C /* InvoiceManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68159ED1F3AB85C0092A40C /* InvoiceManagerViewController.swift */; };
+		C68159F01F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68159EF1F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift */; };
+		C68159F21F3ADCA90092A40C /* HomeNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68159F11F3ADCA90092A40C /* HomeNet.swift */; };
+		C68159F71F3B0DF10092A40C /* ProductClassifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68159F61F3B0DF10092A40C /* ProductClassifyViewController.swift */; };
+		C68159F91F3B0E090092A40C /* ProductClassifyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68159F81F3B0E090092A40C /* ProductClassifyTableViewCell.swift */; };
 		C6838ECD1F39976200CE69E5 /* MyAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838ECC1F39976200CE69E5 /* MyAccountModel.swift */; };
-		C68527821F3162A2001A2441 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685277E1F3162A2001A2441 /* MineCell.swift */; };
 		C68527831F3162A2001A2441 /* MineHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685277F1F3162A2001A2441 /* MineHeader.swift */; };
-		C68527841F3162A2001A2441 /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68527801F3162A2001A2441 /* MineModel.swift */; };
 		C68527851F3162A2001A2441 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68527811F3162A2001A2441 /* MineViewController.swift */; };
 		C68527891F3162E3001A2441 /* MineDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68527881F3162E3001A2441 /* MineDetailsViewController.swift */; };
 		C685278B1F316327001A2441 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C685278A1F316327001A2441 /* OrderListViewController.swift */; };
@@ -111,7 +114,7 @@
 		C6A1C8341F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8131F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift */; };
 		C6A1C8351F2ED27600FBD3B9 /* MedicalProductDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8141F2ED27600FBD3B9 /* MedicalProductDetailsModel.swift */; };
 		C6A1C8361F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8151F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift */; };
-		C6A1C8371F2ED27600FBD3B9 /* MedicalProductDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8171F2ED27600FBD3B9 /* MedicalProductDemoModel.swift */; };
+		C6A1C8371F2ED27600FBD3B9 /* MedicalProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8171F2ED27600FBD3B9 /* MedicalProductModel.swift */; };
 		C6A1C8381F2ED27600FBD3B9 /* MedicalProductFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8181F2ED27600FBD3B9 /* MedicalProductFirstCell.swift */; };
 		C6A1C8391F2ED27600FBD3B9 /* MedicalProductFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C8191F2ED27600FBD3B9 /* MedicalProductFirstCell.xib */; };
 		C6A1C83A1F2ED27600FBD3B9 /* MedicalProductHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C81A1F2ED27600FBD3B9 /* MedicalProductHeader.swift */; };
@@ -237,10 +240,13 @@
 		C66BECFF1F1DE3C100985880 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefineCommon.swift; sourceTree = "<group>"; };
+		C68159ED1F3AB85C0092A40C /* InvoiceManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceManagerViewController.swift; sourceTree = "<group>"; };
+		C68159EF1F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssunInvoiceTableViewCell.swift; sourceTree = "<group>"; };
+		C68159F11F3ADCA90092A40C /* HomeNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNet.swift; sourceTree = "<group>"; };
+		C68159F61F3B0DF10092A40C /* ProductClassifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductClassifyViewController.swift; sourceTree = "<group>"; };
+		C68159F81F3B0E090092A40C /* ProductClassifyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductClassifyTableViewCell.swift; sourceTree = "<group>"; };
 		C6838ECC1F39976200CE69E5 /* MyAccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountModel.swift; sourceTree = "<group>"; };
-		C685277E1F3162A2001A2441 /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
 		C685277F1F3162A2001A2441 /* MineHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineHeader.swift; sourceTree = "<group>"; };
-		C68527801F3162A2001A2441 /* MineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
 		C68527811F3162A2001A2441 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		C68527881F3162E3001A2441 /* MineDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineDetailsViewController.swift; sourceTree = "<group>"; };
 		C685278A1F316327001A2441 /* OrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
@@ -296,7 +302,7 @@
 		C6A1C8131F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsModeCell.swift; sourceTree = "<group>"; };
 		C6A1C8141F2ED27600FBD3B9 /* MedicalProductDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsModel.swift; sourceTree = "<group>"; };
 		C6A1C8151F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsViewController.swift; sourceTree = "<group>"; };
-		C6A1C8171F2ED27600FBD3B9 /* MedicalProductDemoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDemoModel.swift; sourceTree = "<group>"; };
+		C6A1C8171F2ED27600FBD3B9 /* MedicalProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductModel.swift; sourceTree = "<group>"; };
 		C6A1C8181F2ED27600FBD3B9 /* MedicalProductFirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductFirstCell.swift; sourceTree = "<group>"; };
 		C6A1C8191F2ED27600FBD3B9 /* MedicalProductFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductFirstCell.xib; sourceTree = "<group>"; };
 		C6A1C81A1F2ED27600FBD3B9 /* MedicalProductHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductHeader.swift; sourceTree = "<group>"; };
@@ -481,6 +487,7 @@
 				C6BF2A4D1F34412300008218 /* BaseNet.swift */,
 				C6BF2A511F344A2200008218 /* UserInfoNet.swift */,
 				C6B456111F37F1BB0066E14E /* PubNet.swift */,
+				C68159F11F3ADCA90092A40C /* HomeNet.swift */,
 				C6BF2A4F1F34422B00008218 /* TransCode.swift */,
 			);
 			path = BaseNet;
@@ -517,6 +524,7 @@
 		C66BED111F1EE38900985880 /* 产品 */ = {
 			isa = PBXGroup;
 			children = (
+				C68159F31F3B0D740092A40C /* 产品分类 */,
 				C69914C91F30267800F879EA /* 确定购买 */,
 				C6A1C8551F2F1F0400FBD3B9 /* 购物车 */,
 				C6A1C8011F2ED27600FBD3B9 /* 产品参数 */,
@@ -548,13 +556,29 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		C68159EC1F3AB83D0092A40C /* 发票管理 */ = {
+			isa = PBXGroup;
+			children = (
+				C68159ED1F3AB85C0092A40C /* InvoiceManagerViewController.swift */,
+				C68159EF1F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift */,
+			);
+			path = "发票管理";
+			sourceTree = "<group>";
+		};
+		C68159F31F3B0D740092A40C /* 产品分类 */ = {
+			isa = PBXGroup;
+			children = (
+				C68159F61F3B0DF10092A40C /* ProductClassifyViewController.swift */,
+				C68159F81F3B0E090092A40C /* ProductClassifyTableViewCell.swift */,
+			);
+			path = "产品分类";
+			sourceTree = "<group>";
+		};
 		C685277D1F3162A2001A2441 /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
 				C68527811F3162A2001A2441 /* MineViewController.swift */,
-				C685277E1F3162A2001A2441 /* MineCell.swift */,
 				C685277F1F3162A2001A2441 /* MineHeader.swift */,
-				C68527801F3162A2001A2441 /* MineModel.swift */,
 			);
 			path = "主页";
 			sourceTree = "<group>";
@@ -727,7 +751,7 @@
 			isa = PBXGroup;
 			children = (
 				C6A1C8211F2ED27600FBD3B9 /* MedicalProductViewController.swift */,
-				C6A1C8171F2ED27600FBD3B9 /* MedicalProductDemoModel.swift */,
+				C6A1C8171F2ED27600FBD3B9 /* MedicalProductModel.swift */,
 				C6A1C8181F2ED27600FBD3B9 /* MedicalProductFirstCell.swift */,
 				C6A1C8191F2ED27600FBD3B9 /* MedicalProductFirstCell.xib */,
 				C6A1C81A1F2ED27600FBD3B9 /* MedicalProductHeader.swift */,
@@ -830,6 +854,7 @@
 		C6B3DCFF1F281DFA007B2F14 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				C68159EC1F3AB83D0092A40C /* 发票管理 */,
 				C6FEB5391F3832B900577F41 /* 企业通讯录 */,
 				C68AF91D1F34091300D4A1E3 /* 我的收藏 */,
 				C6A6B6341F331E3700E014C6 /* 确定发票 */,
@@ -1039,7 +1064,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C68AF9181F33FE1A00D4A1E3 /* SureInvoiceTipTableViewCell.swift in Sources */,
-				C6A1C8371F2ED27600FBD3B9 /* MedicalProductDemoModel.swift in Sources */,
+				C6A1C8371F2ED27600FBD3B9 /* MedicalProductModel.swift in Sources */,
 				C69914C81F300D8500F879EA /* ShoppingModel.swift in Sources */,
 				C6A1C8441F2ED27600FBD3B9 /* ProductFlowLayout.swift in Sources */,
 				C69258E01F32B300007CC754 /* MyAccountViewController.swift in Sources */,
@@ -1059,11 +1084,12 @@
 				C6BF2A541F344EEF00008218 /* EnterpriseModel.swift in Sources */,
 				C68527951F3173ED001A2441 /* MineDetailsTitleModel.swift in Sources */,
 				C69258DB1F32A935007CC754 /* OrderDetailsHeader.swift in Sources */,
+				C68159F91F3B0E090092A40C /* ProductClassifyTableViewCell.swift in Sources */,
 				C6B456121F37F1BB0066E14E /* PubNet.swift in Sources */,
 				C61A90E21F386A9B00DBC821 /* AddressBookModel.swift in Sources */,
 				C6B3DCFE1F28171C007B2F14 /* ViewController.swift in Sources */,
+				C68159F71F3B0DF10092A40C /* ProductClassifyViewController.swift in Sources */,
 				C69258DD1F32A94A007CC754 /* OrderDetailsFooter.swift in Sources */,
-				C68527821F3162A2001A2441 /* MineCell.swift in Sources */,
 				C6D7E3661F394824008F3167 /* NotificationCenter.swift in Sources */,
 				C6A1C8271F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift in Sources */,
 				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
@@ -1102,6 +1128,7 @@
 				C69914D11F302F4B00F879EA /* SureShoppingFooter.swift in Sources */,
 				C6A1C8361F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift in Sources */,
 				C6A6B6361F331E6200E014C6 /* SureInvoiceViewController.swift in Sources */,
+				C68159F01F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift in Sources */,
 				C6A1C83F1F2ED27600FBD3B9 /* MedicalProductSystemCell.swift in Sources */,
 				C68AF9211F34096E00D4A1E3 /* MyFavoriteTableViewCell.swift in Sources */,
 				C69258E21F32B328007CC754 /* MyAccountTableViewCell.swift in Sources */,
@@ -1116,10 +1143,10 @@
 				C69258F11F32F627007CC754 /* AccountDetailsModel.swift in Sources */,
 				C69914CD1F302F1F00F879EA /* SureShoppingProductTableViewCell.swift in Sources */,
 				C69258D31F32A830007CC754 /* OrderDetailsViewController.swift in Sources */,
-				C68527841F3162A2001A2441 /* MineModel.swift in Sources */,
 				C6A1C8301F2ED27600FBD3B9 /* MedicalProductDetailsFooter.swift in Sources */,
 				C68527911F316EEC001A2441 /* MineDetailsHeaderTableViewCell.swift in Sources */,
 				C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */,
+				C68159F21F3ADCA90092A40C /* HomeNet.swift in Sources */,
 				C6A1C82D1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.swift in Sources */,
 				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
 				C6BF2A561F3458C800008218 /* DataEncoding.swift in Sources */,
@@ -1149,6 +1176,7 @@
 				C685278D1F3165A4001A2441 /* ECStroryBoard.swift in Sources */,
 				C68AF91A1F33FEFF00D4A1E3 /* SureInvoiceTableHeader.swift in Sources */,
 				C6A1C82C1F2ED27600FBD3B9 /* MedicalProductDetailsPopViewController.swift in Sources */,
+				C68159EE1F3AB85C0092A40C /* InvoiceManagerViewController.swift in Sources */,
 				C6B3DCF41F28170A007B2F14 /* CRMViewController.swift in Sources */,
 				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
 				C68527971F317FEF001A2441 /* MiniDetailsDatePicker.swift in Sources */,

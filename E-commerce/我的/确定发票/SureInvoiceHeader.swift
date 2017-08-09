@@ -36,7 +36,7 @@ class SureInvoiceHeader: UIView
         exchangeButton = sender
         exchangeButton.isSelected = true
         
-        if exchangeButton == personalButton {
+        if exchangeButton == unitButton {
             type = .Personal
         }
         else {

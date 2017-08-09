@@ -23,8 +23,8 @@ class ProductCollectionViewCell: UICollectionViewCell
         
         if let model = model {
             
-            displayImageView.image = UIImage(named: model.imageString)
-            displayTitle.text = model.title
+            displayImageView.sd_setImage(with: URL(string: model.imageString), placeholderImage: Placeholder.DefaultImage)
+            displayTitle.text = model.cat_name
         }
         
         else if let model = workModel {
@@ -35,4 +35,10 @@ class ProductCollectionViewCell: UICollectionViewCell
         
     }
     
+}
+fileprivate extension ButtonModel {
+    
+    var imageString: String {
+        return "\(host):\(8080)/\(objectAddress)\(cat_image_url)"
+    }
 }
