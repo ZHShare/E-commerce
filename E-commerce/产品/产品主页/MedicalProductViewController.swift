@@ -102,7 +102,7 @@ fileprivate extension MedicalProductViewController {
         static func listForImage(image: UIImage) -> CGSize {
             
             let imageHeight = image.size.height
-            let size = CGSize(width: (Screen.width - 6) / 2.0, height: imageHeight + 86.0)
+            let size = CGSize(width: (Screen.width - 6) / 2.0, height: imageHeight + 100)
             
             return size
         }
@@ -197,6 +197,16 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         let productDetailsController = ECStroryBoard.controller(type: MedicalProductDetailsViewController.self)
+        
+        var productID = ""
+        switch indexPath.section {
+        case 1: productID = packs![indexPath.row].product_id
+        case 2: productID = products![indexPath.row].product_id
+        default:
+            break
+        }
+        productDetailsController.productID = productID
+        
         navigationController?.ecPushViewController(productDetailsController)
     }
     

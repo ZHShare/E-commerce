@@ -77,7 +77,8 @@ class XHScrollView: UIView {
         }
     }
     var isNeedTimer = true // 是否需要自动滚动
-    var pageControlShowStyle:UIPageControlStyle = .none // 默认值
+    var pageControlShowStyle:UIPageControlStyle = .none // 默认值 
+   
     var placeHoldImage:UIImage? { // 可选型变量默认图片
         didSet{
             if placeHoldImage != nil {
@@ -86,6 +87,8 @@ class XHScrollView: UIView {
             }
         }
     }
+    
+    
     var adMoveTime:CGFloat = 3 // 广告轮播时间
     var selected:((_ index: NSInteger) -> ())? // 点击回调，参数是点击的索引值
     weak var delegate:XHScrollViewDelegate?    // 广告点击的代理
@@ -95,6 +98,30 @@ class XHScrollView: UIView {
     fileprivate var leftImageIndex:NSInteger = 0 // 私有型变量左侧图片索引
     fileprivate var centerImageIndex:NSInteger = 0 // 私有型变量当前图片索引
     fileprivate var rightImageIndex:NSInteger = 0  // 私有型变量右侧图片索引
+    
+    func refreshFrame(frame: CGRect) {
+        
+        let w = frame.size.width
+        let h = frame.size.height
+        xscrollView.frame = frame
+        xscrollView.bounces = false
+        xscrollView.showsHorizontalScrollIndicator = false
+        xscrollView.showsVerticalScrollIndicator = false
+        xscrollView.isPagingEnabled = true
+        xscrollView.contentOffset = CGPoint(x: w, y: 0)
+        xscrollView.contentSize = CGSize(width: w*3, height: h)
+        xscrollView.delegate = self
+        addSubview(xscrollView)
+        
+        leftImageView = UIImageView(frame: frame)
+        xscrollView.addSubview(leftImageView!)
+        centerImageView = UIImageView(frame: CGRect(x: w, y: 0, width: w, height: h))
+        centerImageView?.isUserInteractionEnabled = true
+        centerImageView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapClick)))
+        xscrollView.addSubview(centerImageView!)
+        rightImageView = UIImageView(frame: CGRect(x: w*2, y: 0, width: w, height: h))
+        xscrollView.addSubview(rightImageView!)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -121,7 +148,7 @@ class XHScrollView: UIView {
         addSubview(pageControl)
     }
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
     @objc func tapClick(){
         selected?(centerImageIndex)

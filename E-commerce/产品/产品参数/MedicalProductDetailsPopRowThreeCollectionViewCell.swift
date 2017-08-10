@@ -13,19 +13,10 @@ class MedicalProductDetailsPopRowThreeCollectionViewCell: UICollectionViewCell
     
     static let nib: UINib = UINib(nibName: "MedicalProductDetailsPopRowThreeCollectionViewCell", bundle: nil)
 
-    var color: MedicalProductDetailsPopModel.Color? {
-        didSet {
-            displayUIContent.isSelected = color!.isSelected
-            displayUIContent.setTitle(color!.title, for: .normal)
-        }
+    var model: MedicalProductDetailsModel.SubAttrVal? {
+        didSet { updateUI() }
     }
     
-    var ret: MedicalProductDetailsPopModel.Related? {
-        didSet{
-            displayUIContent.isSelected = ret!.isSelected
-            displayUIContent.setTitle(ret!.title, for: .normal)
-        }
-    }
     var indexPath: IndexPath?
     
     @IBOutlet weak var displayUIContent: UIButton! {
@@ -34,4 +25,13 @@ class MedicalProductDetailsPopRowThreeCollectionViewCell: UICollectionViewCell
         }
     }
 
+    fileprivate func updateUI() {
+        
+        DispatchQueue.main.async {
+            
+            self.displayUIContent.isSelected = self.model!.isSelected
+            self.displayUIContent.setTitle(self.model?.attr_value, for: .normal)
+        }
+    }
+    
 }

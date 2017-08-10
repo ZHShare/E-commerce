@@ -56,7 +56,22 @@ class MedicalProductFirstCell: UICollectionViewCell {
             self.buttonsView.reloadData()
         }
     }
+    fileprivate var timer: Timer?
+    @objc fileprivate func timerA() {
+        
+        if currentContentSizeHeight == adScrollView.contentSize.height - adScrollView.frame.size.height {
+            currentContentSizeHeight = 0
+             adScrollView.setContentOffset(CGPoint(x: 0, y: currentContentSizeHeight), animated: false)
+        }
+        
+        else {
+            currentContentSizeHeight += adScrollView.frame.size.height
+            adScrollView.setContentOffset(CGPoint(x: 0, y: currentContentSizeHeight), animated: true)
+        }
+        
+    }
     
+    fileprivate var currentContentSizeHeight: CGFloat = 0
     fileprivate func refreshNotices() {
         
         adScrollView.removeSubviews()
@@ -64,7 +79,19 @@ class MedicalProductFirstCell: UICollectionViewCell {
             return
         }
         let contentSize = CGSize(width: 0, height: adScrollView.bounds.height*CGFloat(notices.count))
-        adScrollView.contentSize = contentSize
+        if adScrollView.contentSize != contentSize {
+            adScrollView.contentSize = contentSize
+        }
+        
+        if timer == nil {
+             timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(timerA), userInfo: nil, repeats: true)
+        }
+        else {
+            timer?.invalidate()
+            timer = nil
+            currentContentSizeHeight = 0
+            timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(timerA), userInfo: nil, repeats: true)
+        }
         
         var frame = adScrollView.frame
         frame.origin.x = 0
@@ -85,7 +112,6 @@ class MedicalProductFirstCell: UICollectionViewCell {
 
         
     }
-    
 
 }
 

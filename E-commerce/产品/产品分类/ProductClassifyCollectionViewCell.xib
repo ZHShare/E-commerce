@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductClassifyCollectionViewCell" customModule="E_commerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="115" height="134"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMu-Cc-3e8" userLabel="contentView">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="134"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="床头分机图" translatesAutoresizingMaskIntoConstraints="NO" id="zbR-lx-G0N">
+                                <rect key="frame" x="8" y="8" width="99" height="91"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="displayTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpx-CQ-lov">
+                                <rect key="frame" x="20.5" y="107" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bpx-CQ-lov" firstAttribute="centerX" secondItem="zbR-lx-G0N" secondAttribute="centerX" id="8rx-3Z-Fye"/>
+                            <constraint firstItem="zbR-lx-G0N" firstAttribute="leading" secondItem="oMu-Cc-3e8" secondAttribute="leadingMargin" id="8xs-vw-YPh"/>
+                            <constraint firstAttribute="bottom" secondItem="zbR-lx-G0N" secondAttribute="bottom" constant="35" id="BQH-YM-aL5"/>
+                            <constraint firstAttribute="bottom" secondItem="Bpx-CQ-lov" secondAttribute="bottom" constant="6" id="Gvr-vD-A3T"/>
+                            <constraint firstItem="zbR-lx-G0N" firstAttribute="trailing" secondItem="oMu-Cc-3e8" secondAttribute="trailingMargin" id="XUj-b1-of1"/>
+                            <constraint firstItem="Bpx-CQ-lov" firstAttribute="top" secondItem="zbR-lx-G0N" secondAttribute="bottom" constant="8" symbolic="YES" id="iUY-A7-Tx2"/>
+                            <constraint firstItem="zbR-lx-G0N" firstAttribute="top" secondItem="oMu-Cc-3e8" secondAttribute="topMargin" id="pej-no-rQc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oMu-Cc-3e8" secondAttribute="trailing" id="0QF-hY-stl"/>
+                <constraint firstAttribute="bottom" secondItem="oMu-Cc-3e8" secondAttribute="bottom" id="Ki4-zU-Ucz"/>
+                <constraint firstItem="oMu-Cc-3e8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="N6L-rX-uro"/>
+                <constraint firstItem="oMu-Cc-3e8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bm0-iz-IpV"/>
+            </constraints>
+            <size key="customSize" width="115" height="134"/>
+            <connections>
+                <outlet property="displayTitle" destination="Bpx-CQ-lov" id="sRK-cm-8PA"/>
+                <outlet property="icon" destination="zbR-lx-G0N" id="viN-A2-dhu"/>
+            </connections>
+            <point key="canvasLocation" x="58.5" y="94"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="床头分机图" width="115" height="110"/>
+    </resources>
+</document>

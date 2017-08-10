@@ -35,6 +35,9 @@ enum TransCode {
     
     struct Home {
         static let mainPage = "200010"
+        static let firstClass = "200012"
+        static let secondClass = "200013"
+        static let productDetails = "200014"
     }
     
 }

@@ -16,4 +16,16 @@ class MedicalProductDetailsPopNormalHeader: UICollectionReusableView
     @IBOutlet weak var displaySubTitle: UILabel!
     @IBOutlet weak var displayTitle: UILabel!
     static let nib = UINib(nibName: "MedicalProductDetailsPopNormalHeader", bundle: nil)
+
+    var model: MedicalProductDetailsModel.Attr? {
+        didSet { updateUI() }
+    }
+    
+    fileprivate func updateUI() {
+        DispatchQueue.main.async {
+            
+            self.displayTitle.text = self.model?.attr_name
+            self.displaySubTitle.text = self.model?.attr_desc
+        }
+    }
 }

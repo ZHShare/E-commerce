@@ -9,18 +9,24 @@
 import UIKit
 import DeckTransition
 
+enum ProductDetailsType {
+    case Normal
+    case AddShoppingCar
+    case SureShopping
+}
+
 class MedicalProductDetailsPopViewController: BaseViewController
 {
     
+    var type: ProductDetailsType = .Normal
+    var model: MedicalProductDetailsModel?
     var selected: ((String) -> Void)?
     
+    @IBOutlet weak var displayStroeNumber: UILabel!
+    @IBOutlet weak var displayPrice: UILabel!
     @IBOutlet var collectionView: UICollectionView!
-    var colors: [MedicalProductDetailsPopModel.Color]?
-    var rets: [MedicalProductDetailsPopModel.Related]?
     
-    fileprivate var color: String = ""
-    fileprivate var ret: String = ""
-    
+    @IBOutlet weak var icon: UIImageView!
     fileprivate var bar: MedicalProductDetailsFooter?
     fileprivate enum ReuseIdentifier {
         static let Address = "Pop Address"
@@ -43,6 +49,7 @@ class MedicalProductDetailsPopViewController: BaseViewController
         
         removeBar()
         configCollectionView()
+        updateUI()
     }
     
     deinit {
@@ -53,11 +60,19 @@ class MedicalProductDetailsPopViewController: BaseViewController
     
     @IBAction func sureAction() {
      
-        if let selected = selected {
-            selected("\(color)  \(ret)")
+        switch type {
+        case .AddShoppingCar:
+            print("发起加入购物车请求,成功后返回并提示")
+        case .SureShopping:
+            print("发起确定购买请求，成功后返回并跳转至确定订单页面")
+        default:
+            if let selected = selected {
+                selected("选中了哪些")
+            }
+            close()
         }
         
-        close()
+        
     }
     
     var recordNumber: String {
@@ -68,6 +83,13 @@ class MedicalProductDetailsPopViewController: BaseViewController
         get {
             return displayNumber.text!
         }
+    }
+    
+    fileprivate func updateUI() {
+        
+        icon.sd_setImage(with: model!.iconURL, placeholderImage: Placeholder.DefaultImage)
+        displayStroeNumber.text = "库存:\(model!.inventory_num)"
+        displayPrice.text = "¥\(model!.market_price)"
     }
     
     @IBAction func add() {
@@ -111,28 +133,14 @@ class MedicalProductDetailsPopViewController: BaseViewController
         
         UIApplication.shared.keyWindow!.addSubview(bar!)
     }
-    
-    fileprivate func fetchData() {
-        
-        colors = MedicalProductDetailsPopModel.Color.models()
-        rets = MedicalProductDetailsPopModel.Related.models()
-        DispatchQueue.main.async {
-            self.collectionView?.reloadData()
-        }
-    }
+   
     
     fileprivate func configCollectionView() {
-        
-        // 注册地址cell
-        collectionView?.register(MedicalProductDetailsPopAddressCollectionViewCell.nib, forCellWithReuseIdentifier: ReuseIdentifier.Address)
-        
+       
         // 注册内容cell
         collectionView?.register(MedicalProductDetailsPopRowThreeCollectionViewCell.nib, forCellWithReuseIdentifier: ReuseIdentifier.Content)
         
         collectionView?.register(MedicalProductDetailsPopNormalHeader.nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ReuseIdentifier.Normal)
-        
-        
-        fetchData()
     }
     
     
@@ -144,100 +152,70 @@ extension MedicalProductDetailsPopViewController: UICollectionViewDelegate, UICo
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
 
-        return 3
+        return self.model == nil ? 0 : self.model!.attrs!.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        switch section {
-        case 0:  return 1
-        case 1:  return colors == nil ? 0 : colors!.count
-        case 2:  return rets == nil ? 0 : rets!.count
-        default:
-            return 0
-        }
+        return self.model == nil ? 0 : self.model!.attrs![section].subAttrs!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.Address, for: indexPath)
-            return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.Content, for: indexPath)
+        
+        if let cell = cell as? MedicalProductDetailsPopRowThreeCollectionViewCell {
+            
+            cell.model = self.model?.attrs?[indexPath.section].subAttrs?[indexPath.row]
         }
         
-        if indexPath.section == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.Content, for: indexPath)
-            
-            if let cell = cell as? MedicalProductDetailsPopRowThreeCollectionViewCell {
-                
-                if let colors = colors {
-                    cell.indexPath = indexPath
-                    cell.color = colors[indexPath.row]
-                }
-            }
-
-            return cell
-        }
+        return cell
         
-        if indexPath.section == 2 {
-            
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseIdentifier.Content, for: indexPath)
-            
-            if let cell = cell as? MedicalProductDetailsPopRowThreeCollectionViewCell {
-                
-                if let colors = rets {
-                    cell.indexPath = indexPath
-                    cell.ret = colors[indexPath.row]
-                }
-            }
-            
-            return cell
-        }
-        
-        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        
-        switch indexPath.section {
-        case 0:
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ReuseIdentifier.Normal, for: indexPath)
-            (header as! MedicalProductDetailsPopNormalHeader).displayTitle.text = "配送区域"
-            (header as! MedicalProductDetailsPopNormalHeader).displaySubTitle.text = "(配送地可能会影响库存，请正确选择)"
-            return header
-        case 1:
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ReuseIdentifier.Normal, for: indexPath)
-            (header as! MedicalProductDetailsPopNormalHeader).displayTitle.text = "颜色"
-            (header as! MedicalProductDetailsPopNormalHeader).displaySubTitle.text = nil
-            return header
-        case 2:
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ReuseIdentifier.Normal, for: indexPath)
-            (header as! MedicalProductDetailsPopNormalHeader).displayTitle.text = "关联产品"
-            (header as! MedicalProductDetailsPopNormalHeader).displaySubTitle.text = nil
-            return header
-        default: break
-            
-        }
-        
-        return UICollectionReusableView(frame: CGRect.zero)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ReuseIdentifier.Normal, for: indexPath)
+        (header as! MedicalProductDetailsPopNormalHeader).model = self.model?.attrs?[indexPath.section]
+        return header
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let newModel = model!
         
-        if indexPath.section == 1 {
+        for section in 0..<newModel.attrs!.count {
             
-            updateColors(indexPath: indexPath)
+            if section == indexPath.section {
+                
+                let sectionArr = NSMutableArray()
+                for row in 0..<newModel.attrs![section].subAttrs!.count {
+                    
+                    var selectedModel = newModel.attrs![section].subAttrs![row]
+
+                    if row == indexPath.row {
+                        
+                        selectedModel.isSelected = true
+                    }
+                    else {
+                        
+                        selectedModel.isSelected = false
+                    }
+                    
+                    sectionArr.add(selectedModel)
+                }
+                
+                newModel.attrs?[section].subAttrs = sectionArr as? [MedicalProductDetailsModel.SubAttrVal]
+                DispatchQueue.main.async {
+                    collectionView.reloadSections(NSIndexSet(index: section) as IndexSet)
+                }
+            }
+            
         }
         
-        else if indexPath.section == 2 {
-            
-            updateRets(indexPath: indexPath)
-        }
-        
+        model = newModel
+       
     }
     
     
@@ -252,12 +230,7 @@ extension MedicalProductDetailsPopViewController: UICollectionViewDelegateFlowLa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        switch indexPath.section {
-        case 0: return ItemSize.Address
-        case 1: return ItemSize.Color
-        case 2: return ItemSize.Ret
-        default: return CGSize.zero
-        }
+         return ItemSize.Color
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -268,8 +241,8 @@ extension MedicalProductDetailsPopViewController: UICollectionViewDelegateFlowLa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         
         switch section {
-        case 1: return 4
-        case 2: return 10
+        case 0: return 4
+        case 1: return 10
         default: return 0.003
         }
     }
@@ -281,25 +254,6 @@ extension MedicalProductDetailsPopViewController {
         
         let newRets = NSMutableArray()
         
-        var row = 0
-        for re in rets! {
-            
-            var re = re
-            if row == indexPath.row {
-                
-                re.isSelected = true
-                ret = re.title
-            }
-            else {
-                
-                re.isSelected = false
-            }
-            
-            newRets.add(re)
-            row += 1
-        }
-        
-        rets = newRets as? [MedicalProductDetailsPopModel.Related]
         DispatchQueue.main.async {
             self.collectionView.reloadSections(NSIndexSet(index: indexPath.section) as IndexSet)
         }
@@ -309,28 +263,16 @@ extension MedicalProductDetailsPopViewController {
         
         let newRets = NSMutableArray()
         
-        var row = 0
-        for re in colors! {
-            
-            var re = re
-            if row == indexPath.row {
-                
-                re.isSelected = true
-                color = re.title
-            }
-            else {
-                
-                re.isSelected = false
-            }
-            
-            newRets.add(re)
-            row += 1
-        }
-        
-        colors = newRets as? [MedicalProductDetailsPopModel.Color]
         DispatchQueue.main.async {
             self.collectionView.reloadSections(NSIndexSet(index: indexPath.section) as IndexSet)
         }
     }
     
+}
+fileprivate extension MedicalProductDetailsModel {
+    
+    var iconURL: URL {
+        
+        return URL(string: "\(host):\(8080)/\(objectAddress)\(product_image_url)")!
+    }
 }

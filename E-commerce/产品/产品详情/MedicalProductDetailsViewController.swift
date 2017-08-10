@@ -12,9 +12,10 @@ import DeckTransition
 class MedicalProductDetailsViewController: BaseTableViewController
 {
 
+    var productID: String = ""
     fileprivate var sectionOnes: [MedicalProductDetailsModel.SectionOne]?
-    fileprivate var sectionTwos: [MedicalProductDetailsModel.SectionTwo]?
     
+    fileprivate var model: MedicalProductDetailsModel?
     fileprivate var currentTitle = CurrentTitle.details
     fileprivate let footer = MedicalProductDetailsFooter()
     fileprivate let sectionHeader: MedicalProductDetailsBottomSectionHeader? = UIView.loadFromNibNamed(nibNamed: "MedicalProductDetailsBottomSectionHeader") as? MedicalProductDetailsBottomSectionHeader
@@ -35,12 +36,48 @@ class MedicalProductDetailsViewController: BaseTableViewController
         configTableView()
         configNavigationBar()
         fetchData()
+        addNotice()
+    }
+    
+    deinit {
+        removeNotice()
+    }
+    
+    fileprivate func addNotice() {
+        
+        UserInfo.addObserver(observer: self, selector: #selector(notice(notice:)), notification: UserInfo.Notification.Update)
+    }
+    
+    fileprivate func removeNotice() {
+        
+        UserInfo.removeObserver(observer: self, notification: UserInfo.Notification.Update)
+    }
+    
+    @objc fileprivate func notice(notice: Notification) {
+        
+        (tableView.tableHeaderView as! MedicalProductDetailsHeader).model = model
     }
     
     fileprivate func fetchData() {
         
+        
+        let params = ["product_id": productID]
+        HomeNet.fetchDataWith(transCode: TransCode.Home.productDetails, params: params) { (response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
+            }
+            
+            self.model = MedicalProductDetailsModel.model(withDic: response)
+            (self.tableView.tableHeaderView as! MedicalProductDetailsHeader).model = self.model
+
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        
+        
         sectionOnes = MedicalProductDetailsModel.SectionOne.models()
-        sectionTwos = MedicalProductDetailsModel.SectionTwo.models()
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -108,7 +145,7 @@ class MedicalProductDetailsViewController: BaseTableViewController
         
         else if section == 1 {
             
-            if let models = sectionTwos {
+            if let models = self.model?.reviews {
                 return models.count
             }
             return 0
@@ -141,7 +178,8 @@ class MedicalProductDetailsViewController: BaseTableViewController
             
             let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.evaluation, for: indexPath)
             
-            (cell as! MedicalProductDetailsEvaluationCell).model = sectionTwos?[indexPath.row]
+            (cell as! MedicalProductDetailsEvaluationCell).model = model?.reviews?[indexPath.row]
+            (cell as! MedicalProductDetailsEvaluationCell).mainModel = model
             (cell as! MedicalProductDetailsEvaluationCell).delegate = self
             return cell
         }
@@ -210,6 +248,7 @@ class MedicalProductDetailsViewController: BaseTableViewController
                 transitionDelegate.isDismissEnabled = false
                 popViewController.transitioningDelegate = transitionDelegate
                 popViewController.modalPresentationStyle = .custom
+                popViewController.model = model
                 popViewController.selected = { type in
                     var newOnes = self.sectionOnes!
                     newOnes[0].title = type
