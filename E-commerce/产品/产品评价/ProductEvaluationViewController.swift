@@ -7,28 +7,59 @@
 //
 
 import UIKit
+import MJRefresh
 
 class ProductEvaluationViewController: BaseTableViewController
 {
 
-    var datas: [ProductEvalutaionModel]?
+    fileprivate var datas: [ProductEvalutaionModel]?
+    var productID: String = ""
     
+    fileprivate let mjFooter = MJRefreshAutoNormalFooter()
+    fileprivate let mjHeader = MJRefreshNormalHeader()
+    fileprivate var pageNumber: Int = 0 {
+        didSet { fetchData() }
+    }
     fileprivate enum ReuseIdentifier {
         static let evaluation = "Product Evaluation"
     }
-
+    fileprivate var status = "0"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
-        fetchData()
+        
     }
     
     fileprivate func fetchData() {
         
-        datas = ProductEvalutaionModel.models()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        let params:[ String: Any] = ["product_id": productID,
+                                     "status": status,
+                                     "page_num": String(pageNumber)]
+        HomeNet.fetchDataWith(transCode: TransCode.Home.evaluation, params: params) { (response, isLoadFaild, errorMsg) in
+            
+            self.endRefreshing()
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
+            }
+            
+            let datas = ProductEvalutaionModel.models(withResponse: response)
+            if self.pageNumber == 1 {
+                self.datas = datas
+            }
+            else if datas.count > 0 {
+                
+                var oldDatas = self.datas!
+                oldDatas.append(contentsOf: datas)
+                self.datas = oldDatas
+            }
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
+        
+        
     }
     
     fileprivate func config() {
@@ -38,15 +69,49 @@ class ProductEvaluationViewController: BaseTableViewController
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         
+        tableView.mj_header = mjHeader
+        tableView.mj_footer = mjFooter
+        
+        mjFooter.refreshingBlock = {
+            
+            self.pageNumber += 1
+        }
+        
+        mjHeader.refreshingBlock = {
+            
+            self.pageNumber = 1
+        }
+        
         let tableHeader = tableView.tableHeaderView as? ProductEvaluationHeader
         tableHeader?.delegate = self
+        
+        mjHeader.beginRefreshing()
+    }
+    
+    fileprivate func endRefreshing() {
+        
+        if Thread.isMainThread {
+            mjHeader.endRefreshing()
+            mjFooter.endRefreshing()
+        }
+        
+        else {
+            
+            DispatchQueue.main.async {
+                self.mjHeader.endRefreshing()
+                self.mjFooter.endRefreshing()
+            }
+            
+        }
     }
 }
 // MARK: - ProductEvaluationHeaderDelegate
 extension ProductEvaluationViewController: ProductEvaluationHeaderDelegate {
     
     func didClick(sender: UIButton) {
-        print(sender.currentTitle!)
+        
+        status = "\(sender.tag)"
+        mjHeader.beginRefreshing()
     }
 }
 

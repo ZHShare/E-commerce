@@ -85,6 +85,7 @@ extension InvoiceManagerViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        
         print("发票详情")
     }
 }

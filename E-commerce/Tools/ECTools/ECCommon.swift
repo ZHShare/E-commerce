@@ -12,6 +12,7 @@ import UIKit
 public enum Screen {
     static let width = UIScreen.main.bounds.width
     static let height = UIScreen.main.bounds.height
+    static let size = CGSize(width: Screen.width, height: Screen.height)
 }
 
 public enum ECCommon {

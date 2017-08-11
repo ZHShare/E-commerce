@@ -20,4 +20,11 @@ class ProductClassifyListCell: UITableViewCell
     fileprivate func updateUI() {
         displayTitle.text = model?.cat_name
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        selectedBackgroundView = UIView(frame: frame)
+        selectedBackgroundView?.backgroundColor = UIColor.groupTableViewBackground
+    }
 }

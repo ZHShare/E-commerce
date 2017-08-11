@@ -101,6 +101,8 @@
 		C69914CB1F30269600F879EA /* SureShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914CA1F30269600F879EA /* SureShoppingViewController.swift */; };
 		C69914CD1F302F1F00F879EA /* SureShoppingProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914CC1F302F1F00F879EA /* SureShoppingProductTableViewCell.swift */; };
 		C69914D11F302F4B00F879EA /* SureShoppingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914D01F302F4B00F879EA /* SureShoppingFooter.swift */; };
+		C6A0A8CE1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0A8CD1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift */; };
+		C6A0A8D01F3D9E2E0067DBAF /* SureInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0A8CF1F3D9E2E0067DBAF /* SureInvoiceViewController.swift */; };
 		C6A1C8271F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8041F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift */; };
 		C6A1C8281F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8051F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift */; };
 		C6A1C8291F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C8061F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib */; };
@@ -139,7 +141,6 @@
 		C6A1C8541F2F17EB00FBD3B9 /* ProductEvalutaionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8531F2F17EB00FBD3B9 /* ProductEvalutaionModel.swift */; };
 		C6A1C8571F2F21AD00FBD3B9 /* ShoppingCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8561F2F21AD00FBD3B9 /* ShoppingCarViewController.swift */; };
 		C6A6B6331F33090E00E014C6 /* OrderDetailsInvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A6B6321F33090E00E014C6 /* OrderDetailsInvoiceTableViewCell.swift */; };
-		C6A6B6361F331E6200E014C6 /* SureInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A6B6351F331E6200E014C6 /* SureInvoiceViewController.swift */; };
 		C6A6B6381F331FBE00E014C6 /* SureInvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A6B6371F331FBE00E014C6 /* SureInvoiceTableViewCell.swift */; };
 		C6A6B63A1F3320E900E014C6 /* SureInvoiceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A6B6391F3320E900E014C6 /* SureInvoiceHeader.swift */; };
 		C6A6B63C1F3320F800E014C6 /* SureInvoiceHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A6B63B1F3320F800E014C6 /* SureInvoiceHeader.xib */; };
@@ -292,6 +293,8 @@
 		C69914CA1F30269600F879EA /* SureShoppingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingViewController.swift; sourceTree = "<group>"; };
 		C69914CC1F302F1F00F879EA /* SureShoppingProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingProductTableViewCell.swift; sourceTree = "<group>"; };
 		C69914D01F302F4B00F879EA /* SureShoppingFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingFooter.swift; sourceTree = "<group>"; };
+		C6A0A8CD1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureInvoiceTablViewController.swift; sourceTree = "<group>"; };
+		C6A0A8CF1F3D9E2E0067DBAF /* SureInvoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureInvoiceViewController.swift; sourceTree = "<group>"; };
 		C6A1C8041F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopModel.swift; sourceTree = "<group>"; };
 		C6A1C8051F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopNormalHeader.swift; sourceTree = "<group>"; };
 		C6A1C8061F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopNormalHeader.xib; sourceTree = "<group>"; };
@@ -330,7 +333,6 @@
 		C6A1C8531F2F17EB00FBD3B9 /* ProductEvalutaionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductEvalutaionModel.swift; sourceTree = "<group>"; };
 		C6A1C8561F2F21AD00FBD3B9 /* ShoppingCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCarViewController.swift; sourceTree = "<group>"; };
 		C6A6B6321F33090E00E014C6 /* OrderDetailsInvoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsInvoiceTableViewCell.swift; sourceTree = "<group>"; };
-		C6A6B6351F331E6200E014C6 /* SureInvoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureInvoiceViewController.swift; sourceTree = "<group>"; };
 		C6A6B6371F331FBE00E014C6 /* SureInvoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureInvoiceTableViewCell.swift; sourceTree = "<group>"; };
 		C6A6B6391F3320E900E014C6 /* SureInvoiceHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureInvoiceHeader.swift; sourceTree = "<group>"; };
 		C6A6B63B1F3320F800E014C6 /* SureInvoiceHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SureInvoiceHeader.xib; sourceTree = "<group>"; };
@@ -567,6 +569,8 @@
 			children = (
 				C68159ED1F3AB85C0092A40C /* InvoiceManagerViewController.swift */,
 				C68159EF1F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift */,
+				C6A0A8CD1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift */,
+				C6A0A8CF1F3D9E2E0067DBAF /* SureInvoiceViewController.swift */,
 			);
 			path = "发票管理";
 			sourceTree = "<group>";
@@ -790,7 +794,6 @@
 		C6A6B6341F331E3700E014C6 /* 确定发票 */ = {
 			isa = PBXGroup;
 			children = (
-				C6A6B6351F331E6200E014C6 /* SureInvoiceViewController.swift */,
 				C6A6B6371F331FBE00E014C6 /* SureInvoiceTableViewCell.swift */,
 				C68AF9171F33FE1900D4A1E3 /* SureInvoiceTipTableViewCell.swift */,
 				C68AF9191F33FEFF00D4A1E3 /* SureInvoiceTableHeader.swift */,
@@ -1078,6 +1081,7 @@
 				C69914C81F300D8500F879EA /* ShoppingModel.swift in Sources */,
 				C6A1C8441F2ED27600FBD3B9 /* ProductFlowLayout.swift in Sources */,
 				C69258E01F32B300007CC754 /* MyAccountViewController.swift in Sources */,
+				C6A0A8CE1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift in Sources */,
 				C644E5B01F3C2C3700F647CE /* ProductClassifyCollectionReusableView.swift in Sources */,
 				C6545DCC1F2723C600F9D479 /* WorkViewController.swift in Sources */,
 				C66881211F31C62000125CA6 /* OrderListModel.swift in Sources */,
@@ -1138,7 +1142,7 @@
 				C6A1C8571F2F21AD00FBD3B9 /* ShoppingCarViewController.swift in Sources */,
 				C69914D11F302F4B00F879EA /* SureShoppingFooter.swift in Sources */,
 				C6A1C8361F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift in Sources */,
-				C6A6B6361F331E6200E014C6 /* SureInvoiceViewController.swift in Sources */,
+				C6A0A8D01F3D9E2E0067DBAF /* SureInvoiceViewController.swift in Sources */,
 				C68159F01F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift in Sources */,
 				C6A1C83F1F2ED27600FBD3B9 /* MedicalProductSystemCell.swift in Sources */,
 				C68AF9211F34096E00D4A1E3 /* MyFavoriteTableViewCell.swift in Sources */,

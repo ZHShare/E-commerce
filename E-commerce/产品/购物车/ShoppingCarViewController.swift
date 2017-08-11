@@ -181,6 +181,13 @@ extension ShoppingCarViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let selectedModel = models![indexPath.row]
+        let detailsViewController = ECStroryBoard.controller(type: MedicalProductDetailsViewController.self)
+        detailsViewController.productID = selectedModel.product_id
+        detailsViewController.selectedTypeString = selectedModel.product_attr
+        detailsViewController.selectedCount = selectedModel.goods_number
+        navigationController?.ecPushViewController(detailsViewController)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

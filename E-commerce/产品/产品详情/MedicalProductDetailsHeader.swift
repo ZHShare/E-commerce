@@ -79,10 +79,14 @@ class MedicalProductDetailsHeader: UIView
     }
     
 }
-fileprivate extension MedicalProductDetailsModel {
+extension MedicalProductDetailsModel {
     
     var showPrice: String {
-        return LoginStatus.isLogined ? "¥\(market_price)(\(weight))" : "***(请登录)"
+        return LoginStatus.isLogined ? "¥\(market_price)(/\(weight))" : "***(请登录)"
+    }
+    
+    var marketPrice: String {
+        return LoginStatus.isLogined ? "¥\(market_price)" : "***"
     }
     
     var post: String {

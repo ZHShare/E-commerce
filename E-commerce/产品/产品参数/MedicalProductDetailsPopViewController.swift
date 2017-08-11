@@ -20,8 +20,9 @@ class MedicalProductDetailsPopViewController: BaseViewController
     
     var type: ProductDetailsType = .Normal
     var model: MedicalProductDetailsModel?
-    var selected: ((String) -> Void)?
-    
+    var selected: ((String, String) -> Void)?
+    var successAddShoppingCar: (() -> Void)?
+
     @IBOutlet weak var displayStroeNumber: UILabel!
     @IBOutlet weak var displayPrice: UILabel!
     @IBOutlet var collectionView: UICollectionView!
@@ -61,22 +62,31 @@ class MedicalProductDetailsPopViewController: BaseViewController
     @IBAction func sureAction() {
      
         switch type {
-        case .AddShoppingCar:
-            print("发起加入购物车请求,成功后返回并提示")
-        case .SureShopping:
-            print("发起确定购买请求，成功后返回并跳转至确定订单页面")
         default:
-            if let selected = selected {
-                selected("选中了哪些")
+            // 遍历选中属性是否全选 全选返回，未选完 要求选完
+            let selectedModel = isAllSelected()
+            if selectedModel.isSelected {
+                
+                if let selected = selected {
+                    selected(selectedModel.selectedString, recordNumber)
+                }
+                close()
             }
-            close()
+            
+            else {
+                
+                super.hudWithMssage(msg: "\(selectedModel.unselectedType)")
+            }
+            
         }
         
         
     }
     
+    
     var recordNumber: String {
         set {
+            
             displayNumber.text = newValue
         }
         
@@ -85,16 +95,58 @@ class MedicalProductDetailsPopViewController: BaseViewController
         }
     }
     
+    fileprivate struct SelectedModel {
+        
+        let isSelected: Bool
+        let unselectedType: String
+        let selectedString: String
+    }
+    
+    fileprivate func isAllSelected() -> SelectedModel {
+        
+        var isAllselected = false
+        
+        var sectionTitle = "已选: "
+        var unSelectedTitle = "请选择: "
+        if self.model?.attrs == nil {
+            return SelectedModel(isSelected: true, unselectedType: "", selectedString: "无")
+        }
+        
+        for section in self.model!.attrs! {
+            
+            sectionTitle += "\(section.attr_name):"
+            var isSelected = false
+            for row in section.subAttrs! {
+                
+                if row.isSelected {
+                    sectionTitle += "\(row.attr_value) "
+                    isSelected = true
+                }
+            }
+            
+            isAllselected = isSelected
+            if isAllselected == false {
+                unSelectedTitle += "\(section.attr_name)"
+                return SelectedModel(isSelected: isAllselected, unselectedType: unSelectedTitle, selectedString: sectionTitle)
+            }
+            
+        }
+        
+        return SelectedModel(isSelected: isAllselected, unselectedType: unSelectedTitle, selectedString: sectionTitle)
+    }
+    
     fileprivate func updateUI() {
+        
+        if model == nil { return }
         
         icon.sd_setImage(with: model!.iconURL, placeholderImage: Placeholder.DefaultImage)
         displayStroeNumber.text = "库存:\(model!.inventory_num)"
-        displayPrice.text = "¥\(model!.market_price)"
+        displayPrice.text = model!.marketPrice
     }
     
     @IBAction func add() {
         
-        let max = 10
+        let max = self.model == nil ? 0 : self.model!.inventory_num.toInt()!
         
         var currentNumber = Int(displayNumber.text!)!
         currentNumber += 1
@@ -110,8 +162,8 @@ class MedicalProductDetailsPopViewController: BaseViewController
         
         var currentNumber = Int(displayNumber.text!)!
         currentNumber -= 1
-        if currentNumber < 0 {
-            currentNumber = 0
+        if currentNumber < 1 {
+            currentNumber = 1
         }
         
         recordNumber = String(currentNumber)
@@ -131,7 +183,9 @@ class MedicalProductDetailsPopViewController: BaseViewController
     
     fileprivate func addBar() {
         
-        UIApplication.shared.keyWindow!.addSubview(bar!)
+        if let bar = bar {
+            UIApplication.shared.keyWindow?.addSubview(bar)
+        }
     }
    
     
@@ -152,7 +206,7 @@ extension MedicalProductDetailsPopViewController: UICollectionViewDelegate, UICo
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
 
-        return self.model == nil ? 0 : self.model!.attrs!.count
+        return self.model == nil ? 0 : self.model!.attrs == nil ? 0 : self.model!.attrs!.count
     }
     
     

@@ -17,6 +17,7 @@ struct ShoppingModel: Equatable {
     let sell_price: String
     let market_price: String
     let product_image_url: String
+    let product_attr: String
 
     
     public static func ==(lhs: ShoppingModel, rhs: ShoppingModel) -> Bool {

@@ -42,7 +42,7 @@ class ShoppingCarTableViewCell: UITableViewCell
         selectedButton.isSelected = model!.isSelected
         displayProductName.text = model?.product_name
         displayMoney.text = model?.showPrice
-        displayRemake.text = model?.product_id
+        displayRemake.text = model?.product_attr
     }
 
 }
