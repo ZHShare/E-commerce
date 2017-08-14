@@ -8,8 +8,15 @@
 
 import UIKit
 
+enum FeedType {
+    case Default
+    case Intro
+}
+
 class FeedBackViewController: BaseTableViewController {
 
+    var type: FeedType = .Default
+    var content: ((String) -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBar()
@@ -22,7 +29,13 @@ class FeedBackViewController: BaseTableViewController {
     fileprivate let maxLength = 200
     fileprivate func configNavigationBar() {
         
-        navigationItem.title = "意见反馈"
+        switch type {
+        case .Intro:
+            navigationItem.title = "客户介绍"
+            placeHolder.text = "请填写客户介绍"
+        default:
+            navigationItem.title = "意见反馈"
+        }
     }
     
     fileprivate func configTextView() {
@@ -67,6 +80,15 @@ class FeedBackViewController: BaseTableViewController {
     
 
     @IBAction func submit() {
+        
+        if type == FeedType.Intro {
+            
+            if let content = self.content {
+                content(contentTextView.text!)
+                popVC()
+            }
+            return
+        }
         
         let content = contentTextView.text!
         var params = ["content": content]

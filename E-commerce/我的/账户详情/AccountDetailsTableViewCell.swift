@@ -48,7 +48,7 @@ class AccountDetailsTableViewCell: UITableViewCell
 extension AccountDetailsModel {
     
     var trueImageUrl: String {
-        return "\(host):\(8080)/\(objectAddress)\(product_image_url)"
+        return "\(host):\(picPort)/\(objectAddress)\(product_image_url)"
     }
     
     var showPrice: String? {

@@ -137,7 +137,7 @@ class ProductModel: NSObject {
             img = image
         }
         else {
-            img = UIImage(urlString: "\(host):\(8080)/\(objectAddress)\(imgString)")
+            img = UIImage(urlString: "\(host):\(picPort)/\(objectAddress)\(imgString)")
             SDImageCache.shared().store(img!, forKey: imgString)
         }
         if img == nil { return Placeholder.DefaultImage! }

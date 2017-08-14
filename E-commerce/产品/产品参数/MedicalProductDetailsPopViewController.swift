@@ -327,6 +327,6 @@ fileprivate extension MedicalProductDetailsModel {
     
     var iconURL: URL {
         
-        return URL(string: "\(host):\(8080)/\(objectAddress)\(product_image_url)")!
+        return URL(string: "\(host):\(picPort)/\(objectAddress)\(product_image_url)")!
     }
 }

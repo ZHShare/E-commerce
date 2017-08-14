@@ -14,11 +14,13 @@ let host = "http://192.168.1.41"
 let port = "8080"
 let objectAddress = "syk-crm-api"
 let api = "api"
+let picPort = "8012"
 
 struct ApiType {
     static let UserInfo = "userinfo"
     static let Pub = "pub"
     static let Home = "home"
+    static let CRM = "crm"
 }
 
 enum BaseNet {
@@ -38,7 +40,7 @@ enum BaseNet {
         
         ECHud.show()
         
-        let url = "\(host):\(8080)/\(objectAddress)/\(api)/\(apiType)/\(transCode).json"
+        let url = "\(host):\(port)/\(objectAddress)/\(api)/\(apiType)/\(transCode).json"
         
         let newParams = ["head": headerParams, "body": params]
         

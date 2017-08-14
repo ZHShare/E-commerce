@@ -49,6 +49,6 @@ class MedicalProductHeader: UICollectionReusableView {
 fileprivate extension ADModel {
     
     var imageString: String {
-        return "\(host):\(8080)/\(objectAddress)\(image_url)"
+        return "\(host):\(picPort)/\(objectAddress)\(image_url)"
     }
 }

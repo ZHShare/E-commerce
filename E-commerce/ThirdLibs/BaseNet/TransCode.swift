@@ -43,4 +43,11 @@ enum TransCode {
         static let evaluation = "200016"
     }
     
+    struct CRM {
+        
+        static let customerNew = "300010"
+        static let customerList = "300012"
+        static let contactNew = "300014"
+        static let contactList = "300016"
+    }
 }

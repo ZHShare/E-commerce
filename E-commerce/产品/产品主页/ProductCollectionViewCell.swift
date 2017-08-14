@@ -39,6 +39,6 @@ class ProductCollectionViewCell: UICollectionViewCell
 fileprivate extension ButtonModel {
     
     var imageString: String {
-        return "\(host):\(8080)/\(objectAddress)\(cat_image_url)"
+        return "\(host):\(picPort)/\(objectAddress)\(cat_image_url)"
     }
 }

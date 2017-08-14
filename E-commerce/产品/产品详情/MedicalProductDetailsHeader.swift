@@ -109,6 +109,6 @@ extension MedicalProductDetailsModel {
 fileprivate extension MedicalProductDetailsModel.Scroll {
     
     var imageString: String {
-        return "\(host):\(8080)/\(objectAddress)\(pic_url)"
+        return "\(host):\(picPort)/\(objectAddress)\(pic_url)"
     }
 }

@@ -52,7 +52,7 @@ enum LoginStatus {
     }
     
     static var faceImageUrl: String? {
-        return "\(host):\(8080)/\(objectAddress)\(userDefaults.string(forKey: Key.PhotoUrl)!)"
+        return "\(host):\(picPort)/\(objectAddress)\(userDefaults.string(forKey: Key.PhotoUrl)!)"
     }
     
     static var name: String? {

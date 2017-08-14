@@ -34,6 +34,6 @@ class MedicalProductSystemCell: UICollectionViewCell {
 fileprivate extension PackModel {
     
     var imageString: String {
-        return "\(host):\(8080)/\(objectAddress)\(product_image_url)"
+        return "\(host):\(picPort)/\(objectAddress)\(product_image_url)"
     }
 }

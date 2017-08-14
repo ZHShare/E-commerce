@@ -228,6 +228,6 @@ extension LoginModel {
     
     var faceUrl: String {
 
-        return "\(host):\(8080)/\(objectAddress)\(face_image_url)"
+        return "\(host):\(picPort)/\(objectAddress)\(face_image_url)"
     }
 }

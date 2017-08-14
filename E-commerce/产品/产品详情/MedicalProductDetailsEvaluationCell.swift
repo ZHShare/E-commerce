@@ -106,6 +106,6 @@ fileprivate extension MedicalProductDetailsModel.Review {
     
     var headerURL: URL {
 
-        return URL(string: "\(host):\(8080)/\(objectAddress)\(face_image_url)")!
+        return URL(string: "\(host):\(picPort)/\(objectAddress)\(face_image_url)")!
     }
 }

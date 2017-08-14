@@ -77,7 +77,7 @@ class ProductEvaluationTableViewCell: UITableViewCell
 fileprivate extension ProductEvalutaionModel {
     
     var imageURL: URL {
-        let urlString = "\(host):\(8080)/\(objectAddress)\(face_image_url)"
+        let urlString = "\(host):\(picPort)/\(objectAddress)\(face_image_url)"
         return URL(string: urlString)!
     }
     

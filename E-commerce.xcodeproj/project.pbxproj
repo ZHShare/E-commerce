@@ -23,7 +23,6 @@
 		C644E5AD1F3C282500F647CE /* ProductClassifyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C644E5AB1F3C282500F647CE /* ProductClassifyCollectionViewCell.xib */; };
 		C644E5B01F3C2C3700F647CE /* ProductClassifyCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644E5AE1F3C2C3700F647CE /* ProductClassifyCollectionReusableView.swift */; };
 		C644E5B11F3C2C3700F647CE /* ProductClassifyCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C644E5AF1F3C2C3700F647CE /* ProductClassifyCollectionReusableView.xib */; };
-		C64C4DE41F29728D003756B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C4DE31F29728D003756B7 /* MapViewController.swift */; };
 		C64C4DED1F2973BD003756B7 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DEC1F2973BD003756B7 /* GLKit.framework */; };
 		C64C4DEF1F2973C6003756B7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DEE1F2973C6003756B7 /* libc++.tbd */; };
 		C64C4DF11F2973D3003756B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C64C4DF01F2973D3003756B7 /* libz.tbd */; };
@@ -96,6 +95,11 @@
 		C69258F71F32FBA1007CC754 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69258F61F32FBA1007CC754 /* SettingViewController.swift */; };
 		C69258F91F32FEF5007CC754 /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69258F81F32FEF5007CC754 /* FeedBackViewController.swift */; };
 		C69258FB1F33051A007CC754 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69258FA1F33051A007CC754 /* AboutViewController.swift */; };
+		C69386B51F414D5400981193 /* CustomerNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69386B41F414D5400981193 /* CustomerNewViewController.swift */; };
+		C69386B81F41729500981193 /* MapSelectedAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69386B71F41729500981193 /* MapSelectedAddressViewController.swift */; };
+		C69386BA1F4181E800981193 /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69386B91F4181E800981193 /* AddressListViewController.swift */; };
+		C69386BC1F41835B00981193 /* AddressListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69386BB1F41835B00981193 /* AddressListTableViewCell.swift */; };
+		C69386BF1F41A01E00981193 /* ContactNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69386BE1F41A01E00981193 /* ContactNewViewController.swift */; };
 		C69914C61F30063C00F879EA /* ShoppingCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914C51F30063C00F879EA /* ShoppingCarTableViewCell.swift */; };
 		C69914C81F300D8500F879EA /* ShoppingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914C71F300D8500F879EA /* ShoppingModel.swift */; };
 		C69914CB1F30269600F879EA /* SureShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914CA1F30269600F879EA /* SureShoppingViewController.swift */; };
@@ -152,7 +156,6 @@
 		C6B3DCF01F2816FC007B2F14 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCEC1F2816FC007B2F14 /* LoginModel.swift */; };
 		C6B3DCF11F2816FC007B2F14 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCED1F2816FC007B2F14 /* LoginViewController.swift */; };
 		C6B3DCF21F2816FC007B2F14 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCEE1F2816FC007B2F14 /* RegisterViewController.swift */; };
-		C6B3DCF41F28170A007B2F14 /* CRMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCF31F28170A007B2F14 /* CRMViewController.swift */; };
 		C6B3DCFA1F28171C007B2F14 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCF51F28171C007B2F14 /* BaseNavigationController.swift */; };
 		C6B3DCFB1F28171C007B2F14 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DCF61F28171C007B2F14 /* BaseViewController.swift */; };
 		C6B3DCFC1F28171C007B2F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B3DCF71F28171C007B2F14 /* Main.storyboard */; };
@@ -168,6 +171,11 @@
 		C6B3DD261F28A9FD007B2F14 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DD251F28A9FD007B2F14 /* ResetViewController.swift */; };
 		C6B421791F31AF8D0022C692 /* MineDetailsChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B421781F31AF8D0022C692 /* MineDetailsChangeViewController.swift */; };
 		C6B456121F37F1BB0066E14E /* PubNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B456111F37F1BB0066E14E /* PubNet.swift */; };
+		C6BAFA501F412FF900E177DF /* CRMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BAFA4F1F412FF900E177DF /* CRMViewController.swift */; };
+		C6BAFA521F41301800E177DF /* MyCustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BAFA511F41301800E177DF /* MyCustomerTableViewController.swift */; };
+		C6BAFA541F41319300E177DF /* MyCustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BAFA531F41319300E177DF /* MyCustomerTableViewCell.swift */; };
+		C6BAFA561F4137CD00E177DF /* CRMNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BAFA551F4137CD00E177DF /* CRMNet.swift */; };
+		C6BAFA581F41385A00E177DF /* MyCustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BAFA571F41385A00E177DF /* MyCustomerModel.swift */; };
 		C6BF2A4E1F34412300008218 /* BaseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF2A4D1F34412300008218 /* BaseNet.swift */; };
 		C6BF2A501F34422B00008218 /* TransCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF2A4F1F34422B00008218 /* TransCode.swift */; };
 		C6BF2A521F344A2200008218 /* UserInfoNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF2A511F344A2200008218 /* UserInfoNet.swift */; };
@@ -214,7 +222,6 @@
 		C644E5AB1F3C282500F647CE /* ProductClassifyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductClassifyCollectionViewCell.xib; sourceTree = "<group>"; };
 		C644E5AE1F3C2C3700F647CE /* ProductClassifyCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductClassifyCollectionReusableView.swift; sourceTree = "<group>"; };
 		C644E5AF1F3C2C3700F647CE /* ProductClassifyCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductClassifyCollectionReusableView.xib; sourceTree = "<group>"; };
-		C64C4DE31F29728D003756B7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C64C4DEC1F2973BD003756B7 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C64C4DEE1F2973C6003756B7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		C64C4DF01F2973D3003756B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -288,6 +295,11 @@
 		C69258F61F32FBA1007CC754 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C69258F81F32FEF5007CC754 /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
 		C69258FA1F33051A007CC754 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		C69386B41F414D5400981193 /* CustomerNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerNewViewController.swift; sourceTree = "<group>"; };
+		C69386B71F41729500981193 /* MapSelectedAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSelectedAddressViewController.swift; sourceTree = "<group>"; };
+		C69386B91F4181E800981193 /* AddressListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
+		C69386BB1F41835B00981193 /* AddressListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListTableViewCell.swift; sourceTree = "<group>"; };
+		C69386BE1F41A01E00981193 /* ContactNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactNewViewController.swift; sourceTree = "<group>"; };
 		C69914C51F30063C00F879EA /* ShoppingCarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCarTableViewCell.swift; sourceTree = "<group>"; };
 		C69914C71F300D8500F879EA /* ShoppingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingModel.swift; sourceTree = "<group>"; };
 		C69914CA1F30269600F879EA /* SureShoppingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingViewController.swift; sourceTree = "<group>"; };
@@ -345,7 +357,6 @@
 		C6B3DCEC1F2816FC007B2F14 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		C6B3DCED1F2816FC007B2F14 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C6B3DCEE1F2816FC007B2F14 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		C6B3DCF31F28170A007B2F14 /* CRMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRMViewController.swift; sourceTree = "<group>"; };
 		C6B3DCF51F28171C007B2F14 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		C6B3DCF61F28171C007B2F14 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C6B3DCF71F28171C007B2F14 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -362,6 +373,11 @@
 		C6B421771F31A7210022C692 /* EZSwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZSwiftExtensions.framework; path = "Pods/../build/Debug-iphoneos/EZSwiftExtensions/EZSwiftExtensions.framework"; sourceTree = "<group>"; };
 		C6B421781F31AF8D0022C692 /* MineDetailsChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineDetailsChangeViewController.swift; sourceTree = "<group>"; };
 		C6B456111F37F1BB0066E14E /* PubNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubNet.swift; sourceTree = "<group>"; };
+		C6BAFA4F1F412FF900E177DF /* CRMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRMViewController.swift; sourceTree = "<group>"; };
+		C6BAFA511F41301800E177DF /* MyCustomerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomerTableViewController.swift; sourceTree = "<group>"; };
+		C6BAFA531F41319300E177DF /* MyCustomerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomerTableViewCell.swift; sourceTree = "<group>"; };
+		C6BAFA551F4137CD00E177DF /* CRMNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRMNet.swift; sourceTree = "<group>"; };
+		C6BAFA571F41385A00E177DF /* MyCustomerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomerModel.swift; sourceTree = "<group>"; };
 		C6BF2A4D1F34412300008218 /* BaseNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNet.swift; sourceTree = "<group>"; };
 		C6BF2A4F1F34422B00008218 /* TransCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransCode.swift; sourceTree = "<group>"; };
 		C6BF2A511F344A2200008218 /* UserInfoNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoNet.swift; sourceTree = "<group>"; };
@@ -472,8 +488,11 @@
 		C6545DD51F27351500F9D479 /* CRM */ = {
 			isa = PBXGroup;
 			children = (
-				C6B3DCF31F28170A007B2F14 /* CRMViewController.swift */,
-				C64C4DE31F29728D003756B7 /* MapViewController.swift */,
+				C69386BD1F41A00000981193 /* 新增联系人 */,
+				C69386B61F41727800981193 /* 地图选址 */,
+				C6BAFA4C1F412FF900E177DF /* 我的客户 */,
+				C6BAFA4D1F412FF900E177DF /* 新增客户 */,
+				C6BAFA4E1F412FF900E177DF /* CRM主页 */,
 			);
 			path = CRM;
 			sourceTree = "<group>";
@@ -496,6 +515,7 @@
 				C6BF2A511F344A2200008218 /* UserInfoNet.swift */,
 				C6B456111F37F1BB0066E14E /* PubNet.swift */,
 				C68159F11F3ADCA90092A40C /* HomeNet.swift */,
+				C6BAFA551F4137CD00E177DF /* CRMNet.swift */,
 				C6BF2A4F1F34422B00008218 /* TransCode.swift */,
 			);
 			path = BaseNet;
@@ -706,6 +726,24 @@
 			path = "设置";
 			sourceTree = "<group>";
 		};
+		C69386B61F41727800981193 /* 地图选址 */ = {
+			isa = PBXGroup;
+			children = (
+				C69386B71F41729500981193 /* MapSelectedAddressViewController.swift */,
+				C69386B91F4181E800981193 /* AddressListViewController.swift */,
+				C69386BB1F41835B00981193 /* AddressListTableViewCell.swift */,
+			);
+			path = "地图选址";
+			sourceTree = "<group>";
+		};
+		C69386BD1F41A00000981193 /* 新增联系人 */ = {
+			isa = PBXGroup;
+			children = (
+				C69386BE1F41A01E00981193 /* ContactNewViewController.swift */,
+			);
+			path = "新增联系人";
+			sourceTree = "<group>";
+		};
 		C69914C91F30267800F879EA /* 确定购买 */ = {
 			isa = PBXGroup;
 			children = (
@@ -879,6 +917,32 @@
 				C685277D1F3162A2001A2441 /* 主页 */,
 			);
 			path = "我的";
+			sourceTree = "<group>";
+		};
+		C6BAFA4C1F412FF900E177DF /* 我的客户 */ = {
+			isa = PBXGroup;
+			children = (
+				C6BAFA511F41301800E177DF /* MyCustomerTableViewController.swift */,
+				C6BAFA531F41319300E177DF /* MyCustomerTableViewCell.swift */,
+				C6BAFA571F41385A00E177DF /* MyCustomerModel.swift */,
+			);
+			path = "我的客户";
+			sourceTree = "<group>";
+		};
+		C6BAFA4D1F412FF900E177DF /* 新增客户 */ = {
+			isa = PBXGroup;
+			children = (
+				C69386B41F414D5400981193 /* CustomerNewViewController.swift */,
+			);
+			path = "新增客户";
+			sourceTree = "<group>";
+		};
+		C6BAFA4E1F412FF900E177DF /* CRM主页 */ = {
+			isa = PBXGroup;
+			children = (
+				C6BAFA4F1F412FF900E177DF /* CRMViewController.swift */,
+			);
+			path = "CRM主页";
 			sourceTree = "<group>";
 		};
 		C6D7E3641F394824008F3167 /* Notification */ = {
@@ -1082,6 +1146,7 @@
 				C6A1C8441F2ED27600FBD3B9 /* ProductFlowLayout.swift in Sources */,
 				C69258E01F32B300007CC754 /* MyAccountViewController.swift in Sources */,
 				C6A0A8CE1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift in Sources */,
+				C6BAFA581F41385A00E177DF /* MyCustomerModel.swift in Sources */,
 				C644E5B01F3C2C3700F647CE /* ProductClassifyCollectionReusableView.swift in Sources */,
 				C6545DCC1F2723C600F9D479 /* WorkViewController.swift in Sources */,
 				C66881211F31C62000125CA6 /* OrderListModel.swift in Sources */,
@@ -1102,6 +1167,7 @@
 				C68159F91F3B0E090092A40C /* ProductClassifyListCell.swift in Sources */,
 				C6B456121F37F1BB0066E14E /* PubNet.swift in Sources */,
 				C61A90E21F386A9B00DBC821 /* AddressBookModel.swift in Sources */,
+				C69386BA1F4181E800981193 /* AddressListViewController.swift in Sources */,
 				C6B3DCFE1F28171C007B2F14 /* ViewController.swift in Sources */,
 				C68159F71F3B0DF10092A40C /* ProductClassifyViewController.swift in Sources */,
 				C69258DD1F32A94A007CC754 /* OrderDetailsFooter.swift in Sources */,
@@ -1109,14 +1175,15 @@
 				C6A1C8271F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift in Sources */,
 				C6AF7EC41F1D959B00D4CF95 /* AppDelegate.swift in Sources */,
 				C66BECFB1F1DDF9C00985880 /* HNet.swift in Sources */,
-				C64C4DE41F29728D003756B7 /* MapViewController.swift in Sources */,
 				C6545DD31F272FED00F9D479 /* WorkReusableView.swift in Sources */,
+				C69386BF1F41A01E00981193 /* ContactNewViewController.swift in Sources */,
 				C6A1C82A1F2ED27600FBD3B9 /* MedicalProductDetailsPopRowThreeCollectionViewCell.swift in Sources */,
 				C69258ED1F32EEFF007CC754 /* AccountDetailsViewController.swift in Sources */,
 				C6A1C83A1F2ED27600FBD3B9 /* MedicalProductHeader.swift in Sources */,
 				C668811D1F31B7F900125CA6 /* MineDetailsDepartmentModel.swift in Sources */,
 				C6094C2D1F21B06D004677BE /* ECSwiftJSON.swift in Sources */,
 				C6A6B6331F33090E00E014C6 /* OrderDetailsInvoiceTableViewCell.swift in Sources */,
+				C69386B51F414D5400981193 /* CustomerNewViewController.swift in Sources */,
 				C66881191F31B72300125CA6 /* MineDetailsDepartmentViewController.swift in Sources */,
 				C6A1C8381F2ED27600FBD3B9 /* MedicalProductFirstCell.swift in Sources */,
 				C6A1C8311F2ED27600FBD3B9 /* MedicalProductDetailsHeader.swift in Sources */,
@@ -1136,6 +1203,7 @@
 				C68527831F3162A2001A2441 /* MineHeader.swift in Sources */,
 				C65641E31F38DA78003D22B5 /* AddressBookDetailsViewController.swift in Sources */,
 				C69914C61F30063C00F879EA /* ShoppingCarTableViewCell.swift in Sources */,
+				C6BAFA521F41301800E177DF /* MyCustomerTableViewController.swift in Sources */,
 				C6BF2A4E1F34412300008218 /* BaseNet.swift in Sources */,
 				C6A1C8461F2ED2C100FBD3B9 /* ProductEvaluationViewController.swift in Sources */,
 				C6B3DD031F281E25007B2F14 /* BaseTableViewController.swift in Sources */,
@@ -1158,6 +1226,7 @@
 				C69258F11F32F627007CC754 /* AccountDetailsModel.swift in Sources */,
 				C69914CD1F302F1F00F879EA /* SureShoppingProductTableViewCell.swift in Sources */,
 				C69258D31F32A830007CC754 /* OrderDetailsViewController.swift in Sources */,
+				C6BAFA501F412FF900E177DF /* CRMViewController.swift in Sources */,
 				C6A1C8301F2ED27600FBD3B9 /* MedicalProductDetailsFooter.swift in Sources */,
 				C68527911F316EEC001A2441 /* MineDetailsHeaderTableViewCell.swift in Sources */,
 				C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */,
@@ -1178,6 +1247,7 @@
 				C6094C5C1F265D92004677BE /* ECCommon.swift in Sources */,
 				C6A1C84A1F2F01AB00FBD3B9 /* ProductEvaluationHeader.swift in Sources */,
 				C6A1C8281F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift in Sources */,
+				C69386BC1F41835B00981193 /* AddressListTableViewCell.swift in Sources */,
 				C6A6B63A1F3320E900E014C6 /* SureInvoiceHeader.swift in Sources */,
 				C6A1C8321F2ED27600FBD3B9 /* MedicalProductDetailsImagesCell.swift in Sources */,
 				C6545DC61F2717A200F9D479 /* MessageTableViewCell.swift in Sources */,
@@ -1186,6 +1256,7 @@
 				C6545DC81F27184D00F9D479 /* MessageModel.swift in Sources */,
 				C6545DC41F2714E200F9D479 /* MessageViewController.swift in Sources */,
 				C68AF91C1F33FF0D00D4A1E3 /* SureInvoiceTableFooter.swift in Sources */,
+				C6BAFA561F4137CD00E177DF /* CRMNet.swift in Sources */,
 				C6A6B6381F331FBE00E014C6 /* SureInvoiceTableViewCell.swift in Sources */,
 				C6B3DCF01F2816FC007B2F14 /* LoginModel.swift in Sources */,
 				C68527851F3162A2001A2441 /* MineViewController.swift in Sources */,
@@ -1193,13 +1264,14 @@
 				C68AF91A1F33FEFF00D4A1E3 /* SureInvoiceTableHeader.swift in Sources */,
 				C6A1C82C1F2ED27600FBD3B9 /* MedicalProductDetailsPopViewController.swift in Sources */,
 				C68159EE1F3AB85C0092A40C /* InvoiceManagerViewController.swift in Sources */,
-				C6B3DCF41F28170A007B2F14 /* CRMViewController.swift in Sources */,
 				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
 				C68527971F317FEF001A2441 /* MiniDetailsDatePicker.swift in Sources */,
+				C69386B81F41729500981193 /* MapSelectedAddressViewController.swift in Sources */,
 				C6D92F2B1F342367005122C5 /* MyFavoriteModel.swift in Sources */,
 				C6FEB53D1F3833BC00577F41 /* AddressBookTableViewCell.swift in Sources */,
 				C6094C2C1F21B06D004677BE /* ECModelManager.swift in Sources */,
 				C6A1C83D1F2ED27600FBD3B9 /* MedicalProductNormalHeader.swift in Sources */,
+				C6BAFA541F41319300E177DF /* MyCustomerTableViewCell.swift in Sources */,
 				C6A1C8481F2ED48E00FBD3B9 /* ProductEvaluationTableViewCell.swift in Sources */,
 				C6A1C8411F2ED27600FBD3B9 /* MedicalProductViewController.swift in Sources */,
 				C6A1C8331F2ED27600FBD3B9 /* MedicalProductDetailsMapCell.swift in Sources */,

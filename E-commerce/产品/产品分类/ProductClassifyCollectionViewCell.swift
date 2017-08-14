@@ -31,7 +31,7 @@ class ProductClassifyCollectionViewCell: UICollectionViewCell
 fileprivate extension SecondClassifySubModel {
     
     var imageURL: URL {
-        let urlString = "\(host):\(8080)/\(objectAddress)\(cat_image_url)"
+        let urlString = "\(host):\(picPort)/\(objectAddress)\(cat_image_url)"
         return URL(string: urlString)!
     }
 }

@@ -40,7 +40,7 @@ class MedicalProductDetailsImagesCell: UITableViewCell
             return
         }
         
-        let urlString = "\(host):\(8080)/\(objectAddress)\(imageH5)\(product_id!)"
+        let urlString = "\(host):\(port)/\(objectAddress)\(imageH5)\(product_id!)"
         webView.loadRequest(URLRequest.init(url: URL(string: urlString)!))
         
     }
@@ -87,7 +87,7 @@ class MedicalProductDetailsPramsCell: UITableViewCell
             return
         }
         
-        let urlString = "\(host):\(8080)/\(objectAddress)\(paramsH5)\(product_id!)"
+        let urlString = "\(host):\(port)/\(objectAddress)\(paramsH5)\(product_id!)"
         webView.loadRequest(URLRequest.init(url: URL(string: urlString)!))
         
     }
@@ -133,7 +133,7 @@ class MedicalProductDetailsInstallCell: UITableViewCell
             return
         }
         
-        let urlString = "\(host):\(8080)/\(objectAddress)\(setupH5)\(product_id!)"
+        let urlString = "\(host):\(port)/\(objectAddress)\(setupH5)\(product_id!)"
         webView.loadRequest(URLRequest.init(url: URL(string: urlString)!))
         
     }
