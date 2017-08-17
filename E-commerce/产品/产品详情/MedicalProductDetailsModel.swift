@@ -23,7 +23,7 @@ class MedicalProductDetailsModel: NSObject {
     var delivery_plac: String = ""
     var product_desc: String = ""
     var product_image_url: String = ""
-    
+    var is_collection: String = ""
     var scrolls: [Scroll]?
     var attrs: [Attr]?
     var reviews: [Review]?

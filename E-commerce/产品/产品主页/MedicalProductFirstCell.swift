@@ -12,16 +12,18 @@ fileprivate enum ReuseIdentifier  {
     static let buttons = "Display Images and Titles"
 }
 
-protocol MedicalProductFirstCellDelegate {
+@objc protocol MedicalProductFirstCellDelegate {
     
-    func didSelectedIndex(index: IndexPath)
+    func didSelectedModel(model: Any)
+    func didClickNotice(notice: Any)
+    func moreNotice()
 }
 
 class MedicalProductFirstCell: UICollectionViewCell {
 
     var models: [ButtonModel]? { didSet { refreshButtons() } }
     var notices: [PreferentialModel]? { didSet { refreshNotices() }}
-    var delegate: MedicalProductFirstCellDelegate?
+    weak var delegate: MedicalProductFirstCellDelegate?
     @IBOutlet weak var moreBg: UIView! { didSet { updateBoxUI() } }
     
     fileprivate func updateBoxUI() {
@@ -36,7 +38,8 @@ class MedicalProductFirstCell: UICollectionViewCell {
     }
     
     @IBAction func more() {
-        print("更多")
+        
+        delegate?.moreNotice()
     }
     
     // 上下滚动广告
@@ -96,15 +99,29 @@ class MedicalProductFirstCell: UICollectionViewCell {
         var frame = adScrollView.frame
         frame.origin.x = 0
         
+        let titleColor = UIColor(hexString: "#057aff")
         var index = 0
         for model in notices {
             
             frame.origin.y = CGFloat(index) * adScrollView.frame.height
             
             let titleLabel = UILabel(frame: frame)
-            titleLabel.font = UIFont.systemFont(ofSize: 12)
-            titleLabel.textColor = UIColor.gray
-            titleLabel.text = model.notice_title
+            titleLabel.tag = index + 10
+            // 富文本
+            let attributed = NSMutableAttributedString()
+            let titleAttri = NSAttributedString(string: "\(model.title): ", attributes: [NSForegroundColorAttributeName : titleColor ?? .black, NSFontAttributeName : UIFont.boldSystemFont(ofSize: 16.0)])
+            let subTitleAttri = NSAttributedString(string: "\(model.notice_title)", attributes: [NSForegroundColorAttributeName : UIColor.darkGray, NSFontAttributeName : UIFont.systemFont(ofSize: 14)])
+            attributed.append(titleAttri)
+            attributed.append(subTitleAttri)
+            titleLabel.isUserInteractionEnabled = true
+            titleLabel.addTapGesture(action: { (tap) in
+                
+                let tapIndex = titleLabel.tag - 10
+                let tapModel = self.notices![tapIndex]
+                self.delegate?.didClickNotice(notice: tapModel)
+            })
+            
+            titleLabel.attributedText = attributed
             adScrollView.addSubview(titleLabel)
             
             index += 1
@@ -114,6 +131,13 @@ class MedicalProductFirstCell: UICollectionViewCell {
     }
 
 }
+extension PreferentialModel {
+    
+    var title: String {
+        return notice_type == "1" ? "系统消息" : "优惠消息"
+    }
+}
+
 
 // MARK: - UICollectionViewDelegate UICollectionViewDatasource
 extension MedicalProductFirstCell: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -143,7 +167,8 @@ extension MedicalProductFirstCell: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        delegate?.didSelectedIndex(index: indexPath)
+        let selectedModel = models![indexPath.row]
+        delegate?.didSelectedModel(model: selectedModel)
     }
     
 }

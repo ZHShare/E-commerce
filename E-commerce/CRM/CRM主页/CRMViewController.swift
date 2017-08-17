@@ -30,6 +30,7 @@ class CRMViewController: BaseViewController {
             
         switch tapView {
         case godView: myCustomer()
+        case nearView: near()
         default:
             break
         }
@@ -46,5 +47,10 @@ fileprivate extension CRMViewController {
         navigationController?.ecPushViewController(myCustomerViewController)
     }
     
+    func near() {
+        
+        let nearViewController = ECStroryBoard.controller(type: NearMapViewController.self)
+        navigationController?.ecPushViewController(nearViewController)
+    }
 }
 

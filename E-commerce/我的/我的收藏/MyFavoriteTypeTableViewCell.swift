@@ -13,10 +13,10 @@ class MyFavoriteTypeTableViewCell: UITableViewCell
 
     @IBOutlet var displayTitle: UILabel!
     
-    var model: MyFavoriteTypeModel? { didSet { updateUI() } }
+    var model: FirstClassifyModel? { didSet { updateUI() } }
     
     fileprivate func updateUI() {
         
-        displayTitle.text = model?.title
+        displayTitle.text = model?.cat_name
     }
 }

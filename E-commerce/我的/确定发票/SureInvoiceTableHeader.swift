@@ -8,13 +8,13 @@
 
 import UIKit
 
-enum InvoiceType {
+@objc enum InvoiceType: Int {
     case Page
     case Electron
     case VAT
 }
 
-protocol SureInvoiceTableHeaderDelegate {
+@objc protocol SureInvoiceTableHeaderDelegate {
     func didClickType(type: InvoiceType)
 }
 
@@ -27,7 +27,7 @@ class SureInvoiceTableHeader: UIView
     @IBOutlet var electronButton: UIButton!
     @IBOutlet var VATButton: UIButton!
     
-    var delegate: SureInvoiceTableHeaderDelegate?
+    weak var delegate: SureInvoiceTableHeaderDelegate?
     
     @IBAction func invoiceClick(sender: UIButton) {
         

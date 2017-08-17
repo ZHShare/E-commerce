@@ -28,7 +28,9 @@ class MyFavoriteViewController: BaseViewController
     fileprivate let mjHeader = MJRefreshNormalHeader()
     fileprivate let mjFooter = MJRefreshAutoNormalFooter()
     fileprivate var products: [MyFavoriteModel]?
-    fileprivate var types: [MyFavoriteTypeModel]?
+    fileprivate var types: [FirstClassifyModel]? {
+        didSet { updateTypeTableView() }
+    }
     fileprivate var pageNumber = 1 {
         didSet { fetchData() }
     }
@@ -41,7 +43,13 @@ class MyFavoriteViewController: BaseViewController
         mjHeader.beginRefreshing()
     }
     
-    fileprivate var params: [String: Any] = ["user_id": LoginModel.load()!.user_id]
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchDataForType()
+    }
+    
+    fileprivate var params: [String: Any] = ["user_id": LoginModel.load()!.user_id,
+                                             "type": "1"]
     fileprivate func fetchData() {
         
         params["page_num"] = "\(pageNumber)"
@@ -68,12 +76,32 @@ class MyFavoriteViewController: BaseViewController
             }
         }
         
+       
+    }
+    
+    fileprivate func updateTypeTableView() {
         
-        types = MyFavoriteTypeModel.models()
         DispatchQueue.main.async {
             
             self.typeTableView.reloadData()
         }
+    }
+    
+    fileprivate func fetchDataForType() {
+        
+        HomeNet.fetchDataWith(transCode: TransCode.Home.firstClass, params: [String : Any]()) { (response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return super.hudWithMssage(msg: errorMsg)
+            }
+            
+            if let models = FirstClassifyModel.models(withDic: response) {
+                
+                self.types = models
+            }
+            
+        }
+        
     }
     
     fileprivate func configTableView() {
@@ -175,11 +203,67 @@ extension MyFavoriteViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch tableView {
         case typeTableView:
+            let selectedType = types![indexPath.row]
+            params["cat_id"] = selectedType.cat_id
+            mjHeader.beginRefreshing()
             hiddenTypeTableView()
         default:
             break
         }
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if tableView == mainTableView{
+            return true
+        }
+        return false
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        
+        return "移除"
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let alertController = UIAlertController(title: nil, message: "确定移除？", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler: { (act) in
+            
+            self.removeFromIndexPath(indexPath: indexPath)
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil))
+        
+        presentVC(alertController)
+        
+    }
+    
+    fileprivate func removeFromIndexPath(indexPath: IndexPath) {
+        
+        let product = products![indexPath.row]
+     
+        let params: [String: Any] = ["user_id": LoginModel.load()!.user_id,
+                                     "product_id": product.product_id]
+        UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.removeFav, params: params) { (response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return super.hudForWindowsWithMessage(msg: errorMsg)
+            }
+           
+            super.hudForWindowsWithMessage(msg: "已移除")
+            var newModels = self.products!
+            newModels.remove(at: indexPath.row)
+            self.products = newModels
+            DispatchQueue.main.async {
+                self.mainTableView.reloadData()
+            }
+        }
+    }
+    
 }
 // MARK: - FilePrivate
 extension MyFavoriteViewController {

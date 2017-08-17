@@ -9,7 +9,7 @@
 import UIKit
 import MBProgressHUD
 
-protocol MedicalProductDetailsImagesCellDelegate {
+@objc protocol MedicalProductDetailsImagesCellDelegate {
     
     func imagesDidLoad(withHeight: CGFloat)
     func paramsDidLoad(withHeight: CGFloat)
@@ -20,7 +20,7 @@ class MedicalProductDetailsImagesCell: UITableViewCell
 {
     fileprivate let imageH5 = "/h5/introduction.htm?product_id="
     
-    var delegate: MedicalProductDetailsImagesCellDelegate?
+    weak var delegate: MedicalProductDetailsImagesCellDelegate?
     @IBOutlet weak var webView: UIWebView! {
         didSet { configWebView() }
     }
@@ -67,7 +67,7 @@ class MedicalProductDetailsPramsCell: UITableViewCell
 {
     fileprivate let paramsH5 = "/h5/parameter.htm?product_id="
     
-    var delegate: MedicalProductDetailsImagesCellDelegate?
+    weak var delegate: MedicalProductDetailsImagesCellDelegate?
     @IBOutlet weak var webView: UIWebView! {
         didSet { configWebView() }
     }
@@ -113,7 +113,7 @@ class MedicalProductDetailsInstallCell: UITableViewCell
 {
     fileprivate let setupH5 = "/h5/install.htm?product_id="
     
-    var delegate: MedicalProductDetailsImagesCellDelegate?
+    weak var delegate: MedicalProductDetailsImagesCellDelegate?
     @IBOutlet weak var webView: UIWebView! {
         didSet { configWebView() }
     }

@@ -2,111 +2,143 @@
 //  SureShoppingViewController.swift
 //  E-commerce
 //
-//  Created by YE on 2017/8/1.
+//  Created by YE on 2017/8/17.
 //  Copyright © 2017年 Eter. All rights reserved.
 //
 
 import UIKit
 
-class SureShoppingViewController: BaseTableViewController
+class SureShopping: Nofifier {
+    enum Notification: String {
+        case Address
+    }
+}
+
+class SureShoppingViewController: BaseViewController
 {
-    fileprivate let bar: SureShoppingBar = UIView.loadFromNibNamed(nibNamed: "SureShoppingBar") as! SureShoppingBar
+
+    var selectedProducts: [ShoppingModel]?
+    var addressModel: ContactListModel?
+
+    fileprivate var tableView: UITableView!
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var displayAllMoney: UILabel!
+    @IBAction func submit() {
+     
+        let title = "是否确定提交此订单"
+        let sure = "确定"
+        let cancel = "取消"
     
+        let alertController = UIAlertController(title: nil, message: title, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: sure, style: UIAlertActionStyle.default, handler: { (act) in
+            
+            print("订单提交")
+        }))
+        alertController.addAction(UIAlertAction(title: cancel, style: UIAlertActionStyle.cancel, handler: nil))
+        presentVC(alertController)
+    }
+    
+    fileprivate var allMoney: Int {
+        
+        set {
+            displayAllMoney.text = "¥\(newValue).00"
+        }
+        
+        get {
+            return displayAllMoney.text!.toInt()!
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        config()
-        updateBarFrame()
+        configTableView()
+        refreshTableView()
+        addNotice()
     }
-    
-    fileprivate enum ReuseIdentifier {
-        static let Address = "Address"
-        static let Product = "Product"
-        static let Normal = "Normal"
-        static let Field = "Field"
-    }
-    
-    fileprivate enum SectionRow {
-        static let Address = 1
-        static let Normal = 3
-        static let Zero = 0
-    }
-    
-    fileprivate func config() {
-        
-        tableView.addSubview(bar)
-        tableView.bringSubview(toFront: bar)
-        
-        navigationItem.title = "确定购买"
-    }
-    
-    fileprivate func updateBarFrame() {
-        
-        bar.frame.origin = CGPoint(x: 0, y: tableView.contentOffset.y + tableView.frame.size.height - 44)
-    }
-    
-}
 
-
-// MARK: - UITableViewDelegate, UITableViewDataSource
-extension SureShoppingViewController {
+    fileprivate let tableVC = ECStroryBoard.controller(type: SureShoppingTableViewController.self)
     
-   
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+    fileprivate func configTableView() {
+        
+        addChildViewController(tableVC)
+        tableView = tableVC.tableView
+        topView.addSubview(tableView)
+        topView.clipsToBounds = true
+        tableView.frame.size.width = topView.frame.size.width
+        tableView.frame.size.height = topView.frame.size.height
+        
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0: return SectionRow.Address
-        case 1: return 2
-        case 2: return SectionRow.Normal
-        default: return SectionRow.Zero
+    fileprivate func refreshTableView() {
+        
+        if let footer: SureShoppingFooter = tableView.tableFooterView as? SureShoppingFooter {
+            footer.allCount = getAllCount()
+            footer.money = getAllMoney()
+        }
+        
+        allMoney = getAllMoney()
+        
+        tableVC.selectedProducts = selectedProducts
+        DispatchQueue.main.async { [unowned self] in
+            self.tableView.reloadData()
         }
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    // MARK: - 共多少件商品
+    fileprivate func getAllCount() -> Int {
         
-        var cell: UITableViewCell!
-        
-        switch indexPath.section {
-        case 0:
-            cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.Address, for: indexPath)
-        case 1:
-            cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.Product, for: indexPath)
-        case 2:
-            if indexPath.row == 2 {
-                cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.Field, for: indexPath)
-            }
-            else {
-                cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.Normal, for: indexPath)
-            }
-        default: cell = UITableViewCell()
+        if selectedProducts == nil {
+            return 0
         }
         
-        return cell
+        var count = 0
+        for model in selectedProducts! {
+            
+            count += model.goods_number.toInt()!
+        }
+        return count
     }
     
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
+    // MARK: 共多少金额
+    fileprivate func getAllMoney() -> Int {
+        
+        if selectedProducts == nil {
+            return 0
+        }
+        
+        var price = 0
+        for model in selectedProducts! {
+            
+            price += model.goods_number.toInt()!*model.sell_price.toInt()!
+        }
+        
+        return price
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView()
-    }
-   
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.001
+    deinit {
+        removeNotice()
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.001
+    fileprivate func addNotice() {
+        
+        SureShopping.addObserver(observer: self, selector: #selector(notice(notice:)), notification: SureShopping.Notification.Address)
     }
     
-}
-// MARK: - UIScrollViewDelegate
-extension SureShoppingViewController {
+    fileprivate func removeNotice() {
+        
+        SureShopping.removeObserver(observer: self, notification: SureShopping.Notification.Address)
+    }
     
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        updateBarFrame()
+    @objc fileprivate func notice(notice: Notification) {
+        
+        let userInfo = notice.userInfo
+        if let model = userInfo?["model"] as? ContactListModel {
+            addressModel = model
+            tableVC.addressModel = model
+            DispatchQueue.main.async {
+                
+                let sectionOneIndexSet = NSIndexSet(index: 0) as IndexSet
+                self.tableView.reloadSections(sectionOneIndexSet, with: UITableViewRowAnimation.none)
+            }
+        }
     }
 }

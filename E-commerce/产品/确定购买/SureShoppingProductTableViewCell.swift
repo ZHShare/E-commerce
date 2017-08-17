@@ -17,4 +17,20 @@ class SureShoppingProductTableViewCell: UITableViewCell
     @IBOutlet weak var displayRemake: UILabel!
     @IBOutlet weak var displayProductName: UILabel!
    
+    var model: ShoppingModel? {
+        didSet { updateUI() }
+    }
+    
+    fileprivate func updateUI() {
+        
+        guard let model = model else { return }
+        DispatchQueue.main.async {
+            
+            self.icon.sd_setImage(with: URL(string: model.trueProductImageURL)!, placeholderImage: Placeholder.DefaultImage)
+            self.displayPrice.text = model.showPrice
+            self.displayCount.text = model.trueCount
+            self.displayRemake.text = model.product_attr
+            self.displayProductName.text = model.product_name
+        }
+    }
 }

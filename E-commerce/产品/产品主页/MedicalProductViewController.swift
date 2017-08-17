@@ -21,6 +21,8 @@ class MedicalProductViewController: BaseViewController {
     
     @IBAction func search() {
         
+        let searchViewController = ECStroryBoard.controller(type: ProductSearchViewController.self)
+        navigationController?.ecPushViewController(searchViewController)
     }
     
     override func viewDidLoad() {
@@ -138,10 +140,36 @@ fileprivate extension MedicalProductViewController {
 // MARK: MedicalProductFirstCellDelegate
 extension MedicalProductViewController: MedicalProductFirstCellDelegate {
     
-    func didSelectedIndex(index: IndexPath) {
+    func didSelectedModel(model: Any) {
         
         let classifyViewController = ECStroryBoard.controller(type: ProductClassifyViewController.self)
-        navigationController?.ecPushViewController(classifyViewController)  
+        classifyViewController.catID = (model as! ButtonModel).cat_id
+        navigationController?.ecPushViewController(classifyViewController)
+    }
+    
+    func didClickNotice(notice: Any) {
+        
+        guard let notice = notice as? PreferentialModel else {
+            return
+        }
+
+        if notice.notice_type == "1" {
+            let detailsViewController = ECStroryBoard.controller(type: NoticeDetailsViewController.self)
+            detailsViewController.notice_id = notice.notice_id
+            navigationController?.ecPushViewController(detailsViewController)
+        }
+        else {
+            
+            let productDetailsViewController = ECStroryBoard.controller(type: MedicalProductDetailsViewController.self)
+            productDetailsViewController.productID = notice.product_id
+            navigationController?.ecPushViewController(productDetailsViewController)
+        }
+    }
+    
+    func moreNotice() {
+        
+        let noticeViewController = ECStroryBoard.controller(type: NoticeListViewController.self)
+        navigationController?.ecPushViewController(noticeViewController)
     }
 }
 
@@ -196,6 +224,8 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
+        if indexPath.section == 0 { return }
+        
         let productDetailsController = ECStroryBoard.controller(type: MedicalProductDetailsViewController.self)
         
         var productID = ""
@@ -222,7 +252,7 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
         }
         
         if let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ReuseIdentifier.normalHeader, for: indexPath) as? MedicalProductNormalHeader {
-            
+            header.delegate = self
             switch indexPath.section {
             case 1: header.displayTitle.text = "系统套餐"
             case 2: header.displayTitle.text = "产品列表"
@@ -261,6 +291,27 @@ extension MedicalProductViewController: UICollectionViewDelegate, UICollectionVi
 
     
 }
+// MARK: 系统套餐" "产品列表" 更多点埚
+extension MedicalProductViewController: MedicalProductNormalHeaderDelegate {
+    
+    func moreForTitle(title: String) {
+        
+        if title == "系统套餐" {
+            
+            let systemListViewController = ECStroryBoard.controller(type: SystemProductListViewController.self)
+            navigationController?.ecPushViewController(systemListViewController)
+        }
+        
+        else {
+            
+           let productListViewController = ECStroryBoard.controller(type: ProductListViewController.self)
+            navigationController?.ecPushViewController(productListViewController)
+        }
+    }
+    
+}
+
+
 extension MedicalProductViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol MedicalProductDetailsHeaderDelegate {
+@objc public protocol MedicalProductDetailsHeaderDelegate {
     func priceClick()
     func share()
 }
@@ -16,7 +16,7 @@ public protocol MedicalProductDetailsHeaderDelegate {
 class MedicalProductDetailsHeader: UIView
 {
     
-    var delegate: MedicalProductDetailsHeaderDelegate?
+    weak var delegate: MedicalProductDetailsHeaderDelegate?
     var model: MedicalProductDetailsModel? {
         didSet { updateUI() }
     }

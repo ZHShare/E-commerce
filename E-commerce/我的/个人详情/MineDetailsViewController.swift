@@ -32,7 +32,7 @@ class MineDetailsViewController: BaseTableViewController
                 }
             }
             
-            LoginModel.update(value: department!.department_name, key: "department_name")
+           
         }
     }
     
@@ -102,8 +102,6 @@ class MineDetailsViewController: BaseTableViewController
                     self.updateSex()
                 }
             }
-            
-            LoginModel.update(value: sex == "男" ? "1" : "2" , key: "user_sex")
         }
     }
     fileprivate var birthday: String = "" {
@@ -118,7 +116,6 @@ class MineDetailsViewController: BaseTableViewController
                 }
             }
             
-            LoginModel.update(value: birthday, key: "user_birthday")
         }
     }
     
@@ -288,6 +285,7 @@ fileprivate extension MineDetailsViewController {
         let departmentController = ECStroryBoard.controller(type: MineDetailsDepartmentViewController.self)
         navigationController?.ecPushViewController(departmentController)
         departmentController.selected = { (model) in
+            LoginModel.update(value: model.department_name, key: "department_name")
             self.department = model
         }
     }
@@ -299,6 +297,7 @@ fileprivate extension MineDetailsViewController {
         changeNameController.name = name
         navigationController?.ecPushViewController(changeNameController)
         changeNameController.done = { (name) in
+            LoginModel.update(value: name, key: "user_name")
             self.name = name
         }
     }
@@ -345,6 +344,7 @@ fileprivate extension MineDetailsViewController {
             
             super.hudWithMssage(msg: "更新成功")
             self.sex = sex
+            LoginModel.update(value: self.sex == "男" ? "1" : "2" , key: "user_sex")
         }
     }
     
@@ -372,6 +372,7 @@ fileprivate extension MineDetailsViewController {
             
             super.hudWithMssage(msg: "更新成功")
             self.birthday = birthDay
+            LoginModel.update(value: birthDay, key: "user_birthday")
         }
     }
     

@@ -8,12 +8,19 @@
 
 import UIKit
 
+@objc protocol MedicalProductNormalHeaderDelegate {
+    
+    func moreForTitle(title: String)
+}
+
 class MedicalProductNormalHeader: UICollectionReusableView
 {
 
     @IBOutlet weak var displayTitle: UILabel!
-
+    weak var delegate: MedicalProductNormalHeaderDelegate?
+    
     @IBAction func more() {
+        delegate?.moreForTitle(title: displayTitle.text!)
     }
     
 }

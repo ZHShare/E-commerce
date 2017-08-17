@@ -26,6 +26,8 @@ enum TransCode {
         static let myAccountDetails = "100035"
         static let myAccount = "100036"
         static let myFavorite = "100028"
+        static let addFav = "100026"
+        static let removeFav = "100027"
         
         static let addShoppingCar = "100020"
     }
@@ -40,7 +42,10 @@ enum TransCode {
         static let firstClass = "200012"
         static let secondClass = "200013"
         static let productDetails = "200014"
+        static let nearCustomer = "200021"
         static let evaluation = "200016"
+        static let type =  "200015"
+        static let publicNotice = "200030"
     }
     
     struct CRM {

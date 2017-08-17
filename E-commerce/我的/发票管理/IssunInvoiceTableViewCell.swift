@@ -13,7 +13,7 @@ enum InvoiceManagerType {
     case Apply
 }
 
-protocol InvoiceManagerDelegate {
+@objc protocol InvoiceManagerDelegate {
     
     func didClickApply(model: Any?)
     func didClickAgain(model: Any?)
@@ -25,7 +25,7 @@ class IssunInvoiceTableViewCell: UITableViewCell
     var type: InvoiceManagerType = .Apply {
         didSet { updateApplyTitle() }
     }
-    var delegate: InvoiceManagerDelegate?
+    weak var delegate: InvoiceManagerDelegate?
     
     @IBOutlet weak var displayTitle: UILabel!
     @IBOutlet weak var icon: UIImageView!

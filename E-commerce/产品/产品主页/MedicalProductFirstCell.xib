@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,24 +53,19 @@
                                         </constraints>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8G-2h-vAn">
-                                        <rect key="frame" x="74" y="0.0" width="175" height="38"/>
+                                        <rect key="frame" x="14" y="0.0" width="235" height="38"/>
                                     </scrollView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_bargain_offer" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-zL-9A1">
-                                        <rect key="frame" x="6" y="14" width="56" height="11"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="PAh-Fl-68j" firstAttribute="leading" secondItem="t8G-2h-vAn" secondAttribute="trailing" constant="8" symbolic="YES" id="0eV-Ag-3s5"/>
                                     <constraint firstItem="pJ2-Kq-fZW" firstAttribute="leading" secondItem="PAh-Fl-68j" secondAttribute="trailing" constant="8" symbolic="YES" id="6yU-G4-BFu"/>
-                                    <constraint firstItem="t8G-2h-vAn" firstAttribute="leading" secondItem="XlW-zL-9A1" secondAttribute="trailing" constant="12" id="DVx-oX-YQQ"/>
                                     <constraint firstAttribute="trailing" secondItem="pJ2-Kq-fZW" secondAttribute="trailing" constant="8" id="G9X-fG-cRY"/>
                                     <constraint firstAttribute="bottom" secondItem="PAh-Fl-68j" secondAttribute="bottom" constant="4" id="GKC-99-REt"/>
                                     <constraint firstItem="PAh-Fl-68j" firstAttribute="top" secondItem="H9q-Vb-JWd" secondAttribute="top" constant="5" id="Pq2-65-kge"/>
-                                    <constraint firstItem="XlW-zL-9A1" firstAttribute="leading" secondItem="H9q-Vb-JWd" secondAttribute="leading" constant="6" id="g5j-Ll-BhT"/>
+                                    <constraint firstItem="t8G-2h-vAn" firstAttribute="leading" secondItem="H9q-Vb-JWd" secondAttribute="leadingMargin" constant="6" id="Qwr-5p-dvO"/>
                                     <constraint firstItem="t8G-2h-vAn" firstAttribute="top" secondItem="H9q-Vb-JWd" secondAttribute="top" id="gTQ-6b-hN4"/>
                                     <constraint firstAttribute="bottom" secondItem="t8G-2h-vAn" secondAttribute="bottom" id="hhc-As-xJT"/>
-                                    <constraint firstItem="XlW-zL-9A1" firstAttribute="centerY" secondItem="H9q-Vb-JWd" secondAttribute="centerY" id="o06-Jo-ZRy"/>
                                     <constraint firstItem="pJ2-Kq-fZW" firstAttribute="centerY" secondItem="H9q-Vb-JWd" secondAttribute="centerY" id="sYB-uI-cIp"/>
                                 </constraints>
                             </view>
@@ -104,7 +99,4 @@
             <point key="canvasLocation" x="-10" y="-53.5"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="product_bargain_offer" width="56" height="11"/>
-    </resources>
 </document>

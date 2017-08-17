@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol SureInvoiceHeaderDelegate {
+@objc protocol SureInvoiceHeaderDelegate {
     
     func didClick(type: SureInvoiceHeaderType)
 }
 
-enum SureInvoiceHeaderType {
+@objc enum SureInvoiceHeaderType: Int {
     case Personal
     case Unit
 }
@@ -21,7 +21,7 @@ enum SureInvoiceHeaderType {
 class SureInvoiceHeader: UIView
 {
 
-    var delegate: SureInvoiceHeaderDelegate?
+    weak var delegate: SureInvoiceHeaderDelegate?
     fileprivate var type = SureInvoiceHeaderType.Personal
     fileprivate var exchangeButton: UIButton!
     @IBOutlet weak var unitButton: UIButton!

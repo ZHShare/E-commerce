@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MedicalProductDetailsBottomSectionHeaderDelegate {
+@objc protocol MedicalProductDetailsBottomSectionHeaderDelegate {
     func didClick(sender: UIButton)
 }
 
@@ -22,7 +22,7 @@ class MedicalProductDetailsBottomSectionHeader: UIView
         centerButton = detailsButton
     }
     
-    var delegate: MedicalProductDetailsBottomSectionHeaderDelegate?
+    weak var delegate: MedicalProductDetailsBottomSectionHeaderDelegate?
     
     @IBAction fileprivate func setCurrent(sender: UIButton) {
         centerButton?.isSelected = false

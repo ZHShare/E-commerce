@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol UIResableViewDelegate {
+@objc public protocol UIResableViewDelegate {
     func didClickArea()
 }
 
@@ -25,7 +25,7 @@ class WorkReusableView: UICollectionReusableView {
         }
     }
     
-    var delegate: UIResableViewDelegate?
+    weak var delegate: UIResableViewDelegate?
     
     @IBOutlet weak var displayArea: UIButton!
     @IBOutlet weak var userImg: UIImageView!

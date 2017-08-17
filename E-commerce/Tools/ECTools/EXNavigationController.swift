@@ -50,6 +50,19 @@ extension UINavigationController {
         
     }
     
+    func ecPopToViewController(viewController: UIViewController, animated: Bool = true) {
+        
+        if Thread.isMainThread {
+            popToViewController(viewController, animated: animated)
+            return
+        }
+        
+        DispatchQueue.main.async {
+            self.popToViewController(viewController, animated: animated)
+        }
+        
+    }
+    
     func ecPresent(viewController vc: UIViewController) {
         
         if Thread.isMainThread {

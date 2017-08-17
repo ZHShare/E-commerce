@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SureInvoiceTipTableViewCellDelegate {
+@objc protocol SureInvoiceTipTableViewCellDelegate {
     
     func tip()
 }
@@ -16,7 +16,7 @@ protocol SureInvoiceTipTableViewCellDelegate {
 class SureInvoiceTipTableViewCell: UITableViewCell
 {
 
-    var delegate: SureInvoiceTipTableViewCellDelegate?
+    weak var delegate: SureInvoiceTipTableViewCellDelegate?
     @IBOutlet var tipButton: UIButton!
     @IBOutlet var numberField: UITextField!
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol MedicalProductDetailsFooterDelegate {
+@objc protocol MedicalProductDetailsFooterDelegate {
     
     func customerService()
     func addShoppingCar()
@@ -58,7 +58,7 @@ class MedicalProductDetailsFooter: UIView
         
     }
     
-    var delegate: MedicalProductDetailsFooterDelegate?
+    weak var delegate: MedicalProductDetailsFooterDelegate?
     
     @objc fileprivate func customerService() {
         delegate?.customerService()

@@ -15,8 +15,6 @@
 		C6094C301F25CFA1004677BE /* XHScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C2F1F25CFA1004677BE /* XHScrollView.swift */; };
 		C6094C5C1F265D92004677BE /* ECCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6094C5B1F265D92004677BE /* ECCommon.swift */; };
 		C60D17F01F307D60002A6E59 /* SureShoppingAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D17EF1F307D60002A6E59 /* SureShoppingAddressTableViewCell.swift */; };
-		C60D17F21F308D5B002A6E59 /* SureShoppingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D17F11F308D5B002A6E59 /* SureShoppingBar.swift */; };
-		C60D17F41F308D73002A6E59 /* SureShoppingBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = C60D17F31F308D73002A6E59 /* SureShoppingBar.xib */; };
 		C61A90E21F386A9B00DBC821 /* AddressBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61A90E11F386A9B00DBC821 /* AddressBookModel.swift */; };
 		C644E5A91F3C02A100F647CE /* FirstClassifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644E5A81F3C02A100F647CE /* FirstClassifyModel.swift */; };
 		C644E5AC1F3C282500F647CE /* ProductClassifyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C644E5AA1F3C282500F647CE /* ProductClassifyCollectionViewCell.swift */; };
@@ -95,18 +93,33 @@
 		C69258F71F32FBA1007CC754 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69258F61F32FBA1007CC754 /* SettingViewController.swift */; };
 		C69258F91F32FEF5007CC754 /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69258F81F32FEF5007CC754 /* FeedBackViewController.swift */; };
 		C69258FB1F33051A007CC754 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69258FA1F33051A007CC754 /* AboutViewController.swift */; };
+		C692D6121F4414E000909A4F /* SystemProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692D6111F4414E000909A4F /* SystemProductListViewController.swift */; };
+		C692D6161F4430F000909A4F /* NoticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692D6151F4430F000909A4F /* NoticeListViewController.swift */; };
+		C692D6181F44322500909A4F /* NoticeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692D6171F44322500909A4F /* NoticeListTableViewCell.swift */; };
+		C692D61A1F4432C500909A4F /* NoticeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692D6191F4432C500909A4F /* NoticeListModel.swift */; };
 		C69386B51F414D5400981193 /* CustomerNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69386B41F414D5400981193 /* CustomerNewViewController.swift */; };
 		C69386B81F41729500981193 /* MapSelectedAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69386B71F41729500981193 /* MapSelectedAddressViewController.swift */; };
 		C69386BA1F4181E800981193 /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69386B91F4181E800981193 /* AddressListViewController.swift */; };
 		C69386BC1F41835B00981193 /* AddressListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69386BB1F41835B00981193 /* AddressListTableViewCell.swift */; };
 		C69386BF1F41A01E00981193 /* ContactNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69386BE1F41A01E00981193 /* ContactNewViewController.swift */; };
+		C693D3E91F452D3E0046DDE2 /* NoticeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693D3E81F452D3E0046DDE2 /* NoticeDetailsViewController.swift */; };
+		C693D3EB1F4541420046DDE2 /* SureShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693D3EA1F4541420046DDE2 /* SureShoppingViewController.swift */; };
+		C693D3EE1F4541B30046DDE2 /* SureInvoiceTablViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693D3EC1F4541B30046DDE2 /* SureInvoiceTablViewController.swift */; };
+		C693D3EF1F4541B30046DDE2 /* SureInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693D3ED1F4541B30046DDE2 /* SureInvoiceViewController.swift */; };
+		C693D3F11F45684C0046DDE2 /* SureShoppingFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693D3F01F45684C0046DDE2 /* SureShoppingFieldTableViewCell.swift */; };
+		C693D3F31F456A3D0046DDE2 /* SureShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693D3F21F456A3D0046DDE2 /* SureShoppingTableViewController.swift */; };
+		C693D3F61F457AE30046DDE2 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693D3F51F457AE30046DDE2 /* ContactListViewController.swift */; };
+		C693D3F81F4580E00046DDE2 /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693D3F71F4580E00046DDE2 /* ContactListTableViewCell.swift */; };
+		C693D3FA1F4581620046DDE2 /* ContactListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693D3F91F4581620046DDE2 /* ContactListModel.swift */; };
 		C69914C61F30063C00F879EA /* ShoppingCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914C51F30063C00F879EA /* ShoppingCarTableViewCell.swift */; };
 		C69914C81F300D8500F879EA /* ShoppingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914C71F300D8500F879EA /* ShoppingModel.swift */; };
-		C69914CB1F30269600F879EA /* SureShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914CA1F30269600F879EA /* SureShoppingViewController.swift */; };
 		C69914CD1F302F1F00F879EA /* SureShoppingProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914CC1F302F1F00F879EA /* SureShoppingProductTableViewCell.swift */; };
 		C69914D11F302F4B00F879EA /* SureShoppingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69914D01F302F4B00F879EA /* SureShoppingFooter.swift */; };
-		C6A0A8CE1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0A8CD1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift */; };
-		C6A0A8D01F3D9E2E0067DBAF /* SureInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0A8CF1F3D9E2E0067DBAF /* SureInvoiceViewController.swift */; };
+		C69967131F42837C00CFF577 /* ProductSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69967121F42837C00CFF577 /* ProductSearchViewController.swift */; };
+		C69967151F428B1C00CFF577 /* ProductSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69967141F428B1C00CFF577 /* ProductSearchTableViewCell.swift */; };
+		C69967171F428ECF00CFF577 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69967161F428ECF00CFF577 /* ProductListViewController.swift */; };
+		C699671A1F42D0FE00CFF577 /* NearMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69967191F42D0FE00CFF577 /* NearMapViewController.swift */; };
+		C699671C1F42E0C300CFF577 /* MedicalProductDetailsNearModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699671B1F42E0C300CFF577 /* MedicalProductDetailsNearModel.swift */; };
 		C6A1C8271F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8041F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift */; };
 		C6A1C8281F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1C8051F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift */; };
 		C6A1C8291F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6A1C8061F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib */; };
@@ -214,8 +227,6 @@
 		C6094C2F1F25CFA1004677BE /* XHScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHScrollView.swift; sourceTree = "<group>"; };
 		C6094C5B1F265D92004677BE /* ECCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECCommon.swift; sourceTree = "<group>"; };
 		C60D17EF1F307D60002A6E59 /* SureShoppingAddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingAddressTableViewCell.swift; sourceTree = "<group>"; };
-		C60D17F11F308D5B002A6E59 /* SureShoppingBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingBar.swift; sourceTree = "<group>"; };
-		C60D17F31F308D73002A6E59 /* SureShoppingBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SureShoppingBar.xib; sourceTree = "<group>"; };
 		C61A90E11F386A9B00DBC821 /* AddressBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookModel.swift; sourceTree = "<group>"; };
 		C644E5A81F3C02A100F647CE /* FirstClassifyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstClassifyModel.swift; sourceTree = "<group>"; };
 		C644E5AA1F3C282500F647CE /* ProductClassifyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductClassifyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -295,18 +306,33 @@
 		C69258F61F32FBA1007CC754 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C69258F81F32FEF5007CC754 /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
 		C69258FA1F33051A007CC754 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		C692D6111F4414E000909A4F /* SystemProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemProductListViewController.swift; sourceTree = "<group>"; };
+		C692D6151F4430F000909A4F /* NoticeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeListViewController.swift; sourceTree = "<group>"; };
+		C692D6171F44322500909A4F /* NoticeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeListTableViewCell.swift; sourceTree = "<group>"; };
+		C692D6191F4432C500909A4F /* NoticeListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeListModel.swift; sourceTree = "<group>"; };
 		C69386B41F414D5400981193 /* CustomerNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerNewViewController.swift; sourceTree = "<group>"; };
 		C69386B71F41729500981193 /* MapSelectedAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSelectedAddressViewController.swift; sourceTree = "<group>"; };
 		C69386B91F4181E800981193 /* AddressListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
 		C69386BB1F41835B00981193 /* AddressListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListTableViewCell.swift; sourceTree = "<group>"; };
 		C69386BE1F41A01E00981193 /* ContactNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactNewViewController.swift; sourceTree = "<group>"; };
+		C693D3E81F452D3E0046DDE2 /* NoticeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeDetailsViewController.swift; sourceTree = "<group>"; };
+		C693D3EA1F4541420046DDE2 /* SureShoppingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingViewController.swift; sourceTree = "<group>"; };
+		C693D3EC1F4541B30046DDE2 /* SureInvoiceTablViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureInvoiceTablViewController.swift; sourceTree = "<group>"; };
+		C693D3ED1F4541B30046DDE2 /* SureInvoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureInvoiceViewController.swift; sourceTree = "<group>"; };
+		C693D3F01F45684C0046DDE2 /* SureShoppingFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingFieldTableViewCell.swift; sourceTree = "<group>"; };
+		C693D3F21F456A3D0046DDE2 /* SureShoppingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingTableViewController.swift; sourceTree = "<group>"; };
+		C693D3F51F457AE30046DDE2 /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		C693D3F71F4580E00046DDE2 /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
+		C693D3F91F4581620046DDE2 /* ContactListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListModel.swift; sourceTree = "<group>"; };
 		C69914C51F30063C00F879EA /* ShoppingCarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCarTableViewCell.swift; sourceTree = "<group>"; };
 		C69914C71F300D8500F879EA /* ShoppingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingModel.swift; sourceTree = "<group>"; };
-		C69914CA1F30269600F879EA /* SureShoppingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingViewController.swift; sourceTree = "<group>"; };
 		C69914CC1F302F1F00F879EA /* SureShoppingProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingProductTableViewCell.swift; sourceTree = "<group>"; };
 		C69914D01F302F4B00F879EA /* SureShoppingFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureShoppingFooter.swift; sourceTree = "<group>"; };
-		C6A0A8CD1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureInvoiceTablViewController.swift; sourceTree = "<group>"; };
-		C6A0A8CF1F3D9E2E0067DBAF /* SureInvoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SureInvoiceViewController.swift; sourceTree = "<group>"; };
+		C69967121F42837C00CFF577 /* ProductSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchViewController.swift; sourceTree = "<group>"; };
+		C69967141F428B1C00CFF577 /* ProductSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchTableViewCell.swift; sourceTree = "<group>"; };
+		C69967161F428ECF00CFF577 /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		C69967191F42D0FE00CFF577 /* NearMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearMapViewController.swift; sourceTree = "<group>"; };
+		C699671B1F42E0C300CFF577 /* MedicalProductDetailsNearModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsNearModel.swift; sourceTree = "<group>"; };
 		C6A1C8041F2ED27600FBD3B9 /* MedicalProductDetailsPopModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopModel.swift; sourceTree = "<group>"; };
 		C6A1C8051F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalProductDetailsPopNormalHeader.swift; sourceTree = "<group>"; };
 		C6A1C8061F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalProductDetailsPopNormalHeader.xib; sourceTree = "<group>"; };
@@ -488,6 +514,8 @@
 		C6545DD51F27351500F9D479 /* CRM */ = {
 			isa = PBXGroup;
 			children = (
+				C693D3F41F4579700046DDE2 /* 联系人列表 */,
+				C69967181F42D0EB00CFF577 /* 附近客户 */,
 				C69386BD1F41A00000981193 /* 新增联系人 */,
 				C69386B61F41727800981193 /* 地图选址 */,
 				C6BAFA4C1F412FF900E177DF /* 我的客户 */,
@@ -552,6 +580,11 @@
 		C66BED111F1EE38900985880 /* 产品 */ = {
 			isa = PBXGroup;
 			children = (
+				C692D6131F4430AA00909A4F /* 今日优惠 */,
+				C692D6141F4430AA00909A4F /* 系统消息 */,
+				C699670F1F427B8E00CFF577 /* 产品列表 */,
+				C69967101F427B8E00CFF577 /* 产品搜索 */,
+				C69967111F427B8E00CFF577 /* 系统列表 */,
 				C68159F31F3B0D740092A40C /* 产品分类 */,
 				C69914C91F30267800F879EA /* 确定购买 */,
 				C6A1C8551F2F1F0400FBD3B9 /* 购物车 */,
@@ -589,8 +622,6 @@
 			children = (
 				C68159ED1F3AB85C0092A40C /* InvoiceManagerViewController.swift */,
 				C68159EF1F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift */,
-				C6A0A8CD1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift */,
-				C6A0A8CF1F3D9E2E0067DBAF /* SureInvoiceViewController.swift */,
 			);
 			path = "发票管理";
 			sourceTree = "<group>";
@@ -726,6 +757,24 @@
 			path = "设置";
 			sourceTree = "<group>";
 		};
+		C692D6131F4430AA00909A4F /* 今日优惠 */ = {
+			isa = PBXGroup;
+			children = (
+				C692D6151F4430F000909A4F /* NoticeListViewController.swift */,
+				C692D6171F44322500909A4F /* NoticeListTableViewCell.swift */,
+				C692D6191F4432C500909A4F /* NoticeListModel.swift */,
+				C693D3E81F452D3E0046DDE2 /* NoticeDetailsViewController.swift */,
+			);
+			path = "今日优惠";
+			sourceTree = "<group>";
+		};
+		C692D6141F4430AA00909A4F /* 系统消息 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "系统消息";
+			sourceTree = "<group>";
+		};
 		C69386B61F41727800981193 /* 地图选址 */ = {
 			isa = PBXGroup;
 			children = (
@@ -744,17 +793,60 @@
 			path = "新增联系人";
 			sourceTree = "<group>";
 		};
+		C693D3F41F4579700046DDE2 /* 联系人列表 */ = {
+			isa = PBXGroup;
+			children = (
+				C693D3F51F457AE30046DDE2 /* ContactListViewController.swift */,
+				C693D3F71F4580E00046DDE2 /* ContactListTableViewCell.swift */,
+				C693D3F91F4581620046DDE2 /* ContactListModel.swift */,
+			);
+			path = "联系人列表";
+			sourceTree = "<group>";
+		};
 		C69914C91F30267800F879EA /* 确定购买 */ = {
 			isa = PBXGroup;
 			children = (
-				C69914CA1F30269600F879EA /* SureShoppingViewController.swift */,
+				C693D3EA1F4541420046DDE2 /* SureShoppingViewController.swift */,
+				C693D3F21F456A3D0046DDE2 /* SureShoppingTableViewController.swift */,
 				C69914CC1F302F1F00F879EA /* SureShoppingProductTableViewCell.swift */,
 				C60D17EF1F307D60002A6E59 /* SureShoppingAddressTableViewCell.swift */,
+				C693D3F01F45684C0046DDE2 /* SureShoppingFieldTableViewCell.swift */,
 				C69914D01F302F4B00F879EA /* SureShoppingFooter.swift */,
-				C60D17F11F308D5B002A6E59 /* SureShoppingBar.swift */,
-				C60D17F31F308D73002A6E59 /* SureShoppingBar.xib */,
 			);
 			path = "确定购买";
+			sourceTree = "<group>";
+		};
+		C699670F1F427B8E00CFF577 /* 产品列表 */ = {
+			isa = PBXGroup;
+			children = (
+				C69967161F428ECF00CFF577 /* ProductListViewController.swift */,
+			);
+			path = "产品列表";
+			sourceTree = "<group>";
+		};
+		C69967101F427B8E00CFF577 /* 产品搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				C69967121F42837C00CFF577 /* ProductSearchViewController.swift */,
+				C69967141F428B1C00CFF577 /* ProductSearchTableViewCell.swift */,
+			);
+			path = "产品搜索";
+			sourceTree = "<group>";
+		};
+		C69967111F427B8E00CFF577 /* 系统列表 */ = {
+			isa = PBXGroup;
+			children = (
+				C692D6111F4414E000909A4F /* SystemProductListViewController.swift */,
+			);
+			path = "系统列表";
+			sourceTree = "<group>";
+		};
+		C69967181F42D0EB00CFF577 /* 附近客户 */ = {
+			isa = PBXGroup;
+			children = (
+				C69967191F42D0FE00CFF577 /* NearMapViewController.swift */,
+			);
+			path = "附近客户";
 			sourceTree = "<group>";
 		};
 		C6A1C8011F2ED27600FBD3B9 /* 产品参数 */ = {
@@ -792,6 +884,7 @@
 				C6A1C8101F2ED27600FBD3B9 /* MedicalProductDetailsHeader.swift */,
 				C6A1C8111F2ED27600FBD3B9 /* MedicalProductDetailsImagesCell.swift */,
 				C6A1C8121F2ED27600FBD3B9 /* MedicalProductDetailsMapCell.swift */,
+				C699671B1F42E0C300CFF577 /* MedicalProductDetailsNearModel.swift */,
 				C6A1C8131F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift */,
 				C6A1C8141F2ED27600FBD3B9 /* MedicalProductDetailsModel.swift */,
 			);
@@ -832,6 +925,8 @@
 		C6A6B6341F331E3700E014C6 /* 确定发票 */ = {
 			isa = PBXGroup;
 			children = (
+				C693D3EC1F4541B30046DDE2 /* SureInvoiceTablViewController.swift */,
+				C693D3ED1F4541B30046DDE2 /* SureInvoiceViewController.swift */,
 				C6A6B6371F331FBE00E014C6 /* SureInvoiceTableViewCell.swift */,
 				C68AF9171F33FE1900D4A1E3 /* SureInvoiceTipTableViewCell.swift */,
 				C68AF9191F33FEFF00D4A1E3 /* SureInvoiceTableHeader.swift */,
@@ -1063,7 +1158,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C60D17F41F308D73002A6E59 /* SureShoppingBar.xib in Resources */,
 				C6A1C82E1F2ED27600FBD3B9 /* MedicalProductDetailsBottomSectionHeader.xib in Resources */,
 				C6A1C8291F2ED27600FBD3B9 /* MedicalProductDetailsPopNormalHeader.xib in Resources */,
 				C644E5B11F3C2C3700F647CE /* ProductClassifyCollectionReusableView.xib in Resources */,
@@ -1145,7 +1239,6 @@
 				C69914C81F300D8500F879EA /* ShoppingModel.swift in Sources */,
 				C6A1C8441F2ED27600FBD3B9 /* ProductFlowLayout.swift in Sources */,
 				C69258E01F32B300007CC754 /* MyAccountViewController.swift in Sources */,
-				C6A0A8CE1F3D9CC20067DBAF /* SureInvoiceTablViewController.swift in Sources */,
 				C6BAFA581F41385A00E177DF /* MyCustomerModel.swift in Sources */,
 				C644E5B01F3C2C3700F647CE /* ProductClassifyCollectionReusableView.swift in Sources */,
 				C6545DCC1F2723C600F9D479 /* WorkViewController.swift in Sources */,
@@ -1158,17 +1251,21 @@
 				C668811B1F31B7CF00125CA6 /* MineDetailsDepartmentTableViewCell.swift in Sources */,
 				C6B3DCEF1F2816FC007B2F14 /* ForgetViewController.swift in Sources */,
 				C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */,
+				C692D6161F4430F000909A4F /* NoticeListViewController.swift in Sources */,
 				C6A1C8351F2ED27600FBD3B9 /* MedicalProductDetailsModel.swift in Sources */,
 				C6B3DCFA1F28171C007B2F14 /* BaseNavigationController.swift in Sources */,
 				C668811F1F31C3B800125CA6 /* OrderListTableViewCell.swift in Sources */,
 				C6BF2A541F344EEF00008218 /* EnterpriseModel.swift in Sources */,
 				C68527951F3173ED001A2441 /* MineDetailsTitleModel.swift in Sources */,
+				C693D3EE1F4541B30046DDE2 /* SureInvoiceTablViewController.swift in Sources */,
+				C693D3EF1F4541B30046DDE2 /* SureInvoiceViewController.swift in Sources */,
 				C69258DB1F32A935007CC754 /* OrderDetailsHeader.swift in Sources */,
 				C68159F91F3B0E090092A40C /* ProductClassifyListCell.swift in Sources */,
 				C6B456121F37F1BB0066E14E /* PubNet.swift in Sources */,
 				C61A90E21F386A9B00DBC821 /* AddressBookModel.swift in Sources */,
 				C69386BA1F4181E800981193 /* AddressListViewController.swift in Sources */,
 				C6B3DCFE1F28171C007B2F14 /* ViewController.swift in Sources */,
+				C693D3EB1F4541420046DDE2 /* SureShoppingViewController.swift in Sources */,
 				C68159F71F3B0DF10092A40C /* ProductClassifyViewController.swift in Sources */,
 				C69258DD1F32A94A007CC754 /* OrderDetailsFooter.swift in Sources */,
 				C6D7E3661F394824008F3167 /* NotificationCenter.swift in Sources */,
@@ -1188,6 +1285,7 @@
 				C6A1C8381F2ED27600FBD3B9 /* MedicalProductFirstCell.swift in Sources */,
 				C6A1C8311F2ED27600FBD3B9 /* MedicalProductDetailsHeader.swift in Sources */,
 				C6FEB53B1F3832E400577F41 /* AddressBookViewController.swift in Sources */,
+				C693D3E91F452D3E0046DDE2 /* NoticeDetailsViewController.swift in Sources */,
 				C69258EF1F32F05F007CC754 /* AccountDetailsTableViewCell.swift in Sources */,
 				C6A1C8341F2ED27600FBD3B9 /* MedicalProductDetailsModeCell.swift in Sources */,
 				C6FEB5431F385BE700577F41 /* AddressBookSearchHeader.swift in Sources */,
@@ -1197,37 +1295,42 @@
 				C6B3DCF21F2816FC007B2F14 /* RegisterViewController.swift in Sources */,
 				C68527931F316F01001A2441 /* MineDetailsNormalTableViewCell.swift in Sources */,
 				C6545DCE1F2724A500F9D479 /* WorkModel.swift in Sources */,
-				C69914CB1F30269600F879EA /* SureShoppingViewController.swift in Sources */,
 				C69258F91F32FEF5007CC754 /* FeedBackViewController.swift in Sources */,
 				C6B3DD261F28A9FD007B2F14 /* ResetViewController.swift in Sources */,
 				C68527831F3162A2001A2441 /* MineHeader.swift in Sources */,
+				C692D61A1F4432C500909A4F /* NoticeListModel.swift in Sources */,
 				C65641E31F38DA78003D22B5 /* AddressBookDetailsViewController.swift in Sources */,
 				C69914C61F30063C00F879EA /* ShoppingCarTableViewCell.swift in Sources */,
 				C6BAFA521F41301800E177DF /* MyCustomerTableViewController.swift in Sources */,
+				C69967171F428ECF00CFF577 /* ProductListViewController.swift in Sources */,
+				C692D6121F4414E000909A4F /* SystemProductListViewController.swift in Sources */,
 				C6BF2A4E1F34412300008218 /* BaseNet.swift in Sources */,
+				C693D3F61F457AE30046DDE2 /* ContactListViewController.swift in Sources */,
 				C6A1C8461F2ED2C100FBD3B9 /* ProductEvaluationViewController.swift in Sources */,
 				C6B3DD031F281E25007B2F14 /* BaseTableViewController.swift in Sources */,
 				C6A1C8571F2F21AD00FBD3B9 /* ShoppingCarViewController.swift in Sources */,
 				C69914D11F302F4B00F879EA /* SureShoppingFooter.swift in Sources */,
 				C6A1C8361F2ED27600FBD3B9 /* MedicalProductDetailsViewController.swift in Sources */,
-				C6A0A8D01F3D9E2E0067DBAF /* SureInvoiceViewController.swift in Sources */,
 				C68159F01F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift in Sources */,
 				C6A1C83F1F2ED27600FBD3B9 /* MedicalProductSystemCell.swift in Sources */,
 				C68AF9211F34096E00D4A1E3 /* MyFavoriteTableViewCell.swift in Sources */,
 				C69258E21F32B328007CC754 /* MyAccountTableViewCell.swift in Sources */,
 				C6BF2A521F344A2200008218 /* UserInfoNet.swift in Sources */,
 				C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */,
+				C693D3F31F456A3D0046DDE2 /* SureShoppingTableViewController.swift in Sources */,
 				C6BF2A501F34422B00008218 /* TransCode.swift in Sources */,
 				C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */,
 				C69258E41F32B83A007CC754 /* MyAccountHeader.swift in Sources */,
 				C69258FB1F33051A007CC754 /* AboutViewController.swift in Sources */,
 				C6D92F291F340DA8005122C5 /* MyFavoriteTypeTableViewCell.swift in Sources */,
-				C60D17F21F308D5B002A6E59 /* SureShoppingBar.swift in Sources */,
 				C69258F11F32F627007CC754 /* AccountDetailsModel.swift in Sources */,
+				C693D3FA1F4581620046DDE2 /* ContactListModel.swift in Sources */,
 				C69914CD1F302F1F00F879EA /* SureShoppingProductTableViewCell.swift in Sources */,
 				C69258D31F32A830007CC754 /* OrderDetailsViewController.swift in Sources */,
 				C6BAFA501F412FF900E177DF /* CRMViewController.swift in Sources */,
 				C6A1C8301F2ED27600FBD3B9 /* MedicalProductDetailsFooter.swift in Sources */,
+				C693D3F81F4580E00046DDE2 /* ContactListTableViewCell.swift in Sources */,
+				C693D3F11F45684C0046DDE2 /* SureShoppingFieldTableViewCell.swift in Sources */,
 				C68527911F316EEC001A2441 /* MineDetailsHeaderTableViewCell.swift in Sources */,
 				C6545DC01F26F0E400F9D479 /* ECMJRefresh.swift in Sources */,
 				C68159F21F3ADCA90092A40C /* HomeNet.swift in Sources */,
@@ -1236,8 +1339,10 @@
 				C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */,
 				C644E5AC1F3C282500F647CE /* ProductClassifyCollectionViewCell.swift in Sources */,
 				C6BF2A561F3458C800008218 /* DataEncoding.swift in Sources */,
+				C699671A1F42D0FE00CFF577 /* NearMapViewController.swift in Sources */,
 				C69258D91F32A918007CC754 /* OrderDetailsDateTableViewCell.swift in Sources */,
 				C6B421791F31AF8D0022C692 /* MineDetailsChangeViewController.swift in Sources */,
+				C69967151F428B1C00CFF577 /* ProductSearchTableViewCell.swift in Sources */,
 				C6B3DCFB1F28171C007B2F14 /* BaseViewController.swift in Sources */,
 				C6A1C8421F2ED27600FBD3B9 /* ProductCollectionViewCell.swift in Sources */,
 				C6B3DCFD1F28171C007B2F14 /* NewViewController.swift in Sources */,
@@ -1256,15 +1361,18 @@
 				C6545DC81F27184D00F9D479 /* MessageModel.swift in Sources */,
 				C6545DC41F2714E200F9D479 /* MessageViewController.swift in Sources */,
 				C68AF91C1F33FF0D00D4A1E3 /* SureInvoiceTableFooter.swift in Sources */,
+				C69967131F42837C00CFF577 /* ProductSearchViewController.swift in Sources */,
 				C6BAFA561F4137CD00E177DF /* CRMNet.swift in Sources */,
 				C6A6B6381F331FBE00E014C6 /* SureInvoiceTableViewCell.swift in Sources */,
 				C6B3DCF01F2816FC007B2F14 /* LoginModel.swift in Sources */,
+				C692D6181F44322500909A4F /* NoticeListTableViewCell.swift in Sources */,
 				C68527851F3162A2001A2441 /* MineViewController.swift in Sources */,
 				C685278D1F3165A4001A2441 /* ECStroryBoard.swift in Sources */,
 				C68AF91A1F33FEFF00D4A1E3 /* SureInvoiceTableHeader.swift in Sources */,
 				C6A1C82C1F2ED27600FBD3B9 /* MedicalProductDetailsPopViewController.swift in Sources */,
 				C68159EE1F3AB85C0092A40C /* InvoiceManagerViewController.swift in Sources */,
 				C6094C2A1F21B06D004677BE /* ECHud.swift in Sources */,
+				C699671C1F42E0C300CFF577 /* MedicalProductDetailsNearModel.swift in Sources */,
 				C68527971F317FEF001A2441 /* MiniDetailsDatePicker.swift in Sources */,
 				C69386B81F41729500981193 /* MapSelectedAddressViewController.swift in Sources */,
 				C6D92F2B1F342367005122C5 /* MyFavoriteModel.swift in Sources */,

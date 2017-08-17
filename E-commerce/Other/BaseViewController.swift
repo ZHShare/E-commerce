@@ -41,4 +41,14 @@ class BaseViewController: UIViewController {
         }
     }
     
+    func hudForWindowsWithMessage(msg: String) {
+        
+        DispatchQueue.main.async {
+            
+            let hud = MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
+            hud?.mode = .text
+            hud?.labelText = msg
+            hud?.hide(true, afterDelay: 1.0)
+        }
+    }
 }

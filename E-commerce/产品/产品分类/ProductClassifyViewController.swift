@@ -11,6 +11,7 @@ import UIKit
 class ProductClassifyViewController: BaseViewController
 {
 
+    var catID: String?
     fileprivate enum ReuseIdentifier {
         static let Calssify = "Calssify"
         static let List = "List"
@@ -47,19 +48,41 @@ class ProductClassifyViewController: BaseViewController
             if let models = FirstClassifyModel.models(withDic: response) {
                
                 self.firstClassifyModels = models
-                self.fetchSecondClassifyDataWithFirstClass(classs: models[0])
+                
+                if let catID = self.catID {
+                    
+                    self.fetchSecondClassifyDataWithCatID(catID: catID)
+                }
+                else {
+                    self.fetchSecondClassifyDataWithCatID(catID: models.first!.cat_id)
+                }
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-                    self.tableView.selectRow(at: NSIndexPath(row: 0, section: 0) as IndexPath, animated: true, scrollPosition: UITableViewScrollPosition.none)
+                    self.tableView.selectRow(at: NSIndexPath(row: self.catIDForIndex(), section: 0) as IndexPath, animated: true, scrollPosition: UITableViewScrollPosition.none)
                 }
             }
             
         }
     }
     
-    fileprivate func fetchSecondClassifyDataWithFirstClass(classs: FirstClassifyModel) {
+    fileprivate func catIDForIndex() -> Int {
         
-        let params = ["cat_id": classs.cat_id]
+        if catID == nil { return 0 }
+        
+        var index = 0
+        for m in firstClassifyModels! {
+            if m.cat_id == catID! {
+                break
+            }
+            index += 1
+        }
+        return index
+    }
+    
+    fileprivate func fetchSecondClassifyDataWithCatID(catID: String) {
+        
+        let params = ["cat_id": catID]
         
         HomeNet.fetchDataWith(transCode: TransCode.Home.secondClass, params: params) { (response, isLoadFaild, errorMsg) in
             
@@ -102,7 +125,7 @@ extension ProductClassifyViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let selectedModel = firstClassifyModels![indexPath.row]
-        fetchSecondClassifyDataWithFirstClass(classs: selectedModel)
+        fetchSecondClassifyDataWithCatID(catID: selectedModel.cat_id)
     }
 }
 extension ProductClassifyViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -130,6 +153,14 @@ extension ProductClassifyViewController: UICollectionViewDelegate, UICollectionV
         
         return header
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let selectedModel = subs?[indexPath.section].subs?[indexPath.row]
+        let listViewController = ECStroryBoard.controller(type: ProductListViewController.self)
+        listViewController.cat_id = selectedModel?.sub_cat_id
+        navigationController?.ecPushViewController(listViewController)
         
     }
     

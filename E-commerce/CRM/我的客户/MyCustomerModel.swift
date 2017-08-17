@@ -16,7 +16,8 @@ struct MyCustomerModel {
     let hosp_principal: String
     let cust_avatar: String
     let cust_address: String
-
+    let cust_no: String
+    
     static func models(withDic: [String: Any]?) -> [MyCustomerModel]? {
         
         guard let response = withDic else {

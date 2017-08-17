@@ -11,3 +11,6 @@ import Foundation
 enum UserDefaultsKey {
     static let isFirstLoad = "isFirstLoad"
 }
+enum SearchHistoryKey {
+    static let History = "SearchHistoryKey.History"
+}

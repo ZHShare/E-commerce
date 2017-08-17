@@ -30,13 +30,15 @@ class CustomerNewViewController: BaseTableViewController
         params["cust_url"] = webSitField.text
 
         
-        CRMNet.fetchDataWith(transCode: TransCode.CRM.contactNew, params: params) { (response, isLoadFaild, errorMsg) in
+        CRMNet.fetchDataWith(transCode: TransCode.CRM.customerNew, params: params) { (response, isLoadFaild, errorMsg) in
             
             if isLoadFaild {
                 return super.hudForWindowsWithMessage(msg: errorMsg)
             }
             
+            let custNumber = (response["data"] as? [String: Any])?["cust_no"] as? String
             let contactNewController = ECStroryBoard.controller(type: ContactNewViewController.self)
+            contactNewController.cust_no = custNumber
             self.navigationController?.ecPushViewController(contactNewController)
         }
     }

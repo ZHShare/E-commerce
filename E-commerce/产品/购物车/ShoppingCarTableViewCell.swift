@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol ShoppingCarTableViewCellDelegate {
-    func didSelected(status: Bool, model: ShoppingModel)
+@objc protocol ShoppingCarTableViewCellDelegate {
+    func didSelected(status: Bool, model: Any)
 }
 
 class ShoppingCarTableViewCell: UITableViewCell
@@ -21,7 +21,7 @@ class ShoppingCarTableViewCell: UITableViewCell
         }
     }
     
-    var delegate: ShoppingCarTableViewCellDelegate?
+    weak var delegate: ShoppingCarTableViewCellDelegate?
     
     @IBOutlet var selectedButton: UIButton!
     @IBOutlet var icon: UIImageView!

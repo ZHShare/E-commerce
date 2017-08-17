@@ -16,7 +16,8 @@ class ShoppingCarViewController: BaseViewController
     }
     
     fileprivate var allMoney = 0
-
+    fileprivate var selectedAllModels = [ShoppingModel]()
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var displayMoney: UILabel!
     @IBOutlet weak var selectedAllButton: UIButton!
@@ -75,13 +76,26 @@ class ShoppingCarViewController: BaseViewController
     
     @IBAction func settlenAccount() {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let sureShoppingViewControler = storyboard.instantiateViewController(withIdentifier: "SureShoppingViewController") as? SureShoppingViewController {
-            
-            (navigationController as? BaseNavigationController)?.isHidesBottomBarWhenPushed = true
-            navigationController?.pushViewController(sureShoppingViewControler, animated: true)
+        let sureShoppingViewController = ECStroryBoard.controller(type: SureShoppingViewController.self)
+        sureShoppingViewController.selectedProducts = getSelectedModels()
+        navigationController?.ecPushViewController(sureShoppingViewController)
+        
+    }
+    
+    // MAKR: - 获取选中的商品
+    fileprivate func getSelectedModels() -> [ShoppingModel] {
+        
+        var resultModels = [ShoppingModel]()
+        guard let models = models else {
+            return resultModels
         }
         
+        for model in models {
+            if model.isSelected {
+                resultModels.append(model)
+            }
+        }
+        return resultModels
     }
     
     fileprivate enum ReuseIdentifier {
@@ -111,8 +125,11 @@ class ShoppingCarViewController: BaseViewController
 // MARK: - ShoppingCarTableViewCellDelegate
 extension ShoppingCarViewController: ShoppingCarTableViewCellDelegate {
     
-    func didSelected(status: Bool, model: ShoppingModel) {
+    func didSelected(status: Bool, model: Any) {
         
+        guard let model = model as? ShoppingModel else {
+            return
+        }
         let newModels = NSMutableArray()
         
         var allStatus = true
@@ -204,7 +221,22 @@ extension ShoppingCarViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
+        let alertController = UIAlertController(title: nil, message: "确定删除？", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler: { (act) in
+            
+            self.removeSelectedIndexPath(indexPath: indexPath)
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil))
+     
+        presentVC(alertController)
+        
+    }
+    
+    fileprivate func removeSelectedIndexPath(indexPath: IndexPath) {
+        
         let selectedModel = models![indexPath.row]
+
         let parms: [String: Any] = ["list": [["user_id": LoginModel.load()!.user_id, "product_id": selectedModel.product_id]]]
         UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.delShoppingCar, params: parms) { (response, isLoadFaild, errorMsg) in
             
@@ -217,6 +249,5 @@ extension ShoppingCarViewController: UITableViewDelegate, UITableViewDataSource 
             self.models = newModels
             self.updateMoney()
         }
-        
     }
 }

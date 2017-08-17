@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum MyCustomerType {
+    case Default
+    case Selected
+}
+
 class MyCustomerTableViewController: BaseTableViewController
 {
 
@@ -17,6 +22,8 @@ class MyCustomerTableViewController: BaseTableViewController
         configSearchController()
         fetchData()
     }
+    
+    var type: MyCustomerType = .Default
     
     fileprivate var searchResults: [MyCustomerModel]?
     fileprivate var datas: [MyCustomerModel]?
@@ -37,7 +44,7 @@ class MyCustomerTableViewController: BaseTableViewController
         navigationController?.ecPushViewController(addCustomerViewController)
     }
     
-    fileprivate func fetchData() {
+    func fetchData() {
         
         let params: [String: Any] = ["user_id": LoginModel.load()!.user_id]
         
@@ -67,15 +74,7 @@ class MyCustomerTableViewController: BaseTableViewController
         searchController.dimsBackgroundDuringPresentation = false
         
         searchController.searchBar.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: Screen.width, height: tableView!.tableHeaderView!.frame.size.height))
-        
-//        
-//        searchController.searchBar.backgroundImage = imageWithColor(color: .white, size: searchController.searchBar.bounds.size)
-//        
-//        if let searchField = searchController.searchBar.value(forKey: "_searchField") as? UITextField {
-//            
-//            searchField.backgroundColor = UIColor.groupTableViewBackground
-//        }
-        
+ 
         definesPresentationContext = true
         
         // 取消按钮文字
@@ -147,6 +146,13 @@ extension MyCustomerTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let contactListViewController = ECStroryBoard.controller(type: ContactListViewController.self)
+        let selectedModel = searchController.isActive ? searchResults![indexPath.row] : datas![indexPath.row]
+        contactListViewController.type = type
+        contactListViewController.model = selectedModel
+        navigationController?.ecPushViewController(contactListViewController)
+        
     }
     
 }

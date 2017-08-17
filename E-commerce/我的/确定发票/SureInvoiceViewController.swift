@@ -16,7 +16,7 @@ class SureInvoiceViewController: BaseViewController {
         print("发票提交")
     }
     
-    weak var tableView: UITableView!
+    var tableView: UITableView!
     fileprivate let tableVC = ECStroryBoard.controller(type: SureInvoiceTablViewController.self)
 
     override func viewDidLoad() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ProductEvaluationHeaderDelegate {
+@objc protocol ProductEvaluationHeaderDelegate {
     func didClick(sender: UIButton)
 }
 
@@ -16,7 +16,7 @@ class ProductEvaluationHeader: UIView
 {
     fileprivate var exchangeButton: UIButton!
 
-    var delegate: ProductEvaluationHeaderDelegate?
+    weak var delegate: ProductEvaluationHeaderDelegate?
     
     @IBAction func headerClick(sender: UIButton) {
         

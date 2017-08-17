@@ -44,16 +44,3 @@ struct MyFavoriteModel {
     }
 }
 
-struct MyFavoriteTypeModel {
-    
-    let title: String
-    
-    static func models() -> [MyFavoriteTypeModel] {
-        
-        return [MyFavoriteTypeModel(title: "传呼类"),
-         MyFavoriteTypeModel(title: "护理系统"),
-         MyFavoriteTypeModel(title: "制氧机"),
-         MyFavoriteTypeModel(title: "工程设计"),
-         MyFavoriteTypeModel(title: "工程产品")]
-    }
-}

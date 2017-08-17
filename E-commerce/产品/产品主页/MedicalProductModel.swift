@@ -90,24 +90,62 @@ class ProductModel: NSObject {
     var product_id: String = ""
     var product_name: String = ""
     var product_image_url: String = ""
+    var product_image = ""
     var product_desc: String = ""
     var is_best: String = ""
     var is_promote: String = ""
     var is_new: String = ""
     var is_hot: String = ""
     var image: UIImage = Placeholder.DefaultImage!
-    
+    var sell_price: String = ""
+    var inventory_num = ""
+    var market_price = ""
     
     override func setValue(_ value: Any?, forKey key: String) {
         if let value = value as? NSNumber {
             return super.setValue(value.stringValue, forKey: key)
         }
+        
         super.setValue(value, forKey: key)
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         print("\(self) none key \(key)")
     }
+    
+    static func models(withResponse: [String: Any]?, isNormal: Bool = true) -> [ProductModel]? {
+        
+        guard let response = withResponse else {
+            return nil
+        }
+        
+        guard let data = response["data"] as? [String: Any] else {
+            return nil
+        }
+        
+        guard let list = data["list"] as? [Any] else {
+            return nil
+        }
+        
+        if list.count == 0 {
+            return nil
+        }
+        
+        var models = [ProductModel]()
+        for dic in list {
+            
+            var newDic = dic as! [String: Any]
+            if isNormal {
+                newDic["image"] = ProductModel.fixImage(imgString: (dic as! [String: Any])["product_image_url"] as! String)
+            }
+            
+            let model = ProductModel()
+            model.setValuesForKeys(newDic)
+            models.append(model)
+        }
+        return models
+    }
+
     
     static func models(withArray: [Any]?) -> [ProductModel] {
         
@@ -173,7 +211,9 @@ struct PreferentialModel {
     let notice_id: String
     let notice_title: String
     let notice_content: String
-
+    let notice_type: String
+    let product_id: String
+    
     static func models(withArray: [Any]?) -> [PreferentialModel] {
         
         var models = [PreferentialModel]()

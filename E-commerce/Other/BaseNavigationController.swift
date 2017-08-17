@@ -41,8 +41,8 @@ class BaseNavigationController: UINavigationController {
     }
     /// 返回按钮
     func navigationBackClick() {
+
         _ = popViewController(animated: true)
     }
 
-    
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MineHeaderViewDelegate {
+@objc protocol MineHeaderViewDelegate {
     
     func headerClick(imageView: UIImageView)
     // 待提交
@@ -158,7 +158,7 @@ class MineHeader: UIView
         
     }
     
-    var delegate: MineHeaderViewDelegate?
+    weak var delegate: MineHeaderViewDelegate?
     
     @IBOutlet weak var headerImageView: UIImageView!
     @IBOutlet weak var displayUserName: UIButton!

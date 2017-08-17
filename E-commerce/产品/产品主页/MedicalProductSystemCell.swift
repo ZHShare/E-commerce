@@ -11,7 +11,8 @@ import UIKit
 class MedicalProductSystemCell: UICollectionViewCell {
 
     var model: PackModel? { didSet { updateUI() }  }
-
+    var productModel: ProductModel? { didSet { updateProductUI() } }
+    
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var displaySystemName: UILabel!
     @IBOutlet weak var displaySystemSub: UILabel!
@@ -30,7 +31,26 @@ class MedicalProductSystemCell: UICollectionViewCell {
         }
         
     }
+    
+    fileprivate func updateProductUI() {
+        
+        if productModel == nil { return }
+        DispatchQueue.main.async {
+            
+            self.icon.sd_setImage(with: self.productModel!.imageURL, placeholderImage: Placeholder.DefaultImage)
+            self.displaySystemSub.text = self.productModel?.product_desc
+            self.displaySystemName.text = self.productModel?.product_name
+        }
+    }
 }
+fileprivate extension ProductModel {
+    
+    var imageURL: URL {
+        let urlString = "\(host):\(picPort)/\(objectAddress)\(product_image_url)"
+        return URL(string: urlString)!
+    }
+}
+
 fileprivate extension PackModel {
     
     var imageString: String {

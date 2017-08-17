@@ -9,23 +9,47 @@
 import UIKit
 import DeckTransition
 
+extension MedicalProductDetailsModel {
+    
+    var isCollection: Bool {
+        return is_collection == "0" ? false : true
+    }
+}
+
+fileprivate extension UIBarButtonItem {
+    
+    func isSelected() {
+        
+        DispatchQueue.main.async {
+            self.image = UIImage(named: "product_details_is_fav")
+        }
+    }
+    
+    func isUnSelected() {
+        DispatchQueue.main.async {
+            self.image = UIImage(named: "product_details_fav")
+        }
+    }
+}
+
 class MedicalProductDetailsViewController: BaseTableViewController
 {
 
-    var productID: String = ""
+    var productID: String?
     fileprivate var sectionOnes: [MedicalProductDetailsModel.SectionOne]?
     
     fileprivate var model: MedicalProductDetailsModel?
-    fileprivate var currentTitle = CurrentTitle.details
+    fileprivate var nearCustomers: [MedicalProductDetailsNearModel]?
+    fileprivate var currentTitle: String!
     var selectedTypeString: String?
-    var selectedCount = ""
-    fileprivate let footer = MedicalProductDetailsFooter()
-    fileprivate let sectionHeader: MedicalProductDetailsBottomSectionHeader? = UIView.loadFromNibNamed(nibNamed: "MedicalProductDetailsBottomSectionHeader") as? MedicalProductDetailsBottomSectionHeader
+    var selectedCount: String?
+    fileprivate var footer: MedicalProductDetailsFooter!
+    fileprivate var sectionHeader: MedicalProductDetailsBottomSectionHeader!
     
     fileprivate var imagesRowHeight: CGFloat = 0
     fileprivate var instaillRowHeight: CGFloat = 0
     fileprivate var paramsRowHeight: CGFloat = 0
-
+    fileprivate var favoriteItem: UIBarButtonItem!
     fileprivate enum NavigationItem {
         static let title = "产品详情"
     }
@@ -41,10 +65,19 @@ class MedicalProductDetailsViewController: BaseTableViewController
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+
         configTableView()
         configNavigationBar()
         fetchData()
         addNotice()
+    }
+    
+    fileprivate func setupUI() {
+        
+        currentTitle = CurrentTitle.details
+        footer = MedicalProductDetailsFooter()
+        sectionHeader = UIView.loadFromNibNamed(nibNamed: "MedicalProductDetailsBottomSectionHeader") as? MedicalProductDetailsBottomSectionHeader
     }
     
     deinit {
@@ -63,24 +96,58 @@ class MedicalProductDetailsViewController: BaseTableViewController
     
     @objc fileprivate func notice(notice: Notification) {
         
-        (tableView.tableHeaderView as! MedicalProductDetailsHeader).model = model
+        fetchData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let params = ["product_id": productID]
+        
+        HomeNet.fetchDataWith(transCode: TransCode.Home.nearCustomer, params: params) { [unowned self](response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return self.hudForWindowsWithMessage(msg: errorMsg)
+            }
+            
+            self.nearCustomers = MedicalProductDetailsNearModel.models(withDic: response)
+            
+            if self.currentTitle == CurrentTitle.near {
+                DispatchQueue.main.async { [unowned self] in
+                    self.tableView.reloadSections(NSIndexSet(index: 2) as IndexSet, with: UITableViewRowAnimation.none)
+                }
+            }
+        }
     }
     
     fileprivate func fetchData() {
         
-        let params = ["product_id": productID]
-        HomeNet.fetchDataWith(transCode: TransCode.Home.productDetails, params: params) { (response, isLoadFaild, errorMsg) in
+        let params = ["product_id": productID,
+                      "user_id": LoginModel.load() == nil ? "" : LoginModel.load()!.user_id]
+        HomeNet.fetchDataWith(transCode: TransCode.Home.productDetails, params: params) { [unowned self](response, isLoadFaild, errorMsg) in
             
             if isLoadFaild {
-                return super.hudForWindowsWithMessage(msg: errorMsg)
+                return self.hudForWindowsWithMessage(msg: errorMsg)
             }
             
             self.model = MedicalProductDetailsModel.model(withDic: response)
             (self.tableView.tableHeaderView as! MedicalProductDetailsHeader).model = self.model
-
+            self.refreshFav()
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+        }
+        
+    }
+    
+    fileprivate func refreshFav() {
+        
+        if model!.isCollection {
+            favoriteItem.isSelected()
+        }
+        
+        else {
+            favoriteItem.isUnSelected()
         }
     }
     
@@ -106,7 +173,7 @@ class MedicalProductDetailsViewController: BaseTableViewController
         
         navigationItem.title = NavigationItem.title
 
-        let favoriteItem = UIBarButtonItem(image: UIImage(named: "product_details_fav"), style: UIBarButtonItemStyle.done, target: self, action: #selector(favorite))
+        favoriteItem = UIBarButtonItem(image: UIImage(named: "product_details_fav"), style: UIBarButtonItemStyle.done, target: self, action: #selector(favorite))
         favoriteItem.tintColor = UIColor.black
         navigationItem.rightBarButtonItem = favoriteItem
     }
@@ -132,8 +199,74 @@ class MedicalProductDetailsViewController: BaseTableViewController
     }
 
     @objc fileprivate func favorite() {
+     
+        if LoginStatus.isLogined == false {
+            return enterLogin()
+        }
+        
+        guard let model = model else {
+            return
+        }
+        
+        if model.isCollection {
+            // 取消
+            collectionWithFlag(flag: "0", tip: "已取消收藏")
+        }
+        
+        else {
+            // 收藏
+            collectionWithFlag(flag: "1", tip: "已收藏")
+        }
         
     }
+    
+    fileprivate func collectionWithFlag(flag: String, tip: String) {
+        
+        // 成功后，改变当前model的收藏属性 并更新收藏按钮
+        if flag == "0" {
+            
+            removeCollectionWithSuccessString(string: tip)
+        }
+        else {
+            
+            collectionWithSuccessString(string: tip)
+            
+        }
+    }
+    
+    fileprivate func removeCollectionWithSuccessString(string: String) {
+        
+        let params: [String: Any] = ["user_id": LoginModel.load()!.user_id,
+                                     "product_id": model!.product_id]
+        UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.removeFav, params: params){ [unowned self](response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return self.hudForWindowsWithMessage(msg: errorMsg)
+            }
+            self.model!.is_collection = "0"
+            self.refreshFav()
+            self.hudForWindowsWithMessage(msg: string)
+        }
+    }
+    
+    
+    fileprivate func collectionWithSuccessString(string: String) {
+        
+        let params: [String: Any] = ["user_id": LoginModel.load()!.user_id,
+                                     "product_id": model!.product_id,
+                                     "type": "1"]
+        UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.addFav, params: params) { [unowned self](response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return self.hudForWindowsWithMessage(msg: errorMsg)
+            }
+            self.model!.is_collection = "1"
+            self.refreshFav()
+            self.hudForWindowsWithMessage(msg: string)
+        }
+    }
+    
+    
     
     // MARK: - Table view data source
 
@@ -207,6 +340,7 @@ class MedicalProductDetailsViewController: BaseTableViewController
                 return cell
             case CurrentTitle.near:
                 let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.detailsMap, for: indexPath)
+                (cell as! MedicalProductDetailsMapCell).models = nearCustomers
                 return cell
             case CurrentTitle.params:
                 let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.params, for: indexPath)
@@ -293,7 +427,7 @@ class MedicalProductDetailsViewController: BaseTableViewController
             popViewController.transitioningDelegate = transitionDelegate
             popViewController.modalPresentationStyle = .custom
             popViewController.model = model
-            popViewController.selected = { (type, count) in
+            popViewController.selected = { [unowned self](type, count) in
                 self.selectedTypeString = type
                 self.selectedCount = count
                 var newOnes = self.sectionOnes!
@@ -315,7 +449,7 @@ extension MedicalProductDetailsViewController: MedicalProductDetailsImagesCellDe
     func updateSection() {
         
         let sectionIndexSet = NSIndexSet(index: 2) as IndexSet
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [unowned self] in
             self.tableView.reloadSections(sectionIndexSet, with: UITableViewRowAnimation.none)
         }
     }
@@ -409,7 +543,7 @@ extension MedicalProductDetailsViewController: MedicalProductDetailsFooterDelega
         popViewController.transitioningDelegate = transitionDelegate
         popViewController.modalPresentationStyle = .custom
         popViewController.model = model
-        popViewController.selected = { (type, count) in
+        popViewController.selected = { [unowned self](type, count) in
             
             self.selectedTypeString = type
             self.selectedCount = count
@@ -441,18 +575,18 @@ extension MedicalProductDetailsViewController: MedicalProductDetailsFooterDelega
             return enterLogin()
         }
         
-        let params = ["user_id": LoginModel.load()!.user_id,
-                      "product_id": productID,
-                      "goods_number": selectedCount,
-                      "product_attr": selectedTypeString!]
+        let params: [String: Any] = ["user_id": LoginModel.load()!.user_id,
+                                     "product_id": productID,
+                                     "goods_number": selectedCount,
+                                     "product_attr": selectedTypeString!]
         
-        UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.addShoppingCar, params: params) { (response, isLoadFaild, errorMsg) in
+        UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.addShoppingCar, params: params) { [unowned self](response, isLoadFaild, errorMsg) in
             
             if isLoadFaild {
-                return super.hudForWindowsWithMessage(msg: errorMsg)
+                return self.hudForWindowsWithMessage(msg: errorMsg)
             }
             
-            super.hudForWindowsWithMessage(msg: "已加入购物车")
+            self.hudForWindowsWithMessage(msg: "已加入购物车")
         }
         
     }
@@ -465,7 +599,7 @@ extension MedicalProductDetailsViewController: MedicalProductDetailsEvaluationCe
     func didClickMore() {
      
         let evaluationController = ECStroryBoard.controller(type: ProductEvaluationViewController.self)
-        evaluationController.productID = productID
+        evaluationController.productID = productID ?? ""
         navigationController?.ecPushViewController(evaluationController)
     }
    
@@ -486,7 +620,7 @@ extension MedicalProductDetailsViewController: MedicalProductDetailsBottomSectio
         
         currentTitle = sender.currentTitle!
         print("\(sender.currentTitle!)")
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [unowned self] in
             self.tableView.reloadSections(sectionIndexSet, with: UITableViewRowAnimation.none)
         }
     }

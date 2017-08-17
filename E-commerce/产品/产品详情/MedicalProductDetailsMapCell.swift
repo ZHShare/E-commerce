@@ -12,11 +12,15 @@ class MedicalProductDetailsMapCell: UITableViewCell
 {
 
     @IBOutlet var mapView: MAMapView! { didSet { updateMapView() } }
-    var customUserLocationView: MAAnnotationView!
-
+    fileprivate var customUserLocationView: MAAnnotationView!
     
+    var models: [MedicalProductDetailsNearModel]? {
+        didSet { updateUI() }
+    }
+    fileprivate var index = 0
     fileprivate func updateMapView() {
         
+        mapView.zoomLevel = 14
         mapView.isShowsUserLocation = true
         mapView.userTrackingMode = MAUserTrackingMode.follow
         
@@ -24,9 +28,69 @@ class MedicalProductDetailsMapCell: UITableViewCell
         mapView.autoresizingMask = [UIViewAutoresizing.flexibleHeight, UIViewAutoresizing.flexibleWidth]
     }
     
+    fileprivate enum ReuseIdentifier {
+        static let AddPoint = "Add Point"
+    }
+    
+    fileprivate func updateUI() {
+        
+        if models == nil { return }
+        if models!.count == 0 { return }
+                
+        index = 0
+        if mapView.annotations != nil {
+            for annotation in mapView.annotations {
+                if let annotation = annotation as? MAPointAnnotation {
+                    mapView.removeAnnotation(annotation)
+                }
+            }
+        }
+        for model in models! {
+            
+            let pointAnnotation = MAPointAnnotation()
+            pointAnnotation.title = model.cust_name
+            pointAnnotation.subtitle = model.cust_address
+            pointAnnotation.coordinate = CLLocationCoordinate2DMake(Double(model.locations_lat)!, Double(model.locations_lng)!)
+            mapView.addAnnotation(pointAnnotation)
+        }
+    }
+    
 }
+extension MedicalProductDetailsNearModel {
+    var imageURL: URL {
+        let urlString = "\(host):\(picPort)/\(objectAddress)\(cust_avatar)"
+        return URL(string: urlString)!
+    }
+}
+
 // MARK: - MAMapViewDelegate
 extension MedicalProductDetailsMapCell: MAMapViewDelegate {
+    
+    func mapView(_ mapView: MAMapView!, viewFor annotation: MAAnnotation!) -> MAAnnotationView! {
+        
+        if annotation.isKind(of: MAPointAnnotation.classForCoder()) {
+            
+            var pointAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: ReuseIdentifier.AddPoint)
+            if pointAnnotationView == nil {
+                pointAnnotationView = MAAnnotationView(annotation: annotation, reuseIdentifier: ReuseIdentifier.AddPoint)
+            }
+            
+            pointAnnotationView?.frame = CGRect(x: 0, y: 0, w: 40, h: 40)
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, w: 40, h: 40))
+            imageView.sd_setImage(with: models![index].imageURL, placeholderImage: Placeholder.DefaultImage)
+            imageView.layer.cornerRadius = imageView.bounds.width / 2
+            imageView.layer.masksToBounds = true
+            pointAnnotationView?.addSubview(imageView)
+            pointAnnotationView?.layer.borderColor = UIColor.white.cgColor
+            pointAnnotationView?.layer.borderWidth = 2
+            pointAnnotationView?.layer.cornerRadius = 20
+            pointAnnotationView?.canShowCallout = true
+            
+            return pointAnnotationView
+        }
+        
+        return nil
+    }
     
     func mapView(_ mapView: MAMapView!, didAddAnnotationViews views: [Any]!) {
         

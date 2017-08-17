@@ -8,7 +8,7 @@
 
 import UIKit
 import EZSwiftExtensions
-public protocol MedicalProductDetailsEvaluationCellDelegate {
+@objc public protocol MedicalProductDetailsEvaluationCellDelegate {
     func didClickMore()
 }
 
@@ -63,7 +63,7 @@ class MedicalProductDetailsEvaluationCell: UITableViewCell
         }
     }
     
-    var delegate: MedicalProductDetailsEvaluationCellDelegate?
+    weak var delegate: MedicalProductDetailsEvaluationCellDelegate?
     
     @IBOutlet weak var displayAllEvl: UILabel!
     @IBOutlet weak var userHeaderImageView: UIImageView!
