@@ -41,12 +41,11 @@ class MyFavoriteViewController: BaseViewController
         hiddenTypeTableView()
         configTableView()
         mjHeader.beginRefreshing()
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).asyncAfter(deadline: DispatchTime.now()+0.5) { [unowned self] in
+            self.fetchDataForType()
+        }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        fetchDataForType()
-    }
     
     fileprivate var params: [String: Any] = ["user_id": LoginModel.load()!.user_id,
                                              "type": "1"]
@@ -208,7 +207,10 @@ extension MyFavoriteViewController: UITableViewDelegate, UITableViewDataSource {
             mjHeader.beginRefreshing()
             hiddenTypeTableView()
         default:
-            break
+            let model = products![indexPath.row]
+            let productDetailsViewController = ECStroryBoard.controller(type: MedicalProductDetailsViewController.self)
+            productDetailsViewController.productID = model.product_id
+            navigationController?.ecPushViewController(productDetailsViewController)
         }
     }
     

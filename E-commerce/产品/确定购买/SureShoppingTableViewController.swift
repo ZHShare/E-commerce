@@ -15,6 +15,7 @@ class SureShoppingTableViewController: BaseTableViewController
     var selectedProducts: [ShoppingModel]?
     var addressModel: ContactListModel?
     
+    fileprivate var fieldCell: SureShoppingFieldTableViewCell?
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
@@ -33,6 +34,9 @@ class SureShoppingTableViewController: BaseTableViewController
         
     }
     
+    var fieldText: String? {
+        return fieldCell?.leaveAMessageField.text
+    }
   
     
 }
@@ -77,7 +81,7 @@ extension SureShoppingTableViewController {
             (cell as! SureShoppingProductTableViewCell).model = selectedProducts?[indexPath.row]
         case 2:
             cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifier.Field, for: indexPath)
-            
+            fieldCell = cell as? SureShoppingFieldTableViewCell
         default: cell = UITableViewCell()
         }
         

@@ -38,7 +38,7 @@ class SureShoppingAddressTableViewCell: UITableViewCell
         DispatchQueue.main.async {
             self.displayName.text = model.name
             self.displayPhone.text = model.mobile.length == 0 ? model.phone : model.mobile
-            self.displayAddress.text = model.address
+            self.displayAddress.text = model.cust_address
         }
         
     }

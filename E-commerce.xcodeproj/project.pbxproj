@@ -54,6 +54,7 @@
 		C66BED001F1DE3C100985880 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BECFF1F1DE3C100985880 /* GuideViewController.swift */; };
 		C66BED051F1DE4BC00985880 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */; };
 		C66BED071F1DE7B000985880 /* TypeDefineCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */; };
+		C67ECED51F4678840065CCE7 /* ShoppingResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ECED41F4678840065CCE7 /* ShoppingResultsViewController.swift */; };
 		C68159EE1F3AB85C0092A40C /* InvoiceManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68159ED1F3AB85C0092A40C /* InvoiceManagerViewController.swift */; };
 		C68159F01F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68159EF1F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift */; };
 		C68159F21F3ADCA90092A40C /* HomeNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68159F11F3ADCA90092A40C /* HomeNet.swift */; };
@@ -267,6 +268,7 @@
 		C66BECFF1F1DE3C100985880 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		C66BED041F1DE4BC00985880 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		C66BED061F1DE7B000985880 /* TypeDefineCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefineCommon.swift; sourceTree = "<group>"; };
+		C67ECED41F4678840065CCE7 /* ShoppingResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingResultsViewController.swift; sourceTree = "<group>"; };
 		C68159ED1F3AB85C0092A40C /* InvoiceManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceManagerViewController.swift; sourceTree = "<group>"; };
 		C68159EF1F3ABB3F0092A40C /* IssunInvoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssunInvoiceTableViewCell.swift; sourceTree = "<group>"; };
 		C68159F11F3ADCA90092A40C /* HomeNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNet.swift; sourceTree = "<group>"; };
@@ -615,6 +617,14 @@
 				C6094C251F21B06D004677BE /* ECTools */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		C67ECED31F4678490065CCE7 /* 操作结果 */ = {
+			isa = PBXGroup;
+			children = (
+				C67ECED41F4678840065CCE7 /* ShoppingResultsViewController.swift */,
+			);
+			path = "操作结果";
 			sourceTree = "<group>";
 		};
 		C68159EC1F3AB83D0092A40C /* 发票管理 */ = {
@@ -999,6 +1009,7 @@
 		C6B3DCFF1F281DFA007B2F14 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				C67ECED31F4678490065CCE7 /* 操作结果 */,
 				C68159EC1F3AB83D0092A40C /* 发票管理 */,
 				C6FEB5391F3832B900577F41 /* 企业通讯录 */,
 				C68AF91D1F34091300D4A1E3 /* 我的收藏 */,
@@ -1316,6 +1327,7 @@
 				C68AF9211F34096E00D4A1E3 /* MyFavoriteTableViewCell.swift in Sources */,
 				C69258E21F32B328007CC754 /* MyAccountTableViewCell.swift in Sources */,
 				C6BF2A521F344A2200008218 /* UserInfoNet.swift in Sources */,
+				C67ECED51F4678840065CCE7 /* ShoppingResultsViewController.swift in Sources */,
 				C6094C2B1F21B06D004677BE /* ECMapping.swift in Sources */,
 				C693D3F31F456A3D0046DDE2 /* SureShoppingTableViewController.swift in Sources */,
 				C6BF2A501F34422B00008218 /* TransCode.swift in Sources */,

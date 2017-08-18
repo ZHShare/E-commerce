@@ -71,6 +71,9 @@ class MedicalProductDetailsViewController: BaseTableViewController
         configNavigationBar()
         fetchData()
         addNotice()
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).asyncAfter(deadline: DispatchTime.now()+0.5) { [unowned self] in
+            self.fetchNearCustomers()
+        }
     }
     
     fileprivate func setupUI() {
@@ -99,9 +102,9 @@ class MedicalProductDetailsViewController: BaseTableViewController
         fetchData()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let params = ["product_id": productID]
+    fileprivate func fetchNearCustomers() {
+        
+        let params: [String: Any] = ["product_id": productID ?? ""]
         
         HomeNet.fetchDataWith(transCode: TransCode.Home.nearCustomer, params: params) { [unowned self](response, isLoadFaild, errorMsg) in
             
@@ -119,10 +122,10 @@ class MedicalProductDetailsViewController: BaseTableViewController
         }
     }
     
-    fileprivate func fetchData() {
+    func fetchData() {
         
-        let params = ["product_id": productID,
-                      "user_id": LoginModel.load() == nil ? "" : LoginModel.load()!.user_id]
+        let params: [String: Any] = ["product_id": productID ?? "",
+                                     "user_id": LoginModel.load() == nil ? "" : LoginModel.load()!.user_id]
         HomeNet.fetchDataWith(transCode: TransCode.Home.productDetails, params: params) { [unowned self](response, isLoadFaild, errorMsg) in
             
             if isLoadFaild {
@@ -522,7 +525,18 @@ extension MedicalProductDetailsViewController: MedicalProductDetailsFooterDelega
         // 检查是否已经选择完产品参数 已选：带参跳转至结算页面，未选：跳转选择参数，确定完跳转至结算页面
         if selectedTypeString != nil {
             
+            let shoppingModel = ShoppingModel(
+                isSelected: false,
+                product_name: model!.product_name,
+                product_id: model!.product_id,
+                goods_number: selectedCount!,
+                sell_price: model!.sell_price,
+                market_price: model!.market_price,
+                product_image_url: model!.product_image_url,
+                product_attr: selectedTypeString!)
+            
             let sureShoppingViewController = ECStroryBoard.controller(type: SureShoppingViewController.self)
+            sureShoppingViewController.selectedProducts = [shoppingModel]
             navigationController?.ecPushViewController(sureShoppingViewController)
         }
         
@@ -576,8 +590,8 @@ extension MedicalProductDetailsViewController: MedicalProductDetailsFooterDelega
         }
         
         let params: [String: Any] = ["user_id": LoginModel.load()!.user_id,
-                                     "product_id": productID,
-                                     "goods_number": selectedCount,
+                                     "product_id": productID ?? "",
+                                     "goods_number": selectedCount ?? "",
                                      "product_attr": selectedTypeString!]
         
         UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.addShoppingCar, params: params) { [unowned self](response, isLoadFaild, errorMsg) in

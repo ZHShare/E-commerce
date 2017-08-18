@@ -8,6 +8,12 @@
 
 import UIKit
 
+
+enum ShoppingType {
+    case Car
+    case BuyNow
+}
+
 class SureShopping: Nofifier {
     enum Notification: String {
         case Address
@@ -17,6 +23,7 @@ class SureShopping: Nofifier {
 class SureShoppingViewController: BaseViewController
 {
 
+    var shoppingType: ShoppingType = .Car
     var selectedProducts: [ShoppingModel]?
     var addressModel: ContactListModel?
 
@@ -24,7 +31,11 @@ class SureShoppingViewController: BaseViewController
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var displayAllMoney: UILabel!
     @IBAction func submit() {
-     
+        
+        if addressModel == nil {
+            return super.hudForWindowsWithMessage(msg: "请选择一个联系人")
+        }
+        
         let title = "是否确定提交此订单"
         let sure = "确定"
         let cancel = "取消"
@@ -32,10 +43,52 @@ class SureShoppingViewController: BaseViewController
         let alertController = UIAlertController(title: nil, message: title, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: sure, style: UIAlertActionStyle.default, handler: { (act) in
             
-            print("订单提交")
+            self.orddingSubmit()
         }))
         alertController.addAction(UIAlertAction(title: cancel, style: UIAlertActionStyle.cancel, handler: nil))
         presentVC(alertController)
+    }
+    
+    fileprivate func orddingSubmit() {
+        
+        var params: [String: Any] = ["user_id": LoginModel.load()!.user_id,
+                                     "cust_no": addressModel!.cust_no,
+                                     "receiver_detail_address": addressModel!.cust_address,
+                                     "order_total_amount": "\(getAllMoney())",
+                                     "product_total_amount": "\(getAllMoney())",
+                                     "iffe_total_amount": "0",
+                                     "pay_mode": "3",
+                                     "user_comments": tableVC.fieldText ?? "",
+                                     "receiver_mobile": addressModel!.mobile,
+                                     "receiver_name": addressModel!.name,
+                                     "order_mode": shoppingType == .BuyNow ? "1" : "2"]
+        
+        var lists = [Any]()
+        for product in selectedProducts! {
+            
+            var productDic = [String: Any]()
+            productDic["product_id"] = product.product_id
+            productDic["goods_number"] = product.goods_number
+            productDic["product_attr"] = product.product_attr
+            productDic["product_price"] = product.sell_price
+            
+            lists.append(productDic)
+        }
+        
+        params["list"] = lists
+        
+        HomeNet.fetchDataWith(transCode: TransCode.Home.sureShopping, params: params) { [unowned self](response, isLoadFaild, errorMsg) in
+            
+            if isLoadFaild {
+                return self.hudForWindowsWithMessage(msg: errorMsg)
+            }
+            
+            let order_id = (response["data"] as? [String: String])?["order_id"]
+            let resultsViewController = ECStroryBoard.controller(type: ShoppingResultsViewController.self)
+            resultsViewController.order_id = order_id
+            self.navigationController?.ecPushViewController(resultsViewController)
+            
+        }
     }
     
     fileprivate var allMoney: Int {

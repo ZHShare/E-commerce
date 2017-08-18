@@ -34,8 +34,20 @@ class BaseNavigationController: UINavigationController {
         if viewControllers.count > 0 {
             // push 后隐藏 tabbar
             viewController.hidesBottomBarWhenPushed = isHidesBottomBarWhenPushed
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "log_reg_left"), style: .plain, target: self, action: #selector(navigationBackClick))
-            viewController.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
+            
+            if viewController.isKind(of: ShoppingResultsViewController.classForCoder()) {
+                
+                let closeItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.stop, target: self, action: #selector(close(_:)))
+                closeItem.tintColor = .black
+                viewController.navigationItem.leftBarButtonItem = closeItem
+            }
+                
+            else {
+                
+                viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "log_reg_left"), style: .plain, target: self, action: #selector(navigationBackClick))
+                viewController.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
+                
+            }
         }
         super.pushViewController(viewController, animated: true)
     }
@@ -43,6 +55,24 @@ class BaseNavigationController: UINavigationController {
     func navigationBackClick() {
 
         _ = popViewController(animated: true)
+    }
+
+    @objc fileprivate func close(_ sender: UIBarButtonItem) {
+        
+        for viewController in viewControllers {
+            
+            if let shoppingCarViewController = viewController as? ShoppingCarViewController {
+                ecPopToViewController(viewController: shoppingCarViewController)
+                shoppingCarViewController.fetchData()
+                return
+            }
+            else if let detailsViewController = viewController as? MedicalProductDetailsViewController {
+                ecPopToViewController(viewController: detailsViewController)
+                detailsViewController.fetchData()
+                return
+            }
+        }
+        
     }
 
 }

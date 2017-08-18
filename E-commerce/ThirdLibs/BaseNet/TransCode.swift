@@ -45,6 +45,7 @@ enum TransCode {
         static let nearCustomer = "200021"
         static let evaluation = "200016"
         static let type =  "200015"
+        static let sureShopping = "200022"
         static let publicNotice = "200030"
     }
     

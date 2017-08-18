@@ -22,7 +22,7 @@ class ShoppingCarViewController: BaseViewController
     @IBOutlet var displayMoney: UILabel!
     @IBOutlet weak var selectedAllButton: UIButton!
     
-    fileprivate func fetchData() {
+    func fetchData() {
         
         UserInfoNet.fetchDataWith(transCode: TransCode.UserInfo.myShoppingCar, params: params) { (response, isLoadFaild, errorMsg) in
             
@@ -76,8 +76,13 @@ class ShoppingCarViewController: BaseViewController
     
     @IBAction func settlenAccount() {
         
+        let products = getSelectedModels()
+        if products.count == 0 {
+            return super.hudForWindowsWithMessage(msg: "请选择商品")
+        }
+        
         let sureShoppingViewController = ECStroryBoard.controller(type: SureShoppingViewController.self)
-        sureShoppingViewController.selectedProducts = getSelectedModels()
+        sureShoppingViewController.selectedProducts = products
         navigationController?.ecPushViewController(sureShoppingViewController)
         
     }
@@ -166,14 +171,14 @@ extension ShoppingCarViewController: ShoppingCarTableViewCellDelegate {
                 allMoney += Int(model.sell_price)! * Int(model.goods_number)!
             }
         })
-        
+       
         if Thread.isMainThread {
-            displayMoney.text = "\(allMoney)"
+            displayMoney.text = "¥\(allMoney).00"
             
         }
         else {
             DispatchQueue.main.async {
-                self.displayMoney.text = "\(self.allMoney)"
+                self.displayMoney.text = "¥\(self.allMoney).00"
             }
         }
     }

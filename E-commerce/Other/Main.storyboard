@@ -8240,6 +8240,68 @@
             </objects>
             <point key="canvasLocation" x="13540" y="-74.212893553223395"/>
         </scene>
+        <!--操作结果-->
+        <scene sceneID="1PD-tk-taU">
+            <objects>
+                <viewController storyboardIdentifier="ShoppingResultsViewController" id="26U-4b-lW1" customClass="ShoppingResultsViewController" customModule="E_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XLg-3k-f93"/>
+                        <viewControllerLayoutGuide type="bottom" id="HDp-T0-FIW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LbC-j5-f7f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping_success" translatesAutoresizingMaskIntoConstraints="NO" id="M6D-MX-VVS">
+                                <rect key="frame" x="163" y="86" width="48" height="48"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提交成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHC-fQ-kzt">
+                                <rect key="frame" x="146" y="141" width="82" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请耐心等待订单审核,审核通过我们会短信通知您！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq3-k0-E8O">
+                                <rect key="frame" x="39" y="173" width="296" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEg-Uf-5YB">
+                                <rect key="frame" x="37" y="209" width="300" height="35"/>
+                                <state key="normal" title="查看订单详情" backgroundImage="shopping_box">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="details" destination="26U-4b-lW1" eventType="touchUpInside" id="txf-6G-RgS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FHC-fQ-kzt" firstAttribute="centerX" secondItem="M6D-MX-VVS" secondAttribute="centerX" id="9cr-oy-XY8"/>
+                            <constraint firstItem="uEg-Uf-5YB" firstAttribute="centerX" secondItem="FHC-fQ-kzt" secondAttribute="centerX" id="JCK-9j-CM2"/>
+                            <constraint firstItem="FHC-fQ-kzt" firstAttribute="top" secondItem="M6D-MX-VVS" secondAttribute="bottom" constant="7" id="Kmn-mE-Lby"/>
+                            <constraint firstItem="M6D-MX-VVS" firstAttribute="centerX" secondItem="LbC-j5-f7f" secondAttribute="centerX" id="QLr-4t-BSl"/>
+                            <constraint firstItem="uEg-Uf-5YB" firstAttribute="top" secondItem="gq3-k0-E8O" secondAttribute="bottom" constant="20" id="UQ6-wY-aLc"/>
+                            <constraint firstItem="gq3-k0-E8O" firstAttribute="centerX" secondItem="M6D-MX-VVS" secondAttribute="centerX" id="YgD-AP-e7e"/>
+                            <constraint firstItem="M6D-MX-VVS" firstAttribute="bottom" secondItem="LbC-j5-f7f" secondAttribute="centerY" constant="-200" id="f6J-gg-7pd"/>
+                            <constraint firstItem="gq3-k0-E8O" firstAttribute="top" secondItem="FHC-fQ-kzt" secondAttribute="bottom" constant="8" symbolic="YES" id="iLa-Nq-Caf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="操作结果" id="zdn-df-1uS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="7gx-Se-j5U">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="close:" destination="26U-4b-lW1" id="AFi-AI-pcX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoR-5B-D2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14185" y="-73"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="uDd-bO-fEE">
             <objects>
@@ -8431,8 +8493,10 @@
         <image name="product_eva_selected" width="75" height="28"/>
         <image name="product_shopping_car" width="55" height="55"/>
         <image name="selected_address" width="24" height="24"/>
+        <image name="shopping_box" width="300" height="35"/>
         <image name="shopping_chose_normal" width="20" height="20"/>
         <image name="shopping_chose_selected" width="20" height="20"/>
+        <image name="shopping_success" width="48" height="48"/>
         <image name="sure_invoice_bg" width="100" height="26"/>
         <image name="tabbar_crm_normal" width="24" height="24"/>
         <image name="tabbar_crm_selected" width="24" height="24"/>

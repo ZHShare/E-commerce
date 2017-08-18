@@ -50,7 +50,7 @@ class ContactListTableViewCell: UITableViewCell
         DispatchQueue.main.async {
             
             self.displayName.text = model.name
-            self.displayAddress.text = model.address
+            self.displayAddress.text = model.cust_address
             self.selectedButton.isSelected = model.isDefault
         }
     }

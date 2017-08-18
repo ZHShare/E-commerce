@@ -17,7 +17,9 @@ struct ContactListModel {
     let phone: String
     let relationship: String
     let default_flag: String
-    
+    let cust_address: String
+    let cust_no: String
+
     static func models(withResponse: [String: Any]?) -> [ContactListModel]? {
         
         guard let response = withResponse else {
